@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-09-12</title>
+<style>
+:root{
+  --bg:#f6f8f9; --card:#ffffff; --text:#132322; --muted:#5b6f6d; --line:#dfe8e7;
+  --accent:#0d9488; --accent-soft:#e6f4f2; --warn:#b45309; --warn-soft:#fef3c7;
+  --chip:#eef2f2; --shadow:0 1px 3px rgba(13,20,20,.08),0 8px 24px rgba(13,20,20,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0e1514; --card:#162120; --text:#e6efee; --muted:#9ab2b0; --line:#243230;
+    --accent:#2dd4bf; --accent-soft:#123330; --warn:#fbbf24; --warn-soft:#33280d;
+    --chip:#1d2c2b; --shadow:0 1px 3px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+  }
+}
+*{box-sizing:border-box;}
+body{
+  margin:0; padding:32px 16px 64px; background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.75; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:860px;margin:0 auto;}
+header.hero{
+  background:linear-gradient(135deg,var(--accent-soft),var(--card));
+  border:1px solid var(--line); border-radius:12px; padding:28px 28px 24px; box-shadow:var(--shadow);
+}
+h1{margin:0 0 6px;font-size:26px;letter-spacing:.5px;}
+.sub{color:var(--muted);font-size:14px;margin-bottom:18px;}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.chip{
+  background:var(--chip); border:1px solid var(--line); border-radius:999px;
+  padding:4px 12px; font-size:12.5px; color:var(--muted);
+}
+.chip b{color:var(--accent);font-weight:600;}
+.section{margin-top:34px;}
+.section h2{
+  font-size:17px;margin:0 0 14px;padding-left:11px;border-left:4px solid var(--accent);line-height:1.3;
+}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:12px;
+  padding:20px 22px; margin-bottom:14px; box-shadow:var(--shadow);
+}
+.card h3{margin:0 0 8px;font-size:16.5px;line-height:1.5;}
+.card h3 a{color:var(--text);text-decoration:none;border-bottom:1px solid transparent;}
+.card h3 a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+.src{font-size:12.5px;color:var(--muted);margin-bottom:10px;}
+.src .tag{
+  display:inline-block;background:var(--accent-soft);color:var(--accent);
+  border-radius:6px;padding:1px 7px;margin-right:8px;font-weight:600;
+}
+.src .pre{background:var(--warn-soft);color:var(--warn);}
+.abs{font-size:14.5px;margin:0 0 12px;}
+.why{
+  background:var(--accent-soft); border-radius:10px; padding:12px 14px; font-size:14px;
+  border-left:3px solid var(--accent);
+}
+.why b{color:var(--accent);}
+ul.scan{list-style:none;padding:0;margin:0;}
+ul.scan li{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-bottom:9px;font-size:14px;box-shadow:var(--shadow);
+}
+ul.scan li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid var(--line);}
+ul.scan li a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+ul.scan li span{display:block;color:var(--muted);font-size:13px;margin-top:4px;font-weight:400;}
+.action{
+  background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:12px;padding:16px 20px;margin-top:34px;box-shadow:var(--shadow);
+}
+.action h2{font-size:17px;margin:0 0 10px;}
+.action ol{margin:0;padding-left:20px;font-size:14.5px;}
+.action li{margin-bottom:9px;}
+.note{
+  background:var(--card);border:1px dashed var(--line);border-radius:12px;
+  padding:14px 18px;margin-top:20px;font-size:13.5px;color:var(--muted);
+}
+footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+  <div class="sub">主理人 Alan（李帅帅）· 三甲儿科规培医师转型 AI · 视频号「AI新青年」面向青少年与家长</div>
+  <div class="meta">
+    <span class="chip">日期 <b>2026-09-12</b></span>
+    <span class="chip">检索窗口 <b>2026-09-05 → 2026-09-12</b></span>
+    <span class="chip">精选 <b>6 条</b>主卡 + 5 条速览</span>
+    <span class="chip">数据源 <b>AI HOT / PubMed / medRxiv</b></span>
+  </div>
+</header>
+
+<div class="section">
+  <h2>前沿研究 · 同行评审论文</h2>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42726183/" target="_blank" rel="noopener">Parent's AI Coach (PaiCoach)：面向孤独症儿童家长的 AI 教练系统单一个案实验研究</a></h3>
+    <div class="src"><span class="tag">J Autism Dev Disord</span>2026-09-11 · 美国国家特殊教育 AI 研究所（Univ. at Buffalo）</div>
+    <p class="abs">用并发多基线跨被试单一个案设计，纳入 4 对母子（孤独症儿童 45–56 月龄、极低口语），在亲子共读场景中检验 AI 教练系统对家长实施循证策略保真度与儿童沟通回应性的影响。视觉分析显示家长实施保真度随系统引入上升、儿童回应性同步改善。关键数据：AI 生成的分析中 <b>68.6% 被人类专家原样采纳</b>，31.4% 需要专家修改；家长满意度与可用性评分高。</p>
+    <div class="why"><b>为什么与你有关：</b>这是星桥计划最贴近的一篇——它证明了「AI 教练」路线在真实家庭场景中可跑通，且给出了一个可抄的<b>人机分工比例</b>（约 七成 AI 直出、三成人工修订）。做家长端产品时，把「AI 输出 + 专家审核」做成显式流程而不是隐藏的兜底，既是质量保障也是信任卖点。样本仅 4 对，属初步可行性证据，不能直接外推疗效。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42722598/" target="_blank" rel="noopener">PAICS 辅助产前超声检出胎儿颅内畸形：中国 5 中心自身交叉随机对照试验</a></h3>
+    <div class="src"><span class="tag">Lancet Digit Health</span>2026-09-10 · 中山一院牵头，5 家中心</div>
+    <p class="abs">国内 5 中心、1584 次扫描、由 3–8 年经验超声医师执行的自身交叉 RCT（4 周洗脱），以专家组视频复核为金标准。AI 辅助使胎儿层面检出敏感度<b>提升 0.087（95%CI 0.029–0.147，优效 p&lt;0.0001）</b>，畸形层面<b>提升 0.118（0.054–0.181）</b>，特异度均达非劣标准。研究还专门评估了 AI 识别范围之外的畸形是否被漏掉。</p>
+    <div class="why"><b>为什么与你有关：</b>这是「AI 不替代医生、但确实改变医生表现」目前证据等级最高的儿科相关研究之一，且是本土多中心 RCT。给量表平台与任何临床 AI 产品的启示：上市前别只报模型 AUC，要按这篇的路子设计<b>「AI 辅助 vs 独立」的交叉对照 + 人类基线 + 识别盲区评估</b>。另外注意它测的是「中等年资医师」，即 AI 的最大价值在缩小学历曲线差距——这正好是基层儿科/妇幼场景的付费理由。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42724178/" target="_blank" rel="noopener">儿童 EB 病毒相关噬血细胞综合征（EBV-HLH）机器学习辅助诊断模型</a></h3>
+    <div class="src"><span class="tag">Transl Pediatr</span>2026-08-31 · 西安市儿童医院</div>
+    <p class="abs">244 例 EBV 感染住院儿童（1:3 时间匹配病例对照，7:3 拆分），LASSO + Boruta 筛选后比较 6 个分类器。最终保留 5 个常规入院指标：甘油三酯、IFN-γ、血清铁蛋白、血小板、CD4+/CD8+ 比值。随机森林验证集 <b>AUC 0.895（95%CI 0.824–0.966）</b>，敏感度 0.735、特异度 0.846；已用 SHAP 做个体化解释并部署为 Shiny 网页计算器。</p>
+    <div class="why"><b>为什么与你有关：</b>几乎就是「小雪宝血液方向 + 量表平台技术栈」的合体模板：儿科血液重症、只用入院常规指标、可解释、且直接做成了网页工具。作者自己坦承单中心回顾性、缺外部验证——这恰恰是你可以补位的地方：<b>把这类单中心儿科模型做成多中心验证 + 中文交互界面</b>，就是一个有真实价值的产品切口，而不是再发一篇论文。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42723953/" target="_blank" rel="noopener">单细胞拉曼图谱刻画 B 细胞分化与白血病转化，并推断转录组</a></h3>
+    <div class="src"><span class="tag">Front Immunol</span>2026-08-27 · 中国医学科学院血液病医院（天津）</div>
+    <p class="abs">构建免标记单细胞拉曼平台，对 HSC、pro-B、pre-B、naive B 四阶段及 B-ALL 细胞成像，PC-LDA 分类四阶段准确率 <b>96.48%</b>；用对抗自编码器（AAE）把拉曼光谱对齐到参考 scRNA-seq 空间，重复划分平均分类准确率 <b>91.78% ± 8.13%</b>；区分脐血正常 B 细胞与骨髓 B-ALL 细胞达 <b>96.62%</b>，并揭示葡萄糖代谢重编程。作者明确指出 pro-B（52.48–100%）与 pre-B（34.4–100%）相邻阶段区分仍不稳定。</p>
+    <div class="why"><b>为什么与你有关：</b>与白血病（小雪宝的核心疾病域）直接相关的国产前沿工作，价值在于<b>「免标记 + 单细胞 + 低成本」</b>这条路——拉曼无需测序，若成熟可显著降低 MRD/分型监测成本。但要清醒：这是概念验证，相邻分化阶段准确率波动极大，离临床很远。做内容时可作为「中国血液学 AI 正在往哪走」的素材，不要包装成即将落地的诊断手段。</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>临床 AI 落地与评估方法</h2>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.64898/2026.09.03.26362181" target="_blank" rel="noopener">LUMANA：文化适配的 AI 心理健康筛查系统在尼日利亚的标准化场景实地验证</a></h3>
+    <div class="src"><span class="tag pre">medRxiv 预印本 · 未经同行评审</span>psychiatry and clinical psychology · 2026-09-07</div>
+    <p class="abs">在精神科医生不足 5 人、覆盖 540 万人口的尼日利亚索科托州，20 名一线卫生工作者用 8 个标准化临床场景、5 种评估工具对系统打分。共完成 136 次 AI 输出安全性评估：<b>113/136（83%）可直接采纳，23/136（17%）需人工复核后采纳，0 条被判为不可接受</b>。82% 受访者认为宗教与文化是信任的关键决定因素；<b>17/17（100%）一致同意：一旦出现自伤或自杀披露，必须转交人类临床医生</b>。豪萨语转录质量 9.9/10、译英 9.9/10。</p>
+    <div class="why"><b>为什么与你有关：</b>这份实地验证给星桥计划和任何青少年心理健康 AI 提供了<b>可照搬的安全边界设计</b>：① 默认 100% 敏感的自伤/自杀识别 → 强制转人工，这是不可谈判的红线；② 把「AI 输出分级（直出 / 需复核 / 不可用）」做成产品指标而不是事后补救；③ 文化适配不是翻译问题，是信任问题。三者都应写进你们的产品需求文档。注意：这是预印本，未经同行评审，且为小样本场景模拟而非真实患者结局。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.64898/2026.09.03.26362158" target="_blank" rel="noopener">用语义参照片为作答者打分：识别跨问卷高负担、却更不容易获得照护的人群</a></h3>
+    <div class="src"><span class="tag pre">medRxiv 预印本 · 未经同行评审</span>psychiatry and clinical psychology · 2026-09-07</div>
+    <p class="abs">现有跨量表方法从作答反推结构，无法解释含义、也无法给具体的人打分。作者仅凭<b>已发表的问题文本</b>，用语言模型把 50 份问卷的 577 道题归入若干可解释成分，成分在任何队列作答之前就已固定；随后把任意量表组映射到这些成分，按作答者的位置异常度打分。在 All of Us 的 22,332 名参与者上，识别出一组跨多份问卷同时高负担的人；在未参与打分的健康记录与就医可及性调查中，<b>这组人确实更不容易获得照护</b>，且这一差异无法用「更痛苦」解释。</p>
+    <div class="why"><b>为什么与你有关：</b>对孤独症量表 AI 平台来说，这几乎是一份方法论范本：<b>「量表无关」的通用评分为你解决了多量表拼接后无法比较的核心难题</b>，而且每个分数都能追溯到具体是哪些题目贡献的（天然可解释，契合医疗场景）。更关键的是它证明了一件事——量表分数的真正价值可能不在诊断，而在<b>预测谁能真正走到照护环节</b>。这给平台的差异化定位（不做第 N 个筛查工具，而做「筛查—转介—可及性」闭环）提供了论文级支撑。预印本，需等同行评审后再大范围引用。</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>速览</h2>
+  <ul class="scan">
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42726228/" target="_blank" rel="noopener">儿科胸片气管插管定位两阶段深度学习流水线（Pediatr Radiol, 09-11）</a><span>Cincinnati 儿童医院 1000 张胸片，检测 AUROC 0.994；插管尖端定位 MAE 6.59 mm，而医师间变异仅 2.01 mm——检测已超人，定位仍不如人。加入分类阶段后假阳性分割由 17 降到 3，级联设计值得借鉴。</span></li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42721880/" target="_blank" rel="noopener">可解释机器学习早期预测儿科急诊入院（J Pediatr Nurs, 09-10）</a><span>3427 次 0–17 岁急诊就诊，仅用护理评估常规变量，随机森林 AUC 0.720、校准良好（Brier 0.047），显著优于逻辑回归。说明「分诊台能拿到的信息」本身就够建模，无需等化验结果。</span></li>
+    <li><a href="https://doi.org/10.64898/2026.09.08.26361653" target="_blank" rel="noopener">超越就医利用：全儿童、多部门儿科风险分层（medRxiv，未经同行评审）</a><span>纳入 99,564 名 0–20 岁 Medicaid 儿童，整合健康、教育、社会与少年司法数据分层。被判为中高需求的儿童中，约 24% 与 20% 被保险方划为低风险——非临床变量的增量价值被量化。</span></li>
+    <li><a href="https://www.ithome.com/1/001/091.htm" target="_blank" rel="noopener">OpenAI 将 GPT-Live-1 引入 API，支持全双工语音、打断处理与工具调用（09-11 08:28 北京时间）</a><span>语音陪伴类应用的基础设施升级：可打断、可并行工具调用，直接降低「AI 陪聊伙伴」的交互延迟门槛。对小雪宝这类陪伴型产品是明确的可用性利好，但需评估数据出境与儿童隐私合规。</span></li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42727068/" target="_blank" rel="noopener">中国医师生成式 AI 使用、感知有用性/风险与职业倦怠（J Med Internet Res, 09-11）</a><span>混合方法研究中国医生群体的生成式 AI 使用与倦怠、成就感关系。与你「医师转型 AI」的叙事直接相关，可作为视频号讲「医生为什么该学 AI、又该警惕什么」的本土数据支撑。</span></li>
+  </ul>
+</div>
+
+<div class="note">
+  <b>今日信号说明：</b>本期主检索命中 284 条，三组定向检索（儿科 179 / 白血病·儿童肿瘤 13 / 孤独症 42）合计新增候选 67 条，已与最近四期简报做 PMID + DOI 去重，6 条主卡均为首次出现。血液肿瘤方向本期仅 13 命中，但质量不错（单细胞拉曼 B-ALL、儿科 EBV-HLH 两条入选）；儿童 ALL/AML 的强证据仍稀缺，建议把「儿童 ALL/AML + 可解释 ML + MRD」设为 30 天常设检索线。本期未硬凑，无强命中的方向留空。
+</div>
+
+<div class="action">
+  <h2>今日行动建议</h2>
+  <ol>
+    <li><b>星桥计划 · 把安全红线写进 PRD：</b>直接采用 LUMANA 的三分法（直出 / 需复核 / 不可用）+「自伤自杀披露 100% 转人工」，并把 PaiCoach 的 68.6% / 31.4% 人机分工比例设为家长端内容生产的质检基线——先定指标，再调模型。</li>
+    <li><b>量表平台 · 试跑语义参照片思路：</b>把现有孤独症量表（ABC、CARS、SRS 等）题目文本投到语义成分框架上，看能否做出一个「跨量表通用负担分」，并用可及性/转介数据验证。这是平台最难被抄的一层，且天然可解释。</li>
+    <li><b>小雪宝 · 补一次血液方向的外部验证：</b>EBV-HLH 那篇是典型单中心儿科模型（AUC 0.895、无外部验证）。把「多中心验证 + 中文交互界面」做成可复用的轻量方案，既是一篇能发的论文，也是能演示的产品——比再训一个新模型性价比高得多。</li>
+  </ol>
+</div>
+
+<footer>
+  数据来源：AI HOT（医疗行业资讯）· PubMed / E-utilities（同行评审文献）· medRxiv（预印本）。<br>
+  标注「未经同行评审」的条目为预印本，结论尚未经过同行评议，不得作为临床决策依据引用。<br>
+  本简报内容仅供参考，不构成医疗建议。© 2026 AI新青年 · 由 WorkBuddy 自动生成。
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-09-06</title>
+<style>
+:root{
+  --bg:#f6f8f9; --card:#ffffff; --ink:#12232b; --ink2:#43565f; --ink3:#6b818c;
+  --line:#e2eaee; --brand:#0d9488; --brand-soft:#e6f5f3; --brand-ink:#0b6f66;
+  --warn:#b45309; --warn-soft:#fef3c7; --chip:#eef3f5; --shadow:0 1px 3px rgba(16,40,50,.06),0 8px 24px rgba(16,40,50,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0d1519; --card:#142026; --ink:#e8f1f4; --ink2:#b3c6cd; --ink3:#8ba3ac;
+    --line:#22343c; --brand:#2dd4bf; --brand-soft:#10312e; --brand-ink:#7fe9dc;
+    --warn:#fbbf24; --warn-soft:#33280c; --chip:#1a2b32; --shadow:0 1px 3px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.7; padding:28px 16px 56px; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:820px;margin:0 auto}
+a{color:var(--brand);text-decoration:none;border-bottom:1px solid transparent}
+a:hover{border-bottom-color:var(--brand)}
+header{
+  background:var(--card); border:1px solid var(--line); border-radius:12px;
+  padding:26px 26px 22px; box-shadow:var(--shadow); margin-bottom:20px;
+  border-top:4px solid var(--brand);
+}
+.eyebrow{font-size:12px;letter-spacing:.14em;color:var(--brand);font-weight:700;margin-bottom:8px}
+h1{font-size:25px;line-height:1.35;letter-spacing:-.01em;margin-bottom:14px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chip{
+  font-size:12px;background:var(--chip);color:var(--ink2);
+  padding:4px 10px;border-radius:12px;border:1px solid var(--line);
+}
+.chip.b{background:var(--brand-soft);color:var(--brand-ink);border-color:transparent;font-weight:600}
+.persona{
+  background:var(--brand-soft); border-radius:12px; padding:13px 15px;
+  font-size:13.5px; color:var(--brand-ink); border-left:3px solid var(--brand);
+}
+.persona b{font-weight:700}
+.srcnote{font-size:12.5px;color:var(--ink3);margin-top:12px}
+h2{
+  font-size:15px; margin:28px 0 13px; color:var(--ink2);
+  display:flex;align-items:center;gap:9px; letter-spacing:.02em;
+}
+h2::before{content:"";width:3px;height:15px;background:var(--brand);border-radius:2px;display:inline-block}
+h2 .n{font-size:12px;color:var(--ink3);font-weight:400}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:12px;
+  padding:19px 20px; margin-bottom:13px; box-shadow:var(--shadow);
+}
+.card h3{font-size:16.5px;line-height:1.5;margin-bottom:9px;font-weight:650}
+.card h3 a{color:var(--ink);border-bottom:1px solid var(--line)}
+.card h3 a:hover{color:var(--brand);border-bottom-color:var(--brand)}
+.srcbar{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:11px}
+.tag{font-size:11.5px;padding:3px 9px;border-radius:11px;background:var(--chip);color:var(--ink2)}
+.tag.j{background:var(--brand-soft);color:var(--brand-ink);font-weight:600}
+.tag.pre{background:var(--warn-soft);color:var(--warn);font-weight:600}
+.tag.d{color:var(--ink3)}
+.abs{font-size:14.2px;color:var(--ink2);margin-bottom:13px}
+.why{
+  background:var(--brand-soft); border-radius:12px; padding:12px 14px;
+  font-size:13.4px; color:var(--brand-ink); border-left:3px solid var(--brand);
+}
+.why b{font-weight:700}
+.quick{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:17px 20px;box-shadow:var(--shadow)}
+.quick ul{list-style:none}
+.quick li{font-size:13.6px;color:var(--ink2);padding:9px 0;border-bottom:1px solid var(--line)}
+.quick li:last-child{border-bottom:none;padding-bottom:0}
+.quick li:first-child{padding-top:0}
+.quick .t{color:var(--ink);font-weight:600}
+.act{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;padding:19px 22px;
+  box-shadow:var(--shadow);margin-top:26px;border-left:4px solid var(--brand);
+}
+.act h2{margin-top:0}
+.act ol{margin-left:18px}
+.act li{font-size:14px;color:var(--ink2);margin-bottom:9px}
+.act li:last-child{margin-bottom:0}
+.act b{color:var(--ink)}
+.note{
+  font-size:13px;color:var(--ink3);background:var(--chip);border-radius:12px;
+  padding:13px 16px;margin-top:16px;border:1px dashed var(--line);
+}
+footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--ink3)}
+footer p{margin-bottom:5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">AI新青年 · MEDICAL AI FOCUS</div>
+  <h1>医疗 AI 聚焦简报</h1>
+  <div class="meta">
+    <span class="chip b">2026-09-06（周日）</span>
+    <span class="chip">窗口 08-30 → 09-06</span>
+    <span class="chip">精选 6 条 · 速览 5 条</span>
+  </div>
+  <div class="persona">
+    <b>主理人画像</b>：李帅帅（Alan）· 三甲儿科规培医师转型 AI · 「AI新青年」视频号主理人<br>
+    <b>在手项目</b>：小雪宝 LeukemiaPal（白血病患儿陪伴）· 星桥计划（孤独症数字疗愈）· 孤独症量表 AI 平台 · 本地 AI 内容团队 · 一人公司
+  </div>
+  <div class="srcnote">数据来源：医疗行业资讯源 · PubMed 同行评审文献 · medRxiv 预印本。本期主题覆盖面：<b>孤独症/发育筛查信号密集</b>，儿科肿瘤影像与血液肿瘤各有一条硬核命中。</div>
+</header>
+
+<h2>医疗模型与临床落地<span class="n">／ 2 条</span></h2>
+
+<div class="card">
+  <h3><a href="https://www.ithome.com/0/998/823.htm" target="_blank" rel="noopener">解放军总医院第六医学中心完成全球首例 AI 超声机器人引导下先天性心脏病封堵术</a></h3>
+  <div class="srcbar">
+    <span class="tag j">解放军总医院第六医学中心</span>
+    <span class="tag d">2026-09-05 21:11（北京时间）</span>
+  </div>
+  <div class="abs">AI 超声机器人系统完成对先天性心脏病封堵术的实时引导，为该术式的全球首例机器人辅助案例。先心病封堵传统上高度依赖术者手眼协调与实时影像判读，机器人引导意味着影像识别 + 器械路径控制开始进入儿科结构性心脏病介入场景。</div>
+  <div class="why"><b>为什么与你有关</b>：这是「AI 不只在读片、而是进入操作环节」的儿科落地样本。你的受众是青少年/家长，先心病是家长高关注病种——可以直接做一期「AI 机器人给小孩做心脏手术，医生去哪了」的科普，比泛泛讲 AI 诊断更有画面感，也天然带出「AI 是医生的增强而非替代」这个你一直想传递的立场。</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42648875/" target="_blank" rel="noopener">Improved Deep Learning Segmentation of Pediatric Diffuse Midline Gliomas After Treatment</a></h3>
+  <div class="srcbar">
+    <span class="tag j">AJNR Am J Neuroradiol</span>
+    <span class="tag d">2026-08-26 · 在线预发表</span>
+    <span class="tag">PMID 42648875</span>
+  </div>
+  <div class="abs">多中心回顾性研究，1–30 岁弥漫性中线胶质瘤（DMG）患者，用 140 例机构内治疗前后专家标注 + 261 例 BraTS-PEDs 2024 训练 nnU-Net 模型「DMGtracker」，在 PNOC007 前瞻性试验的 88 例上外部验证。关键做法是把<b>治疗后</b>扫描纳入训练：全肿瘤分割 DSC 0.90 vs 冠军模型 0.81，体积差异 9.6% vs 16.8%，治疗后扫描优势最大（DSC 0.90 vs 0.80，p&lt;0.001）。</div>
+  <div class="why"><b>为什么与你有关</b>：儿童脑肿瘤正是小雪宝 LeukemiaPal 所在的血液肿瘤邻域，这篇给出了一个可复用的工程结论——<b>只拿治疗前数据训练的分割模型，在随访期会系统性退化</b>。你做任何纵向影像/症状追踪功能时，训练分布必须覆盖「治疗后」状态，否则疗效评估会失真。nnU-Net 作为基线也是可本地部署的开源方案。</div>
+</div>
+
+<h2>前沿研究 · 儿科与血液肿瘤<span class="n">／ 1 条</span></h2>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42675142/" target="_blank" rel="noopener">Association of sarcopenia with treatment tolerance in older adults with acute myeloid leukemia using artificial intelligence computed tomography-segmentation and a geriatric assessment</a></h3>
+  <div class="srcbar">
+    <span class="tag j">Leukemia</span>
+    <span class="tag d">2026-08-31 · 在线预发表</span>
+    <span class="tag">PMID 42675142</span>
+  </div>
+  <div class="abs">芝加哥大学团队研究：用 AI 的 CT 身体成分自动分割量化肌少症，结合老年综合评估（GA），分析其与老年 AML 患者治疗耐受性的关联。属于「机会性筛查」路径——不额外做检查，直接把常规诊疗中已有的 CT 影像转成可量化的营养/肌肉储备指标。（该文在线预发表，公开题录未附结构化摘要，此处仅据标题与作者信息陈述研究设计，未引述具体数值。）</div>
+  <div class="why"><b>为什么与你有关</b>：AML 是小雪宝的核心病种。这篇提示一条低成本的产品思路——<b>患儿已有的常规影像/检验数据里藏着可量化的耐受性信号</b>，不必新增采集负担。对小雪宝的「陪伴」定位来说，把「治疗耐受性风险」转成家长能看懂的日常照护提示（营养、活动量、感染预警），是从情绪陪伴走向临床价值的自然延伸。</div>
+</div>
+
+<h2>前沿研究 · 孤独症与数字疗愈<span class="n">／ 2 条</span></h2>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42684313/" target="_blank" rel="noopener">Feasibility and Acceptability of an AI-Driven Conversational Platform for Structured Autism History Taking and Referral Support（ASIST）</a></h3>
+  <div class="srcbar">
+    <span class="tag j">JMIR Formative Research</span>
+    <span class="tag d">2026-08-27</span>
+    <span class="tag">PMID 42684313</span>
+  </div>
+  <div class="abs">混合方法概念验证：语音 AI 聊天机器人 ASIST 向成人施测 AQ-10（10 项自闭症谱系商数）与 2 分钟孤独症检测量表，完成结构化病史采集并生成转诊材料。12 名成人完成试点，报告低认知负荷、信任感与公平感良好；开放文本反馈指出需改进<b>语速节奏、语音清晰度、回答格式</b>。11 名患者与公众参与贡献者参与了开发迭代。</div>
+  <div class="why"><b>为什么与你有关</b>：这几乎是<b>孤独症量表 AI 平台的教科书级参照架构</b>——语音对话 + 标准化量表 + 自动生成转诊材料。三件事可以直接抄：① 量表不是被 AI 取代而是被 AI「施测」，合规风险显著降低；② 用户抱怨集中在节奏/清晰度/格式而非准确性，说明语音陪伴类产品的瓶颈是<b>交互质感</b>不是模型能力；③ PPI（患者与公众参与）前置开发，是这类产品拿监管与家长信任的标配动作。</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42694617/" target="_blank" rel="noopener">Artificial-intelligence-based developmental screening for pre-school children (ages 3–6): a scoping review of deployed tools, clinical validity, equity, and implementation</a></h3>
+  <div class="srcbar">
+    <span class="tag j">Frontiers in Psychology</span>
+    <span class="tag d">2026-08-20</span>
+    <span class="tag">PMID 42694617</span>
+  </div>
+  <div class="abs">纳入 16 项 AI 发育筛查工具的一手验证研究，覆盖 8 类模态（眼动、问卷+视频多模态、计算机视觉家庭/诊室视频、平板数字表型、语音声学 ML、EHR 风险预测、问卷 ML、可穿戴）与 8 个国家。灵敏度约 75–99.2%，特异度 78.9–95.5%。目前仅 Cognoa Canvas Dx（2021）与 EarliPoint Evaluation（2023）获 FDA 授权。关键结论：<b>仅一款工具在性别、种族、族裔上表现稳定，亚组分层验证近乎缺失；无 CE 标记的孤独症专用筛查设备</b>；分析准确率与基层部署之间存在巨大鸿沟。</div>
+  <div class="why"><b>为什么与你有关</b>：这是你做量表平台选型时最该读的一篇。三个可直接落地的判断：① 模态选择上，眼动与语音/声学是当前证据最厚、也最适合本地化采集的两条路；② <b>「公平性盲区」是明确的空白位</b>——中国儿童人群的亚组验证几乎空白，这是你做本土化产品的差异化切口，也是一个极好的内容选题；③ FDA 授权路径已经跑通 2 款，说明监管不是不可逾越，但要求的是亚组数据而非整体准确率。</div>
+</div>
+
+<h2>行业与监管动态<span class="n">／ 1 条</span></h2>
+
+<div class="card">
+  <h3><a href="https://www.ithome.com/0/998/771.htm" target="_blank" rel="noopener">《美国医学会杂志》论文称 AI 在认知性医疗中可超越医生，引发行业反对</a></h3>
+  <div class="srcbar">
+    <span class="tag j">JAMA（经 IT之家报道）</span>
+    <span class="tag d">2026-09-05 16:08（北京时间）</span>
+  </div>
+  <div class="abs">JAMA 刊发论文提出 AI 在认知性医疗任务中表现可超越医生，引发行业团体反对与争议。争议的焦点通常不在单次 benchmark 的胜负，而在试验设计是否贴近真实临床：病例是否被筛选、是否有多解与信息不全、是否允许医生调用常规资源、以及谁来承担决策责任。</div>
+  <div class="why"><b>为什么与你有关</b>：这类新闻是流量高地，但也最容易翻车。你具备临床背景 + AI 双视角，正好可以做一期「拆论文」内容：<b>把「AI 超越医生」还原成「在什么任务、什么设定、什么人群下超越」</b>，指出 benchmark 与真实诊室的距离。这比站队更有辨识度，也直接服务于「AI新青年」在家长群体中建立理性权威的定位。</div>
+</div>
+
+<h2>速览<span class="n">／ 5 条</span></h2>
+<div class="quick">
+  <ul>
+    <li><span class="t">孤独症表型的四维连续谱与三个亚型（预印本）</span> — 用变分自编码器（VAE）分析 SPARK 队列 36,710 人的病史与量表数据（背景史、SCO、RBS-R），VAE 重构精度约为因子分析的 4 倍、高斯混合模型的 8 倍，稳定识别出 4 个潜变量维度，并在该 4 维空间中划分出 <b>3 个相互重叠的孤独症亚型</b>，可用雷达图做个体画像。<a href="https://doi.org/10.64898/2026.08.27.26361561" target="_blank" rel="noopener">doi.org/10.64898/2026.08.27.26361561</a> · medRxiv 2026-08-31 · <b>未经同行评审</b></li>
+    <li><span class="t">NeuroCypher ASD：知识图谱 + 表格 ML 做幼儿孤独症筛查</span> — 用问卷与人口学特征估风险，叠加知识图谱支持病例比对、模式探索与自然语言查询，配 SHAP 可解释性分析与异常病例检出模块，面向学校场景。<a href="https://pubmed.ncbi.nlm.nih.gov/42666557/" target="_blank" rel="noopener">PMID 42666557</a> · J Healthc Inform Res 2026-09</li>
+    <li><span class="t">HARMONY 研究：ML 个体化预测成人 AML 首次完全缓解后不做移植的结局</span> — 欧洲多中心大数据联盟成果，针对 CR1 后未行异基因移植巩固这一决策灰区做个体化预后建模。<a href="https://pubmed.ncbi.nlm.nih.gov/42670491/" target="_blank" rel="noopener">PMID 42670491</a> · Hemasphere 2026-08-30</li>
+    <li><span class="t">编码数据漏掉一半的酒精/药物/自伤急诊就诊（预印本）</span> — 两阶段诊断准确性研究（n=2,256 验证 + 105,096 例年就诊），本地部署 LLM 平衡准确率在药物（0.959 vs 0.791）与自伤（0.982 vs 0.908）上优于临床医生复核；编码仅记录 12.1% 真实发生率中的 6.0%。提示<b>本地部署 LLM 做结构化病历补全</b>是刚需。<a href="https://doi.org/10.64898/2026.08.26.26361443" target="_blank" rel="noopener">doi.org/10.64898/2026.08.26.26361443</a> · medRxiv 2026-08-31 · <b>未经同行评审</b></li>
+    <li><span class="t">开源：小米 Xiaomi-TabLDM 表格结构化数据大模型</span> — 面向表格数据的结构化建模，在 OpenML-CTR23 登顶。临床量表、EHR 表格正是典型的中小样本表格场景，可作为量表平台建模的开源基线候选。<a href="https://www.ithome.com/0/998/683.htm" target="_blank" rel="noopener">IT之家</a> · 2026-09-05</li>
+  </ul>
+</div>
+
+<div class="act">
+  <h2>今日行动建议</h2>
+  <ol>
+    <li><b>把 ASIST 的架构抄进量表平台原型。</b> 语音对话施测 AQ-10 / 2 分钟量表 → 结构化病史 → 自动生成转诊材料，这条链路与你的孤独症量表 AI 平台高度同构。先做最小版本：单量表 + 语音输入 + 导出结构化报告，跑通再谈模型。</li>
+    <li><b>把「公平性盲区」做成内容选题与产品切口。</b> scoping review 已证实中国儿童亚组验证近乎空白。可出一期「为什么美国的孤独症 AI 筛查不能直接拿到中国用」——既是差异化定位，也是在为量表平台招本土合作方。</li>
+    <li><b>小雪宝补一条「治疗耐受性」线索。</b> 参考 Leukemia 的 AI CT 身体成分思路，把患儿已有检查数据转成家长可理解的照护提示（营养、活动、感染预警），让陪伴产品从情绪价值向临床价值延伸一步。</li>
+  </ol>
+</div>
+
+<div class="note">
+  <b>今日信号说明</b>：本期孤独症方向信号密集（3 篇同行评审 + 1 篇预印本），儿科肿瘤影像与血液肿瘤各 1 条硬核命中，整体质量优于前几期。为保持跨期信息增量，已主动跳过此前报道过的条目（华为云×瑞金 RuiPath 2.0、英国 AI 转录警示、ChatGPT×Epic 病历接入、蚂蚁 Ling-3.0-flash-Sante、瑞金 AML FLT3-ITD、medRxiv SPROUT 儿科生长障碍多智能体）。血液肿瘤方向本期为老年人群研究，儿科白血病专属信号仍偏弱——建议将检索窗口扩至 30 天并单开「儿童白血病 × 机器学习」定向检索。
+</div>
+
+<footer>
+  <p>数据来源：医疗行业资讯源（AI HOT）· PubMed（美国国立卫生研究院 NCBI E-utilities）· medRxiv 预印本平台</p>
+  <p>标注「预印本 / 未经同行评审」的条目尚未经过同行评审，结论可能被修订或撤稿，<b>不构成临床或诊疗建议</b>，请勿据此做出医疗决策。</p>
+  <p>本简报为「AI新青年」内部研究性内容整理，文献版权归原作者与出版方所有，链接均指向原文。</p>
+  <p>生成时间：2026-09-06 08:30（北京时间）· 检索窗口：2026-08-30 至 2026-09-06</p>
+</footer>
+
+</div>
+</body>
+</html>

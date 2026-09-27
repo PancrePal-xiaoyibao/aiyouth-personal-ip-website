@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-09-11</title>
+<style>
+:root{
+  --bg:#f6f8f8; --card:#ffffff; --text:#12211f; --muted:#5b6b69; --line:#dfe7e6;
+  --brand:#0d9488; --brand-soft:#e6f4f2; --brand-soft2:#f0f8f7;
+  --accent:#0f766e; --warn:#b45309; --warn-soft:#fef3c7;
+  --chip:#eaf2f1; --shadow:0 1px 3px rgba(13,148,136,.08),0 8px 24px rgba(16,40,38,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0c1514; --card:#132020; --text:#e6efee; --muted:#93a5a3; --line:#243635;
+    --brand:#2dd4bf; --brand-soft:#12302c; --brand-soft2:#0f2624;
+    --accent:#5eead4; --warn:#fbbf24; --warn-soft:#33280c;
+    --chip:#17302d; --shadow:0 1px 3px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35);
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:28px 16px 56px; background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.72; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:860px;margin:0 auto}
+header.hero{
+  background:linear-gradient(135deg,var(--brand-soft) 0%,var(--brand-soft2) 100%);
+  border:1px solid var(--line); border-radius:12px; padding:26px 24px; box-shadow:var(--shadow);
+}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);font-weight:700;margin:0 0 8px}
+h1{font-size:26px;line-height:1.35;margin:0 0 10px;letter-spacing:-.01em}
+.persona{font-size:14px;color:var(--muted);margin:0 0 16px}
+.persona b{color:var(--text)}
+.metarow{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chip{
+  display:inline-block;background:var(--chip);border:1px solid var(--line);color:var(--text);
+  font-size:12.5px;padding:4px 11px;border-radius:999px;
+}
+.chip.brand{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600}
+section{margin-top:32px}
+h2{
+  font-size:16px;margin:0 0 14px;padding-left:12px;border-left:4px solid var(--brand);
+  letter-spacing:.02em;
+}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);
+}
+.card h3{font-size:17px;margin:0 0 8px;line-height:1.45}
+.card h3 a{color:var(--text);text-decoration:none;border-bottom:1.5px solid var(--brand)}
+.card h3 a:hover{color:var(--brand)}
+.src{font-size:12.5px;color:var(--muted);margin:0 0 10px}
+.src .dot{color:var(--line);margin:0 6px}
+.tag{
+  display:inline-block;font-size:11.5px;padding:2px 8px;border-radius:6px;
+  background:var(--brand-soft);color:var(--accent);font-weight:600;margin-left:6px;vertical-align:1px;
+}
+.tag.pre{background:var(--warn-soft);color:var(--warn)}
+.abs{font-size:14.5px;margin:0 0 12px;color:var(--text)}
+.why{
+  background:var(--brand-soft2);border-left:3px solid var(--brand);border-radius:0 8px 8px 0;
+  padding:10px 14px;font-size:14px;margin:0;
+}
+.why b{color:var(--accent)}
+ul.quick{list-style:none;padding:0;margin:0}
+ul.quick li{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-bottom:10px;font-size:14px;box-shadow:var(--shadow);
+}
+ul.quick li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1.5px solid var(--brand)}
+ul.quick li a:hover{color:var(--brand)}
+ul.quick li p{margin:6px 0 0;font-size:13.5px;color:var(--muted)}
+.actions{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:12px;padding:18px 22px;box-shadow:var(--shadow)}
+ol.act{margin:0;padding-left:20px}
+ol.act li{margin-bottom:10px;font-size:14.5px}
+ol.act li:last-child{margin-bottom:0}
+ol.act b{color:var(--accent)}
+.note{font-size:13.5px;color:var(--muted);background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:14px 18px;margin-top:26px}
+footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+footer p{margin:4px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <p class="eyebrow">AI 新青年 · 医疗 AI 聚焦</p>
+  <h1>医疗 AI 聚焦简报</h1>
+  <p class="persona">主理人 <b>Alan（李帅帅）</b> · 三甲儿科规培医师转型 AI ｜ 在手项目：<b>小雪宝 LeukemiaPal</b>（白血病患儿陪伴）、<b>星桥计划</b>（孤独症数字疗愈）、<b>孤独症量表 AI 平台</b>、本地 AI 内容团队、一人公司</p>
+  <div class="metarow">
+    <span class="chip brand">2026-09-11</span>
+    <span class="chip">窗口 09-04 → 09-11</span>
+    <span class="chip">精选 6 条 + 5 条速览</span>
+    <span class="chip">儿科 3 · 孤独症/心理 2 · 治理 1</span>
+    <span class="chip">来源：行业资讯 / 同行评审期刊 / 预印本</span>
+  </div>
+</header>
+
+<section>
+  <h2>医疗模型与临床落地</h2>
+
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2609.09140" target="_blank" rel="noopener">NOAH：学习完整患者病程的纵向多模态时间感知生成模型</a></h3>
+    <p class="src">arXiv 预印本 <span class="dot">·</span> 2026-09-08 <span class="tag pre">未经同行评审</span></p>
+    <p class="abs">面向电子病历的时序生成基础模型。现有纵向病历建模多为判别式、模态单一、被封闭词表限制，且难以预测未来状态。NOAH 是任务无关的<b>生成式 Transformer</b>，引入双向时间整合与变分隐空间来刻画患者状态的连续演化与临床轨迹的随机性，原生处理医学影像、时序/数值信号与分类编码。训练规模为 MIMIC 系列数据集上 <b>29.9 万患者、43.1 万次住院、5.59 亿条临床事件</b>。</p>
+    <p class="why"><b>为什么与你有关：</b>小雪宝要做的不是单轮问答，而是「患儿从确诊 → 化疗 → 出院 → 随访」的全程陪伴。NOAH 这类「把整个病程压缩成一个可预测隐状态」的路线，正是陪伴型 Agent 的底座思路：影像、检验、护理记录、家长自报症状多模态进同一个时间轴。注意它是 MIMIC（成人 ICU）训练，儿科外推需谨慎，但架构值得跟踪。</p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42720887/" target="_blank" rel="noopener">深度学习 + 注意力机制在儿童腹部平片上检测急性阑尾炎</a></h3>
+    <p class="src">Journal of Imaging Informatics in Medicine <span class="dot">·</span> 2026-09-10 <span class="dot">·</span> PMID 42720887</p>
+    <p class="abs">儿童阑尾炎临床诊断不确定、超声依赖操作者、CT 有辐射风险，而腹部平片虽便宜快速却敏感度低。研究回顾性收集 <b>162 例手术确诊患儿 + 206 例对照</b>的腹部平片，手工裁剪 + 非锐化掩蔽预处理后，微调五种 ImageNet 预训练架构（五折分层交叉验证）。EfficientNet-B0 基线聚合 AUC <b>0.804</b>；手工裁剪贡献最大（AUC 0.700 → 0.822），叠加 SE 注意力后达 <b>0.824</b>，优于 CA/CBAM/PCCA。Grad-CAM 显示模型在相当比例病例中确实聚焦右下腹与盆腔。</p>
+    <p class="why"><b>为什么与你有关：</b>儿科影像 AI 少见的「低成本模态 + 弱信号 + 可解释验证」完整闭环——0.82 的 AUC 离临床单独使用还很远，但作为急诊<b>分诊筛查</b>（先排掉低风险、再决定要不要超声/CT）定位清晰。这条也提醒：儿科场景下「减少辐射 / 减少有创检查」本身就是产品价值主张，比单纯拼准确率更容易被临床接受。</p>
+  </div>
+</section>
+
+<section>
+  <h2>前沿研究 · 论文</h2>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.1101/2025.11.04.25339472" target="_blank" rel="noopener">儿童急性髓系白血病（pAML）的克隆进化及其在复发中的作用</a></h3>
+    <p class="src">medRxiv 预印本 · St. Jude 儿童研究医院 <span class="dot">·</span> 2026-09-04 <span class="tag pre">未经同行评审</span></p>
+    <p class="abs">复发是 pAML 死亡的首位原因，但驱动复发的遗传改变一直未厘清。研究对 <b>41 例配对复发样本的 pAML 病例</b>做全基因组 + 靶向捕获测序：复发时突变负荷升高，但治疗相关突变特征罕见；复发性富集突变见于 FLT3、WT1、TP53，而<b>注定复发的亚克隆常常只携带非致病或非编码变异</b>。8 例患者纵向深度测序（约 5000×）联合系列 WGS 监测显示，诱导治疗后主要克隆快速耗竭，亚克隆化疗敏感性各异，复发特异突变出现很晚——提示复发主要机制是<b>既有克隆被选择</b>，而非治疗新诱发突变。</p>
+    <p class="why"><b>为什么与你有关：</b>近七期简报里儿童白血病一直缺强命中，今天补上了。对<b>小雪宝 LeukemiaPal</b> 的知识底座有直接含义：家长最常问的是「缓解了为什么还会复发」，而答案在分子层面是「治疗前就存在的稀有亚克隆被选择」——这不是治疗失败，是疾病生物学。把这条写进患教内容，能显著缓解家长的自责与对方案的怀疑。另注：靠常规致病突变 panel 抓不到这些亚克隆，也解释了为什么「MRD 阴性后仍复发」。</p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42655610/" target="_blank" rel="noopener">眼动 + 时间 Transformer 模型改善跨年龄段孤独症识别</a></h3>
+    <p class="src">Sensors (Basel) <span class="dot">·</span> 2026-08-21 <span class="dot">·</span> PMID 42655610</p>
+    <p class="abs">注视（gaze）行为随年龄变化，是眼动筛查泛化的核心难题。作者用<b>时序 Transformer</b> 把注视行为建模为结构化时间过程，配合基于熵的变异性建模与时间一致性约束。在公开眼动语料（ASD 与典型发育、跨年龄组）上做基线分类、类别平衡、跨年龄、消融、跨数据集迁移五组实验：域内 <b>AUC 0.91 / F1 0.81</b>，跨数据集 <b>AUC 0.85 / F1 0.74</b>。消融显示熵正则与时间一致性机制对稳定性贡献最大。</p>
+    <p class="why"><b>为什么与你有关：</b><b>星桥计划</b>与<b>量表 AI 平台</b>都在找「客观、低成本、可规模化」的行为标志物。这篇的价值不在 0.91，而在<b>跨年龄与跨数据集的衰减幅度（AUC 0.91 → 0.85）被量化出来了</b>——这是产品化必须提前回答的问题：你在一批 4 岁孩子上调好的模型，换到 8 岁、换一台眼动仪还剩多少。建议把「跨年龄/跨设备泛化衰减」列为星桥技术指标的第一条。</p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42713780/" target="_blank" rel="noopener">在 PICU 床旁构建临床 AI：认识「临床医生-构建者」（Clinician-Builder）</a></h3>
+    <p class="src">Critical Care Explorations <span class="dot">·</span> 2026-09-09 <span class="dot">·</span> PMID 42713780</p>
+    <p class="abs">重症监护里最有价值的问题——整合床旁碎片数据、显化资深医生的隐性经验、生成面向家属的解释、决策支持——都太专门、太局部、太嵌在未被编码的实践中，无法由科室外部的人定义清楚；其市场规模也往往小到商业公司不会投入。文章主张承认一个缺失的转化角色：<b>clinician-builder</b>，即发现工作流断点并自己动手做原型的一线临床医生，正如当年 clinician-scientist 对分子医学的意义。同时强调原型不等于产品，需与机构 AI 中心共同确定预期用途、证据与治理。作者呼吁儿科重症不应是最后才被 AI 覆盖的场景，而应成为最早被检验、并为其他专科提供蓝本的战场。</p>
+    <p class="why"><b>为什么与你有关：</b>这篇几乎是给你写的定位宣言。你没有走「等厂商做儿科版」的路，而是自己做小雪宝、星桥、量表平台——这就是 clinician-builder。文章里那句「<b>原型不是产品</b>」值得贴在墙上：从 demo 走向真正被科室使用时，需要补的是预期用途界定、证据与治理三件事。做本地 AI 内容团队与对外培训时，这也是一个极好的叙事锚点：儿科不是 AI 的末梢，是可以先跑通范式的地方。</p>
+  </div>
+</section>
+
+<section>
+  <h2>行业与监管动态</h2>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.64898/2026.09.05.26362340" target="_blank" rel="noopener">临床 AI 工具伦理问题评估评分量表（Scoring Rubric）</a></h3>
+    <p class="src">medRxiv 预印本 · 匹兹堡大学 <span class="dot">·</span> 2026-09-08 <span class="tag pre">未经同行评审</span></p>
+    <p class="abs">由临床专家与 AI 专家组成的多学科团队开发并测试了一套可复用的评分量表，用于从伦理角度评估临床场景中的 AI 工具（部署前后皆适用）。量表含 <b>5 个内容域</b>——评估人群（evaluation population）、可及性（accessibility）、临床偏倚（clinical bias）、用户控制（user control）、监测与更新（monitoring and updates）——以及 <b>4 个评分类别</b>。团队将其应用于临床决策、临床文档、临床影像分析三类 AI 工具，且<b>仅依赖公开信息</b>完成评估，以模拟真实临床环境下的可得条件。</p>
+    <p class="why"><b>为什么与你有关：</b>这是<b>孤独症量表 AI 平台</b>可以直接改造的治理框架。你在做的是「用算法输出一个影响孩子的分数」，伦理风险天然更高；这套量表的五个域（尤其「评估人群」与「临床偏倚」）可以本土化后作为平台上线前的自检清单。更实际的用法：把它做成对外的<b>选型/验收服务</b>——帮医院评估采购的 AI 工具，正好是一人公司可交付的轻咨询产品。</p>
+  </div>
+</section>
+
+<section>
+  <h2>今日速览（5 条）</h2>
+  <ul class="quick">
+    <li><a href="https://doi.org/10.64898/2026.09.03.26362181" target="_blank" rel="noopener">LUMANA：文化适配的心理健康筛查 AI 系统在尼日利亚的现场验证</a><span class="tag pre">未经同行评审</span>
+      <p>medRxiv · 2026-09-07 · eHealth Africa。20 名利益相关者、8 个标准化场景、5 种评估工具，完成 136 次 AI 输出安全评估：<b>83%（113/136）可直接使用，17% 需人工复核，0% 判为不可接受</b>；82% 认为宗教与文化是信任的关键决定因素，<b>100% 同意自伤/自杀披露必须转人工</b>。启示：一线部署的瓶颈不是模型准确率，而是文化适配与人工接管边界。</p>
+    </li>
+    <li><a href="https://doi.org/10.64898/2026.09.07.26362459" target="_blank" rel="noopener">集成 SHAP 聚合与归因变异性：临床机器学习可解释性的稳定性检验</a><span class="tag pre">未经同行评审</span>
+      <p>medRxiv · 2026-09-08 · 密歇根州立大学。1857 例 COVID-19 住院患者、10 种算法、30 次重采样训练，按性能加权聚合 SHAP 并评估特征重要性与患者级归因的稳定性。要点：单次 SHAP 解释方差很大，做「可解释」卖点前应先报告归因稳定性。</p>
+    </li>
+    <li><a href="https://doi.org/10.64898/2026.09.03.26361431" target="_blank" rel="noopener">用 Flongle 流动槽将 CNS 肿瘤甲基化测序成本降低 10 倍</a><span class="tag pre">未经同行评审</span>
+      <p>medRxiv · 2026-09-08 · 特拉维夫大学。12 例<b>儿童</b> CNS 肿瘤样本（测序产量 17–330 Mbp 差异极大），MinION 约 1000 美元 → Flongle 约 100 美元，Sturgeon 与 nanoDx 分类器在显著性阈值以上仍保持<b>完全诊断准确</b>。儿科脑肿瘤精准诊断的可及性路径。</p>
+    </li>
+    <li><a href="https://arxiv.org/abs/2609.10296" target="_blank" rel="noopener">Brain2Semantics2Text：用语义瓶颈实现非侵入式语音解码</a><span class="tag pre">未经同行评审</span>
+      <p>arXiv · 2026-09-09。非侵入式神经信号 → 语义 → 文本的解码路线。与语音陪伴类产品的远期交互形态相关，目前仍属研究阶段，不建议近期产品化预期。</p>
+    </li>
+    <li><a href="https://the-decoder.com/chatbots-built-an-echo-chamber-of-one-and-now-psychiatry-has-to-decide-if-ai-psychosis-exists" target="_blank" rel="noopener">「AI 精神病」是否成立：精神病学界面临的新诊断难题，及 OpenAI 相关诉讼</a>
+      <p>行业资讯 · 2026-09-06 / 09-09。King's College London 等机构正研究聊天机器人相关妄想是否构成独立临床实体；同期有用户称 ChatGPT 诱发宗教妄想并起诉 OpenAI。对做陪伴型产品的你，这是必须提前写进风险条款与危机转人工策略的部分。</p>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>今日行动建议</h2>
+  <div class="actions">
+    <ol class="act">
+      <li><b>小雪宝 LeukemiaPal：</b>把 pAML 克隆进化这条（既有亚克隆被选择 → 复发）写成一条家长向患教卡片，主题定为「为什么缓解了还会复发」。这是家长最高频、也最容易被错误信息带偏的问题，做完可直接进内容库。</li>
+      <li><b>星桥计划 + 量表平台：</b>把「跨年龄 / 跨设备泛化衰减」列为硬指标，参考眼动 Transformer 那篇的做法（域内 AUC 0.91 → 跨数据集 0.85），为你手上的眼动或语音模型建一组同类对照实验；同时把临床 AI 伦理评分量表的 5 个内容域本土化为上线前自检清单。</li>
+      <li><b>一人公司 / 内容团队：</b>以「Clinician-Builder」为叙事锚点，产出一期「儿科医生为什么要自己做 AI」的内容（视频号 + 公众号）。文章里「原型不是产品，需补预期用途、证据、治理」这句可直接作为你的服务分层依据：原型交付 vs 合规交付。</li>
+    </ol>
+  </div>
+</section>
+
+<p class="note">
+  <b>今日信号说明：</b>本期主检索命中 336 条，另跑儿科定向（205 命中）、儿童肿瘤定向（10 命中）、孤独症定向（21 命中）三组补充检索。已与最近 4 期简报做过跨期去重（抽取已用 PMID 与 DOI 比对），6 条主卡均为首次出现。儿童血液肿瘤在连续多期空缺后<b>本期首次拿到儿科专属硬核证据</b>（St. Jude 的 pAML 克隆进化）；成人血液肿瘤方向本期无强命中，未硬凑。孤独症方向本期以「跨年龄泛化」方法学证据为主，而非新的诊断准确率突破。
+</p>
+
+<footer>
+  <p>数据来源：AI HOT 医疗资讯聚合（近 7 日）· PubMed / MEDLINE（E-utilities，近 7–14 日）· medRxiv 预印本（2026-09-04 → 2026-09-11）。</p>
+  <p>标注「未经同行评审」的条目为预印本，结论尚未经同行评议，不应作为临床决策依据。论文链接指向 PubMed 或 DOI 原文；新闻时间为北京时间。</p>
+  <p>© 2026 AI新青年 · 医疗 AI 聚焦简报 ｜ 仅供学习与研究交流，转载请注明出处。</p>
+</footer>
+
+</div>
+</body>
+</html>

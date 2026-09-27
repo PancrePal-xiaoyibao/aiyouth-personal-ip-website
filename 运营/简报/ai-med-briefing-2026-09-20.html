@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-09-20</title>
+<style>
+  :root{
+    --bg:#f4f7f7; --card:#ffffff; --txt:#1a2b2b; --sub:#5a6f6f; --line:#dfe9e9;
+    --accent:#0d9488; --accent-soft:rgba(13,148,136,.10); --tag:#e6f4f2; --tagtxt:#0b6e66;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#101a1a; --card:#182525; --txt:#e2eeee; --sub:#93a8a8; --line:#26403f;
+      --accent:#2dd4bf; --accent-soft:rgba(45,212,191,.10); --tag:#123632; --tagtxt:#5eead4;
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;background:var(--bg);color:var(--txt);line-height:1.7;padding:28px 16px 48px;}
+  .wrap{max-width:860px;margin:0 auto;}
+  .hero{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px 28px 22px;margin-bottom:18px;}
+  .brand{font-size:13px;letter-spacing:2px;color:var(--accent);font-weight:600;margin-bottom:8px;}
+  h1{font-size:26px;line-height:1.35;margin-bottom:10px;}
+  .persona{font-size:14px;color:var(--sub);margin-bottom:16px;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{background:var(--tag);color:var(--tagtxt);font-size:12.5px;padding:4px 12px;border-radius:999px;}
+  .section-title{font-size:19px;font-weight:700;margin:30px 4px 14px;display:flex;align-items:center;gap:10px;}
+  .section-title::before{content:"";width:4px;height:18px;background:var(--accent);border-radius:2px;display:inline-block;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:14px;}
+  .card h3{font-size:16.5px;line-height:1.55;margin-bottom:8px;}
+  .card h3 a{color:var(--txt);text-decoration:none;border-bottom:1.5px solid var(--accent);}
+  .card h3 a:hover{color:var(--accent);}
+  .meta{font-size:12.5px;color:var(--sub);margin-bottom:10px;display:flex;flex-wrap:wrap;gap:6px 14px;}
+  .sum{font-size:14px;color:var(--txt);opacity:.92;margin-bottom:10px;}
+  .why{font-size:13.5px;color:var(--tagtxt);background:var(--accent-soft);border-left:3px solid var(--accent);padding:10px 14px;border-radius:0 8px 8px 0;}
+  .why b{font-weight:700;}
+  .preprint{display:inline-block;font-size:11.5px;color:#b45309;background:rgba(217,119,6,.12);border:1px solid rgba(217,119,6,.35);padding:1px 8px;border-radius:999px;margin-left:8px;vertical-align:2px;}
+  .speed{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:14px;}
+  .speed-item{padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px;}
+  .speed-item:last-child{border-bottom:none;padding-bottom:0;}
+  .speed-item a{color:var(--accent);text-decoration:none;font-weight:600;}
+  .speed-item .src{color:var(--sub);font-size:12.5px;}
+  .note{background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:16px 22px;font-size:13.5px;color:var(--sub);margin-bottom:14px;}
+  .actions{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px;}
+  .actions h2{font-size:18px;margin-bottom:12px;}
+  .actions ol{padding-left:20px;}
+  .actions li{font-size:14px;margin-bottom:10px;}
+  .actions li b{color:var(--accent);}
+  footer{margin-top:26px;font-size:12.5px;color:var(--sub);text-align:center;line-height:1.9;}
+  @media (max-width:600px){ h1{font-size:22px;} .card{padding:18px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="brand">AI新青年 · MED AI BRIEFING</div>
+    <h1>医疗 AI 聚焦简报</h1>
+    <div class="persona">主理人 Alan（李帅帅）：三甲医院儿科医师 × AI Builder，「AI新青年」主理人。在研：小雪宝 LeukemiaPal（白血患儿陪伴助手）· 星桥计划（孤独症数字疗愈）· 孤独症量表 AI 平台。</div>
+    <div class="chips">
+      <span class="chip">📅 2026-09-20（北京时间）</span>
+      <span class="chip">窗口：2026-09-13 → 09-20</span>
+      <span class="chip">数据源：AI HOT · PubMed · medRxiv</span>
+      <span class="chip">本期精选 6 条主卡 + 3 条速览</span>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>今日信号说明：</b>① 医疗行业新闻端本期无新硬命中——热榜上的开源医疗三连（阿里 DAMO RADAR 医学影像、NVIDIA×费城儿童医院心脏建模、Included Health 联邦医疗智能体）均为近两周已覆盖条目，本期不再重复收录，故「行业与监管动态」版块省略。② 儿童白血病（ALL/AML）专属强命中本期缺席（14 天定向窗 32 条中以成人 AML 与综述为主），由儿童实体瘤（横纹肌肉瘤）与泛癌毒性图谱补位。③ 本期论文端儿科方向扎实：4 条同行评审儿科研究 + 2 条肿瘤 AI 预印本，宁缺毋滥未注水。
+  </div>
+
+  <div class="section-title">前沿研究 · 论文（同行评审）</div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42742002/">多中心深度学习多任务模型：儿童头颈部横纹肌肉瘤治疗前同步预测化疗反应与无事件生存期</a></h3>
+    <div class="meta"><span>🏥 中华耳鼻咽喉头颈外科杂志（北京儿童医院牵头，三中心）</span><span>📅 2026-09-15</span></div>
+    <div class="sum">382 例 III/IV 期患儿：治疗前增强 T1 MRI 提取 2D / 2.5D 三平面 / 3D 深度学习、影像组学与临床特征，统一编码器接多任务预测头，一次成像联合输出新辅助化疗反应分类与 EFS 生存估计。2.5D 模型化疗反应预测内部验证 AUC 0.818、外部测试 0.770（NPV 92.6% / 85.7%）；EFS C-index 0.779 / 0.732，优于 2D、3D、影像组学与纯临床模型；其风险评分在化疗敏感与耐药亚组内均可进一步分层预后。</div>
+    <div class="why"><b>为什么与你有关：</b>儿童实体瘤 × 影像 AI 的完整证据链（多中心 + 外部验证 + 消融实验），与小雪宝所在儿童血液肿瘤叙事带同域。「一次成像、两个预测」的多任务架构和「治疗前分层」范式，可直接迁移到白血病患儿的影像/检验数据预后建模——注意外部测试集 0.770 这个诚实数字，比单中心漂亮数字更值得抄进你的评审清单。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42761863/">用机器学习优化症状量表：自适应施测 7 题逼近 PCL-5 全量表，预测创伤后一年 PTSD</a></h3>
+    <div class="meta"><span>🏥 IEEE CHASE 2026（Case Western Reserve University / University of Toledo）</span><span>📅 2026-08-31（Epub）</span></div>
+    <div class="sum">规律间隔施测的行为症状量表可预测创伤后 1 年 PTSD 诊断（准确率约 75%，AUC ≈0.83）；经特征选择把每次施测压缩到最多 7 题；再引入树模型做个体化自适应选题，高精度逼近 PCL-5 全量表得分，诊断预测准确性与完整量表相当——为资源受限临床场景提供可部署的量表减负方案。</div>
+    <div class="why"><b>为什么与你有关：</b>这是孤独症量表 AI 平台「自适应短版」的直接参照实现：把长量表（PCL-5 这类 20 题量表）压缩到 ≤7 题且不损失诊断信息，同款思路可平移到 AQ / SRS 等家长负担重的孤独症量表——家长填表时长砍 2/3，正是你平台的核心卖点之一。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42761332/">AutoGluon 可解释机器学习：超早产儿视网膜病变的住院期间临床病程风险分层</a></h3>
+    <div class="meta"><span>🏥 Frontiers in Pediatrics（西南医科大学附属医院儿童医学中心新生儿科）</span><span>📅 2026-09-04</span></div>
+    <div class="sum">236 例超早产儿（106 例 ROP / 130 例筛查正常），仅用 15 个常规收集的母婴临床变量做分层五折内部验证：AutoGluon 加权集成模型 AUC 0.823、敏感度 0.764、NPV 0.779；配套 LightGBM + TreeSHAP 解释显示机械通气时长、氧疗时长、出生体重、BPD 为主要预测因子——把依赖出生特征的静态筛查推进为基于临床病程的动态分层。</div>
+    <div class="why"><b>为什么与你有关：</b>NICU 常规数据 → 可解释风险分层（SHAP 映射回临床医生能读懂的原始变量），是量表平台与住院场景工具的通用架构范本。同时注意它的诚实边界：仅内部验证、无外部验证——这恰好是你可以在内容里讲的「怎么读儿科 AI 论文」素材。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42763319/">早产儿呼吸暂停相关心肺不稳定的个体化预测：牛津团队 18 万次事件分析</a></h3>
+    <div class="meta"><span>🏥 Pediatric Research（University of Oxford 儿科系，Online ahead of print）</span><span>📅 2026-09-19</span></div>
+    <div class="sum">146 名 &lt;37 周早产儿、181,511 次 &gt;5 秒呼吸暂停：固定临床阈值下个体差异巨大——&lt;10 秒的事件中仍有 3.6% 引发心肺不稳定，而 ≥20 秒的事件中 61.2% 却安然无恙。XGBoost 融合临床/人口学特征（矫正月龄、性别、体重 z 分数、通气模式）与动态特征（基线心率、血氧、近期呼吸暂停聚集）后，平衡准确率 75.8%（仅静态临床特征只有 66.0%），支持「个体化呼吸暂停警报」与出院决策。</div>
+    <div class="why"><b>为什么与你有关：</b>「常规监测数据 → 个体化阈值」的路径与小雪宝同构：固定阈值漏掉的正是每个孩子的个体轨迹。另一个可复用结论是动态特征（近期事件聚集）比静态特征多贡献近 10 个点准确率——对星桥计划的行为流/生理流特征工程是直接提示。</div>
+  </div>
+
+  <div class="section-title">预印本聚焦 <span class="preprint">以下 2 条未经同行评审</span></div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.64898/2026.09.16.26363259">MSK-Tox：LLM 构建五万例泛癌治疗毒性图谱，开启「精准安全」范式</a><span class="preprint">未经同行评审</span></h3>
+    <div class="meta"><span>🧪 medRxiv 预印本（纪念斯隆-凯特琳癌症中心）</span><span>📅 2026-09-17</span></div>
+    <div class="sum">用 LLM 从病历中系统提取 50,000+ 例患者抗肿瘤全身治疗的毒性发生率、时间性与分级，构建泛癌资源 MSK-Tox；对肺炎、肾上腺功能不全、肝毒性、结肠炎、甲亢/甲减六类不良事件刻画出由癌种、方案与临床背景塑造的「毒性景观」。鉴定出两种胚系易感模式：器官固有型（FOXE1 附近调控变异 × 甲状腺毒性）与免疫介导型（HLA-DRB1*15 × 免疫治疗相关肾上腺功能不全——无癌人群中同一位点关联多发性硬化，提示免疫治疗揭开了潜在自身免疫倾向）。治疗前临床特征已可个体化预测毒性风险。</div>
+    <div class="why"><b>为什么与你有关：</b>血液肿瘤叙事带的新维度——「疗效可预测」之外，「谁会被治疗伤害」也成了可计算问题。对白血病患儿长期随访场景（小雪宝），治疗毒性监测与预测是比疗效更贴身的日常痛点；LLM 病历提取 → 结构化毒性图谱的管线本身也可在脱敏前提下借鉴。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.64898/2026.09.16.26363176">ICON-Bench：19 个 LLM 评委能否替人类专家审查患者沟通？安全行、共情不行</a><span class="preprint">未经同行评审</span></h3>
+    <div class="meta"><span>🧪 medRxiv 预印本</span><span>📅 2026-09-17</span></div>
+    <div class="sum">以临床试验知情同意这一高难度沟通场景为试金石，制定由利益相关者参与的七准则评审 rubric（安全、可靠、沟通质量），在 ICON-Bench 上对 19 个 LLM 评委做基准测试：安全筛查与事实核验上与临床医生强一致（Spearman ρ &gt; 0.80），但沟通质量一致性弱（ρ &lt; 0.60）；安全专用 guard 模型反而不如通用模型；患者倡导者对沟通质量的打分系统性低于医生与 LLM 评委。结论：自动化监督可行，但必须按患者中心标准重新校准。</div>
+    <div class="why"><b>为什么与你有关：</b>小雪宝 / 星桥所有 AI 生成话术的质检流水线蓝本：安全红线可以交给 LLM 评委自动化，共情与沟通质量必须人审；「专用安全模型不如通用模型」是个反直觉的选型结论，直接省钱。七准则 rubric 可本周就抄成你自己的质检清单。</div>
+  </div>
+
+  <div class="section-title">工具与速览</div>
+
+  <div class="speed">
+    <div class="speed-item">📌 <a href="https://doi.org/10.64898/2026.09.14.26362715">词错率不是医疗语音的安全指标</a>（medRxiv，2026-09-14，<i>未经同行评审</i>）——99 语言、59,819 处真实转写错误分析：97.5% 为低风险，仅 0.42% 危重/高风险；六种频率类指标（含 WER）与严重临床风险无可检关联。应改用「严重度 × 可能性」临床风险框架评估医疗语音 AI。<span class="src">→ 小雪宝语音链路与量表语音录入的验收指标该换了。</span></div>
+    <div class="speed-item">📌 <a href="https://pubmed.ncbi.nlm.nih.gov/42763696/">儿童糖尿病 AI 自我管理工具 scoping 综述</a>（Int J Endocrinol Metab，2026-08-11）——19 项研究归入 5 个应用域（血糖预测 / 剂量优化 / 个性化教育 / 远程监测 / 伦理与实现），共同短板是缺长期评估与隐私保障。<span class="src">→ 青少年慢病「陪伴 + 自我管理」定位与小雪宝同型，其伦理清单可直接借用。</span></div>
+    <div class="speed-item">📌 <a href="https://doi.org/10.64898/2026.09.15.26363148">LLM 从 MIMIC-IV 病历文本提取症状簇并预测结直肠癌结局</a>（medRxiv，2026-09-16，<i>未经同行评审</i>）——2,728 份出院小结零样本提取 46 症状、1,507 患者；双 LLM 症状共现网络收敛出 3 个临床连贯症状簇（跨模型 ARI 0.727），系统症状簇是最稳定的结局预测因子。<span class="src">→ EHR 文本 → 症状簇管线可平移到儿科住院叙事与随访摘要。</span></div>
+  </div>
+
+  <div class="actions">
+    <h2>🎯 今日行动建议</h2>
+    <ol>
+      <li><b>量表平台 → 自适应短版立项：</b>参照本期 PTSD 研究（≤7 题逼近 PCL-5），本周用现有孤独症量表题库做一次离线模拟（固定题库 + 树模型选题），先量化「压缩比 vs 与全量表的一致性」，全程不碰真实用户数据——拿到数字再决定要不要做成产品功能。</li>
+      <li><b>小雪宝 → 语音验收指标换轨：</b>把「严重度 × 可能性」临床风险分级写进语音/文字链路的验收标准，词错率指标退役；先从对话日志抽 30 条样本人工标注「高危误转 / 高危漏转」，测出底线风险率再谈优化。</li>
+      <li><b>内容选题 → 「治疗伤害可计算」：</b>MSK-Tox 的「毒性预测与疗效预测并行」框架，可为你下周的血液肿瘤科普/课程写一节「AI 如何预测治疗副作用」——脱敏处理、不点名机构，正好衔接小雪宝的家长受众痛点。</li>
+    </ol>
+  </div>
+
+  <footer>
+    数据来源：AI HOT（行业资讯聚合）· PubMed（NCBI E-utilities）· medRxiv（冷泉港实验室预印本平台）<br>
+    标注「未经同行评审」的条目为预印本，结论请谨慎引用 · 各条目均附原文链接（PMID / DOI）<br>
+    © AI新青年 · 主理人 Alan（李帅帅）· 本简报由自动化管线生成 · 2026-09-20
+  </footer>
+
+</div>
+</body>
+</html>

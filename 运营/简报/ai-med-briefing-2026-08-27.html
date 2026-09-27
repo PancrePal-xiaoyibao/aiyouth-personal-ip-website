@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-08-27</title>
+<style>
+  :root{
+    --teal:#0d9488;
+    --teal-soft:rgba(13,148,136,.12);
+    --teal-line:rgba(13,148,136,.35);
+    --bg:#f6f8f8;
+    --card:#ffffff;
+    --ink:#0f172a;
+    --ink-soft:#475569;
+    --ink-faint:#94a3b8;
+    --line:#e2e8f0;
+    --shadow:0 1px 3px rgba(15,23,42,.06),0 8px 24px rgba(15,23,42,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b1220;
+      --card:#111c2e;
+      --ink:#e6edf3;
+      --ink-soft:#aab7c4;
+      --ink-faint:#6b7c8c;
+      --line:#1e2d40;
+      --teal-soft:rgba(13,148,136,.18);
+      --teal-line:rgba(13,148,136,.5);
+      --shadow:0 1px 3px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:32px 20px 56px}
+  header.top{
+    border:1px solid var(--line);border-radius:16px;
+    background:linear-gradient(135deg,var(--teal-soft),transparent 60%);
+    padding:26px 26px 22px;margin-bottom:26px;box-shadow:var(--shadow);
+  }
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:700}
+  h1{font-size:27px;line-height:1.25;margin:8px 0 14px;font-weight:800;letter-spacing:.01em}
+  .byline{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;font-size:13.5px;color:var(--ink-soft)}
+  .byline b{color:var(--ink);font-weight:700}
+  .pill{display:inline-flex;align-items:center;gap:6px;background:var(--teal-soft);color:var(--teal);
+    border:1px solid var(--teal-line);border-radius:999px;padding:3px 11px;font-size:12.5px;font-weight:600}
+  .meta-row{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);
+    font-size:12.5px;color:var(--ink-faint);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .meta-row span b{color:var(--ink-soft);font-weight:600}
+  section.block{margin:30px 0 8px}
+  .sec-h{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:18px;font-weight:800}
+  .sec-h .bar{width:5px;height:20px;border-radius:3px;background:var(--teal)}
+  .sec-h .cnt{font-size:12.5px;font-weight:600;color:var(--teal);background:var(--teal-soft);
+    border:1px solid var(--teal-line);border-radius:999px;padding:1px 9px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);
+    transition:transform .15s ease,border-color .15s ease;
+  }
+  .card:hover{transform:translateY(-2px);border-color:var(--teal-line)}
+  .tag{display:inline-block;font-size:11.5px;font-weight:700;color:var(--teal);
+    background:var(--teal-soft);border:1px solid var(--teal-line);border-radius:6px;padding:2px 8px;margin-bottom:9px}
+  .card h3{margin:0 0 8px;font-size:16.5px;line-height:1.4;font-weight:750}
+  .card h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--teal-line)}
+  .card h3 a:hover{color:var(--teal)}
+  .src{font-size:12.5px;color:var(--ink-faint);margin:0 0 10px;display:flex;flex-wrap:wrap;gap:6px 12px}
+  .src b{color:var(--ink-soft);font-weight:600}
+  .summary{font-size:14px;color:var(--ink-soft);margin:0 0 11px}
+  .why{font-size:13.5px;color:var(--ink);background:var(--teal-soft);
+    border-left:3px solid var(--teal);border-radius:0 8px 8px 0;padding:9px 13px;margin:0}
+  .why b{color:var(--teal);font-weight:700}
+  .actions{margin-top:32px;background:var(--card);border:1px solid var(--line);
+    border-radius:14px;padding:20px 22px;box-shadow:var(--shadow)}
+  .actions h2{margin:0 0 12px;font-size:18px;font-weight:800;display:flex;align-items:center;gap:9px}
+  .actions h2 .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px var(--teal-soft)}
+  .actions ol{margin:0;padding-left:0;list-style:none;counter-reset:a}
+  .actions li{counter-increment:a;position:relative;padding:11px 0 11px 42px;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink-soft)}
+  .actions li:last-child{border-bottom:none}
+  .actions li::before{content:counter(a);position:absolute;left:0;top:11px;width:26px;height:26px;
+    border-radius:50%;background:var(--teal);color:#fff;font-weight:800;font-size:13px;
+    display:flex;align-items:center;justify-content:center}
+  .actions li b{color:var(--ink);font-weight:700}
+  footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:12px;color:var(--ink-faint);line-height:1.7}
+  footer b{color:var(--ink-soft)}
+  .note{font-size:12.5px;color:var(--ink-faint);background:var(--card);border:1px dashed var(--line);
+    border-radius:10px;padding:11px 14px;margin:6px 0 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="kicker">AI 新青年 · 每日医疗 AI 聚焦</div>
+    <h1>医疗 AI 聚焦简报</h1>
+    <div class="byline">
+      <span class="pill">主理人 · Alan（李帅帅）</span>
+      <span>三甲儿科规培医师 × AI Builder｜<b>AI新青年</b> 视频号</span>
+      <span>受众：青少年 / 家长</span>
+    </div>
+    <div class="meta-row">
+      <span><b>日期</b> 2026-08-27（周四）</span>
+      <span><b>精选</b> 6 条硬核信号</span>
+      <span><b>数据源</b> AI HOT 医疗资讯 · PubMed · medRxiv</span>
+      <span><b>窗口</b> 近 7 天（2026-08-20 → 08-27）</span>
+    </div>
+  </header>
+
+  <!-- ============ 医疗模型与临床落地 ============ -->
+  <section class="block">
+    <h2 class="sec-h"><span class="bar"></span>医疗模型与临床落地<span class="cnt">2 条</span></h2>
+
+    <article class="card">
+      <span class="tag">影像 AI · 临床落地</span>
+      <h3><a href="https://www.ithome.com/0/993/478.htm" target="_blank" rel="noopener">达摩院 DAMO LiON：CT 影像精准识别 1 厘米微小肝癌病灶，登上《自然·医学》</a></h3>
+      <p class="src"><b>来源</b> 阿里达摩院 × 中国医科大学附属盛京医院 · IT之家 &nbsp;|&nbsp; <b>时间</b> 2026-08-24 12:16（北京时间）</p>
+      <p class="summary">两个月真实世界前瞻试验中，模型额外发现 15 例原本被遗漏的恶性肿瘤（多为 1cm 左右），AI 协助阅片用时减少 27%、对恶性肿瘤敏感性提高 11.5%。论文发表于《自然·医学》，是少有的"前瞻临床补漏"级证据。</p>
+      <p class="why"><b>为什么与你有关：</b>这是影像 AI「真实世界补漏」的标杆案例，可直接对标你后续做白血病骨髓/外周血涂片 AI 时的「敏感性 + 漏诊率」论证框架；也提示小雪宝若接入影像辅助模块，应优先用"减少漏诊"而非"替代医生"的叙事对外沟通。</p>
+    </article>
+
+    <article class="card">
+      <span class="tag">神经数字疗愈 · 设备</span>
+      <h3><a href="https://www.ithome.com/0/993/315.htm" target="_blank" rel="noopener">联影 × 天津大学发布全球首个磁共振脑机接口全栈方案「uMR 神观」</a></h3>
+      <p class="src"><b>来源</b> 联影医疗 × 天津大学（首届磁共振脑机接口大会）· IT之家 &nbsp;|&nbsp; <b>时间</b> 2026-08-23 23:18（北京时间）</p>
+      <p class="summary">以 uMR 系列为硬件基座，覆盖"读脑—写脑—验证"闭环，依托 3.0T/5.0T/9.4T 跨场强贯穿基础研究到临床转化；联盟含清华、北大、宣武、天坛等机构。这是"影像 + 神经调控 + 闭环验证"的一体化范式。</p>
+      <p class="why"><b>为什么与你有关：</b>星桥计划的孤独症数字疗愈若想从"对话陪伴"升级到"神经反馈闭环"，这条"读脑—写脑—验证"全栈路线是值得跟踪的底层技术参照；也提示未来可探索脑机接口 × 行为数据的多模态干预评估。</p>
+    </article>
+  </section>
+
+  <!-- ============ 前沿研究·论文 ============ -->
+  <section class="block">
+    <h2 class="sec-h"><span class="bar"></span>前沿研究 · 论文<span class="cnt">4 条</span></h2>
+
+    <article class="card">
+      <span class="tag">白血病 · 计算机视觉</span>
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42645391/" target="_blank" rel="noopener">YOLOv11-Large 外周血涂片白血病细胞检测模型（Curr Oncol）</a></h3>
+      <p class="src"><b>来源</b> Current Oncology, 2026-08-18 (PMID 42645391) &nbsp;|&nbsp; <b>时间</b> 2026-08-18</p>
+      <p class="summary">针对外周血涂片（PBS）中白细胞亚型识别这一白血病诊断/监测核心环节，用 YOLOv11-Large 目标检测实现自动化；论文直击传统人工镜检劳动密集、观察者间/内差异大的痛点，并关注小数据集与泛化限制。</p>
+      <p class="why"><b>为什么与你有关：</b>这是小雪宝（LeukemiaPal）最贴的核心疾病 AI 方向——外周血/骨髓涂片细胞识别。可直接作为"疾病科普 + 技术可行性"素材，也提示你后续若有标注数据，YOLO 系是低门槛可本地化的切入路线。</p>
+    </article>
+
+    <article class="card">
+      <span class="tag">儿科 · 白血病 · 生物标志物</span>
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42641935/" target="_blank" rel="noopener">儿童急性淋巴细胞白血病（ALL）的 microRNA 诊断谱（Clin Chim Acta）</a></h3>
+      <p class="src"><b>来源</b> Clinica Chimica Acta, 2026-08-25 (PMID 42641935) &nbsp;|&nbsp; <b>时间</b> 2026-08-25</p>
+      <p class="summary">系统梳理 microRNA 谱作为儿童 ALL 诊断工具的价值——ALL 是儿童期最常见恶性肿瘤，液体活检/分子标志物路线有望补充传统形态学与流式。属"诊断前移、无创化"研究脉络。</p>
+      <p class="why"><b>为什么与你有关：</b>直中小雪宝的"儿科白血病"主战场。可转化为家长向科普："除了骨穿，未来抽血里的 microRNA 也能辅助判断"；也为量表平台预留"分子标志物 × 临床量表"多模态字段的设计思路。</p>
+    </article>
+
+    <article class="card">
+      <span class="tag">数字心理疗愈 · LLM</span>
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42647055/" target="_blank" rel="noopener">LLM 作为治疗师工具辅助互联网 CBT：盲法临床评分试点（JMIR Ment Health）</a></h3>
+      <p class="src"><b>来源</b> JMIR Mental Health, 2026-08-26 (PMID 42647055) &nbsp;|&nbsp; <b>时间</b> 2026-08-26</p>
+      <p class="summary">评估 LLM 生成治疗性文本、辅助治疗师审阅患者输入与起草回应的质量，采用盲法临床评分。结论指向"LLM 作为治疗师的支持工具"而非替代，强调结构化 iCBT 场景下的人机协作定位。</p>
+      <p class="why"><b>为什么与你有关：</b>这是星桥（孤独症数字疗愈）与小雪宝（心理陪伴）共同的方法论范本——"AI 辅助而非替代专业人员"。可直接映射到你产品的"陪伴agent + 专业人类在环"架构，也是对外讲安全合规时的权威论据。</p>
+    </article>
+
+    <article class="card">
+      <span class="tag">本地部署 · NDD 肠胃共病</span>
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42647073/" target="_blank" rel="noopener">本地部署开源 LLM 从电子病历抽取肠道症状：多模型系统对比（JMIR）</a></h3>
+      <p class="src"><b>来源</b> J Med Internet Res, 2026-08-26 (PMID 42647073) &nbsp;|&nbsp; <b>时间</b> 2026-08-26</p>
+      <p class="summary">系统评估 4 个模型家族的本地开源 LLM 从非结构化 EHR 抽取肠道症状的表现，并明确点出云端模型的隐私风险（数据泄露、跨境传输）。研究强调"本地化部署 + 系统多模型对比"的合规路径。</p>
+      <p class="why"><b>为什么与你有关：</b>星桥早期筛查常需处理发育行为 + 肠胃共病主诉，本地化 LLM 抽取病历正是可复用的方法；同时给量表平台上了"隐私优先、本地推理"的一课——尤其你面向青少年/家长群体，数据合规是红线。</p>
+    </article>
+  </section>
+
+  <div class="note">
+    <b>关于 medRxiv 预印本：</b>本期接口返回 395 篇新增预印本，但精神/临床心理类目（12 篇）偏重物质使用障碍、双相障碍神经机制与抑郁蛋白组学，未见与儿科 / 孤独症 / 白血病强相关的 AI 研究，故不单列「预印本」板块，避免凑数。
+  </div>
+
+  <!-- ============ 今日行动建议 ============ -->
+  <div class="actions">
+    <h2><span class="dot"></span>今日行动建议（绑定你的在手项目）</h2>
+    <ol>
+      <li><b>小雪宝 · 技术叙事定调：</b>参照 DAMO LiON「真实世界补漏 + 敏感性提升」与「AI 辅助而非替代」的叙事，起草一页小雪宝对外科普/产品页的"AI 角色"表述，规避"替代医生"雷区。</li>
+      <li><b>星桥计划 · 技术雷达：</b>把 uMR 神观"读脑—写脑—验证"全栈与本地 LLM 病历抽取两条线记入星桥技术备选清单；评估是否在未来版本引入神经反馈闭环与本地化推理。</li>
+      <li><b>量表平台 · 合规基线：</b>参照 JMIR 本地部署 LLM 研究的隐私论证，给量表平台立一条"默认本地/私有化推理、敏感字段不出域"的架构红线，并预留分子标志物 × 临床量表的多模态字段。</li>
+    </ol>
+  </div>
+
+  <footer>
+    <p><b>数据来源：</b>AI HOT 医疗垂直资讯（aihot.virxact.com）· PubMed E-utilities（美国国立医学图书馆）· medRxiv 预印本平台（api.biorxiv.org）。</p>
+    <p><b>说明：</b>本简报为「AI新青年」内部内容参考，论文条目链接至 PubMed 原文/DOI，新闻条目链接至原始报道；预印本均标注「未经同行评审」。内容不构成医疗建议。</p>
+    <p>© 2026 AI新青年（李帅帅 / Alan）· 由 WorkBuddy 自动化生成 · 每日 08:30 更新</p>
+  </footer>
+
+</div>
+</body>
+</html>

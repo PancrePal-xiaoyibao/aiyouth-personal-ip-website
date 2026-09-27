@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-08-22</title>
+<style>
+  :root{
+    --brand:#0d9488; --brand-dark:#0f766e; --brand-soft:#ccfbf1;
+    --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#64748b;
+    --border:#e2e8f0; --highlight:#fef3c7; --link:#0e7490;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b1220; --card:#111a2c; --text:#e6edf7; --muted:#94a3b8;
+      --border:#1f2a44; --brand-soft:#134e4a; --highlight:#3f2d12;
+      --link:#7dd3fc;
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased}
+  .container{max-width:880px;margin:0 auto;padding:32px 20px 80px}
+  .hdr{
+    background:linear-gradient(135deg,var(--brand) 0%,var(--brand-dark) 100%);
+    color:#fff;border-radius:16px;padding:28px 28px 24px;margin-bottom:24px;
+    box-shadow:0 10px 30px -10px rgba(13,148,136,.4);
+  }
+  .hdr h1{margin:0 0 4px;font-size:24px;letter-spacing:.2px}
+  .hdr .sub{opacity:.92;font-size:14px;margin:0}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;font-size:12px}
+  .chip{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);
+    padding:4px 10px;border-radius:999px}
+  .profile{
+    display:flex;align-items:center;gap:14px;background:var(--brand-soft);
+    border:1px solid color-mix(in srgb,var(--brand) 30%, transparent);
+    border-radius:12px;padding:14px 16px;margin-bottom:20px;font-size:13px;
+  }
+  .avatar{
+    width:46px;height:46px;border-radius:50%;
+    background:linear-gradient(135deg,var(--brand),var(--brand-dark));
+    color:#fff;display:grid;place-items:center;font-weight:600;font-size:18px;flex:none;
+    box-shadow:0 4px 12px -4px rgba(13,148,136,.5);
+  }
+  .profile b{color:var(--brand-dark)}
+  .section{margin-top:34px}
+  .section h2{
+    font-size:18px;margin:0 0 14px;padding-left:12px;
+    border-left:4px solid var(--brand);
+  }
+  .empty{
+    padding:18px;background:var(--card);border:1px dashed var(--border);
+    border-radius:12px;color:var(--muted);text-align:center;font-size:14px;
+  }
+  .card{
+    background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:18px 20px;margin-bottom:14px;transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .card:hover{transform:translateY(-1px);box-shadow:0 6px 20px -8px rgba(0,0,0,.12)}
+  .card h3{margin:0 0 6px;font-size:16px;line-height:1.45}
+  .card h3 a{color:var(--brand-dark);text-decoration:none;border-bottom:2px solid transparent}
+  .card h3 a:hover{border-bottom-color:var(--brand)}
+  @media (prefers-color-scheme: dark){.card h3 a{color:#5eead4}}
+  .srcline{
+    font-size:12px;color:var(--muted);margin-bottom:10px;
+    display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+  }
+  .tag{
+    font-size:11px;padding:2px 8px;border-radius:6px;
+    background:var(--brand-soft);color:var(--brand-dark);font-weight:500;
+  }
+  @media (prefers-color-scheme: dark){.tag{color:#5eead4}}
+  .preprint{background:var(--highlight);color:#92400e}
+  @media (prefers-color-scheme: dark){.preprint{background:#3f2d12;color:#fbbf24}}
+  .summary{font-size:14px;margin:8px 0 10px}
+  .why{
+    background:color-mix(in srgb,var(--brand-soft) 50%, transparent);
+    border-left:3px solid var(--brand);padding:10px 12px;border-radius:6px;
+    font-size:13px;margin-top:8px;
+  }
+  .why b{color:var(--brand-dark);margin-right:6px}
+  @media (prefers-color-scheme: dark){.why b{color:#5eead4}}
+  .actions{
+    background:var(--card);border:1px solid var(--brand);border-radius:12px;
+    padding:18px 20px;margin-top:34px;
+  }
+  .actions h2{color:var(--brand-dark);margin:0 0 12px;font-size:17px}
+  .actions ol{margin:0;padding-left:22px;font-size:14px}
+  .actions li{margin-bottom:8px}
+  .actions li b{color:var(--brand-dark)}
+  @media (prefers-color-scheme: dark){.actions h2,.actions b{color:#5eead4}}
+  .footer{
+    margin-top:40px;padding-top:16px;border-top:1px solid var(--border);
+    font-size:12px;color:var(--muted);text-align:center;
+  }
+  .footer a{color:var(--link);text-decoration:none}
+  .stats{display:flex;flex-wrap:wrap;gap:14px;margin:18px 0 4px;font-size:13px}
+  .stat{
+    background:var(--card);border:1px solid var(--border);border-radius:10px;
+    padding:10px 14px;flex:1 1 120px;text-align:center;
+  }
+  .stat b{display:block;font-size:18px;color:var(--brand-dark);font-weight:600}
+  @media (prefers-color-scheme: dark){.stat b{color:#5eead4}}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="hdr">
+    <h1>🩺 AI新青年 · 医疗 AI 聚焦简报</h1>
+    <p class="sub">2026-08-22 · 每日精选 · Alan（儿科医师 × AI Builder）</p>
+    <div class="meta">
+      <span class="chip">📅 2026-08-22</span>
+      <span class="chip">📡 AI HOT · PubMed · medRxiv</span>
+      <span class="chip">⏱ 窗口：近 7 天</span>
+      <span class="chip">🎯 精选 6 条</span>
+    </div>
+  </header>
+
+  <div class="profile">
+    <div class="avatar">A</div>
+    <div>
+      <b>Alan（李帅帅）</b> · 三甲儿科规培转型 AI Builder，「AI新青年」视频号主理人。
+      在手项目：<b>小雪宝 LeukemiaPal</b>（白血患儿陪伴助手）、<b>星桥计划</b>（孤独症数字疗愈）、
+      <b>孤独症量表 AI 平台</b>、本地 AI 内容团队、一人公司。关心：儿科 / 血液肿瘤 / 孤独症 / 数字疗愈 /
+      临床 AI 落地 / 可本地部署的开源医疗模型。
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>242</b>PubMed 近 7 天匹配</div>
+    <div class="stat"><b>369</b>medRxiv 新增预印本</div>
+    <div class="stat"><b>10+</b>AI HOT 医疗条数</div>
+    <div class="stat"><b>6</b>本日精选</div>
+  </div>
+
+  <!-- ============ 行业与监管 / 工具与开源 ============ -->
+  <section class="section">
+    <h2>🛠 医疗模型与开源生态</h2>
+
+    <article class="card">
+      <h3><a href="https://x.com/ArtificialAnlys/status/2090836826487734494" target="_blank" rel="noopener">MLCR-AA 医疗长上下文推理基准发布：Claude Fable 5 以 64.4% 居首</a></h3>
+      <div class="srcline">
+        <span class="tag">🤖 AI HOT · 医疗基准</span>
+        <span>Artificial Analysis · X / @ArtificialAnlys</span>
+        <span>· 2026-08-22 00:21 (北京时间)</span>
+      </div>
+      <p class="summary">Wisedocs 发布医疗长上下文推理基准 MLCR-AA：Claude Fable 5 拿到 64.4%、单任务约 $1；中位模型得分不足 15%。这份榜单第一次系统度量了"医疗文档+长病历"场景下主流模型的实际推理水位。</p>
+      <p class="why"><b>为什么与你有关</b>小雪宝 LeukemiaPal、白血病知识库、量表平台都要做"长文档摘要+问答"。这份榜单可作为选型依据：在 1 美金/任务的成本线内，闭源 Claude Fable 5 是当前高水位；本地部署方向（星桥计划/量表平台的离线版）则需要在开源模型上自己跑一份同款基准。</p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://www.ithome.com/0/992/441.htm" target="_blank" rel="noopener">谷歌开源 Gemma 端侧家族下载量破 10 亿，含医疗报告标准化与癌症治疗方案场景</a></h3>
+      <div class="srcline">
+        <span class="tag">🧬 AI HOT · 开源医疗</span>
+        <span>谷歌 Gemma 官方 · IT之家转载</span>
+        <span>· 2026-08-21 09:06 (北京时间)</span>
+      </div>
+      <p class="summary">Gemma 端侧模型两年累计下载破 10 亿次、派生超 10 万变体。谷歌点名 4 类落地：太空本地图像分析、医疗报告标准化、癌症治疗方案、动物语言识别；同步上线 Awesome Gemma 代码库收录社区微调/教程。</p>
+      <p class="why"><b>为什么与你有关</b>这是当前最适合「一人公司 + 本地部署」的开源底座之一。量表平台的离线评估、星桥计划在家长端的本地陪伴、小雪宝知识库微调，都可以参考 Gemma 2/3 系列的轻量变体（MedGemma 已是为医疗专门微调的分支）。</p>
+    </article>
+  </section>
+
+  <!-- ============ 前沿研究 · 论文 ============ -->
+  <section class="section">
+    <h2>📑 前沿研究 · 同行评审论文</h2>
+
+    <article class="card">
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42629325/" target="_blank" rel="noopener">ChatGPT-4o 在 HPV 疫苗推荐中的年龄与性别差异：固定提示审计</a></h3>
+      <div class="srcline">
+        <span class="tag">👶 青少年 · LLM 审计</span>
+        <span>Human Vaccines &amp; Immunotherapeutics · 2026</span>
+        <span>· 2026-08-21</span>
+      </div>
+      <p class="summary">Chandeying/Thongseiratch 用固定 prompt 跨年龄、性别多次评估 ChatGPT-4o 的 HPV 疫苗推荐话术，发现输出风格在"接种意愿/剂次/沟通礼节"上对不同人群有显著差异——这是 LLM 临床科普偏差的典型证据。</p>
+      <p class="why"><b>为什么与你有关</b>小雪宝 LeukemiaPal 里所有面向家长/患儿的回答，都可能被同样的年龄/性别偏差污染。建议参考该文"固定 prompt 多次采样 + 分层统计"的方法，自建一份儿科/肿瘤科 LLM 偏见测试集，定期扫描你的输出。</p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42628959/" target="_blank" rel="noopener">精神疾病的多感官整合：精神病学跨模态机制视图</a></h3>
+      <div class="srcline">
+        <span class="tag">🧠 精神/孤独症 · 多模态</span>
+        <span>Multisensory Research · 2026</span>
+        <span>· 2026-08-18</span>
+      </div>
+      <p class="summary">Molholm/Noel/Wallace 在 Multisensory Research 抛出一个精神病学"viewpoint"：听觉-视觉-触觉等多感官整合在自闭症谱系、精神分裂、ADHD 等中存在系统性差异，可能成为数字疗愈的新靶点。</p>
+      <p class="why"><b>为什么与你有关</b>星桥计划做孤独症数字疗愈，过去常聚焦"行为识别 / 语言发育"。这篇提醒你把"多感官耦合"作为下一个差异化点：小雪宝作为陪伴玩具，本身就天然走在「视觉表情+语音+触觉反馈」的多模态通道上，正可对应这套理论框架。</p>
+    </article>
+  </section>
+
+  <!-- ============ 预印本·medRxiv ============ -->
+  <section class="section">
+    <h2>🧪 预印本 · medRxiv（未经同行评审）</h2>
+
+    <article class="card">
+      <h3><a href="https://doi.org/10.64898/2026.08.18.26360709" target="_blank" rel="noopener">用机器学习预测未来 BRFSS 主观认知下降：开源多语言基准</a></h3>
+      <div class="srcline">
+        <span class="tag preprint">⚠ 预印本</span>
+        <span class="tag">🧠 认知筛查 · 量表</span>
+        <span>medRxiv · public and global health</span>
+        <span>· 2026-08-19 (北京时间)</span>
+      </div>
+      <p class="summary">基于美国 BRFSS 大规模调查，建立"主观认知下降(SCD)"未来年份的多语言机器学习预测基准——自评记忆/思维在过去一年是否变差，是阿尔茨海默早期征兆，也是孤独症/学习障碍评估的常见探针。</p>
+      <p class="why"><b>为什么与你有关</b>你的孤独症量表 AI 平台正在做的事，本质上也是"自评量表 → ML 预测 → 早期识别"。这篇给出的方法学——多语言、开源 benchmark、把"主观变化"作为可机器学习的目标变量——可以直接迁移到 ASD 量表场景。</p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://doi.org/10.1101/2025.10.13.25337771" target="_blank" rel="noopener">机器学习优化围产期抑郁筛查：影响最大化、负担最小化</a></h3>
+      <div class="srcline">
+        <span class="tag preprint">⚠ 预印本</span>
+        <span class="tag">💗 心理健康 · 量表</span>
+        <span>medRxiv · psychiatry and clinical psychology</span>
+        <span>· 2026-08-20 (北京时间)</span>
+      </div>
+      <p class="summary">作者用机器学习筛出 EPDS（爱丁堡产后抑郁量表）10 个题目里对识别围产期抑郁贡献最大、最小负担的子集，提出"Maximum impact, minimal burden"原则——用更少的题目拿到近似的筛查效力。</p>
+      <p class="why"><b>为什么与你有关</b>这条思路直接可复用：用 ML 在孤独症/量表评估的几十题里反推"最关键 5-8 题 + 必要时的概率化补问"，让家长填表时间从 20 分钟压缩到 5 分钟，且不损失筛出率。量表平台下次迭代可以考虑这个方向。</p>
+    </article>
+
+    <!-- 备份卡片槽：若再有强命中再补 -->
+
+  </section>
+
+  <!-- ============ 今日行动建议 ============ -->
+  <section class="section">
+    <div class="actions">
+      <h2>🎯 今日行动建议（绑定你在手项目）</h2>
+      <ol>
+        <li><b>小雪宝 LeukemiaPal（白血病陪伴/科普）</b>：把 ChatGPT-4o HPV 论文里的"固定 prompt × 多次采样 × 分层统计"方法拿过来，明天给白血病家长版回答做一份"年龄/性别/治疗阶段"三维偏见自测，把任何明显偏差写进 v2 prompt 护栏。</li>
+        <li><b>星桥计划（孤独症数字疗愈）</b>：以《Multisensory Integration》那篇 viewpoint 为锚，把"视觉表情 + 语音 + 触觉反馈"的多模态框架正式写进产品白皮书——这是和市面上"只做识别"的产品拉开身位的差异化点。</li>
+        <li><b>孤独症量表 AI 平台</b>：本月用 ML 反推"最关键的 5-8 题量表"——参考围产期抑郁"Maximum impact, minimal burden"的思路，把家长侧填表时长砍到 5 分钟内，下周二前出一版 A/B 实验设计。</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 页脚 ============ -->
+  <footer class="footer">
+    📌 数据来源：<a href="https://aihot.virxact.com/" target="_blank">AI HOT</a> ·
+    <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a> ·
+    <a href="https://www.medrxiv.org/" target="_blank">medRxiv</a><br>
+    本简报仅供医学/AI 信息参考，不构成医疗建议；预印本未经同行评审，结论需谨慎对待。<br>
+    © AI新青年 · Alan · 仅供个人学习与项目追踪使用
+  </footer>
+
+</div>
+</body>
+</html>

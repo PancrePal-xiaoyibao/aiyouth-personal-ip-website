@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-08-20</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --text:#0f172a; --muted:#64748b;
+  --brand:#0d9488; --brand-soft:#ccfbf1; --border:#e2e8f0;
+  --accent:#115e59; --chip:#f1f5f9;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b1220; --card:#111a2b; --text:#e2e8f0; --muted:#94a3b8;
+    --brand:#2dd4bf; --brand-soft:#0f2e2a; --border:#1e293b;
+    --accent:#5eead4; --chip:#1e293b;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;padding:28px 16px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:880px;margin:0 auto}
+header.hero{
+  background:linear-gradient(135deg,var(--brand) 0%,#14b8a6 100%);
+  color:#fff;border-radius:12px;padding:32px 28px;margin-bottom:24px;
+  box-shadow:0 8px 30px rgba(13,148,136,.25);
+}
+header.hero h1{font-size:26px;font-weight:800;letter-spacing:.5px;margin-bottom:10px}
+header.hero .sub{font-size:14px;opacity:.95;margin-bottom:18px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px}
+.hero-meta span{
+  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);
+  padding:4px 12px;border-radius:999px;font-size:12.5px;backdrop-filter:blur(4px);
+}
+.persona{
+  display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--border);
+  border-radius:12px;padding:16px 20px;margin-bottom:24px;
+}
+.persona .avatar{
+  width:52px;height:52px;border-radius:50%;background:var(--brand-soft);color:var(--brand);
+  display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;font-weight:700;
+}
+.persona .who{font-size:15px;font-weight:700;margin-bottom:3px}
+.persona .desc{font-size:13px;color:var(--muted)}
+section{margin-bottom:26px}
+section h2{
+  font-size:17px;font-weight:800;color:var(--accent);margin-bottom:14px;
+  padding-left:12px;border-left:4px solid var(--brand);display:flex;align-items:center;gap:8px;
+}
+section h2 .cnt{font-size:12px;font-weight:600;color:var(--muted);background:var(--chip);padding:2px 9px;border-radius:999px}
+.card{
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  padding:20px 22px;margin-bottom:14px;transition:transform .12s ease,box-shadow .12s ease;
+}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.08)}
+.card .top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.tag{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:6px;background:var(--brand-soft);color:var(--accent)}
+.tag.warn{background:#fff7e6;color:#b45309}
+.tag.prep{background:#fee2e2;color:#b91c1c}
+.card h3{font-size:16.5px;font-weight:750;margin-bottom:8px;line-height:1.5}
+.card h3 a{color:var(--text);text-decoration:none}
+.card h3 a:hover{color:var(--brand)}
+.meta{font-size:12.5px;color:var(--muted);margin-bottom:10px;display:flex;flex-wrap:wrap;gap:6px 14px}
+.meta b{color:var(--text);font-weight:650}
+.summary{font-size:14px;margin-bottom:12px;color:var(--text)}
+.why{
+  font-size:13px;background:var(--brand-soft);border-radius:8px;padding:10px 14px;
+  color:var(--accent);line-height:1.65;
+}
+.why b{font-weight:750}
+.actions{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px 24px}
+.actions h2{margin-bottom:4px}
+.actions ol{padding-left:20px;margin-top:8px}
+.actions li{margin-bottom:10px;font-size:14px}
+.actions li b{color:var(--accent)}
+footer{text-align:center;font-size:12px;color:var(--muted);margin-top:30px;line-height:1.8}
+footer .src{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+footer .src span{background:var(--chip);padding:3px 10px;border-radius:6px}
+a{color:var(--brand)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+  <div class="sub">为儿科 × AI 转型实践者精选的硬核医疗 AI 信号</div>
+  <div class="hero-meta">
+    <span>📅 2026-08-20（周四）</span>
+    <span>🧬 数据源：AI HOT · PubMed · medRxiv</span>
+    <span>⭐ 本期精选 6 条</span>
+  </div>
+</header>
+
+<div class="persona">
+  <div class="avatar">🩺</div>
+  <div>
+    <div class="who">主理人 Alan · 李帅帅</div>
+    <div class="desc">三甲儿科规培医师 → AI 转型实践者 | 在手项目：小雪宝 LeukemiaPal（白血患儿陪伴）、星桥计划（孤独症数字疗愈）、孤独症量表 AI 平台 | 受众：青少年与家长</div>
+  </div>
+</div>
+
+<section>
+  <h2>医疗模型与临床落地 <span class="cnt">2 条</span></h2>
+
+  <div class="card">
+    <div class="top"><span class="tag">临床落地</span><span class="tag">医疗智能体</span></div>
+    <h3><a href="https://x.com/elonmusk/status/2090078247392555471" target="_blank" rel="noopener">Grok 4.6 登顶医疗智能体基准 MedAgentBench</a></h3>
+    <div class="meta"><span>来源 <b>X（xAI / Elon Musk）</b></span><span>日期 <b>2026-08-19 22:07（北京时间）</b></span></div>
+    <p class="summary">Grok 4.6 以约 95.9% 的成绩登顶 MedAgentBench——该基准在真实电子健康记录（EHR）环境中测试 300 项临床任务，要求模型推理、调用工具并执行多步临床工作流，GPT-5.6 Sol、Grok 4.5 分列其后。</p>
+    <div class="why"><b>为什么与你有关：</b>这是"能自己动手跑临床流程"的医疗智能体新标尺。你的一人公司/本地内容团队在做模型选型时，可直接对标这 300 项 EHR 任务来评估候选模型；但它是闭源，本地部署侧需同步寻找开源替代的对照基准。</div>
+  </div>
+
+  <div class="card">
+    <div class="top"><span class="tag">临床 AI 文档</span><span class="tag">合规治理</span></div>
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42616679/" target="_blank" rel="noopener">SMART：临床 AI 的结构化、可审计、可追溯文档框架（JAMIA）</a></h3>
+    <div class="meta"><span>来源 <b>J Am Med Inform Assoc（JAMIA）</b></span><span>日期 <b>2026-08-19</b></span><span>PMID <b>42616679</b></span></div>
+    <p class="summary">针对现有模型卡/数据表/报告指南无法统一串联"结构化临床字段、受控词表队列描述、结构化性能报告、受治理文档历史"的问题，提出 SMART 框架：OMOP 集成 + 角色化生命周期治理 + 区块链审计链，用于校验文档完整性与生命周期历史。</p>
+    <div class="why"><b>为什么与你有关：</b>你的量表 AI 平台是"AI 辅助评估"类产品，最需要可审计、可追溯的模型文档来建立信任与合规。SMART 直接给你一套可落地范式：意图、性能证据、透明度、生命周期状态四要素结构化，可作为量表模型卡片的模板骨架。</div>
+  </div>
+</section>
+
+<section>
+  <h2>前沿研究 · 论文 <span class="cnt">3 条</span></h2>
+
+  <div class="card">
+    <div class="top"><span class="tag">儿科陪伴</span><span class="tag">家长支持</span></div>
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42616654/" target="_blank" rel="noopener">AI 对话代理 Pat 陪伴家长：参与度、满意度与治疗联盟研究（JMIR）</a></h3>
+    <div class="meta"><span>来源 <b>JMIR Formative Research</b></span><span>日期 <b>2026-08-19</b></span><span>PMID <b>42616654</b></span></div>
+    <p class="summary">88 名 3–14 岁儿童照护者参与的在线家长管理训练（PMT）中，AI 对话代理 Pat 在治疗间期提供实时指导与答疑。结果显示照护者与 Pat 建立高治疗联盟（均值 4.10/5，12 周稳定）、净推荐值 NPS 持续高位（75–78），消息交互量极高（8 周均值 726 条）。</p>
+    <div class="why"><b>为什么与你有关：</b>这是"AI 陪伴家长而非直接陪孩子"的高质量实证，与小雪宝的"家长端陪伴"、星桥计划的家长支持高度同构。关键设计：AI 作为治疗师主导的 PMT 的"间期增强器"，而非替代——这正可作为你产品中 AI 陪伴的角色定位依据。</div>
+  </div>
+
+  <div class="card">
+    <div class="top"><span class="tag">青少年</span><span class="tag">心理健康</span><span class="tag">综述</span></div>
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42615471/" target="_blank" rel="noopener">青少年心理健康 App 中的生成式 AI：快速综述（JMIR Mental Health）</a></h3>
+    <div class="meta"><span>来源 <b>JMIR Mental Health</b></span><span>日期 <b>2026-08-19</b></span><span>PMID <b>42615471</b></span></div>
+    <p class="summary">系统检索 4 大数据库后纳入 5 项研究（11–24 岁人群）。生成式 AI 最常见集成方式是聊天机器人；青少年普遍评价可用性、质量良好，对抑郁/焦虑/痛苦有积极信号。但<b>无一项研究系统评估了危害</b>，作者强调"缺乏不良反应报告更可能是未调查，而非无伤害"。</p>
+    <div class="why"><b>为什么与你有关：</b>星桥计划面向孤独症儿童与青少年，这条综述点出一个直击要害的盲区——大家都在做 AI 陪伴，但几乎没人系统评估安全性。你的产品若想差异化胜出，应把"不良反应/风险监测"做成显性能力，而不是默认无伤害。</div>
+  </div>
+
+  <div class="card">
+    <div class="top"><span class="tag prep">预印本 · 未经同行评审</span><span class="tag">早期发育</span></div>
+    <h3><a href="https://doi.org/10.64898/2026.08.09.26360057" target="_blank" rel="noopener">多模态嵌入 + 自然语言检索，从亲子互动录音中识别发育行为</a></h3>
+    <div class="meta"><span>来源 <b>medRxiv（health informatics）</b></span><span>日期 <b>2026-08-13</b></span><span>DOI <b>10.64898/2026.08.09.26360057</b></span></div>
+    <p class="summary">用自然语言查询 + 多模态嵌入（Jina Embeddings v5 Omni 最优），直接在音频/视频流上检索照护者-儿童互动中的发育行为，跨越转录文本。在 277 段 14/24/36 月龄录音、27 个行为目标中，Jina 能按相对词汇量准确排序儿童（Spearman 0.68–0.90），但对罕见行为（指物、咿呀）召回不足，也低估完整词汇量。</p>
+    <div class="why"><b>为什么与你有关：</b>这条直击星桥计划的核心场景——孤独症早期筛查高度依赖对"发育行为信号"的捕捉。结论很务实：多模态模型目前适合做"证据筛选"帮专家定位关键片段，而非替代人工评估。这提示你：星桥的早期筛查模块应定位为"筛查辅助 + 人工复核"，而非全自动诊断。</div>
+  </div>
+</section>
+
+<section>
+  <h2>行业与监管动态 <span class="cnt">1 条</span></h2>
+
+  <div class="card">
+    <div class="top"><span class="tag">监管</span><span class="tag">人在环</span></div>
+    <h3><a href="https://aihot.virxact.com/items/cmt066ejp13ezrodp51bqwt8d" target="_blank" rel="noopener">JAMA 评论：当 AI 超越医生，监管者不应强制"人类介入"</a></h3>
+    <div class="meta"><span>来源 <b>JAMA / The Decoder</b></span><span>日期 <b>2026-08-18</b></span></div>
+    <p class="summary">JAMA 评论预测自主 AI 在医学推理上将超越任何"医生+AI"组合，呼吁监管者不要把"人类介入（human-in-the-loop）"写成硬性规则。援引研究称 ChatGPT o3 在 377 个复杂病例中 60% 首诊即给出正确诊断。</p>
+    <div class="why"><b>为什么与你有关：</b>这直接关乎你量表平台与 AI 辅助评估的监管定位。与你今天选中的另一条形成对照——一套说"别强制人在环"，另一套（青少年综述）警示"安全评估严重缺失"。你的判断应为：能力可以往前推，但<b>安全护栏必须先行</b>，尤其面向青少年与孤独症这样的敏感人群，不应盲从"去人化"论调。</div>
+  </div>
+</section>
+
+<div class="actions">
+  <h2>今日行动建议</h2>
+  <ol>
+    <li><b>星桥计划 · 产品架构：</b>把"Pat 家长陪伴模式（AI 作治疗间期增强器）"和"多模态发育行为筛查（AI 作证据筛选）"合并进 v2 产品蓝图——AI 定位为"辅助+复核"，家长端陪伴与早期信号筛查双线并进。</li>
+    <li><b>量表平台 · 合规文档：</b>参照 SMART 框架，为你的量表 AI 建立最小可用的模型卡片模板（意图 / 性能证据 / 透明度 / 生命周期状态四要素），先跑通一个量表的文档化。</li>
+    <li><b>安全护栏：</b>在星桥计划中把"不良反应/风险监测"设计为显性模块——这正是当前青少年 AI 产品的公认盲区，做成差异点而非默认值。</li>
+  </ol>
+</div>
+
+<footer>
+  <div class="src">
+    <span>数据源：AI HOT（医疗资讯）</span>
+    <span>PubMed（同行评审论文）</span>
+    <span>medRxiv（预印本）</span>
+  </div>
+  <div>本简报由「AI新青年」自动化生成 · 仅供个人学习研究参考，不构成医疗建议</div>
+  <div>预印本内容未经同行评审，请谨慎引用 · 版权归原作者与出版方所有</div>
+</footer>
+
+</div>
+</body>
+</html>

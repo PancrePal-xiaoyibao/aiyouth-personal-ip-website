@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-09-05</title>
+<style>
+  :root {
+    --bg: #f4f7f7;
+    --card: #ffffff;
+    --text: #16211f;
+    --muted: #5b6b69;
+    --line: #dfe8e7;
+    --brand: #0d9488;
+    --brand-soft: rgba(13,148,136,0.10);
+    --brand-soft2: rgba(13,148,136,0.18);
+    --chip: #eef5f4;
+    --warn: #b45309;
+    --warn-bg: rgba(180,83,9,0.10);
+    --shadow: 0 1px 3px rgba(16,40,38,0.06), 0 8px 24px rgba(16,40,38,0.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0c1514;
+      --card: #14201f;
+      --text: #e7efee;
+      --muted: #93a5a3;
+      --line: #263533;
+      --brand: #2dd4bf;
+      --brand-soft: rgba(45,212,191,0.12);
+      --brand-soft2: rgba(45,212,191,0.22);
+      --chip: #1b2b2a;
+      --warn: #fbbf24;
+      --warn-bg: rgba(251,191,36,0.12);
+      --shadow: 0 1px 3px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  header.hero {
+    background: linear-gradient(135deg, var(--brand-soft2), var(--card) 62%);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 28px 26px 22px;
+    box-shadow: var(--shadow);
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--brand);
+    background: var(--brand-soft);
+    border-radius: 12px;
+    padding: 4px 12px;
+    margin-bottom: 14px;
+  }
+  h1 { font-size: 27px; margin: 0 0 10px; letter-spacing: -.4px; line-height: 1.3; }
+  .sub { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill {
+    font-size: 12.5px; color: var(--muted);
+    background: var(--chip); border: 1px solid var(--line);
+    border-radius: 12px; padding: 4px 11px;
+  }
+  .pill b { color: var(--brand); font-weight: 600; }
+  h2.sec {
+    font-size: 15px; margin: 34px 0 14px; color: var(--brand);
+    letter-spacing: .04em; display: flex; align-items: center; gap: 9px;
+  }
+  h2.sec::before { content: ""; width: 4px; height: 16px; background: var(--brand); border-radius: 2px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 20px 22px; margin-bottom: 14px;
+    box-shadow: var(--shadow);
+  }
+  .card h3 { font-size: 17.5px; margin: 0 0 8px; line-height: 1.45; }
+  .card h3 a { color: var(--text); text-decoration: none; border-bottom: 2px solid var(--brand-soft2); }
+  .card h3 a:hover { color: var(--brand); border-bottom-color: var(--brand); }
+  .src { font-size: 12.5px; color: var(--muted); margin-bottom: 11px; }
+  .src .dot { opacity: .5; margin: 0 7px; }
+  .tag {
+    display: inline-block; font-size: 11.5px; padding: 2px 8px; border-radius: 12px;
+    background: var(--brand-soft); color: var(--brand); margin-left: 6px; vertical-align: 1.5px;
+  }
+  .tag.pre { background: var(--warn-bg); color: var(--warn); }
+  .abs { font-size: 14.5px; margin: 0 0 13px; }
+  .why {
+    font-size: 14px; background: var(--brand-soft);
+    border-left: 3px solid var(--brand);
+    border-radius: 0 12px 12px 0; padding: 11px 15px;
+  }
+  .why b { color: var(--brand); }
+  .quick { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; box-shadow: var(--shadow); }
+  .quick ol { margin: 0; padding-left: 20px; font-size: 14.5px; }
+  .quick li { margin-bottom: 9px; }
+  .quick li:last-child { margin-bottom: 0; }
+  .quick a { color: var(--brand); }
+  .acts { background: linear-gradient(135deg, var(--brand-soft), var(--card) 55%); }
+  .acts ol { padding-left: 20px; margin: 0; font-size: 14.5px; }
+  .acts li { margin-bottom: 11px; }
+  .acts li:last-child { margin-bottom: 0; }
+  .acts b { color: var(--brand); }
+  footer {
+    margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--line);
+    font-size: 12.5px; color: var(--muted); text-align: center; line-height: 1.9;
+  }
+  a { color: var(--brand); }
+  @media (max-width: 600px) {
+    body { padding: 20px 12px 44px; }
+    h1 { font-size: 22px; }
+    .card { padding: 17px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="kicker">AI新青年 · 医疗 AI 聚焦</span>
+    <h1>医疗 AI 聚焦简报 · 2026-09-05</h1>
+    <p class="sub">主理人 Alan（李帅帅）· 三甲儿科规培医师转型 AI · 受众为青少年与家长<br>在手项目：小雪宝 LeukemiaPal（白血病患儿陪伴助手）· 星桥计划（孤独症数字疗愈）· 孤独症量表 AI 平台 · 本地 AI 内容团队 · 一人公司</p>
+    <div class="meta">
+      <span class="pill">日期 <b>2026-09-05</b></span>
+      <span class="pill">窗口 <b>2026-08-29 → 2026-09-05</b></span>
+      <span class="pill">精选 <b>6 条</b> + 速览 5 条</span>
+      <span class="pill">信源 <b>AI HOT / PubMed / medRxiv</b></span>
+    </div>
+  </header>
+
+  <h2 class="sec">医疗模型与临床落地</h2>
+
+  <article class="card">
+    <h3><a href="https://x.com/AntLingAGI/status/2095953758148853892" target="_blank" rel="noopener">蚂蚁百灵发布 Ling-3.0-flash-Sante：面向健康与医疗场景增强的 MoE 模型</a></h3>
+    <div class="src">X：蚂蚁百灵 @AntLingAGI <span class="dot">·</span> 2026-09-05 03:14（北京时间）</div>
+    <p class="abs">蚂蚁百灵在 Ling-3.0-flash 基座之上推出医疗增强版本 Ling-3.0-flash-Sante（法语「健康」），沿用 MoE 稀疏激活架构，主打健康与医疗领域的问诊、解读与知识问答能力增强。</p>
+    <p class="why"><b>为什么与你有关：</b>小雪宝与星桥计划都卡在「医疗场景能力 vs. 部署成本」这个矛盾上——MoE 的稀疏激活意味着单次推理只唤醒部分专家，是本地/私有化部署下性价比最高的一类医疗模型路线。值得把它列进你的可本地部署医疗模型候选池，和此前关注的开源医疗模型做一轮中文儿科问诊、量表解读、化验单解释的横向盲评。</p>
+  </article>
+
+  <h2 class="sec">前沿研究 · 论文</h2>
+
+  <article class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42660134/" target="_blank" rel="noopener">超越最高分级：真实世界数字健康技术如何捕捉、预测和管理血液肿瘤的治疗毒性</a></h3>
+    <div class="src">The Lancet Haematology <span class="dot">·</span> 2026 Sep;13(9):e679-e689 <span class="dot">·</span> El-Galaly TC 等（Aarhus / Mayo Clinic / Institut Curie）</div>
+    <p class="abs">文章指出，传统以「最高毒性分级（maximum grade）」为终点的毒性记录方式严重低估了患者的真实负担。作者主张用可穿戴设备、患者报告结局（PRO）与移动端症状采集等真实世界数字健康技术，连续捕捉治疗毒性的发生、轨迹与波动，并据此做预测与主动干预。</p>
+    <p class="why"><b>为什么与你有关：</b>这几乎就是小雪宝 LeukemiaPal 的学术背书与产品定义书。它把「陪伴助手」从情感陪聊抬到了临床价值层面——每日症状与 PRO 的连续轨迹，才是触发预警、指导支持治疗的真实信号源。建议把「时间维度上的症状负担（而非单次最高分级）」直接写进小雪宝的数据模型，并把它作为与临床科室沟通时的核心引用文献。</p>
+  </article>
+
+  <article class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42696227/" target="_blank" rel="noopener">人工智能用于神经母细胞瘤的诊断、风险分层与预后：系统综述与荟萃分析</a></h3>
+    <div class="src">Current Oncology Reports <span class="dot">·</span> 2026 Sep 4;28(1):90 <span class="dot">·</span> PRISMA 2020 / PROSPERO CRD42024539475</div>
+    <p class="abs">从 3,742 篇文献中纳入 53 项研究。机器学习模型在鉴别诊断上的 AUC 为 0.87，略高于影像科医师的 0.83，但差异不显著且不确定性大；混合型列线图在风险分层上 AUC 达 0.87，AI 衍生列线图（0.9）与基因特征（0.8）在描述性层面优于传统预后标志物。化疗反应预测在所有模型类型中均未达到临床可用阈值。仅 33.9% 的模型报告了校准，24.5% 做了外部验证。</p>
+    <p class="why"><b>为什么与你有关：</b>这是儿科实体肿瘤 AI 目前最诚实的一份体检报告——「看起来很强，但校准和外部验证严重缺失」。做内容时，这组数字（33.9% / 24.5%）是极好的科普钩子：能一句话讲清「AI 论文的 AUC 高 ≠ 能上临床」。同时也给你手上的任何医疗 AI 评估工作提供了一份现成的质量清单：看校准、看外部验证、看任务类型，而不只看 AUC。</p>
+  </article>
+
+  <article class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42695515/" target="_blank" rel="noopener">从诊室到家庭：社交沟通量表（SCS）在中国幼儿远程孤独症早期筛查中的效度验证</a></h3>
+    <div class="src">Autism <span class="dot">·</span> 2026 Sep 4（在线优先）<span class="dot">·</span> 香港中文大学</div>
+    <p class="abs">多数远程评估工具诞生于西方语境，跨文化适用性存疑。研究纳入 170 名 16–30 月龄中国幼儿，由家长在家中录制亲子互动视频，再按 SCS 方案编码，以 ADOS-2 分类作为孤独症可能性判定标准。SCS 评分者间信度良好（ICC = 0.87），与 ADOS-2 呈中等聚合效度。逻辑回归与随机森林均优于总分截断法，其中随机森林表现最均衡；加入人口学变量后 AUC、敏感度、特异度均达 0.91。</p>
+    <p class="why"><b>为什么与你有关：</b>与你的孤独症量表 AI 平台是同一条赛道上的直接对标物，而且是中国样本、家庭场景、视频采集——三个条件全中。它的技术路径对你有两点直接启发：一是「量表打标 + 机器学习建模」显著优于传统总分截断（这是量表平台的核心卖点论证）；二是作者自己也指出仍需独立样本与临床诊断验证，这正是你可以补位的地方。建议把 SCS 纳入平台的能力对照表。</p>
+  </article>
+
+  <article class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42671322/" target="_blank" rel="noopener">MBAFNet：基于异质音频嵌入的多分支注意力融合网络，用于语音孤独症检测</a></h3>
+    <div class="src">International Journal of Neural Systems <span class="dot">·</span> 2026 Aug 31（在线优先）<span class="dot">·</span> 穆罕默德五世大学 / IMT-Atlantique</div>
+    <p class="abs">现有研究多只用单一语音表征。作者提出 MBAFNet：让 YAMNet、VGGish 等预训练音频嵌入各自过一遍卷积编码器，在多尺度提取时序线索后，用自注意力层建模跨表征交互，再用门控机制调节各路嵌入的贡献权重后分类。在 CASD-SC 语料、受试者不重叠的五折评估下准确率达 94.17%，超过所有基线与此前 SOTA。作者同时强调，用于筛查前仍需更广泛验证。</p>
+    <p class="why"><b>为什么与你有关：</b>语音是星桥计划最自然的无感采集通道——孩子不用配合、家长不用填表。MBAFNet 的关键启示不是 94.17% 这个数字，而是「多路预训练嵌入 + 门控选择性融合」这个结构：在你的中文儿童语音数据上，大概率可以复用同一套框架，只替换嵌入与微调语料。另外 94% 的准确率配合「作者自陈仍需验证」，正好是你内容里讲「AI 筛查不能替代诊断」的标准案例。</p>
+  </article>
+
+  <h2 class="sec">预印本（未经同行评审）</h2>
+
+  <article class="card">
+    <h3><a href="https://doi.org/10.64898/2026.08.28.26361655" target="_blank" rel="noopener">SPROUT：用于儿科生长发育障碍早期检测的多智能体大模型推理引擎</a><span class="tag pre">预印本 · 未经同行评审</span></h3>
+    <div class="src">medRxiv <span class="dot">·</span> 2026-08-31 <span class="dot">·</span> health informatics</div>
+    <p class="abs">儿童生长监测是儿科基石，但细微的生长轨迹异常常被漏判、导致诊断延迟。SPROUT（System for Pediatric Recognition Of Undiagnosed Trajectories）是一个两阶段系统：先由高特异度的大模型筛查器标记可疑的纵向生长模式，再由 Orchestrator 协调一个多学科的大模型智能体小组生成排序后的鉴别诊断；并设 Trainer 模块通过「Learner」智能体向小组注入元知识，纠正系统性推理错误。在诊断前一年的数据上，筛查器特异度 98%（83/85）、敏感度 28%；用到诊断当日为止的纵向数据，特异度 100%、敏感度 47%。</p>
+    <p class="why"><b>为什么与你有关：</b>这是「多智能体 + 儿科纵向数据」目前最完整的一个工程范式，和你熟悉的智能体编排思路完全同构：筛查器—编排器—专家小组—纠错训练器。对你有三个可迁移点：① 纵向轨迹筛查比单点判断更符合儿科临床逻辑，小雪宝的生长/血象趋势预警可直接借鉴；② Trainer/Learner 这种「元知识注入纠正系统性错误」的做法，适合解决陪伴类产品在敏感场景下的安全对齐；③ 敏感度偏低（28%→47%）这个诚实结论提醒你，这类系统定位应是「提示」而非「诊断」。</p>
+  </article>
+
+  <h2 class="sec">其他信号速览</h2>
+  <div class="quick">
+    <ol>
+      <li><b>孤独症表型的四维连续谱：</b><a href="https://doi.org/10.64898/2026.08.27.26361561" target="_blank" rel="noopener">medRxiv 预印本 · 未经同行评审</a> — 在 SPARK 队列 36,710 人数据上比较因子分析、高斯混合模型与变分自编码器（VAE），VAE 重构精度约为因子分析的 4 倍、GMM 的 8 倍，并稳定提取出 4 个潜变量维度、识别出 3 个重叠亚型，可用雷达图做个体层面画像。对量表平台的「分型 + 可视化报告」是现成的方法学参考。</li>
+      <li><b>肌少症与老年 AML 治疗耐受：</b><a href="https://pubmed.ncbi.nlm.nih.gov/42675142/" target="_blank" rel="noopener">Leukemia（PMID 42675142）</a> — 芝加哥大学用 AI CT 分割自动测量身体成分，结合老年综合评估，分析肌少症与老年急性髓系白血病治疗耐受的关联。成人数据，但「影像组学 + 量表评估」的组合范式对患儿营养与耐受监测有迁移价值。</li>
+      <li><b>AML 首次完全缓解后的个体化预后：</b><a href="https://pubmed.ncbi.nlm.nih.gov/42670491/" target="_blank" rel="noopener">HemaSphere（PMID 42670491）</a> — HARMONY 联盟多中心研究，用机器学习预测成人 AML 在 CR1 后不做异基因移植巩固的个体化结局。</li>
+      <li><b>仿生医疗机器人内置评估量表：</b><a href="https://www.ithome.com/0/997/971.htm" target="_blank" rel="noopener">IT之家 2026-09-03</a> — 优必选联合麦迪科技发布优麦机器人康养版，内置自研 CGA 老年综合评估题库，覆盖 10 项慢病管理维度，可完成血压血糖监测、复诊管理与用药风险预警。「量表题库内置进陪伴硬件」是对小雪宝形态的直接参照。</li>
+      <li><b>AI 生成医疗内容治理加码：</b><a href="https://www.ithome.com/0/998/157.htm" target="_blank" rel="noopener">IT之家 2026-09-03</a> — 小红书发布《关于 AI 制作医美、民宿等虚假内容治理公告》，6–8 月清理 AI 虚假笔记近 12 万条，对发布虚假医美内容的账号封禁或禁言，并要求创作者用 AI 内容声明功能标注。医疗相关内容的 AI 标识已是硬要求，本地 AI 内容团队的发布流程需要加上这道合规步骤。</li>
+    </ol>
+  </div>
+
+  <h2 class="sec">今日行动建议</h2>
+  <div class="card acts">
+    <ol>
+      <li><b>小雪宝 · 把「症状时间轨迹」写进数据模型。</b>以 Lancet Haematology 那篇（PMID 42660134）为核心依据，把小雪宝的每日记录字段从「今日症状有/无」改为「症状负担随时间的曲线」，并设计触发预警的斜率与持续时长规则。这一步做完，你在和临床科室沟通时才拿得出可讨论的东西。</li>
+      <li><b>量表平台 · 建一张 SCS 对标表并启动中文语音实验。</b>把 SCS（PMID 42695515）的指标（ICC 0.87、RF AUC/敏感度/特异度 0.91、样本 170 例 16–30 月龄）录入竞品对照表，明确你的差异化在哪；同时用 MBAFNet 的「多路嵌入 + 门控融合」结构，在你手上的中文儿童语音数据上跑一版最小验证。</li>
+      <li><b>内容团队 · 把「AI 医疗内容标识」固化进 SOP，并开一个选题。</b>发布流程加一道 AI 声明标注检查；选题上，神经母细胞瘤综述里「仅 33.9% 报告校准、24.5% 做外部验证」这组数字，配合 SPROUT 的敏感度 28%→47%，足够撑起一条「为什么 AI 医疗论文的漂亮数字不等于能上临床」的硬核科普。</li>
+    </ol>
+  </div>
+
+  <footer>
+    数据来源：AI HOT（行业资讯）· PubMed / E-utilities（同行评审文献）· medRxiv（预印本）<br>
+    预印本条目均已标注「未经同行评审」，结论可能随同行评审修订，请谨慎引用。<br>
+    © 2026 AI新青年 · 本简报由 AI 自动汇编，仅供研究参考，不构成任何诊疗建议。
+  </footer>
+
+</div>
+</body>
+</html>

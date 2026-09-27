@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-09-13</title>
+<style>
+:root{
+  --accent:#0d9488;
+  --accent-soft:rgba(13,148,136,.12);
+  --bg:#f6f8f9;
+  --card:#ffffff;
+  --text:#14282c;
+  --text-sub:#4a6367;
+  --line:#e2eaeb;
+  --chip:#eef4f4;
+  --warn-bg:#fff7e6;
+  --warn-line:#f0c36d;
+  --warn-text:#7a5410;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0d1517;
+    --card:#152225;
+    --text:#e6f0f1;
+    --text-sub:#9fb4b6;
+    --line:#243437;
+    --chip:#1c2e31;
+    --warn-bg:#2a2416;
+    --warn-line:#6b5526;
+    --warn-text:#e2c98a;
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  padding:28px 16px 60px;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:820px;margin:0 auto}
+header{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:26px 26px 22px;
+  margin-bottom:20px;
+}
+.brand{
+  display:inline-block;
+  font-size:12px;
+  letter-spacing:.14em;
+  color:var(--accent);
+  font-weight:700;
+  margin-bottom:10px;
+}
+h1{
+  margin:0 0 12px;
+  font-size:26px;
+  line-height:1.35;
+  letter-spacing:-.4px;
+}
+.meta{
+  font-size:13px;
+  color:var(--text-sub);
+  margin:0 0 14px;
+}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  background:var(--chip);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:5px 12px;
+  font-size:12px;
+  color:var(--text-sub);
+}
+.chip b{color:var(--accent);font-weight:700}
+h2{
+  font-size:15px;
+  margin:30px 0 14px;
+  padding-left:11px;
+  border-left:4px solid var(--accent);
+  letter-spacing:.02em;
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:20px 22px;
+  margin-bottom:14px;
+}
+.card h3{
+  margin:0 0 8px;
+  font-size:17px;
+  line-height:1.5;
+}
+.card h3 a{color:var(--text);text-decoration:none;border-bottom:1px solid transparent}
+.card h3 a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.src{
+  font-size:12px;
+  color:var(--text-sub);
+  margin-bottom:10px;
+}
+.src .sep{opacity:.45;margin:0 7px}
+.tag{
+  display:inline-block;
+  font-size:11px;
+  padding:2px 8px;
+  border-radius:6px;
+  background:var(--accent-soft);
+  color:var(--accent);
+  font-weight:600;
+  margin-left:6px;
+}
+.tag.pre{background:var(--warn-bg);color:var(--warn-text)}
+.sum{margin:0 0 12px;font-size:14.5px}
+.why{
+  background:var(--accent-soft);
+  border-left:3px solid var(--accent);
+  border-radius:0 8px 8px 0;
+  padding:11px 14px;
+  font-size:13.5px;
+  color:var(--text);
+}
+.why b{color:var(--accent)}
+ul.quick{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:18px 22px 18px 40px;
+  margin:0 0 14px;
+  font-size:14px;
+}
+ul.quick li{margin-bottom:9px}
+ul.quick li:last-child{margin-bottom:0}
+ul.quick a{color:var(--accent);text-decoration:none}
+ul.quick a:hover{text-decoration:underline}
+.note{
+  background:var(--warn-bg);
+  border:1px solid var(--warn-line);
+  border-radius:12px;
+  padding:14px 18px;
+  font-size:13px;
+  color:var(--warn-text);
+  margin-bottom:20px;
+}
+.actions{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-left:4px solid var(--accent);
+  border-radius:12px;
+  padding:20px 24px;
+  margin-top:8px;
+}
+.actions h2{margin:0 0 12px;border:none;padding:0;font-size:16px}
+.actions ol{margin:0;padding-left:20px;font-size:14.5px}
+.actions ol li{margin-bottom:11px}
+.actions ol li:last-child{margin-bottom:0}
+footer{
+  margin-top:30px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  font-size:12px;
+  color:var(--text-sub);
+  text-align:center;
+}
+footer p{margin:4px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="brand">AI新青年 · MEDICAL AI</span>
+  <h1>医疗 AI 聚焦简报</h1>
+  <p class="meta">2026-09-13（周日） · 检索窗口 2026-09-06 → 2026-09-13 · 主理人 Alan：三甲儿科规培医师转型 AI，受众青少年／家长</p>
+  <div class="chips">
+    <span class="chip">精选 <b>6</b> 条</span>
+    <span class="chip">同行评审论文 <b>4</b></span>
+    <span class="chip">预印本 <b>2</b></span>
+    <span class="chip">速览 <b>5</b> 条</span>
+    <span class="chip">来源：PubMed · medRxiv · 行业资讯源</span>
+  </div>
+</header>
+
+<div class="note">
+  <b>今日信号说明：</b>本期主检索 247 命中，三组定向检索（儿科 158 / 白血病·儿童肿瘤 29 / 孤独症 39）中<strong>儿科方向信号最实</strong>，血液肿瘤仅有 1 条体外药敏类硬核（成人 AML）。已跨期去重，主动跳过前四期已用的 AlphaGenome Atlas、APL 三模态、CARS2 MCID、PaiCoach 等条目。儿童 ALL/AML 临床队列连续多期无强命中，未硬凑。
+</div>
+
+<h2>医疗模型与临床落地</h2>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42727764/" target="_blank" rel="noopener">生成式 AI 破解儿科罕见病数据荒：cGAN 合成图像让先天性巨结肠术中判读 AUC 从 0.84 提到 0.94</a></h3>
+  <div class="src">Journal of Pediatric Surgery · 2026-09-11<span class="sep">|</span>意大利 Salesi 儿童医院 × 马尔凯理工大学</div>
+  <p class="sum">腹腔镜巨结肠根治术中最难的一环是术中快速判断"哪段肠子有神经节细胞"，而先天性巨结肠属罕见病、图像极度稀缺。团队对 2024-11 至 2025-11 术中荧光共聚焦显微镜（FCM）图像做标注切片，训练三个同架构 CNN：仅真实切片（461 神经节 / 1374 无神经节）、加入 913 张 cGAN 合成切片、加入 913 张传统数据增强切片，在独立真实测试集（590 无神经节 / 198 有神经节）验证。结果合成组准确率 84%、敏感度 91%、特异度 78%，ROC-AUC 0.94 vs 单纯真实组 0.84、传统增强组 0.80（P&lt;0.01）。</p>
+  <div class="why"><b>为什么与你有关：</b>这是"小样本 + 生成式增强"在真实儿科手术场景里跑出来的完整证据链——<b>星桥计划</b>和小雪宝都面临同一个死结：阳性样本少、标注贵、外部数据拿不到。它给出的不只是"可以合成数据"，而是"合成数据确实比传统增强更能补上代表性问题"（+10 个 AUC 点、敏感度 +13 个点）。做量表平台时若要用合成样本扩充训练，可以把这条当作对投资人/合作者说明可行性的硬引用。</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42721450/" target="_blank" rel="noopener">SmartADHD：与 9 位患者共同设计的青少年 ADHD 大模型聊天机器人原型，给出 7 条开发建议</a></h3>
+  <div class="src">JMIR Formative Research · 2026-09-10<span class="sep">|</span>英国埃克塞特大学医学院 × 布里斯托大学</div>
+  <p class="sum">针对 ADHD 青少年心理教育与医疗资源可及性不均，组建跨学科团队（研究者＋开发者＋临床医生＋亲历者），按 person-based approach 开展工作坊共同设计原型。9 位亲历者与 3 位卫生专业人员参与工作坊，6 位亲历者完成 think-aloud 访谈，对对话流、头像形象、文本转语音、聊天框交互与措辞逐项反馈。原型基于现成 GPT-4o（Convai 托管），用 NHS 公开资料做知识源，最终沉淀出 7 条面向后续开发的建议。</p>
+  <div class="why"><b>为什么与你有关：</b>这是<b>星桥计划</b>目前能看到的最贴近的同类蓝本——同样是"神经发育障碍青少年 + LLM 虚拟助手"，且文章把共同设计流程、亲历者样本量、反馈维度（头像/语音/措辞/对话流）全部拆开写清，可直接照抄成需求清单。特别注意它明确写到"还需进一步明确技术边界与临床医生视角"——这正是你做数字疗愈产品时必须提前设的红线位置。</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42727698/" target="_blank" rel="noopener">儿科心跳骤停后神经预后：EEG 电极从全导联砍到 2 个，机器学习模型表现不掉</a></h3>
+  <div class="src">Resuscitation · 2026-09-11<span class="sep">|</span>荷兰伊拉斯姆斯医学中心儿童医院</div>
+  <p class="sum">回顾性纳入 2012-2023 年 PICU 收治的 82 名心跳骤停后 24 小时接受 EEG 监测的 18 岁以下患儿（中位年龄 3.5 岁，60% 预后不良）。分别在全部可用导联、6 导联、2 导联三种双极导联组合下做视觉判读与定量 EEG 机器学习建模，预测 12 个月后 PCPC 4-6 的不良结局。6 导联与 2 导联同全导联的视觉分级一致性 κ 分别为 0.803 和 0.682；三种导联训练出的模型在患者层面表现无显著差异，EEG 连续性与波幅特征跨导联最稳健。</p>
+  <div class="why"><b>为什么与你有关：</b>AI 医疗落地的真正瓶颈往往不是准确率而是<b>部署成本</b>——把设备要求砍掉 2/3 而性能不掉，价值远大于 AUC 涨 0.02。这条对星桥计划的硬件路线是直接提醒：如果打算上 EEG 或生理信号做孤独症/注意力评估，先问"最少几个通道够用"，通道数每减一半，家庭端可及性就翻一倍。同时 κ=0.682 提示 2 导联时人工判读一致性已明显下滑，别把降配后的结果直接交给非专科人员解读。</div>
+</div>
+
+<h2>前沿研究 · 论文</h2>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42716307/" target="_blank" rel="noopener">单细胞分辨率药物反应谱：高内涵成像 + 监督机器学习刻画 AML 亚型异质性</a></h3>
+  <div class="src">SLAS Discovery · 2026-09-09<span class="sep">|</span>德国 Georg-Speyer-Haus × 法兰克福大学</div>
+  <p class="sum">AML 细胞异质性强，传统 bulk 活力检测把多样性平均掉了。团队建立高内涵荧光成像工作流，三种无毒染料同时捕捉核形态、线粒体功能与凋亡，自动化成像＋计算图像分析完成分割与表型特征提取，再用监督机器学习把每个细胞分为存活/凋亡/死亡，从而支持单细胞分辨率的剂量反应曲线、IC50 与药敏评分。在 7 个 AML 细胞系（含 BCL-2 抑制获得性与突变驱动耐药模型）验证，维奈克拉结果与 ATP 法 CellTiterGlo 高度一致，16 化合物面板筛选同样吻合且额外提供表型信息，并已成功迁移至原代 AML 样本。</p>
+  <div class="why"><b>为什么与你有关：</b>血液肿瘤方向本期唯一硬核命中，且它踩中的正是<b>小雪宝 LeukemiaPal</b> 长远能延伸的方向——从"陪伴"走向"疗效与副作用预测"。需注意这是<b>体外细胞系与原代样本研究，尚未进入临床验证</b>，不能外推成临床决策工具；但"单细胞表型 + 可解释分类"的思路，与你做白血病患儿病程记录时的分层思路（同一诊断、不同轨迹）是同构的，值得作为知识库长期跟踪的支线。</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://doi.org/10.64898/2026.09.02.26362090" target="_blank" rel="noopener">人打分不一致、大模型却高度一致：对话式医疗 AI 的错误分类法到底能不能用？<span class="tag pre">预印本 · 未经同行评审</span></a></h3>
+  <div class="src">medRxiv（Health Informatics） · 2026-09-07</div>
+  <p class="sum">从业者自下而上归纳出的对话式 AI 工作流错误分类法，人工编码者之间一致性极低，究竟是分类法本身没定义清楚，还是这类判断天然困难？研究者把一套锁定的 8 类错误分类法原封不动交给三个来自不同开发方的前沿大模型，对 45 起已记录的错误事件编码。结果模型间一致性 Fleiss κ=0.625（ substantial），而人类编码者仅 κ=0.155（slight）；全语料上稳定在 κ=0.632，细化到 10 类后不降反升（κ=0.690）。但严重度判定与"声称已核实"标记在人机两侧都只达 fair 水平。</p>
+  <div class="why"><b>为什么与你有关：</b>做<b>星桥计划</b>和小雪宝的对话安全评审时，你迟早要建一套"AI 说错了算哪类错"的台账。这条给了两个冷峻结论：一是<b>错误类型的识别可以交给模型批量做</b>（κ 0.63 已接近可用），但<b>严重度分级绝不能自动化</b>——人机都不靠谱，必须人定规则、人工复核。二是它诚实承认 κ 高不等于分类法正确，可能只是模型共享先验，这点在给医疗合作方汇报时要主动说清，别把一致性当有效性卖。</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://doi.org/10.64898/2026.09.08.26362559" target="_blank" rel="noopener">面对"带错误前提的提问"，自动技能优化把大模型的纠错率从 16% 拉到 90%<span class="tag pre">预印本 · 未经同行评审</span></a></h3>
+  <div class="src">medRxiv（Oncology） · 2026-09-10</div>
+  <p class="sum">大模型回答癌症相关提问时，常会"顺着"问题中隐含的错误前提给出看似合理的答案。研究用医生核验过的 Cancer-Myth 基准，以 117 道含错误前提的问题训练，由 GPT-5.4 为 GPT-4o 优化出一份书面技能（SkillOpt，微软研究院方法），在 58 道含错误前提 + 30 道不含的验证集上筛选，最终在 410 道未见过的问题上测试。GPT-4o 的错误前提纠正率从 15.4-17.6% 提升至 82.2-90.5%，提升 66.3-72.9 个百分点（95% bootstrap CI 61.7-77.3，Holm 校正后 p&lt;0.001）。</p>
+  <div class="why"><b>为什么与你有关：</b>这是<b>小雪宝 LeukemiaPal</b> 最该警惕的失效模式——家长问"我家孩子血小板这么低是不是该停化疗"，模型若默认前提成立顺着答，后果比答错更严重。这条证明：靠写更强的提示词（含 7 个示例的 few-shot）效果有限，而<b>把纠错能力训练成一份可复用"技能"并自动优化</b>，能把纠正率做到九成。建议直接把它列为小雪宝安全层的第一优先级技术方案，并自建一套中文儿科血液肿瘤的"错误前提题库"做回归测试。</div>
+</div>
+
+<h2>速览 · 其他值得知道</h2>
+<ul class="quick">
+  <li><a href="https://pubmed.ncbi.nlm.nih.gov/42728313/" target="_blank" rel="noopener">新生儿血流动力学中的 AI：更早更可靠识别肺动脉高压</a> — Pediatric Research，2026-09-11，蒙特利尔儿童医院。公开题录未附结构化摘要，未引述具体数值，仅供跟踪。</li>
+  <li><a href="https://pubmed.ncbi.nlm.nih.gov/42724136/" target="_blank" rel="noopener">儿童重症支原体肺炎早期风险分层机器学习模型</a> — Translational Pediatrics，2026-08-31，安徽医科大附属滁州医院。98 例、5 个常规变量、MLP 验证集 AUC 0.933；作者自述小样本且无外部验证，属探索性内部估计。</li>
+  <li><a href="https://doi.org/10.64898/2026.09.06.26362218" target="_blank" rel="noopener">焦虑中介 ADHD 症状与孤独症特质通向数字成瘾的路径</a> — medRxiv，2026-09-08，澳大利亚 222 名 17-29 岁。非 AI 方法学，但直接指向"神经发育特质 → 屏幕依赖"机制，星桥用户画像侧参考。<span class="tag pre">未经同行评审</span></li>
+  <li><a href="https://www.lgresearch.ai/blog/view?seq=697" target="_blank" rel="noopener">LG AI Research 发布表格基础模型 EXAONE Tabular，纯合成数据预训练</a> — 2026-09-09。量表平台若要做少样本预测，表格基础模型是比通用 LLM 更贴身的底座选项。</li>
+  <li><a href="https://the-decoder.com/chatbots-built-an-echo-chamber-of-one-and-now-psychiatry-has-to-deal-with-it/" target="_blank" rel="noopener">"AI 相关精神病"能否成为临床诊断仍存争议</a> — The Decoder，2026-09-06，伦敦国王学院等机构正在研究。青少年心理健康内容创业者需提前关注的合规风向。</li>
+</ul>
+
+<div class="actions">
+  <h2>今日行动建议</h2>
+  <ol>
+    <li><b>小雪宝：先建"错误前提题库"，再谈模型调优。</b>参考 SkillOpt 那条（纠正率 16%→90%），用临床经验先攒 60-100 条中文儿科血液肿瘤场景的"带错误前提提问"（家属常见误解、治疗误区），配正确回应口径，作为回归测试集。这一步做完，后续换任何模型都有可量化的安全基线，比反复调提示词有效得多。</li>
+    <li><b>星桥计划：把 SmartADHD 的共设计清单翻成本地版。</b>照搬它的七个反馈维度（对话流/头像/语音/聊天框/措辞/知识源/边界），组 6-9 名孤独症青少年家长与特教老师做一轮工作坊，产出自己的"亲历者需求清单"。同时按 EEG 降配那条的经验，重新审视硬件方案：最少需要几个信号通道、家庭端能否负担。</li>
+    <li><b>量表平台：定下"严重度人工负责"的红线。</b>对话式 AI 错误分类那条说明类型可自动（κ≈0.63）、严重度不可自动（仅 fair）。建议在平台设计规范里直接写死：AI 可批量标注问题类型，任何涉及风险等级、转诊建议的输出必须由持证人员确认，并留审计日志——这既是合规要求，也是向医院客户报价时的差异化卖点。</li>
+  </ol>
+</div>
+
+<footer>
+  <p>数据来源：PubMed（E-utilities）· medRxiv 预印本 · 行业资讯聚合源</p>
+  <p>标注「预印本 · 未经同行评审」的研究尚未经过同行评审，其结论不应作为临床决策依据。</p>
+  <p>本简报由 AI新青年内容管线自动生成 · 仅供学习与研究参考 · 不构成医疗建议</p>
+  <p>© 2026 AI新青年 · 主理人 Alan</p>
+</footer>
+
+</div>
+</body>
+</html>

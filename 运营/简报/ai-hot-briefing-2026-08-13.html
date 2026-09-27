@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI新青年·专属 AI 资讯简报</title>
+<style>
+  :root{
+    --indigo:#6366f1; --emerald:#10b981; --amber:#f59e0b; --sky:#0ea5e9; --rose:#f43f5e;
+    --bg:#f6f7fb; --card:#ffffff; --ink:#1f2330; --sub:#6b7280; --line:#e6e8ef; --chip:#eef0ff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0e1117; --card:#171b24; --ink:#e8eaf0; --sub:#9aa3b2; --line:#272d3a; --chip:#1d2330;
+    }
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.65;padding:0 0 48px;}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px;}
+  header.hero{background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 60%,#0ea5e9 100%);
+    color:#fff;border-radius:0 0 22px 22px;padding:30px 24px 26px;margin-bottom:22px;}
+  .hero h1{margin:0 0 6px;font-size:25px;letter-spacing:.5px;}
+  .hero .date{opacity:.92;font-size:14px;}
+  .profile{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+  .pchip{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);
+    padding:6px 11px;border-radius:999px;font-size:12.5px;}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+  .meta .m{background:rgba(0,0,0,.18);padding:5px 12px;border-radius:10px;font-size:13px;}
+  section{margin:26px 0 8px;}
+  .sec-head{display:flex;align-items:center;gap:10px;margin:0 0 12px;}
+  .sec-dot{width:12px;height:12px;border-radius:4px;}
+  .sec-head h2{font-size:18px;margin:0;}
+  .sec-count{color:var(--sub);font-size:13px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:16px 18px;margin-bottom:14px;box-shadow:0 1px 2px rgba(20,20,40,.04);
+    border-left:4px solid var(--indigo);}
+  .card h3{margin:0 0 8px;font-size:16.5px;line-height:1.4;}
+  .card h3 a{color:var(--ink);text-decoration:none;border-bottom:1px dashed transparent;}
+  .card h3 a:hover{color:var(--indigo);border-bottom-color:var(--indigo);}
+  .row{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12.5px;color:var(--sub);margin-bottom:8px;}
+  .row .src::before{content:"📰 ";} .row .time::before{content:"🕒 ";}
+  .hot{background:#fff3e0;color:#c2410c;border:1px solid #fed7aa;padding:1px 8px;border-radius:999px;font-size:11.5px;font-weight:600;}
+  @media (prefers-color-scheme: dark){ .hot{background:#3a2a14;color:#fdba74;border-color:#7c4a16;} }
+  .summary{font-size:14.5px;margin:6px 0 10px;}
+  .why{background:var(--chip);border-radius:10px;padding:10px 13px;font-size:13.8px;}
+  .why b{color:var(--indigo);}
+  .why .tag{display:inline-block;background:var(--indigo);color:#fff;font-size:11px;
+    padding:1px 8px;border-radius:999px;margin-right:6px;vertical-align:middle;}
+  .actions{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-top:26px;}
+  .actions h2{margin:0 0 12px;font-size:18px;color:var(--indigo);}
+  .actions ol{margin:0;padding-left:20px;}
+  .actions li{margin-bottom:11px;font-size:14.3px;}
+  .actions li b{color:var(--ink);}
+  .actions li span{color:var(--sub);font-size:13px;display:block;margin-top:2px;}
+  footer{text-align:center;color:var(--sub);font-size:12px;margin-top:30px;line-height:1.7;}
+  footer a{color:var(--indigo);text-decoration:none;}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap" style="padding:0;">
+    <h1>AI新青年 · 专属 AI 资讯简报</h1>
+    <div class="date">主理人 Alan（李帅帅）· 三甲儿科规培医师转型 AI · 视频号《AI新青年》</div>
+    <div class="profile">
+      <span class="pchip">🩺 医疗 AI：小雪宝 LeukemiaPal / 星桥计划 / 孤独症量表 AI 平台</span>
+      <span class="pchip">🤖 本地 AI 内容团队：Hermes 71 Skills + Wan 2.2 + DeepSeek</span>
+      <span class="pchip">🚀 一人公司 · 独立开发 · AI 教育</span>
+    </div>
+    <div class="meta">
+      <span class="m">📅 日期：2026-08-13</span>
+      <span class="m">🪟 时间窗：过去 7 天</span>
+      <span class="m">📊 精选：12 条</span>
+      <span class="m">🔥 来源：AI HOT 实时精选池 + 热榜</span>
+    </div>
+  </div>
+</header>
+<div class="wrap">
+<section>
+<div class="sec-head"><span class="sec-dot" style="background:#6366f1"></span><h2>模型发布</h2><span class="sec-count">· 5 条</span></div>
+<div class="card" style="border-left-color:#6366f1">
+  <h3><a href="https://aihot.virxact.com/items/cmsrfaw5c0xo2roz2s8b4p2sv" target="_blank" rel="noopener">DeepSeek-V4-Pro 正式版上线，Agent 能力大幅增强</a></h3>
+  <div class="row">
+    <span class="src">DeepSeek：API 更新日志</span>
+    <span class="time">今天 19:16（北京时间）</span>
+    <span class="hot">🔥 热榜 #1</span>
+  </div>
+  <div class="summary">DeepSeek-V4-Pro 正式版已在 APP、网页与 API 同步上线（模型名 deepseek-v4-pro）。其 Agent 能力显著提升，HLE（w/wo tools）达 42.7/60.0，Terminal Bench 2.1 为 87.9。</div>
+  <div class="why"><span class="tag">为什么与你有关</span>这是你本地内容团队的主模型底座。Agent 能力跃升直接利好「Hermes 71 Skills」编排与自动化脚本；Terminal Bench 高分意味着它更擅长跑代码/工具调用类长任务——可优先把日常 agent 流水线切到 v4-pro 验证效果。</div>
+  <div class="row" style="margin-top:9px;margin-bottom:0;">
+    <span>🔗 原文：<a href="https://api-docs.deepseek.com/zh-cn/updates#%E6%97%B6%E9%97%B4-2026-08-13" target="_blank" rel="noopener" style="color:var(--indigo)">查看出处</a></span>
+    <span>· <a href="https://aihot.virxact.com/items/cmsrfaw5c0xo2roz2s8b4p2sv" target="_blank" rel="noopener" style="color:var(--indigo)">AI HOT 详情</a></span>
+  </div>
+</div>
+<div class="card" style="border-left-color:#6366f1">
+  <h3><a href="https://aihot.virxact.com/items/cmsqagyyz00yuroucf55e5fue" target="_blank" rel="noopener">阿里开放 Qwen3.8-2.4T-A95B 模型权重：2.4T MoE、激活 95B、原生 256K 上下文</a></h3>
+  <div class="row">
+    <span class="src">IT之家（RSS）</span>
+    <span class="time">今天 00:10（北京时间）</span>
+    <span class="hot">🔥 热榜 #7</span>
+  </div>
+  <div class="summary">阿里 Qwen 团队正式开放 Qwen3.8-2.4T-A95B 权重（Qwen-Max 级别首次开源）：总参数 2.4T、每 token 激活 95B、原生支持 262,144 token 上下文并可扩展至 1,010,000 token。</div>
+  <div class="why"><span class="tag">为什么与你有关</span>超大上下文 MoE 开放权重，对「孤独症量表 AI 平台」这类需要长文档/长对话记忆的场景价值高；可在本地或国产算力上做微调与私有部署，避开闭源 API 的数据合规顾虑。</div>
+  <div class="row" style="margin-top:9px;margin-bottom:0;">
+    <span>🔗 原文：<a href="https://www.ithome.com/0/989/001.htm" target="_blank" rel="noopener" style="color:var(--indigo)">查看出处</a></span>
+    <span>· <a href="https://aihot.virxact.com/items/cmsqagyyz00yuroucf55e5fue" target="_blank" rel="noopener" style="color:var(--indigo)">AI HOT 详情</a></span>
+  </div>
+</div>
+<div class="card" style="border-left-color:#6366f1">
+  <h3><a href="https://aihot.virxact.com/items/cmsoolxde07isrop2eb5rrtvq" target="_blank" rel="noopener">NVIDIA 推出 Nemotron 3.5 Lightning，加速本地智能体任务</a></h3>
+  <div class="row">
+    <span class="src">NVIDIA Blog（RSS）</span>
+    <span class="time">8月11日 21:00（北京时间）</span>
+    <span class="hot">🔥 热榜 #4</span>
+  </div>
+  <div class="summary">NVIDIA 发布开源 30B 混合专家（MoE）模型 Nemotron 3.5 Lightning，专为常驻智能体设计，token 生成速度最高提升 4 倍、任务完成时间缩短 30%，可在 RTX PC / DGX Spark / Jetson 上运行。SGLang 已 Day-0 支持。</div>
+  <div class="why"><span class="tag">为什么与你有关</span>直接命中你「本地 AI 内容团队」的硬件现实——RTX 主机就能跑的常驻 agent 模型，适合把素材整理、监控等轻量常驻 agent 下沉到本地省云成本，与 Wan 2.2 视频生成、DeepSeek 编排互补。</div>
+  <div class="row" style="margin-top:9px;margin-bottom:0;">
+    <span>🔗 原文：<a href="https://blogs.nvidia.com/blog/local-ai-open-source-models-agents-nemotron" target="_blank" rel="noopener" style="color:var(--indigo)">查看出处</a></span>
+    <span>· <a href="https://aihot.virxact.com/items/cmsoolxde07isrop2eb5rrtvq" target="_blank" rel="noopener" style="color:var(--indigo)">AI HOT 详情</a></span>
+  </div>
+</div>
+<div class="card" style="border-left-color:#6366f1">
+  <h3><a href="https://aihot.virxact.com/items/cmsrcljcc0uanroz24r5ebcz9" target="_blank" rel="noopener">小红书开源连续自回归语音合成模型 dots.tts：打造可持续扩展的 TTS 基座</a></h3>
+  <div class="row">
+    <span class="src">公众号：小红书技术（dots.llm）</span>
+    <span class="time">今天 17:59（北京时间）</span>
+    <span class="hot">🔥 热榜 #9</span>
+  </div>
+  <div class="summary">小红书 dots 团队开源 20 亿参数全连续端到端自回归语音合成模型 dots.tts，在 Seed-TTS-Eval 三个子集上取得最佳平均内容准确度与平均说话人相似度。</div>
+  <div class="why"><span class="tag">为什么与你有关</span>「小雪宝 LeukemiaPal」白血患儿陪伴助手需要温柔、稳定、可定制的语音形象。连续自回归架构规避离散 token 信息损失，音色克隆与低步数流式同源，便于做患儿专属安抚音。</div>
+  <div class="row" style="margin-top:9px;margin-bottom:0;">
+    <span>🔗 原文：<a href="https://mp.weixin.qq.com/s?__biz=Mzg4OTc2MzczNg%3D%3D&amp;mid=2247496062&amp;idx=1&amp;sn=d4c48926c5d7607f129dfea03699a6c0" target="_blank" rel="noopener" style="color:var(--indigo)">查看出处</a></span>
+    <span>· <a href="https://aihot.virxact.com/items/cmsrcljcc0uanroz24r5ebcz9" target="_blank" rel="noopener" style="color:var(--indigo)">AI HOT 详情</a></span>
+  </div>
+</div>
+<div class="card" style="border-left-color:#6366f1">
+  <h3><a href="https://aihot.virxact.com/items/cmsmhbu4w0338ronxh92vej2u" target="_blank" rel="noopener">NVIDIA 发布 NemotronLabs VoiceChat 11B：开源全双工语音模型，支持约 450ms 轮换与实时工具调用</a></h3>
+  <div class="row">
+    <span class="src">MarkTechPost（RSS）</span>
+    <span class="time">8月10日 07:58（北京时间）</span>
+    
+  </div>
+  <div class="summary">NVIDIA 发布开源端到端全双工语音对话模型 NemotronLabs VoiceChat 11B，统一网络完成流式语音理解与生成，实测轮换延迟 448ms，是首个支持「对话中实时工具调用」的开源全双工模型。</div>
+  <div class="why"><span class="tag">为什么与你有关</span>小雪宝与星桥计划都依赖实时语音陪伴——全双工 + 实时工具调用意味着儿童说话时助手能边听边查资料/调接口，448ms 轮换接近自然对话。注意需单张 80GB 显存、仅研究用途，可先在合规沙箱验证。</div>
+  <div class="row" style="margin-top:9px;margin-bottom:0;">
+    <span>🔗 原文：<a href="https://www.marktechpost.com/2026/08/09/nvidia-releases-nemotronlabs-voicechat-11b-an-open-full-duplex-speech-to-speech-model-with-450-ms-turn-taking-and-live-tool-calling" target="_blank" rel="noopener" style="color:var(--indigo)">查看出处</a></span>
+    <span>· <a href="https://aihot.virxact.com/items/cmsmhbu4w0338ronxh92vej2u" target="_blank" rel="noopener" style="color:var(--indigo)">AI HOT 详情</a></span>
+  </div>
+</div>
+</section>
+<section>
+<div class="sec-head"><span class="sec-dot" style="background:#10b981"></span><h2>产品发布</h2><span class="sec-count">· 3 条</span></div>
+<div class="card" style="border-left-color:#10b981">
+  <h3><a href="https://aihot.virxact.com/items/cmsrjqqfg02z0ro469zple5jl" target="_blank" rel="noopener">DeepSeek Harness v0.1 开发者预览版发布（MIT 开源，一切皆插件）</a></h3>
+  <div class="row">
+    <span class="src">X：DeepSeek (@deepseek_ai)</span>
+    <span class="time">今天 21:02（北京时间）</span>
+    
+  </div>
+  <div class="summary">DeepSeek 开源 MIT 协议的智能体框架 Harness v0.1（开发者预览），基于 Cordis 元框架，核心「一切皆插件」：模型/工具/技能/会话/沙箱/编排/UI 均可自由组合、替换和扩展。</div>
+  <div class="why"><span class="tag">为什么与你有关</span>你已在用 Hermes 71 Skills 做本地编排，Harness 的插件化思路值得借鉴——把「模型、工具、技能」拆成可替换单元，能降低被单一编排方案绑定的迁移成本，也方便把小雪宝/星桥的能力模块化复用。</div>
+  <div class="row" style="margin-top:9px;margin-bottom:0;">
+    <span>🔗 原文：<a href="https://x.com/deepseek_ai/status/2087887408440164663" target="_blank" rel="noopener" style="color:var(--indigo)">查看出处</a></span>
+    <span>· <a href="https://aihot.virxact.com/items/cmsrjqqfg02z0ro469zple5jl" target="_blank" rel="noopener" style="color:var(--indigo)">AI HOT 详情</a></span>
+  </div>
+</div>
+<div class="card" style="border-left-color:#10b981">
+  <h3><a href="https://aihot.virxact.com/items/cmsq9h6gs01x5ronde8fdla7e" target="_blank" rel="noopener">OpenRouter 推出实时网页搜索基准测试：如何为智能体选择引擎、深度与模型</a></h3>
+  <div class="row">
+    <span class="src">OpenRouter：Announcements（RSS）</span>
+    <span class="time">昨天 08:00（北京时间）</span>
+    
+  </div>
+  <div class="summary">OpenRouter 发布实时排行榜，评测模型/引擎/搜索方法/预算组合：搜索轮数从 1 增至 25 可使 BrowseComp 得分近乎翻倍，成本仅增 2.5–7×；模型选择比引擎更重要。</div>
+  <div class="why"><span class="tag">为什么与你有关</span>当你给量表平台或小雪宝接联网检索时，这份基准给出可量化的「搜索深度 vs 成本」取舍——长任务宁可加搜索轮数也比盲目换模型更划算，直接指导 agent 检索配置。</div>
+  <div class="row" style="margin-top:9px;margin-bottom:0;">
+    <span>🔗 原文：<a href="https://openrouter.ai/blog/announcements/web-search-benchmark" target="_blank" rel="noopener" style="color:var(--indigo)">查看出处</a></span>
+    <span>· <a href="https://aihot.virxact.com/items/cmsq9h6gs01x5ronde8fdla7e" target="_blank" rel="noopener" style="color:var(--indigo)">AI HOT 详情</a></span>
+  </div>
+</div>
+<div class="card" style="border-left-color:#10b981">
+  <h3><a href="https://aihot.virxact.com/items/cmsr160kg0dk0roz2mb20yxwk" target="_blank" rel="noopener">WorkBuddy 上线远程控制，国内也有了最丝滑的 Agent 工作方式</a></h3>
+  <div class="row">
+    <span class="src">公众号：数字生命卡兹克</span>
+    <span class="time">今天 12:32（北京时间）</span>
+    <span class="hot">🔥 热榜 #10</span>
+  </div>
+  <div class="summary">WorkBuddy 上线远程控制，手机端实时同步电脑端任务/对话/工作区与产物，支持多设备切换、资料库与 Markdown 协作、AI 原生审阅，并可将资料库生成可发布 HTML 网站。</div>
+  <div class="why"><span class="tag">为什么与你有关</span>你是一人公司，长 agent 任务常跑在电脑上。手机端接力 agent、随时切设备等于把「本地 AI 内容团队」装进口袋；资料库→可发布 HTML 也能直接服务 AI新青年 的内容分发。</div>
+  <div class="row" style="margin-top:9px;margin-bottom:0;">
+    <span>🔗 原文：<a href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&amp;mid=2647685179&amp;idx=1&amp;sn=4cbee32b677b57a9dc6ec2a79d6f72c7" target="_blank" rel="noopener" style="color:var(--indigo)">查看出处</a></span>
+    <span>· <a href="https://aihot.virxact.com/items/cmsr160kg0dk0roz2mb20yxwk" target="_blank" rel="noopener" style="color:var(--indigo)">AI HOT 详情</a></span>
+  </div>
+</div>
+</section>
+<section>
+<div class="sec-head"><span class="sec-dot" style="background:#0ea5e9"></span><h2>论文研究·技术教程</h2><span class="sec-count">· 2 条</span></div>
+<div class="card" style="border-left-color:#0ea5e9">
+  <h3><a href="https://aihot.virxact.com/items/cmsqu0nr604oeroz2rh6b6mqt" target="_blank" rel="noopener">新兴多智能体系统的模式与问题（Anthropic Research）</a></h3>
+  <div class="row">
+    <span class="src">Anthropic：Research（发表成果 · 网页）</span>
+    <span class="time">今天 09:20（北京时间）</span>
+    
+  </div>
+  <div class="summary">Anthropic 研究指出智能体间交互量或超人机交互；45 个协调智能体在 2700 万 token 中发现 266 个漏洞，且个体良性怪癖会叠加成系统性失败。</div>
+  <div class="why"><span class="tag">为什么与你有关</span>当你把小雪宝/星桥/量表平台拆成多 agent 协作时，这篇是「安全必修课」——协调失败不会随模型更强自然消失，设计交互环境（而非只堆更强模型）才是关键。</div>
+  <div class="row" style="margin-top:9px;margin-bottom:0;">
+    <span>🔗 原文：<a href="https://www.anthropic.com/research/multiagent-systems" target="_blank" rel="noopener" style="color:var(--indigo)">查看出处</a></span>
+    <span>· <a href="https://aihot.virxact.com/items/cmsqu0nr604oeroz2rh6b6mqt" target="_blank" rel="noopener" style="color:var(--indigo)">AI HOT 详情</a></span>
+  </div>
+</div>
+<div class="card" style="border-left-color:#0ea5e9">
+  <h3><a href="https://aihot.virxact.com/items/cmsqe6mat01bsroli3hw71nz7" target="_blank" rel="noopener">Google 研究：Recall 是参数化事实性的瓶颈（空货架还是丢钥匙？）</a></h3>
+  <div class="row">
+    <span class="src">Google Research：Blog（网页）</span>
+    <span class="time">今天 01:57（北京时间）</span>
+    
+  </div>
+  <div class="summary">Google 提出「知识画像」框架，发现前沿 LLM 事实编码接近饱和、错误多源于回忆（recall）失败而非「没学会」；配套 WikiProfile 基准（2150 条事实，每条 10 问）。</div>
+  <div class="why"><span class="tag">为什么与你有关</span>量表平台/小雪宝回答医疗问题时，错常不在模型「不知道」而是「想不起来」——优化应多放在检索增强（RAG）、提示召回与置信度上报，而非盲目换更大模型。</div>
+  <div class="row" style="margin-top:9px;margin-bottom:0;">
+    <span>🔗 原文：<a href="https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality" target="_blank" rel="noopener" style="color:var(--indigo)">查看出处</a></span>
+    <span>· <a href="https://aihot.virxact.com/items/cmsqe6mat01bsroli3hw71nz7" target="_blank" rel="noopener" style="color:var(--indigo)">AI HOT 详情</a></span>
+  </div>
+</div>
+</section>
+<section>
+<div class="sec-head"><span class="sec-dot" style="background:#f43f5e"></span><h2>技巧与观点</h2><span class="sec-count">· 2 条</span></div>
+<div class="card" style="border-left-color:#f43f5e">
+  <h3><a href="https://aihot.virxact.com/items/cmsqgeo2e02cvroxvpnycl2zi" target="_blank" rel="noopener">AutoGPT 如何用 AGENTS.md 和技能门控管理 AI 生成的拉取请求</a></h3>
+  <div class="row">
+    <span class="src">GitHub Blog</span>
+    <span class="time">今天 02:00（北京时间）</span>
+    
+  </div>
+  <div class="summary">AutoGPT 维护者发现 agent 不读文档，于是把指令放进 AGENTS.md/技能文件并置于代码旁，用 PR 模板、CI 覆盖率、CLA 签名等门控把 AI 提交从「不可用」变「可用」。</div>
+  <div class="why"><span class="tag">为什么与你有关</span>你项目里的 AGENTS.md（如 AI新青年 规范）正是这一思路——agent 只读当前目录层级的指令，把规则放代码旁比写 wiki 更有效；可直接复用到 Hermes Skills 的治理。</div>
+  <div class="row" style="margin-top:9px;margin-bottom:0;">
+    <span>🔗 原文：<a href="https://github.blog/open-source/maintainers/your-contributors-are-ai-first-now-is-your-project" target="_blank" rel="noopener" style="color:var(--indigo)">查看出处</a></span>
+    <span>· <a href="https://aihot.virxact.com/items/cmsqgeo2e02cvroxvpnycl2zi" target="_blank" rel="noopener" style="color:var(--indigo)">AI HOT 详情</a></span>
+  </div>
+</div>
+<div class="card" style="border-left-color:#f43f5e">
+  <h3><a href="https://aihot.virxact.com/items/cmsq5saxh051mro2e90h10exo" target="_blank" rel="noopener">我写了一本 AI 教科书——AI 还要多久才能写得更好？</a></h3>
+  <div class="row">
+    <span class="src">Nathan Lambert：Interconnects（RSS）</span>
+    <span class="time">昨天 21:01（北京时间）</span>
+    
+  </div>
+  <div class="summary">作者写完 RLHF 教科书后反思：LLM 长文非虚构写作进展停滞，能改错字却组织不好整章，阻碍其自主解决开放科学问题。</div>
+  <div class="why"><span class="tag">为什么与你有关</span>你面向青少年/家长的 AI新青年 选题可借这个反差——「AI 编码数学超人、长文写作却混乱」是极好的科普切入点；也提醒你做教育内容时让 AI 写稿要保留人工结构把控。</div>
+  <div class="row" style="margin-top:9px;margin-bottom:0;">
+    <span>🔗 原文：<a href="https://www.interconnects.ai/p/i-wrote-an-ai-textbook-how-long-until" target="_blank" rel="noopener" style="color:var(--indigo)">查看出处</a></span>
+    <span>· <a href="https://aihot.virxact.com/items/cmsq5saxh051mro2e90h10exo" target="_blank" rel="noopener" style="color:var(--indigo)">AI HOT 详情</a></span>
+  </div>
+</div>
+</section>
+<div class="actions"><h2>🎯 今日行动建议（绑定你在手项目）</h2><ol>
+<li><b>把日常 agent 流水线切到 DeepSeek-V4-Pro 验证</b><span>今晚用 v4-pro 跑一遍 Hermes 71 Skills 中最高频的 1–2 条编排任务，对比 v3 在 Terminal/工具调用类长任务上的稳定性。</span></li>
+<li><b>为本地的常驻轻量 agent 试装 Nemotron 3.5 Lightning</b><span>在 RTX 主机用 SGLang Day-0 支持拉起 30B MoE，承接素材整理/监控类常驻任务，验证 4× 提速是否属实、能否省下云 API 开销。</span></li>
+<li><b>为小雪宝做语音形象技术选型</b><span>对比 dots.tts（音色克隆）与 NemotronLabs VoiceChat 11B（全双工+实时工具调用）的本地部署门槛，先画一张「陪伴助手语音架构」草图，标注显存/合规约束。</span></li>
+<li><b>把 Google「Recall 瓶颈」结论落到量表平台</b><span>在孤独症量表 AI 平台加一层 RAG + 置信度上报，把「答错=没学会」假设改为「答错=召回失败」，复盘现有提示与检索配置。</span></li>
+</ol></div>
+<footer>
+  数据来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a>（实时精选池 + 热榜，window=7d）。资讯由 AI 自动聚合，链接均保留至原始出处，数据以原文为准。<br>
+  本简报由「AI新青年」内容产出方每日为 Alan 自动生成 · © 2026 AI新青年 · 仅供内部参考，转载请注明来源。
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 全球 AI 前沿简报 · 2026-08-21</title>
+<style>
+  :root {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --text: #1a1c2e;
+    --muted: #6b7089;
+    --border: #e7e9f2;
+    --accent: #6366f1;
+    --accent-soft: rgba(99, 102, 241, 0.10);
+    --shadow: 0 6px 24px rgba(20, 24, 60, 0.06);
+    --chip-bg: #eef0fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1117;
+      --card: #1a1d29;
+      --text: #e9ebf5;
+      --muted: #9398ad;
+      --border: #2a2e40;
+      --accent: #818cf8;
+      --accent-soft: rgba(129, 140, 248, 0.14);
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+      --chip-bg: #22263a;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    padding: 28px 16px 60px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 55%, #a855f7 100%);
+    border-radius: 12px;
+    padding: 34px 30px 28px;
+    color: #fff;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  .header::after {
+    content: "";
+    position: absolute;
+    right: -60px; top: -60px;
+    width: 220px; height: 220px;
+    background: rgba(255,255,255,0.10);
+    border-radius: 50%;
+  }
+  .header h1 { font-size: 26px; font-weight: 800; letter-spacing: 0.5px; }
+  .header .sub { margin-top: 6px; font-size: 13px; opacity: 0.92; }
+  .header .meta {
+    margin-top: 18px;
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .header .meta span {
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(4px);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12.5px;
+  }
+
+  /* Profile card */
+  .profile {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    box-shadow: var(--shadow);
+    font-size: 13.5px;
+    color: var(--muted);
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .profile .avatar {
+    flex: 0 0 auto;
+    width: 42px; height: 42px;
+    border-radius: 10px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 18px;
+  }
+  .profile b { color: var(--text); }
+
+  /* Section */
+  .section { margin-top: 30px; }
+  .section-head {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 14px;
+  }
+  .section-head .dot { width: 10px; height: 10px; border-radius: 50%; flex: 0 0 auto; }
+  .section-head h2 { font-size: 18px; font-weight: 800; }
+  .section-head .count {
+    font-size: 12px; color: var(--muted);
+    background: var(--chip-bg);
+    padding: 2px 10px; border-radius: 999px;
+  }
+
+  /* Card */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(20,24,60,0.10); }
+  .card .tag-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+  .card .cat-tag {
+    font-size: 11px; font-weight: 700;
+    color: #fff; padding: 2px 9px; border-radius: 5px;
+    letter-spacing: 0.5px;
+  }
+  .card .hot {
+    font-size: 11px; font-weight: 700;
+    color: #fff; background: #ef4444;
+    padding: 2px 8px; border-radius: 5px;
+  }
+  .card h3 { font-size: 16px; font-weight: 700; line-height: 1.4; }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: var(--accent); }
+  .card .meta-line { font-size: 12.5px; color: var(--muted); margin-top: 5px; }
+  .card .summary { font-size: 14px; margin-top: 10px; color: var(--text); }
+  .card .why {
+    margin-top: 12px;
+    background: var(--accent-soft);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 13.5px;
+    color: var(--text);
+  }
+  .card .why b { color: var(--accent); }
+
+  /* Action block */
+  .actions {
+    margin-top: 30px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+    box-shadow: var(--shadow);
+  }
+  .actions h2 { font-size: 18px; font-weight: 800; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .actions ol { padding-left: 20px; }
+  .actions li { margin-bottom: 12px; font-size: 14px; line-height: 1.6; }
+  .actions li b { color: var(--accent); }
+
+  .footer {
+    margin-top: 24px; text-align: center;
+    font-size: 12px; color: var(--muted);
+    line-height: 1.9;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <h1>AI新青年 · 全球 AI 前沿简报</h1>
+    <div class="sub">主理人 Alan · 三甲儿科规培医师转型 AI · 面向青少年与家长的 AI 内容</div>
+    <div class="meta">
+      <span>📅 2026-08-21</span>
+      <span>🕐 时间窗：近 7 天</span>
+      <span>✨ 精选 9 条</span>
+      <span>🌐 通用前沿版</span>
+    </div>
+  </div>
+
+  <div class="profile">
+    <div class="avatar">A</div>
+    <div>
+      <b>今日读报视角</b>：为你的在手项目挑重点——<b>小雪宝 LeukemiaPal</b>、<b>星桥计划</b>、<b>孤独症量表 AI 平台</b>、<b>本地内容团队（Hermes 71 Skills + Wan 2.2 视频 + DeepSeek 主模型）</b>、<b>一人公司</b>。<br>
+      每条附「为什么与你有关」，文末 3 条可直接落地。医疗 AI 已拆分至独立简报，本版仅在构成通用突破时简要提及。
+    </div>
+  </div>
+
+  <!-- 模型发布 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="dot" style="background:#6366f1;"></span>
+      <h2>模型发布</h2>
+      <span class="count">2 条</span>
+    </div>
+
+    <div class="card" style="border-left-color:#6366f1;">
+      <div class="tag-row">
+        <span class="cat-tag" style="background:#6366f1;">模型发布</span>
+        <span class="hot">🔥 热榜 #5</span>
+      </div>
+      <h3><a href="https://aihot.virxact.com/items/cmt1di48c04vuro1q95i06dby" target="_blank">阿里发布 Qwen-UI-Agent：让模型真正「会用」每一块屏幕</a></h3>
+      <div class="meta-line">来源：IT之家 · 北京时间 8月20日 17:45</div>
+      <div class="summary">阿里正式推出 Qwen-UI-Agent，一个以真实世界为中心的 GUI 智能体基座模型，覆盖移动端、电脑端、网页端及 DeepSearch 深度搜索环境，主打让模型真正理解并操作系统界面。</div>
+      <div class="why"><b>为什么与你有关</b>：GUI Agent 是「一人公司自动化」的下一块拼图——量表平台的表单填报、多平台发布时的跨端操作、网页数据抓取，都有望交给这类基座模型。Qwen 系开源可本地部署，与你的本地内容团队路线天然契合。</div>
+    </div>
+
+    <div class="card" style="border-left-color:#6366f1;">
+      <div class="tag-row">
+        <span class="cat-tag" style="background:#6366f1;">模型发布</span>
+      </div>
+      <h3><a href="https://aihot.virxact.com/items/cmt1rv5n8066iroovaxgoej1b" target="_blank">Hugging Face 发布 LFM2.5 DSpark 草稿模型：投机解码推理提速最高 3.18 倍</a></h3>
+      <div class="meta-line">来源：Hugging Face Blog · 北京时间 8月21日 00:52</div>
+      <div class="summary">LFM2.5 系列三款模型的 DSpark 草稿模型检查点发布，通过投机解码在不改变输出质量的前提下，GPU 吞吐最高提升 3.18 倍、端侧 2.87 倍；LFM2.5-2.6B 函数调用延迟平均降 57%，已开源支持 llama.cpp 和 SGLang。</div>
+      <div class="why"><b>为什么与你有关</b>：直接命中你「3090 本地跑模型」的性能瓶颈——投机解码是纯推理侧的免费提速，不换卡不掉精度。量表平台、小雪宝的边缘部署也能借端侧 2.87 倍吞吐压低延迟。</div>
+    </div>
+  </div>
+
+  <!-- 产品发布 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="dot" style="background:#10b981;"></span>
+      <h2>产品发布</h2>
+      <span class="count">3 条</span>
+    </div>
+
+    <div class="card" style="border-left-color:#10b981;">
+      <div class="tag-row">
+        <span class="cat-tag" style="background:#10b981;">产品发布</span>
+      </div>
+      <h3><a href="https://aihot.virxact.com/items/cmt1z1q5n0c93roovlvh40tew" target="_blank">Claude Platform 正式上线 Computer Use、Skills API 与 Files API</a></h3>
+      <div class="meta-line">来源：Claude Blog · 北京时间 8月21日 04:27</div>
+      <div class="summary">Anthropic 宣布 Computer Use、Skills API 与 Files API 在 Claude Platform 全面可用，并新增浏览器操作工具：让智能体可操作软件、调用团队技能并返回成品文件；本次正式版支持 computer use 每轮执行多个动作，浏览器工具按页面结构（而非像素）定位元素。</div>
+      <div class="why"><b>为什么与你有关</b>：这是你 Hermes 71 Skills 编排的「官方对标物」——Skills（技能）+ Files（成品文件）+ Computer Use（操作软件）正是你本地团队的抽象。尤其「按页面结构定位元素」的思路，可直接优化你多平台自动发布时踩过的 iframe/受控组件定位坑。</div>
+    </div>
+
+    <div class="card" style="border-left-color:#10b981;">
+      <div class="tag-row">
+        <span class="cat-tag" style="background:#10b981;">产品发布</span>
+      </div>
+      <h3><a href="https://aihot.virxact.com/items/cmt1pkwbj04bxroovzkfca5c7" target="_blank">Mistral 推出 Agentic Search：多步检索提升复杂文档查询准确率</a></h3>
+      <div class="meta-line">来源：Mistral AI News · 北京时间 8月21日 00:02</div>
+      <div class="summary">Mistral 发布 Agentic Search，通过 search、open、navigate、read、grep 五个工具的多步检索循环，让模型在长文档与多来源中查找、定位并验证信息，而不是单次检索一锤定音。</div>
+      <div class="why"><b>为什么与你有关</b>：多步检索 + 交叉验证的思路，正是量表条文、Obsidian 知识库这类「精确召回」场景缺的一环。可把「五工具循环」简化移植到你本地 RAG 管线，减少大模型在长文档里的漏查与幻觉。</div>
+    </div>
+
+    <div class="card" style="border-left-color:#10b981;">
+      <div class="tag-row">
+        <span class="cat-tag" style="background:#10b981;">产品发布</span>
+        <span class="hot">🔥 热榜 #3</span>
+      </div>
+      <h3><a href="https://aihot.virxact.com/items/cmt1xbu7q0b7troovffggr2jh" target="_blank">Grok Build 全面上线网页与移动端，所有套餐可用</a></h3>
+      <div class="meta-line">来源：xAI News · 原文 8月19日发布 · AI HOT 8月20日收录</div>
+      <div class="summary">描述应用、游戏或网站后，Grok 即可在聊天中实时生成可运行版本；自 7 月 Early Beta 以来新增发布分享、接入 X、调用 Grok 自身模型等能力，发布的应用获 grok.me 链接、支持自定义域名并导出到 GitHub。</div>
+      <div class="why"><b>为什么与你有关</b>：一人公司做 demo / MVP 验证的「提速器」——想法描述到可运行原型一步到位，还带分享链接和 GitHub 导出。「一句话生成一个小应用」本身也是给青少年和家长的好动手选题。</div>
+    </div>
+  </div>
+
+  <!-- 行业动态 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="dot" style="background:#f59e0b;"></span>
+      <h2>行业动态</h2>
+      <span class="count">2 条</span>
+    </div>
+
+    <div class="card" style="border-left-color:#f59e0b;">
+      <div class="tag-row">
+        <span class="cat-tag" style="background:#f59e0b;">行业动态</span>
+      </div>
+      <h3><a href="https://aihot.virxact.com/items/cmt0s2ems0dkxro2oylebzxob" target="_blank">OpenAI CFO 告知员工：公司最迟 2027 年上市</a></h3>
+      <div class="meta-line">来源：IT之家 · 北京时间 8月20日 08:17</div>
+      <div class="summary">OpenAI CFO 萨拉·弗里亚尔在全员大会透露，公司最迟 2027 年完成上市（业务向好或更早）；已于 6 月秘密提交 IPO 招股书，本季度整体年化营收增长 35%、企业级业务年化营收增长 50%，AI 编程与办公产品周活跃用户突破 2000 万。</div>
+      <div class="why"><b>为什么与你有关</b>：AI 商业化进入「深水区」的信号——从技术叙事转向营收与上市节奏。作为内容主理人，这是「AI 产业的商业化阶段」这类科普选题的好素材，也能帮你判断整个生态的融资/落地风向。</div>
+    </div>
+
+    <div class="card" style="border-left-color:#f59e0b;">
+      <div class="tag-row">
+        <span class="cat-tag" style="background:#f59e0b;">行业动态</span>
+        <span class="hot">🔥 热榜 #1</span>
+      </div>
+      <h3><a href="https://aihot.virxact.com/items/cmt0d2tsl1961rodpnvzxo4cc" target="_blank">OpenRouter 宣布加入 Stripe：模型路由成基础设施赛道（进展更新）</a></h3>
+      <div class="meta-line">来源：OpenRouter Announcements · 原文 8月19日发布 · 热榜 8月20日更新</div>
+      <div class="summary">OpenRouter 与 Stripe 合并，OpenRouter 目前每日处理 400+ 模型的 10+ 万亿 token、服务超 1000 万开发者与公司，自成立以来推理量每年至少增长 10 倍；合并后保持原名与独立运营，路由决策仍以用户利益为先。</div>
+      <div class="why"><b>为什么与你有关</b>：昨天那条「Stripe 收购 OpenRouter」的最新定调是「合并 + 保持独立」，并给出更硬的数据（400+ 模型 / 1000 万开发者）。「模型路由与支出管理」已成基础设施，你一人公司多 API（DeepSeek 主模型 + 备用源）可借网关统一记账、切换与控本。</div>
+    </div>
+  </div>
+
+  <!-- 论文研究·技术教程 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="dot" style="background:#a855f7;"></span>
+      <h2>论文研究 · 技术教程</h2>
+      <span class="count">1 条</span>
+    </div>
+
+    <div class="card" style="border-left-color:#a855f7;">
+      <div class="tag-row">
+        <span class="cat-tag" style="background:#a855f7;">技术教程</span>
+      </div>
+      <h3><a href="https://aihot.virxact.com/items/cmt1k19bn06qgrokx1p75h1gv" target="_blank">Claude Code 初创公司指南：五大规则与创始人洞见</a></h3>
+      <div class="meta-line">来源：Claude Blog · 北京时间 8月20日 21:26</div>
+      <div class="summary">Anthropic 基于对十余家高增长公司的调研，总结出用 Claude Code 的五大规则：「人人皆可交付、自动化繁琐工作、信任但验证、为重构而构建、原型-自用-产品化」，并附创始人实操洞见。</div>
+      <div class="why"><b>为什么与你有关</b>：一份现成的「一人公司 AI 开发方法论」——尤其「信任但验证」和「原型-自用-产品化」两条，正好补上你 Hermes 71 Skills 编排最需要的工程规范与审核兜底，避免全自动失控。</div>
+    </div>
+  </div>
+
+  <!-- 技巧与观点 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="dot" style="background:#ec4899;"></span>
+      <h2>技巧与观点</h2>
+      <span class="count">1 条</span>
+    </div>
+
+    <div class="card" style="border-left-color:#ec4899;">
+      <div class="tag-row">
+        <span class="cat-tag" style="background:#ec4899;">观点</span>
+        <span class="hot">🔥 热榜 #2</span>
+      </div>
+      <h3><a href="https://aihot.virxact.com/items/cmt1tonwa07i9roovrze0ll65" target="_blank">Anthropic 如何开展 AI 教学：Claude Academy 与 4D AI Fluency 框架</a></h3>
+      <div class="meta-line">来源：Claude Blog · 北京时间 8月21日 01:56</div>
+      <div class="summary">Anthropic 发布 Claude Academy，为全球数百万用户提供 AI 教学资源；课程借鉴其内部员工培训方法，提出 4D AI Fluency Framework 与「ever-boarding」持续学习项目，强调以问题为中心、培养持久思维模式而非机械操作。</div>
+      <div class="why"><b>为什么与你有关</b>：今天对你「讲师身份」价值最高的一条——AI新青年的课程与直播备课可直接借用「4D AI Fluency」框架做本土化：以问题为中心、教思维而非教按钮。这也直接回应你面向青少年与家长的「AI 素养教育」定位。</div>
+    </div>
+  </div>
+
+  <!-- 今日行动建议 -->
+  <div class="actions">
+    <h2>🚀 今日行动建议</h2>
+    <ol>
+      <li><b>本地内容团队 / 一人公司</b>：给 3090 本地推理上投机解码（DSpark 思路），函数调用延迟可降约 57%；并用 Claude Code「五大规则」给 Hermes 71 Skills 编排补「信任但验证」的审核兜底。</li>
+      <li><b>小雪宝 / 星桥 / 量表平台</b>：把 Claude 的「Skills + Files + Computer Use」范式对照重组你的技能编排；Mistral 五工具多步检索思路用于量表条文与知识库的精确召回。</li>
+      <li><b>AI新青年选题与课程</b>：把 Claude Academy「4D AI Fluency」翻译成本土化教学框架，产出一期「家长怎么带孩子学 AI」选题；「一句话生成小应用」（Grok Build）做成青少年动手课素材。</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    数据来源：<a href="https://aihot.virxact.com" target="_blank">AI HOT</a> · 本简报为通用前沿版（医疗 AI 聚焦版独立发布）<br>
+    第三方原文版权归原作者所有；引用数字与原文请以来源链接为准 · 由「AI新青年」内容团队自动生成
+  </div>
+
+</div>
+</body>
+</html>

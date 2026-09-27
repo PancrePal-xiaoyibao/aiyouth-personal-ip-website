@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-09-21</title>
+<style>
+  :root {
+    --brand: #0d9488;
+    --brand-soft: rgba(13, 148, 136, 0.10);
+    --bg: #f6f8f8;
+    --card: #ffffff;
+    --text: #1c2b2a;
+    --muted: #5b6f6d;
+    --line: #dce7e6;
+    --tag-bg: rgba(13, 148, 136, 0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1514;
+      --card: #16211f;
+      --text: #e4eeec;
+      --muted: #93a8a5;
+      --line: #24352f;
+      --brand-soft: rgba(13, 148, 136, 0.18);
+      --tag-bg: rgba(45, 212, 191, 0.14);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--text);
+    line-height: 1.75; padding: 24px 14px 48px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  header.hero {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 28px 26px; margin-bottom: 18px;
+  }
+  .kicker { color: var(--brand); font-weight: 700; font-size: 13px; letter-spacing: 2px; }
+  h1 { font-size: 26px; margin: 6px 0 10px; line-height: 1.35; }
+  .meta { color: var(--muted); font-size: 13.5px; }
+  .meta b { color: var(--text); }
+  .chips { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    background: var(--tag-bg); color: var(--brand);
+    font-size: 12.5px; padding: 4px 12px; border-radius: 999px; font-weight: 600;
+  }
+  .profile {
+    margin-top: 16px; padding: 12px 14px; border-left: 3px solid var(--brand);
+    background: var(--brand-soft); border-radius: 0 10px 10px 0; font-size: 13.5px;
+  }
+  section { margin-top: 22px; }
+  h2 {
+    font-size: 18px; margin-bottom: 12px; padding-left: 10px;
+    border-left: 4px solid var(--brand); line-height: 1.4;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 20px 22px; margin-bottom: 14px;
+  }
+  .card h3 { font-size: 16.5px; line-height: 1.55; margin-bottom: 8px; }
+  .card h3 a { color: var(--text); text-decoration: none; border-bottom: 1.5px solid var(--brand); }
+  .card h3 a:hover { color: var(--brand); }
+  .src { color: var(--muted); font-size: 12.5px; margin-bottom: 10px; }
+  .src b { color: var(--brand); font-weight: 600; }
+  .card p { font-size: 14px; margin-bottom: 8px; }
+  .rel {
+    font-size: 13.5px; padding: 10px 12px; border-radius: 8px;
+    background: var(--brand-soft); margin-top: 10px;
+  }
+  .rel b { color: var(--brand); }
+  .pre { color: #b45309; font-weight: 600; font-size: 12px; }
+  @media (prefers-color-scheme: dark) { .pre { color: #fbbf24; } }
+  .brief .card h3 { font-size: 15px; }
+  .brief .card { padding: 16px 20px; }
+  .brief .card p { font-size: 13.5px; }
+  .actions {
+    background: var(--card); border: 1px solid var(--brand);
+    border-radius: 12px; padding: 20px 22px; margin-top: 22px;
+  }
+  .actions h2 { border: none; padding: 0; margin-bottom: 10px; }
+  .actions ol { padding-left: 20px; }
+  .actions li { font-size: 14px; margin-bottom: 10px; }
+  .actions li b { color: var(--brand); }
+  footer {
+    margin-top: 26px; padding-top: 16px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 12.5px; text-align: center;
+  }
+  a.ext { color: var(--brand); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">AI新青年 · MED AI BRIEFING</div>
+  <h1>医疗 AI 聚焦简报</h1>
+  <div class="meta">
+    <b>2026-09-21</b>（北京时间） · 数据窗口 2026-09-14 → 2026-09-21 ·
+    数据源：AI HOT / PubMed / medRxiv · 本期精选 <b>6 条主卡 + 4 条速览</b>
+  </div>
+  <div class="chips">
+    <span class="chip">儿科</span>
+    <span class="chip">血液肿瘤</span>
+    <span class="chip">语音 AI</span>
+    <span class="chip">量表方法学</span>
+    <span class="chip">开源工具</span>
+  </div>
+  <div class="profile">
+    <b>主理人画像</b>：Alan（李帅帅），三甲医院儿科医师 × AI Builder，「AI新青年」主理人。
+    在手项目：<b>小雪宝 LeukemiaPal</b>（白血患儿陪伴助手）、<b>星桥计划</b>（孤独症数字疗愈）、
+    <b>孤独症量表 AI 平台</b>、本地 AI 内容团队、一人公司。
+    本简报只收硬核信号：儿科 / 血液肿瘤 / 孤独症与心理健康 / 临床落地 / 可部署开源。
+  </div>
+</header>
+
+<section>
+  <h2>医疗模型与临床落地</h2>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42749757/">AI 辅助定量评估骨髓纤维化（CIF）：约 1000 例连续活检的临床验证，观察者间一致性提升 12.6 个百分点且不增加读片时间</a></h3>
+    <div class="src"><b>Leukemia</b>（牛津大学 × MD Anderson 等） · 2026-09-16 在线 · PMID 42749757</div>
+    <p>骨髓纤维化分级长期靠病理医生肉眼半定量。CIF（Continuous Indexing of Fibrosis）在约 1000 例未经预筛选的诊断性骨髓活检上验证：AI 评分与 14 人专家共识分级强相关（Spearman ρ=0.770）；「AI 先行、医生确认」的辅助读片把观察者间一致性拉高 12.6 个百分点（95% CI 10.5–14.8），并在临床关键的 MF-1/MF-2 分界处显著减少分歧——读片时间没有增加。注意：工具由 Ground Truth Labs 开发，多位作者存在公司关联利益。</p>
+    <div class="rel"><b>为什么与你有关</b>：血液肿瘤叙事带本期最强命中。「AI 辅助不增加时间、只提升一致性」正是小雪宝对接血液科场景最该引用的部署证据范式——注意它是成人为主的多中心队列，儿科外推需谨慎，但其「辅助读片协议 + 量化增益」的验收结构可以直接搬进小雪宝方案的证据页。</div>
+  </div>
+</section>
+
+<section>
+  <h2>前沿研究 · 论文</h2>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42757927/">用标准化量表评级当训练标签：AI 从语音频谱检测儿童高鼻音（腭咽功能障碍），F1 最高 0.90</a></h3>
+    <div class="src"><b>Cleft Palate-Craniofacial Journal</b>（约翰斯·霍普金斯全儿童医院） · 2026-09-18 在线 · PMID 42757927</div>
+    <p>言语语言病理师（SLP）资源稀缺时，腭咽功能障碍患儿评估难以及时可及。霍普金斯儿童医院的前瞻单中心研究纳入 40 名 2–17 岁儿童，以标准化听感知评定框架 CAPS-A-AM 的共识评级为金标签，从持续元音、单词、句子提取梅尔频谱图训练三类模型：EfficientNet-V2-S 注意力 MIL 表现最好（F1 0.786–0.900，置信区间重叠、未证明模型间优劣），初步证明「量表评级 → 语音 AI」工作流可行。</p>
+    <div class="rel"><b>为什么与你有关</b>：双投影。对小雪宝，这是语音陪伴走向「语音即临床信号」的同行路径；对量表平台，这是「量表即标注」的教科书示范——标准化评定手册就是未来 AI 施测最干净的训练标签源，比人工从头标注省一个数量级的成本。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42761445/">KGLA-Net：关键点引导的轻量面部情感计算框架，把精神运动表型装进资源受限设备</a></h3>
+    <div class="src"><b>Frontiers in Psychiatry</b>（鲁迅美术学院团队，沈阳） · 2026-09-04 · PMID 42761445</div>
+    <p>面部表情识别正成为计算精神病学的精神运动表型工具，但常用双流网络依赖全局交叉注意力，端侧部署吃不消。KGLA-Net 用关键点结构先验引导局部多尺度窗口聚合（8×8 / 4×4 / 2×2），把计算复杂度降到线性，在保持竞争性 FER 性能的同时适合交互终端与低算力产品长期部署。</p>
+    <div class="rel"><b>为什么与你有关</b>：星桥若要走「面部情感计算」评估干预响应，这篇给的是工程侧答案——不追榜单 SOTA，而是「够用 + 能常驻设备」的轻量路线，与家庭场景里长期、低调采集的设计约束天然匹配。孤独症定向检索本期无更强主卡命中，由这条补位，如实说明、未硬凑。</div>
+  </div>
+</section>
+
+<section>
+  <h2>行业与监管动态</h2>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42757077/">语音生物标志物有了国际共识定义：Bridge2AI-Voice × eVoiceNet 的 VOCAL 倡议发布层级分类框架</a></h3>
+    <div class="src"><b>Digital Biomarkers</b>（卢森堡卫生研究所、南佛罗里达大学语音中心等，24 位国际专家） · 2026-07-21（本期新收录） · PMID 42757077</div>
+    <p>语音健康技术爆发但术语混乱、跨学科协作受阻。VOCAL 倡议经 5 轮评审与线下共识工作坊，建立了语音生物标志物的层级连续体：从 level 0（生物标志物 / 数字生物标志物 / 语音生物标志物）逐层下沉到 level 4（认知/语言维度，含语言学与副语言学亚型），并首次明确区分「语音测量」与「语音生物标志物」。这是后续指南、标准与监管沟通的底座文件。</p>
+    <div class="rel"><b>为什么与你有关</b>：小雪宝语音链路若要谈「语音特征 → 状态监测」，从第一天起就该用 VOCAL 的层级术语写功能文档——跟国际定义对齐，未来对接研究合作或监管沟通时省掉一轮翻译成本；也避免把「声学测量」夸大宣传成「临床生物标志物」。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42705636/">床旁 GenAI 需要「辅助轮」：Pediatrics 伦理专栏谈住院医师使用 AI 的知情同意与能力养成</a></h3>
+    <div class="src"><b>Pediatrics</b>（西雅图儿童生物伦理中心牵头，AAP 官方伦理专栏） · 2026-09-08 在线 · PMID 42705636</div>
+    <p>Pediatrics Ethics Rounds 提出「training wheels approach」：医学生与住院医师是床旁生成式 AI 的早期重度采用者，但在独立批判性评估能力成熟前，容易把 AI 输出当真——而 GenAI 还会省略「small talk」这类儿科临床互动的关键要素、并可能编造内容；患者家庭对床旁 AI 的知情同意标准至今缺位。</p>
+    <div class="rel"><b>为什么与你有关</b>：这条几乎是为你的「儿科规培医师 × AI」双重身份写的——既是你在内容创作里最有共鸣的议题（规培生视角谈 AI 素养），也是小雪宝这类床旁/家庭 AI 产品在设计「医生端 vs 家长端」知情路径时必须回答的问题：谁在什么场景下需要知道 AI 参与了。</div>
+  </div>
+</section>
+
+<section>
+  <h2>工具与开源</h2>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42764354/">HIPPIE：跨物种、跨技术、跨模态的神经元电生理生成式分析框架，Python 包 + 免编程 Web 应用全开源</a></h3>
+    <div class="src"><b>Nature Communications</b>（UC Santa Cruz 基因组研究所） · 2026-08-21 · PMID 42764354</div>
+    <p>胞外电生理记录的神经元分类长期受波形变异、噪声与平台差异困扰。HIPPIE 用条件卷积联合自编码器做自监督预训练 + 监督微调，在小鼠 / 大鼠 / 猕猴记录上完成技术条件对齐的细胞分型，并支持判别式模型做不到的生成式分析：改变实验条件下的电信号反事实解码、跨物种潜空间插值、以及「脉冲时序与波形形态编码神经元身份的独立维度」这一跨模态发现。</p>
+    <div class="rel"><b>为什么与你有关</b>：它的免编程 Web 应用让你和星桥团队今天就能上手试——评估电生理模态进干预评估管线的可行性；对量表平台，其「技术条件对齐后再比」的思路，同样是多来源评估数据合并时该抄的方法学姿态。</div>
+  </div>
+</section>
+
+<section class="brief">
+  <h2>速览 · 一句话信号</h2>
+
+  <div class="card">
+    <h3><a href="https://the-decoder.com/bristol-researchers-say-medicine-already-knows-how-to-handle-black-boxes-and-ai-could-learn-from-it">布里斯托大学提出 Learning Ensemble：借鉴药物审批多阶段机制，系统性评估医疗 AI 可靠性</a></h3>
+    <div class="src">The Decoder（报道布里斯托大学研究） · 2026-09-21</div>
+    <p>核心论点：医学早已有一套对付「黑箱」的制度（药物审批），医疗 AI 的评估可以直接借用其分期与证据分级逻辑。</p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.64898/2026.09.16.26363213">OLS / GAM / GAMLSS 常模对比：七个公开参照数据集上，回归常模与经典分组常模高度一致（r 0.964–1.000）</a></h3>
+    <div class="src">medRxiv 预印本 · 2026-09-17 · <span class="pre">未经同行评审</span></div>
+    <p>关键结论：OLS 与 GAM 的 Z 分数几乎完全相同（r 0.996–1.000）；GAMLSS 的增益只出现在残差方差非恒定的数据集（言语流畅性 σ-ratio 1.79）——它额外恢复了离散度信息。与 09-09 期同类研究（GAMLSS vs 线性常模）主题呼应、互相印证。</p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42757243/">MAX-Net：多尺度自编码增强 xLSTM 的语音早期抑郁症状筛查框架</a></h3>
+    <div class="src"><b>Frontiers in Psychiatry</b> · 2026-09-04 · PMID 42757243</div>
+    <p>语音 depressive screening 又添一个轻量架构候选，与小雪宝「陪伴对话中无感采集语音信号」的路线直接相关。</p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42762251/">超越标量阈值：医学视觉基础模型用于儿科手术风险分层</a></h3>
+    <div class="src"><b>Pediatric Surgery International</b>（南昌大学福州医学院 × 杭州电子科技大学等） · 2026-09-19 · PMID 42762251</div>
+    <p>公开题录未附结构化摘要，未引述具体数值；主题方向 = 基础模型替代单一阈值做儿科围术期风险分层，值得跟进全文。</p>
+  </div>
+</section>
+
+<section class="actions">
+  <h2>今日行动建议</h2>
+  <ol>
+    <li><b>【小雪宝】抄 CIF 的验收范式</b>：给小雪宝设计一个「AI 辅助 vs 纯人工」双臂小样本对照，只看两个指标——一致性提升 Δ 和耗时变化 Δ；Leukemia 这篇「不增时、提一致」就是立项依据模板。同时把它披露利益冲突的写法学过来，方案里预埋独立性声明。</li>
+    <li><b>【量表平台】做一次「量表即标注」盘点</b>：列出平台已覆盖量表中带标准化评定手册的（CAPS-A-AM 式），列为 AI 施测与判分的首选训练标签源；顺手把 GAMLSS 速览条当作常模引擎选型的内部 benchmark 作业（1 天内可出对比结论）。</li>
+    <li><b>【星桥】两条路线各花半天做对比</b>：上午跑 HIPPIE 的免编程 Web 应用评估电生理路线，下午按 KGLA-Net 论文清单评估面部情感计算路线，产出一份一页纸对比（数据可得性 / 端侧算力 / 家长接受度三列），下周定方向。</li>
+  </ol>
+</section>
+
+<section class="card" style="margin-top:18px">
+  <p style="font-size:13px; color:var(--muted)"><b>今日信号说明</b>：血液肿瘤方向本期由 Leukemia CIF 强命中补位（成人为主队列，儿科外推已标注）；孤独症 PubMed 定向检索命中偏通用精神健康、无强主卡，由面部情感计算与语音方向补位，未硬凑。AI HOT 侧 DAMO RADAR、NVIDIA×费城儿童医院、MiniCPM5、Included Health 等均为往期已用条目，已跨期去重；本期新命中仅布里斯托 Learning Ensemble。儿童 ALL/AML 专属研究连续多期无新强命中，维持「30 天定向扩窗」建议。</p>
+</section>
+
+<footer>
+  数据来源：<a class="ext" href="https://aihot.virxact.com">AI HOT</a> · <a class="ext" href="https://pubmed.ncbi.nlm.nih.gov">PubMed</a> · <a class="ext" href="https://www.medrxiv.org">medRxiv</a><br>
+  标注「未经同行评审」的条目为预印本，结论请以正式发表版本为准 · 论文链接指向 PubMed / DOI 原文<br>
+  AI新青年 · 医疗 AI 聚焦简报 · 仅供个人研究参考，不构成医疗建议 · © 2026 AI新青年
+</footer>
+
+</div>
+</body>
+</html>

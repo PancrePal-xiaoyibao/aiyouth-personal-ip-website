@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-09-15</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f4f7f7; color: #1c2b2b; line-height: 1.75; padding: 24px 16px 48px;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; }
+  header.hero {
+    background: linear-gradient(135deg, #0d9488 0%, #0f766e 60%, #115e59 100%);
+    color: #fff; border-radius: 12px; padding: 32px 28px 26px; margin-bottom: 20px;
+  }
+  header.hero h1 { font-size: 24px; letter-spacing: 1px; margin-bottom: 6px; }
+  header.hero .sub { font-size: 13.5px; opacity: .92; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .chip {
+    background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28);
+    border-radius: 999px; padding: 4px 12px; font-size: 12.5px;
+  }
+  .profile {
+    background: #ffffff; border: 1px solid #d8e6e4; border-radius: 12px;
+    padding: 18px 20px; margin-bottom: 20px; font-size: 13.5px;
+  }
+  .profile b { color: #0f766e; }
+  h2.sec {
+    font-size: 18px; color: #0f766e; margin: 30px 0 14px; padding-left: 12px;
+    border-left: 4px solid #0d9488;
+  }
+  .card {
+    background: #ffffff; border: 1px solid #dde8e6; border-radius: 12px;
+    padding: 20px 22px; margin-bottom: 16px;
+  }
+  .card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .badge {
+    font-size: 12px; padding: 3px 10px; border-radius: 999px; font-weight: 600;
+  }
+  .b-teal { background: #ccfbf1; color: #0f766e; }
+  .b-amber { background: #fef3c7; color: #92400e; }
+  .date { font-size: 12.5px; color: #6b7f7d; }
+  .card h3 { font-size: 16.5px; margin-bottom: 6px; line-height: 1.5; }
+  .card h3 a { color: #134e4a; text-decoration: none; border-bottom: 1px solid #99d5cd; }
+  .card h3 a:hover { color: #0d9488; }
+  .meta { font-size: 12.5px; color: #647d7a; margin-bottom: 10px; }
+  .summary { font-size: 14px; margin-bottom: 10px; }
+  .why {
+    font-size: 13.5px; background: #f0faf8; border-left: 3px solid #0d9488;
+    padding: 10px 14px; border-radius: 0 8px 8px 0; color: #2a4340;
+  }
+  .preprint {
+    display: inline-block; font-size: 11.5px; color: #92400e; background: #fef3c7;
+    border-radius: 4px; padding: 1px 8px; margin-left: 8px; font-weight: 600; vertical-align: 2px;
+  }
+  .signal {
+    background: #ecfdf5; border: 1px dashed #6ee7b7; border-radius: 12px;
+    padding: 16px 20px; font-size: 13px; color: #065f46; margin-bottom: 8px;
+  }
+  .quick { list-style: none; }
+  .quick li {
+    background: #ffffff; border: 1px solid #dde8e6; border-radius: 12px;
+    padding: 14px 18px; margin-bottom: 10px; font-size: 13.5px;
+  }
+  .quick .qt { font-weight: 700; color: #134e4a; }
+  .quick a { color: #0d9488; text-decoration: none; border-bottom: 1px solid #99d5cd; }
+  .quick .meta { margin: 4px 0 6px; }
+  .actions {
+    background: #134e4a; color: #e6fffa; border-radius: 12px; padding: 22px 24px; margin-top: 26px;
+  }
+  .actions h2 { font-size: 17px; margin-bottom: 12px; color: #5eead4; }
+  .actions ol { padding-left: 20px; }
+  .actions li { margin-bottom: 10px; font-size: 14px; }
+  footer {
+    margin-top: 30px; font-size: 12px; color: #7d908e; text-align: center; line-height: 1.8;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #0e1515; color: #dcebe9; }
+    .card, .profile, .quick li { background: #16221f; border-color: #24352f; }
+    .card h3 a { color: #a7e8de; border-bottom-color: #2e5d55; }
+    .card h3 a:hover { color: #2dd4bf; }
+    .meta, .date { color: #8aa39f; }
+    .why { background: #12302b; color: #c8e8e2; border-left-color: #0d9488; }
+    .signal { background: #0f2a20; border-color: #1f5c43; color: #9fe8c8; }
+    .b-teal { background: #11423a; color: #7de3d3; }
+    .b-amber, .preprint { background: #453412; color: #fcd34d; }
+    .actions { background: #12332e; }
+    footer { color: #6f8683; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+    <div class="sub">主理人：李帅帅 Alan（三甲儿科规培医师 × AI Builder）｜ 2026-09-15 · 每日一期</div>
+    <div class="chips">
+      <span class="chip">📅 数据窗口 2026-09-08 → 2026-09-15</span>
+      <span class="chip">🔬 精选 6 条 + 5 条速览</span>
+      <span class="chip">🩺 儿科 / 血液肿瘤 / 孤独症 / 数字疗愈</span>
+      <span class="chip">📡 AI HOT · PubMed · medRxiv</span>
+    </div>
+  </header>
+
+  <section class="profile">
+    <b>筛选画像：</b>儿科医师转型 AI 的实践者视角——只收能落地的：儿科与新生儿、白血病等血液肿瘤、孤独症与心理健康、数字疗愈、临床 AI 与量表评估、可本地部署的开源医疗模型。宁缺毋滥，不做资讯堆料。
+  </section>
+
+  <h2 class="sec">🧪 医疗模型与临床落地</h2>
+
+  <article class="card">
+    <div class="card-head"><span class="badge b-teal">新生儿 · 临床预测</span><span class="date">2026-09-14</span></div>
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42735002/">机器学习预测培养确诊的新生儿败血症：三级 NICU 回顾性队列</a></h3>
+    <div class="meta">JMIR Medical Informatics · 约旦大学医学院附属三级 NICU</div>
+    <p class="summary">3274 例住院新生儿的结构化 EHR 回顾队列：XGBoost 在独立测试集 AUC 0.98（95%CI 0.97–0.99）、敏感度 98%（95/97 例检出），最重要特征是 CRP、血小板计数与孕周——全是基层可得的常规指标；神经网络仅 0.81。作者明确要求外部验证后方可临床落地。</p>
+    <div class="why"><b>为什么与你有关：</b>这就是量表平台同款路线的儿科重症版——不追稀缺数据，用「常规可及变量」把分层做稳。小雪宝家长端科普也可以引用它的边界表述：回顾性高分 ≠ 可以上临床。</div>
+  </article>
+
+  <article class="card">
+    <div class="card-head"><span class="badge b-teal">罕见病 · 早期识别</span><span class="date">2026-09-11</span><span class="preprint">未经同行评审</span></div>
+    <h3><a href="https://doi.org/10.64898/2026.09.10.26362561">时序 EHR 模型在确诊前数年发现罕见病</a></h3>
+    <div class="meta">medRxiv 预印本 · Mayo Clinic Platform（约 300 万人纵向病历）</div>
+    <p class="summary">GRU-Attn 时序模型对 10 种罕见病建模最长 30 年病史：诊断前 1–2 年平均 AUROC 0.928（静态 CatBoost 仅 0.871），诊断前 6–10 年仍达 0.726；HPO+ICD 双特征融合再 +0.063。在 143 例「最终确诊但当时未诊断」的真实病例中，全部 143 例都在正式诊断前被模型高分标记。</p>
+    <div class="why"><b>为什么与你有关：</b>诊断延迟是小雪宝家长社群的核心痛点之一，这条给出了「AI 把诊断提前数年」的实证形态——直接可做一期视频号选题《AI 怎么在确诊前几年就拉响警报》；量表平台也值得借鉴 HPO+编码双通道的特征融合思路。</div>
+  </article>
+
+  <article class="card">
+    <div class="card-head"><span class="badge b-teal">报告解读 · 儿科肿瘤</span><span class="date">2026-09-11</span><span class="preprint">未经同行评审</span></div>
+    <h3><a href="https://doi.org/10.64898/2026.09.10.26362656">AI 摘要儿科肿瘤基因组报告非劣于人工：QNOMX-VHIR-CPSP-001 一期研究</a></h3>
+    <div class="meta">medRxiv 预印本 · 西班牙 Vall d'Hebron 研究所（ISO 20916 临床性能研究）</div>
+    <p class="summary">37 例三级儿科肿瘤基因组报告、74 份配对评估：AI 摘要内容分 4.01 vs 人工 3.97、呈现分 4.39 vs 4.12，双主要终点均达非劣（呈现维度反而更高）；仅「准确性」单域未下非劣结论，评分者间信度整体偏低。是「AI 报告解读」首个儿科肿瘤临床级证据。</p>
+    <div class="why"><b>为什么与你有关：</b>与小雪宝最直接的一条——家长拿到的正是一沓天书报告。它的六域 QSI 评分框架可以直接抄成你「报告→家长可读摘要」功能的验收标准：先定评分维度，再谈上线。</div>
+  </article>
+
+  <h2 class="sec">🔬 前沿研究 · 论文</h2>
+
+  <article class="card">
+    <div class="card-head"><span class="badge b-teal">孤独症 · 干预证据</span><span class="date">2026-08-11</span></div>
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42727523/">重复经颅磁刺激治疗孤独症谱系障碍：53 项 RCT 的系统综述与 meta 分析</a></h3>
+    <div class="meta">Psychiatry Research · 河南科技大学（含儿科与数字病理 AI 诊断工程中心）</div>
+    <p class="summary">53 项 RCT 显示 rTMS 改善核心症状（ABC SMD −1.48、CARS −0.95、ATEC −1.83）与共病睡眠/行为问题，但 GRADE 证据确定性低到极低：85% 开放标签、51.9% 未报告安全性数据，高频 vs 低频、不同靶点均无差异；作者结论明确——暂不能推荐为常规临床治疗。</p>
+    <div class="why"><b>为什么与你有关：</b>星桥计划的护栏素材。「53 篇 RCT 也撑不起证据等级」正是数字疗愈赛道最该敬畏的坑：把这条写进产品证据页，对外话术主动承认不确定性、只承诺「辅助 + 家长赋能」，本身就是差异化；也够做一期《为什么 53 项 RCT 的结论依然要打折》。</div>
+  </article>
+
+  <article class="card">
+    <div class="card-head"><span class="badge b-teal">儿童发展 · AI 陪伴边界</span><span class="date">2026-09-12</span></div>
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42733420/">AI 互动不等于社会互动：重思幼儿期 AI 介导的数字暴露</a></h3>
+    <div class="meta">Pediatric Investigation · 福棠儿童医学发展研究中心期刊 · 土耳其儿科团队</div>
+    <p class="summary">叙事综述提出「数字暴露光谱」模型：被动媒体 → 互动媒体 → AI 型媒体，认知刺激递增、真实社会性发展机会递减；AI 系统缺乏真实情感互惠，可能制造「社会互动幻觉」，主张评估体系从「屏幕时长」转向「互动质量」。</p>
+    <div class="why"><b>为什么与你有关：</b>小雪宝与星桥共同的哲学题：AI 陪伴是替代还是补充？建议在两个产品的家长端明示定位边界，并把光谱模型直接用于家长教育内容——《AI 陪娃 ≠ 社交，儿科医生怎么看》是天然的视频号选题。</div>
+  </article>
+
+  <article class="card">
+    <div class="card-head"><span class="badge b-teal">方法论 · 金标准之辩</span><span class="date">2026-08-31</span></div>
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42729460/">基准幻觉：论 AI 的被低估与其创造者金标准的不确定</a></h3>
+    <div class="meta">EClinicalMedicine（Lancet 子刊）观点文章 · 慕尼黑白血病实验室 MLL</div>
+    <p class="summary">来自顶级血液诊断实验室的观点文章：AI 在越来越多诊断任务上已比肩甚至超越人类，但评价仍在拿「金成色从未被检验」的人类共识当真值——所谓 benchmark illusion。作者主张显式建模金标准不确定性、以患者结局为导向验证，在真实诊断生态里评价「人机集合」。</p>
+    <div class="why"><b>为什么与你有关：</b>量表平台的方法论钉子——ASD 量表的参照金标准（临床综合诊断）本身带噪声。把「金标准不确定性」显式写进平台方法学文档，是与专业评审对话时最有力的姿态，也回应了你连续几期关注的「模型分数 vs 临床可用性」落差。</div>
+  </article>
+
+  <div class="signal"><b>今日信号说明：</b>本周期医疗行业硬新闻偏少（多为消费电子与通用 AI），主卡由 PubMed 定向检索（儿科 / 白血病 / 孤独症三组）与 medRxiv 深翻（11 页 326 条去重）供给；儿童白血病（ALL/AML）专属研究连续第 7 期无强命中（本期定向组仅 9 条，多为成人或往期已用），建议维持 30 天扩窗常设检索线。已对最近 4 期做跨期去重，本期条目均首次出现。</div>
+
+  <h2 class="sec">⚡ 速览 · 行业监管与工具开源</h2>
+
+  <ul class="quick">
+    <li><span class="qt">【监管】国家药监局发布全球首个「AI + 脑机接口」医疗器械标准</span>，2027-09-01 起实施。<div class="meta">IT之家 · 2026-09-14 14:47（北京时间）· <a href="https://www.ithome.com/1/002/081.htm">原文</a></div>数字疗愈与 BCI 赛道的中国监管信号，星桥若涉神经调控类硬件需盯紧这类标准的落地细则。</li>
+    <li><span class="qt">【工具】Anthropic Claude Tag（beta）进入三家医疗组织</span>，用于非 PHI 场景的结构化标注。<div class="meta">Anthropic 官方博客 · 2026-09-15 01:15（北京时间）· <a href="https://claude.com/blog/how-healthcare-organizations-use-claude-tag">原文</a></div>「非 PHI 场景」的合规切法值得借鉴：小雪宝的数据管线可按同样思路先切出可外包/可本地两层。</li>
+    <li><span class="qt">【开源系统】HemOncAgent：血液肿瘤知识混合检索智能体</span>，在 HemOncKB 知识图谱与 HemOnc.org 叙事路径之间自动选工具，结构化与叙事基准均保持高保真。<div class="meta">medRxiv 预印本（未经同行评审）· 2026-09-11 · <a href="https://doi.org/10.64898/2026.09.09.26362651">DOI</a></div>「知识图谱 + 叙事双源」架构可直接参考到量表平台的知识问答模块。</li>
+    <li><span class="qt">【论文】JAMA Pediatrics 观点信：与不受监管的 AI 聊天机器人共管儿童青少年心理健康的法律与临床责任</span>（含作者回复）。<div class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/42734907/">PMID 42734907</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/42734955/">PMID 42734955</a> · 2026-09-14（公开题录未附摘要，未引述具体内容）</div>与星桥的合规防线直接相关：儿童心理健康 AI 的责任划分正在成为期刊级议题。</li>
+    <li><span class="qt">【预印本】ADHD 起始用药队列的多基因评分 + 机器学习分析</span>：309 名 6–17 岁瑞典儿童，PGS 关联基线严重度（β=0.142）而非随访变化；信息论准确率上限 72%（仅 PGS）/ 84%（临床变量）/ 92%（联合），但模型未能实证泛化。<div class="meta">medRxiv 预印本（未经同行评审）· 2026-09-11 · <a href="https://doi.org/10.64898/2026.09.09.26362635">DOI</a></div>量表平台写方案时的好例子：上限 ≠ 成绩，联合建模的 92% 是天花板不是承诺。</li>
+  </ul>
+
+  <section class="actions">
+    <h2>📌 今日行动建议</h2>
+    <ol>
+      <li><b>小雪宝 · 报告摘要功能立项：</b>照抄 QNOMX 的六域 QSI 框架（内容 / 呈现 / 准确性等），先人工标注 20 份脱敏报告做基线，再接 AI 摘要对比——非劣验收标准直接引用其 0.5 分界值设计。</li>
+      <li><b>星桥计划 · 证据页与家长问卷双更新：</b>把 rTMS meta 的 GRADE 结论写进产品证据页（只承诺辅助与家长赋能，不做疗效承诺）；家长端问卷按「数字暴露光谱」加一道 AI 使用类型分类题，为后续分层运营铺数据。</li>
+      <li><b>量表平台 · 方法学声明 + 常设检索线：</b>在平台文档显式声明「金标准 = 临床综合诊断、含噪声」并补 outcome-based 校准章节；同时把「儿童 ALL/AML × 机器学习 × MRD」的 30 天扩窗检索排进本周——已连续 7 期无专属强命中，值得单开一条线盯住。</li>
+    </ol>
+  </section>
+
+  <footer>
+    数据来源：AI HOT（aihot.virxact.com）· PubMed（NCBI E-utilities）· medRxiv（Cold Spring Harbor Laboratory）<br>
+    标注「未经同行评审」的条目为预印本，结论以最终发表版本为准。内容仅供研究参考，不构成医疗建议。<br>
+    AI新青年 · 医疗 AI 聚焦 · 主理人 Alan · 2026-09-15
+  </footer>
+
+</div>
+</body>
+</html>

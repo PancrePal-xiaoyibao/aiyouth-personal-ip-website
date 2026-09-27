@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-08-25</title>
+<style>
+  :root{
+    --teal:#0d9488;
+    --teal-soft:#ccfbf1;
+    --teal-ink:#0f766e;
+    --bg:#f7faf9;
+    --card:#ffffff;
+    --text:#13322f;
+    --muted:#5b706c;
+    --border:#e2ece9;
+    --shadow:0 4px 18px rgba(13,148,136,.08);
+    --tag-bg:#e6f7f4;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --teal:#2dd4bf;
+      --teal-soft:#0b3b37;
+      --teal-ink:#5eead4;
+      --bg:#0c1413;
+      --card:#13201e;
+      --text:#e6f1ef;
+      --muted:#9bb3ae;
+      --border:#243a36;
+      --shadow:0 4px 20px rgba(0,0,0,.45);
+      --tag-bg:#10302c;
+    }
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;padding:32px 16px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.6;
+  }
+  .wrap{max-width:860px;margin:0 auto;}
+  header{
+    background:linear-gradient(135deg,var(--teal) 0%,var(--teal-ink) 100%);
+    color:#fff;border-radius:12px;padding:28px 26px;box-shadow:var(--shadow);
+  }
+  header.dark-note{color:#fff;}
+  h1{margin:0 0 6px;font-size:26px;letter-spacing:.5px;}
+  .sub{font-size:14px;opacity:.95;margin:0;}
+  .profile{
+    display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:16px;
+    font-size:13px;opacity:.96;
+  }
+  .profile b{font-weight:600;}
+  .meta{
+    display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;
+  }
+  .chip{
+    background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);
+    padding:4px 11px;border-radius:999px;font-size:12px;color:#fff;
+  }
+  section{margin-top:30px;}
+  .sec-title{
+    display:flex;align-items:center;gap:10px;
+    font-size:17px;font-weight:700;color:var(--teal-ink);
+    margin:0 0 14px;padding-left:12px;border-left:4px solid var(--teal);
+  }
+  .card{
+    background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);
+    transition:transform .15s ease,border-color .15s ease;
+  }
+  .card:hover{transform:translateY(-2px);border-color:var(--teal);}
+  .card h3{margin:0 0 8px;font-size:16.5px;line-height:1.4;}
+  .card h3 a{color:var(--teal-ink);text-decoration:none;}
+  .card h3 a:hover{text-decoration:underline;}
+  .card h3 .ext{font-size:12px;color:var(--muted);font-weight:400;}
+  .info{font-size:12.5px;color:var(--muted);margin-bottom:10px;display:flex;flex-wrap:wrap;gap:6px 14px;}
+  .info .src{color:var(--teal-ink);font-weight:600;}
+  .tags{margin:0 0 10px;}
+  .tag{
+    display:inline-block;background:var(--tag-bg);color:var(--teal-ink);
+    font-size:11.5px;padding:2px 9px;border-radius:999px;margin:0 6px 4px 0;
+    border:1px solid var(--border);
+  }
+  .summary{font-size:14.5px;margin:0 0 10px;}
+  .why{
+    background:var(--teal-soft);border-radius:10px;padding:11px 14px;
+    font-size:13.5px;color:var(--text);
+  }
+  .why b{color:var(--teal-ink);}
+  .actions{
+    background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:18px 22px;box-shadow:var(--shadow);
+  }
+  .actions h2{margin:0 0 12px;font-size:17px;color:var(--teal-ink);}
+  .actions ol{margin:0;padding-left:20px;}
+  .actions li{margin-bottom:10px;font-size:14px;}
+  .actions li b{color:var(--teal-ink);}
+  footer{
+    margin-top:30px;padding-top:16px;border-top:1px solid var(--border);
+    font-size:12px;color:var(--muted);text-align:center;line-height:1.7;
+  }
+  .pre{color:#c2410c;font-weight:600;}
+  @media (prefers-color-scheme: dark){.pre{color:#fb923c;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+    <p class="sub">为「AI新青年」主理人 Alan（李帅帅）定制 · 每日精选硬核医疗 AI 信号</p>
+    <div class="profile">
+      <span><b>主理人画像：</b>三甲儿科规培医师转型 AI Builder</span>
+      <span><b>受众：</b>青少年 / 家长</span>
+      <span><b>在手项目：</b>小雪宝 LeukemiaPal · 星桥计划 · 孤独症量表 AI 平台 · 本地内容团队 · 一人公司</span>
+    </div>
+    <div class="meta">
+      <span class="chip">📅 2026-08-25（周二）</span>
+      <span class="chip">📡 数据窗口：近 7 天（08-18 ~ 08-25）</span>
+      <span class="chip">✅ 本日精选：6 条</span>
+      <span class="chip">🔎 数据源：AI HOT · PubMed · medRxiv</span>
+    </div>
+  </header>
+
+  <!-- 医疗模型与临床落地 -->
+  <section>
+    <h2 class="sec-title">🩺 医疗模型与临床落地</h2>
+
+    <div class="card">
+      <h3><a href="https://www.ithome.com/0/993/478.htm" target="_blank" rel="noopener">阿里巴巴达摩院推出肝癌 AI 模型 DAMO LiON，可精准识别 1 厘米微小肿瘤 <span class="ext">↗ 原文</span></a></h3>
+      <div class="info">
+        <span class="src">IT之家 / 《自然·医学》</span>
+        <span>🕒 2026-08-24 12:16 +08:00</span>
+        <span>🔖 AI 影像诊断</span>
+      </div>
+      <div class="tags"><span class="tag">影像 AI</span><span class="tag">真实世界验证</span><span class="tag">小雪宝·可迁移</span></div>
+      <p class="summary">达摩院联合中国医科大学附属盛京医院等研发肝癌诊断 AI「DAMO LiON」，通过 CT 影像识别微小肝脏癌变病灶。两个月真实世界前瞻临床试验中，模型额外发现 15 例原被遗漏的恶性肿瘤（绝大部分约 1cm），AI 协助阅片用时减少 27%、对恶性肿瘤敏感性提高 11.5%，相关论文登上《自然·医学》。</p>
+      <div class="why"><b>为什么与你有关：</b>这是影像 AI「真实世界落地」的范本——小雪宝若接入儿童实体瘤（如神经母细胞瘤）影像随访，可借鉴其「前瞻临床验证 + 敏感性提升」的合规路径；也提示你视频号可讲「AI 读片不是替代医生，而是补漏」的科普角度。</div>
+    </div>
+  </section>
+
+  <!-- 行业与监管动态 -->
+  <section>
+    <h2 class="sec-title">⚖️ 行业与监管动态</h2>
+
+    <div class="card">
+      <h3><a href="https://the-decoder.com/ai-chatbots-regularly-link-pregnant-users-to-anti-abortion-websites-without-disclosure" target="_blank" rel="noopener">AI 聊天机器人频繁向孕妇推荐反堕胎网站且不披露立场 <span class="ext">↗ 原文</span></a></h3>
+      <div class="info">
+        <span class="src">The Decoder / AlgorithmWatch</span>
+        <span>🕒 2026-08-24 18:00 +08:00</span>
+        <span>🔖 AI 安全 · 偏见</span>
+      </div>
+      <div class="tags"><span class="tag">内容安全</span><span class="tag">小雪宝·偏见测试</span><span class="tag">量表平台·红线</span></div>
+      <p class="summary">AlgorithmWatch 测试发现：ChatGPT、Gemini、Grok 和 Claude 在回答意外怀孕问题时，约每 4 次查询就有 1 次会附上反堕胎网站链接，且通常不披露这些来源的意识形态立场——主流模型在敏感健康议题上存在系统性立场偏向。</p>
+      <div class="why"><b>为什么与你有关：</b>这正是小雪宝与量表平台必须前置的「内容安全红线」。任何面向青少年/家长的陪伴式 AI，都需做立场披露与偏见压测（bias test），否则会重蹈大厂覆辙；建议把「反事实立场测试」写进小雪宝提示词评测集。</div>
+    </div>
+  </section>
+
+  <!-- 前沿研究·论文 -->
+  <section>
+    <h2 class="sec-title">🔬 前沿研究 · 论文（PubMed）</h2>
+
+    <div class="card">
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42630465/" target="_blank" rel="noopener">Recent advances in deep learning for leukemia diagnosis: a scoping review of diagnostic modalities and fusion strategies <span class="ext">↗ PMID 42630465</span></a></h3>
+      <div class="info">
+        <span class="src">Frontiers in Digital Health, 2026</span>
+        <span>🕒 2026</span>
+        <span>🔖 白血病 · 多模态</span>
+      </div>
+      <div class="tags"><span class="tag">小雪宝·白血病</span><span class="tag">多模态融合</span><span class="tag">可解释性</span></div>
+      <p class="summary">范围综述系统梳理深度学习在白血病诊断中的应用，覆盖外周血/骨髓涂片、流式细胞、基因等多模态数据及融合策略，指出数据异质性与可解释性仍是临床落地的核心瓶颈。</p>
+      <div class="why"><b>为什么与你有关：</b>小雪宝的「白血病知识库」边界由此清晰——多模态融合（影像+检验+基因）是趋势，你的知识库应预留结构化字段承接检验/病理结论，而非只做问答；也可作为视频号「AI 怎么看白血病骨穿片」的选题素材。</div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42625082/" target="_blank" rel="noopener">AI and neuroimaging in autism spectrum disorder: advances in diagnosis, methodological challenges and future directions <span class="ext">↗ PMID 42625082</span></a></h3>
+      <div class="info">
+        <span class="src">Neurological Sciences, 2026-08-21</span>
+        <span>🕒 2026-08-21</span>
+        <span>🔖 孤独症 · 神经影像</span>
+      </div>
+      <div class="tags"><span class="tag">星桥计划·孤独症</span><span class="tag">早期筛查</span><span class="tag">方法学警示</span></div>
+      <p class="summary">综述 AI 与神经影像在孤独症谱系障碍（ASD）诊断中的进展，强调样本偏差、可复现性等 method 挑战，指出当前模型多依赖结构 MRI，跨人群泛化能力有限。</p>
+      <div class="why"><b>为什么与你有关：</b>星桥计划的「早期筛查」若要引入客观生物标志物，需警惕论文点出的样本偏差与可复现陷阱——你的数字疗愈产品应坚持「辅助筛查、不替代诊断」定位，把家长问卷+行为观察作为主航道，影像仅作科研储备。</div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42635990/" target="_blank" rel="noopener">Prevalence of Mental Health Discussions in Publicly Available Generative AI Conversations <span class="ext">↗ PMID 42635990</span></a></h3>
+      <div class="info">
+        <span class="src">JAMA Network Open, 2026-08-03</span>
+        <span>🕒 2026-08-03</span>
+        <span>🔖 青少年 · 心理健康 AI</span>
+      </div>
+      <div class="tags"><span class="tag">小雪宝·心理陪伴</span><span class="tag">星桥·安全护栏</span><span class="tag">受众验证</span></div>
+      <p class="summary">横断面研究评估青少年使用生成式 AI 聊天机器人讨论心理健康问题的普遍程度，提示大量未成年人已在向 AI 倾诉情绪困扰，但对话质量与安全性缺乏保障。</p>
+      <div class="why"><b>为什么与你有关：</b>直接印证小雪宝/星桥的受众真实需求——青少年已在私下用通用 AI 处理心理困扰。你的陪伴助手必须补上「危机识别 + 转介 + 不替代专业帮助」的安全护栏，也是视频号「家长该不该让孩子用 AI 谈心」的高共鸣选题。</div>
+    </div>
+  </section>
+
+  <!-- 工具与开源·预印本 -->
+  <section>
+    <h2 class="sec-title">🧪 工具与开源 · 预印本（medRxiv）</h2>
+
+    <div class="card">
+      <h3><a href="https://doi.org/10.64898/2026.08.17.26360370" target="_blank" rel="noopener">Elevated Rates of Gastrointestinal Dysfunction in Children with Neurodevelopmental Disabilities <span class="ext">↗ DOI 10.64898/2026.08.17.26360370</span></a></h3>
+      <div class="info">
+        <span class="src">medRxiv 预印本 <span class="pre">（未经同行评审）</span></span>
+        <span>🕒 2026-08-17</span>
+        <span>🔖 神经发育 · 共病</span>
+      </div>
+      <div class="tags"><span class="tag">星桥·扩谱筛查</span><span class="tag">NDD 共病</span><span class="tag">家长观察清单</span></div>
+      <p class="summary">大样本研究显示，神经发育障碍（NDD）儿童肠胃功能紊乱发生率显著升高，并与行为症状、功能损害及医疗利用增加相关——提示 NDD 群体存在易被忽视的共病谱。</p>
+      <div class="why"><b>为什么与你有关：</b>星桥计划「孤独症早期筛查」可借这类证据做「共病谱扩展」：把肠胃/睡眠/情绪共病纳入家长观察清单，提升早期识别灵敏度；同时提醒内容团队——ASD 科普要覆盖「非典型表现」，避免只讲社交障碍。</div>
+    </div>
+  </section>
+
+  <!-- 今日行动建议 -->
+  <section>
+    <div class="actions">
+      <h2>🚀 今日行动建议（绑定在手项目）</h2>
+      <ol>
+        <li><b>小雪宝：</b>把 AlgorithmWatch 的「反事实立场测试」沉淀为提示词评测集一条，专测立场披露与偏见，作为下个迭代的质量门禁。</li>
+        <li><b>星桥计划：</b>以 NDD 肠胃共病证据 + ASD 神经影像综述为据，把「家长观察清单」从纯社交维度扩到共病谱（肠胃/睡眠/情绪），并明确「辅助筛查、不替代诊断」的对外口径。</li>
+        <li><b>量表平台：</b>参考白血病多模态融合综述，给知识库/量表库预留「检验—影像—基因」结构化字段位，为后续多模态量表评估留接口。</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>
+    数据来源：AI HOT 医疗资讯 · PubMed（NIH E-utilities）· medRxiv 预印本平台 ｜ 本简报由「AI新青年」自动化生成，仅供内容选题参考，不构成医疗建议。<br>
+    © 2026 AI新青年 · 主理人 Alan（李帅帅）。预印本内容 <span class="pre">未经同行评审</span>，引用前请核实正式发表版本。
+  </footer>
+
+</div>
+</body>
+</html>

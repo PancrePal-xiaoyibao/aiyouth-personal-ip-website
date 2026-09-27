@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 (2026-08-24)</title>
+<style>
+  :root{
+    --teal:#0d9488;
+    --teal-soft:#0d94881a;
+    --teal-line:#0d948840;
+    --bg:#f7faf9;
+    --card:#ffffff;
+    --text:#1f2a2e;
+    --muted:#5b6b70;
+    --border:#e3ecea;
+    --tag:#0d9488;
+    --shadow:0 1px 3px rgba(13,148,136,.08),0 8px 24px rgba(13,148,136,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0e1614;
+      --card:#16201e;
+      --text:#e8f1ef;
+      --muted:#9fb2ae;
+      --border:#26332f;
+      --teal-soft:#0d94881f;
+      --teal-line:#0d948860;
+      --shadow:0 1px 3px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.65;
+    padding:32px 16px 64px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto}
+  header.hero{
+    background:linear-gradient(135deg,var(--teal) 0%,#0f766e 100%);
+    color:#fff;
+    border-radius:12px;
+    padding:30px 28px;
+    box-shadow:var(--shadow);
+    margin-bottom:22px;
+  }
+  header.hero h1{font-size:24px;font-weight:800;letter-spacing:.5px}
+  .persona{
+    display:flex;align-items:center;gap:12px;
+    margin-top:14px;padding-top:14px;
+    border-top:1px solid rgba(255,255,255,.22);
+    font-size:13.5px;opacity:.95;
+  }
+  .avatar{
+    width:42px;height:42px;border-radius:50%;
+    background:rgba(255,255,255,.2);
+    display:flex;align-items:center;justify-content:center;
+    font-size:20px;font-weight:700;flex-shrink:0;
+  }
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .chip{
+    background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.28);
+    color:#fff;font-size:12px;
+    padding:4px 11px;border-radius:999px;
+  }
+  section{margin:26px 0}
+  .sec-title{
+    display:flex;align-items:center;gap:9px;
+    font-size:16px;font-weight:700;color:var(--teal);
+    margin-bottom:14px;padding-left:11px;
+    border-left:4px solid var(--teal);
+  }
+  .sec-title .num{
+    background:var(--teal);color:#fff;
+    font-size:12px;width:22px;height:22px;border-radius:6px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:18px 20px;
+    margin-bottom:14px;
+    box-shadow:var(--shadow);
+    transition:transform .15s ease,border-color .15s ease;
+  }
+  .card:hover{transform:translateY(-2px);border-color:var(--teal-line)}
+  .card h3{font-size:15.5px;font-weight:700;line-height:1.45;margin-bottom:8px}
+  .card h3 a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--teal-line)}
+  .card h3 a:hover{color:var(--teal)}
+  .src{font-size:12px;color:var(--muted);margin-bottom:9px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+  .src .tag{
+    background:var(--teal-soft);color:var(--teal);
+    border:1px solid var(--teal-line);
+    padding:1px 8px;border-radius:6px;font-weight:600;
+  }
+  .preprint{background:#fef3c7;color:#92660a;border-color:#fde68a}
+  @media (prefers-color-scheme: dark){.preprint{background:#3a2f12;color:#f5d77a;border-color:#5a4a1e}}
+  .summary{font-size:14px;color:var(--text);margin-bottom:10px}
+  .why{
+    font-size:13.5px;color:var(--muted);
+    background:var(--teal-soft);
+    border-radius:8px;padding:11px 13px;
+    border-left:3px solid var(--teal);
+  }
+  .why b{color:var(--teal)}
+  .actions{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:12px;padding:20px 22px;box-shadow:var(--shadow);
+  }
+  .actions h2{font-size:16px;color:var(--teal);margin-bottom:12px}
+  .actions ol{margin-left:20px}
+  .actions li{margin-bottom:11px;font-size:14px}
+  .actions li b{color:var(--teal)}
+  footer{
+    margin-top:30px;padding-top:18px;
+    border-top:1px solid var(--border);
+    font-size:12px;color:var(--muted);line-height:1.7;
+  }
+  footer a{color:var(--teal);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+    <div class="persona">
+      <div class="avatar">A</div>
+      <div>
+        <div style="font-weight:700">主理人 Alan（李帅帅）</div>
+        <div>三甲儿科规培医师转型 AI · 视频号「AI新青年」· 受众：青少年 / 家长</div>
+      </div>
+    </div>
+    <div class="meta">
+      <span class="chip">📅 2026-08-24（周一）</span>
+      <span class="chip">🎯 精选 6 条</span>
+      <span class="chip">📡 AI HOT · PubMed · medRxiv</span>
+      <span class="chip">⏱ 数据窗：近 7 天</span>
+    </div>
+  </header>
+
+  <!-- 行业与监管动态 -->
+  <section>
+    <div class="sec-title"><span class="num">1</span>行业与监管动态</div>
+    <div class="card">
+      <h3><a href="https://www.ithome.com/0/993/193.htm" target="_blank" rel="noopener">马克·库班：医生应教患者用 AI 辅助治疗，AI 不会取代医生</a></h3>
+      <div class="src"><span class="tag">IT之家（AI HOT 收录）</span><span>2026-08-23 15:11 (+08:00)</span></div>
+      <div class="summary">亿万投资人马克·库班反驳"AI 取代医生"论，强调医生的实时观察、共情与判断不可被复制，但每位医生未来都会用 AI；他建议医生主动教患者配置 Claude / ChatGPT / Gemini / Grok 等工具的个性化指令与提示词，并主张"用 AI 取代中间商"以削减医疗行政杂务。</div>
+      <div class="why"><b>为什么与你有关：</b>这正是「小雪宝 LeukemiaPal」产品理念的同频信号——你做的不是"AI 取代医生"，而是"AI 赋能患儿家庭"。可直接转化为一期视频号内容：教白血病患儿家长用 AI 整理问诊清单、读懂化验单、生成复诊提问，把"患者赋能"做成可落地的陪伴场景。</div>
+    </div>
+  </section>
+
+  <!-- 前沿研究·论文 -->
+  <section>
+    <div class="sec-title"><span class="num">2</span>前沿研究 · 论文（同行评审）</div>
+
+    <div class="card">
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42630465/" target="_blank" rel="noopener">Recent advances in deep learning for leukemia diagnosis: a scoping review of diagnostic modalities and fusion-based approaches</a></h3>
+      <div class="src"><span class="tag">Frontiers in Digital Health</span><span>2026-08</span><span>PMID 42630465</span></div>
+      <div class="summary">系统性范围综述梳理了深度学习在白血病诊断中的多模态应用——外周血与骨髓图像分析、基因表达与多组学、流式细胞术、常规化验与多模态融合；指出当前研究高度碎片化、真正多模态整合稀少，并给出"模态感知融合 + 外部验证 + 监管意识 + 人在环决策支持"的转化路线图。</div>
+      <div class="why"><b>为什么与你有关：</b>直中小雪宝的核心病种。综述点出"多数方法停留在单模态、缺乏跨数据集泛化"这一行业痛点——正好印证你做白血病陪伴助手时"不替代诊断、只做多模态信息整合与人话翻译"的边界设计；可把"模态感知融合 + 人在环"作为产品白皮书的方法论支点。</div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42628031/" target="_blank" rel="noopener">A Human-Governed Clinical Informatics Framework for Safe AI-Assisted Mental Health Counseling</a></h3>
+      <div class="src"><span class="tag">JMIR Formative Research</span><span>2026-08-21</span><span>PMID 42628031</span></div>
+      <div class="summary">基于韩国 AI Hub 心理咨询数据集，研究构建了一套"人类治理"的心理健康咨询 AI 框架：7 阶段工作流、6 层安全控制、操作级安全门；在 139 例规则筛查中，91.4% 触发过至少一类安全代理标记（医学化表达 54.7%、过度诊断表达 31.7%），证明纯流畅生成摘要不足以支撑安全落地。</div>
+      <div class="why"><b>为什么与你有关：</b>这是小雪宝（患儿心理陪伴）与孤独症量表 AI 平台的"安全护栏"范本。结论强调"应作为受治理的临床信息工作流，而非自主诊断 / 文档通道"——直接为你的产品划定红线：陪伴可以，贴标签式诊断不行；建议把"6 层安全控制 + 高危示例"搬进量表平台的合规设计。</div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42627847/" target="_blank" rel="noopener">Dissecting multimodal predictors of psychosis risk and remission in youth at ultra-high risk</a></h3>
+      <div class="src"><span class="tag">PLOS Mental Health</span><span>2026-08-21</span><span>PMID 42627847</span></div>
+      <div class="summary">新加坡团队在 56 名超高危（UHR）青少年中系统评估 6 类数据模态，发现"临床评估(CAARMS) + 社会环境风险 + 社会功能"组合预测 12 个月内转精神病最佳（MCC=0.71），行为与社会环境模态在多模态框架中预测价值最强，而分子 / 遗传模态尚难转化。</div>
+      <div class="why"><b>为什么与你有关：</b>对星桥计划（孤独症数字疗愈）是绝佳的多模态框架参考——它证明"行为 + 社会环境"这类低成本模态就能打出高预测力，不必迷信高维生物标志物。可借鉴其"模态逐层纳入 / 剔除"的消融思路，来设计星桥早期筛查的特征优先级。</div>
+    </div>
+  </section>
+
+  <!-- 前沿研究·预印本 -->
+  <section>
+    <div class="sec-title"><span class="num">3</span>前沿研究 · 预印本（未经同行评审）</div>
+
+    <div class="card">
+      <h3><a href="https://doi.org/10.64898/2026.08.17.26360370" target="_blank" rel="noopener">Elevated Rates of Gastrointestinal Dysfunction in Children with Neurodevelopmental Disabilities: Not Just an Autism Issue</a></h3>
+      <div class="src"><span class="tag preprint">⚠ 预印本 · 未经同行评审</span><span>medRxiv · pediatrics</span><span>2026-08-19</span><span>DOI 10.64898/2026.08.17.26360370</span></div>
+      <div class="summary">基于 20 年电子病历、42,204 名神经发育障碍（NDD）患儿与 297,402 名对照，研究发现胃肠道（GI）问题在所有 NDD 亚型中均更常见，以智力障碍与脑瘫关联最强；提示 GI-NDD 关系并非孤独症专属，临床工具开发需扩展到更广的 NDD 谱系。</div>
+      <div class="why"><b>为什么与你有关：</b>星桥计划做孤独症早期筛查时，常把"喂养 / 肠胃问题"当作伴随信号。这篇用大样本提醒你：共病肠胃问题在更广 NDD 群体中普遍存在，早期筛查问卷应覆盖多类 NDD 而非只锚定 ASD，避免漏筛。</div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://doi.org/10.1101/2025.10.13.25337771" target="_blank" rel="noopener">Machine learning-optimized perinatal depression screening: Maximum impact, minimal burden</a></h3>
+      <div class="src"><span class="tag preprint">⚠ 预印本 · 未经同行评审</span><span>medRxiv · psychiatry</span><span>2026-08-20</span><span>DOI 10.1101/2025.10.13.25337771</span></div>
+      <div class="summary">利用 N3C 队列（n=22,924）开发 ML 框架，从爱丁堡产后抑郁量表（EPDS）10 题中自动筛选 2–5 题子集即可逼近全量表预测力，并在产后（n=7,750）与外部孕期队列中验证——用"最少题目、最大收益"降低筛查负担。</div>
+      <div class="why"><b>为什么与你有关：</b>这正是孤独症量表 AI 平台可直接复用的"量表精简"方法论。你做 ASD 筛查 / 评估时，可借鉴其"ML 优化题项组合"思路，在保持信效度的前提下缩短家长填答时长，把"Maximum impact, minimal burden"写进产品设计原则。</div>
+    </div>
+  </section>
+
+  <!-- 今日行动建议 -->
+  <section>
+    <div class="actions">
+      <h2>📌 今日行动建议</h2>
+      <ol>
+        <li><b>小雪宝 LeukemiaPal：</b>把今日「白血病多模态综述」与「心理健康咨询治理框架」两篇存入知识库，作为白皮书"方法学 + 安全红线"两章的引用锚点；本周短视频选题锁定"教白血病患儿家长用 AI 整理问诊清单"（呼应库班观点）。</li>
+        <li><b>星桥计划：</b>参考青少年精神病多模态研究，把"行为 + 社会环境"作为早期筛查的优先低成本模态；同时更新 ASD 共病肠胃的筛查问卷，覆盖更广 NDD 谱系（呼应预印本）。</li>
+        <li><b>孤独症量表 AI 平台：</b>把"ML 优化 EPDS 题项"的方法论迁移到量表精简模块，评估用最少题项达到可接受信效度的可行性，并汇入合规设计的安全控制清单。</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>
+    <div>数据来源：AI HOT 医疗资讯 · PubMed（NCBI E-utilities）· medRxiv 预印本平台。本简报仅作信息聚合与项目启发，不构成医疗建议。</div>
+    <div>预印本条目标注「未经同行评审」，正式引用请以期刊同行评审版本为准。© 2026 AI新青年（主理人 Alan / 李帅帅）。</div>
+  </footer>
+
+</div>
+</body>
+</html>

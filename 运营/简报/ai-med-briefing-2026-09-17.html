@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-09-17</title>
+<style>
+:root { color-scheme: light dark; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f4f6f6; color: #1a2b2b; line-height: 1.65; padding: 24px 16px;
+}
+@media (prefers-color-scheme: dark) {
+  body { background: #0f1616; color: #d8e4e4; }
+  .card { background: #172323 !important; border-color: #244040 !important; }
+  .meta, .why-label { color: #6f9494 !important; }
+  .tag { background: rgba(13,148,136,.16) !important; color: #4ecdc4 !important; }
+  .card h3 a { color: #7fe0d6 !important; }
+  .card h3 a:hover { color: #a5ece4 !important; }
+  .footer { border-top-color: #244040 !important; color: #6f9494 !important; }
+  .note { background: #142020 !important; border-left-color: #0d9488 !important; }
+  .signal-box { background: #142020 !important; }
+}
+.wrap { max-width: 860px; margin: 0 auto; }
+header.hero {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 60%, #115e59 100%);
+  border-radius: 12px; padding: 34px 30px; color: #fff; margin-bottom: 20px;
+}
+.hero .brand { font-size: 13px; letter-spacing: 2px; opacity: .85; text-transform: uppercase; }
+.hero h1 { font-size: 27px; margin: 8px 0 10px; font-weight: 700; }
+.hero .sub { font-size: 14.5px; opacity: .93; }
+.chips { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.25);
+  padding: 4px 12px; border-radius: 999px; font-size: 12.5px;
+}
+.section-title {
+  font-size: 15px; font-weight: 700; color: #0d9488; letter-spacing: 1px;
+  margin: 30px 0 12px; display: flex; align-items: center; gap: 10px;
+}
+.section-title::after { content: ""; flex: 1; height: 1px; background: currentColor; opacity: .25; }
+.card {
+  background: #ffffff; border: 1px solid #dbe7e7; border-radius: 12px;
+  padding: 20px 22px; margin-bottom: 14px;
+}
+.tag {
+  display: inline-block; background: rgba(13,148,136,.1); color: #0d9488;
+  font-size: 11.5px; font-weight: 600; padding: 2px 10px; border-radius: 999px; margin-bottom: 8px;
+}
+.card h3 { font-size: 17px; margin-bottom: 6px; }
+.card h3 a { color: #0f5e58; text-decoration: none; }
+.card h3 a:hover { color: #0d9488; text-decoration: underline; }
+.meta { font-size: 12.5px; color: #5f7d7d; margin-bottom: 10px; }
+.card p { font-size: 14px; margin-bottom: 10px; }
+.why {
+  font-size: 13.5px; background: rgba(13,148,136,.06); border-left: 3px solid #0d9488;
+  padding: 10px 14px; border-radius: 0 8px 8px 0;
+}
+.why-label { font-weight: 700; color: #0d9488; margin-right: 6px; font-size: 12.5px; }
+.signal-box {
+  background: #ffffff; border: 1px dashed #9fc5c5; border-radius: 12px;
+  padding: 16px 20px; font-size: 13.5px; margin-bottom: 6px;
+}
+.actions { margin-top: 8px; }
+.actions li { margin: 10px 0 10px 20px; font-size: 14px; }
+.footer {
+  margin-top: 34px; padding-top: 18px; border-top: 1px solid #dbe7e7;
+  font-size: 12.5px; color: #7d9494; line-height: 1.8;
+}
+.preprint-badge {
+  display: inline-block; font-size: 11px; color: #b45309; background: rgba(217,119,6,.12);
+  padding: 1px 8px; border-radius: 999px; margin-left: 8px; font-weight: 600; vertical-align: 2px;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="brand">AI新青年 · DAILY MED·AI BRIEFING</div>
+  <h1>医疗 AI 聚焦简报</h1>
+  <div class="sub">2026-09-17（北京时间） · 窗口：近 7 天 · 今日精选 6 条</div>
+  <div class="sub" style="margin-top:8px">主理人 Alan：三甲医院儿科医师 × AI Builder —— 为儿科、血液肿瘤与神经发育领域筛「能落地」的医疗 AI 信号</div>
+  <div class="chips">
+    <span class="chip">📡 数据源：AI HOT / PubMed / medRxiv·Research Square（经 Europe PMC）</span>
+    <span class="chip">🎯 今日主题：孤独症 ×4 · 语音心理健康 ×2 · 血液肿瘤综述 ×1</span>
+  </div>
+</header>
+
+<div class="signal-box">ℹ️ 今日信号说明：孤独症与青少年心理健康方向命中集中，6 条精选全部围绕「可落地的筛查/陪伴/评估」；血液肿瘤本期无新原始研究强命中，以一篇 AML 临床决策点全景综述补位（此前 8 期已连续覆盖 ALLCatchR2、MoChiAgent 等条目，均已去重跳过）。AI HOT 侧医疗硬新闻偏弱，仅取 MIT 术中导航 1 条入速览。</div>
+
+<div class="section-title">前沿研究 · 孤独症与神经发育</div>
+
+<div class="card">
+  <span class="tag">孤独症 · 分层架构</span>
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42746007/">FIAP-Digital：面向孤独症精准分层的可解释多模态 AI 架构</a></h3>
+  <div class="meta">Frontiers in Neuroinformatics · 2026-09-01 · PMID 42746007</div>
+  <p>提出「构念保持而非纯预测」的多模态 AI 架构：整合生物负荷、发育状态、治疗可及性与干预应答等纵向指标，输出临床可读的分层估计，并显式内置不确定性可见、医生在环与负责任 AI 治理。作者明确声明这是假设生成型架构与验证路线图，而非已验证的诊断工具。</p>
+  <div class="why"><span class="why-label">为什么与你有关</span>星桥计划如果要长成「数字疗愈平台」而不是单点工具，缺的正是这种把多模态数据组织成临床构念、并把不确定性摆上台面的顶层架构——这篇等于免费给了一份设计蓝图 + 验证路线图（构念效度→外部验证→医生可用性→公平性），可直接当星桥二期架构评审的对照清单。</div>
+</div>
+
+<div class="card">
+  <span class="tag">孤独症 · 眼动方法学</span>
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42742790/">小样本静息态 fMRI 功能连接指标系统评测：分龄孤独症研究</a></h3>
+  <div class="meta">Neuroinformatics · 2026-09-15 · PMID 42742790</div>
+  <p>系统比较五种功能连接度量（全相关/偏相关/Granger/相干/互信息）在儿童、青少年、成人三段的表现：线性指标在儿童期最稳，非线性信息论指标在青春期最有信息量，频域指标在成人期更强。全程用训练折内特征选择 + 严格交叉验证防数据泄漏。</p>
+  <div class="why"><span class="why-label">为什么与你有关</span>上期 GNN 连接组研究已提示影像路线天花板低（平衡准确率 ~61%），这篇进一步说明：同一个「孤独症 vs 对照」任务，换连接度量、换年龄段，结论就会翻转。星桥若做眼动/影像 biomarker，小样本+分龄是绕不开的坑——这篇的防泄漏评测框架可以原样搬进你们的实验设计，避免发出过乐观的内部指标。</div>
+</div>
+
+<div class="card">
+  <span class="tag">孤独症 · 运动数字表型<span class="preprint-badge">预印本 · 未经同行评审</span></span>
+  <h3><a href="https://doi.org/10.21203/rs.3.rs-10816089/v1">用可解释学习刻画孤独症的 3D 运动「运动签名」</a></h3>
+  <div class="meta">Research Square · 2026-09-10 · DOI 10.21203/rs.3.rs-10816089/v1</div>
+  <p>Move4AS 数据集（34 人，14 孤独症 vs 20 神经典型）动捕数据：情绪行走与社交舞蹈模仿任务上，SVM/CNN 分类准确率随任务社交复杂度上升而提高，可解释分析定位出组间判别性运动模式——情绪与社交需求放大了组间差异。</p>
+  <div class="why"><span class="why-label">为什么与你有关</span>样本仅 34 人、任务是模仿范式，别当筛查工具看；但它给星桥指了个方向：运动数字表型（摄像头/IMU 可采）可能比问卷更接近「社交动机」构念，且可解释分析能输出家长听得懂的证据——这正是家庭场景数字疗愈需要的「看得见的进步」。</div>
+</div>
+
+<div class="card">
+  <span class="tag">孤独症 · 社区筛查落地<span class="preprint-badge">预印本 · 未经同行评审</span></span>
+  <h3><a href="https://doi.org/10.64898/2026.09.12.26362904">坦桑尼亚乞力马扎罗社区场景适配孤独症筛查工具：利益相关者视角</a></h3>
+  <div class="meta">medRxiv · 2026-09-14 · DOI 10.64898/2026.09.12.26362904</div>
+  <p>社会生态模型指导的现象学质性研究：对幼托机构、康复机构、家长与政策制定者等 10 场深访 + 焦点小组，系统梳理社区场景下文化适配孤独症筛查的可行性、可接受性与落地策略——系统性、文化、物流三类障碍是主矛盾。</p>
+  <div class="why"><span class="why-label">为什么与你有关</span>量表平台出海或下沉时，最大的坑从来不是模型而是「谁来筛、家长信不信、筛完转去哪」。这篇把低收入场景的完整利益相关者地图画了出来——换成国内县城/基层妇幼场景几乎一一对应，可直接改写成量表平台「社区筛查落地 SOP」的需求调研提纲。</div>
+</div>
+
+<div class="section-title">前沿研究 · 心理健康与语音 AI</div>
+
+<div class="card">
+  <span class="tag">心理健康 · 声学筛查</span>
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42743592/">智能手机声学机器学习管线检测大学生自杀意念：病例对照研究</a></h3>
+  <div class="meta">JMIR Formative Research · 2026-09-15 · PMID 42743592 · 中国团队（陆军军医大学×重庆大学）</div>
+  <p>96 名大学生经微信小程序录 16 句标准化朗读语音，openSMILE 提 570 维声学特征；防泄漏的被试级 5 折交叉验证下，随机森林 AUC 0.813（准确率 0.748）。贡献最大的特征族：基频、MFCC、谐波性。</p>
+  <div class="why"><span class="why-label">为什么与你有关</span>这条对小雪宝和量表平台是双重原型：①「标准化朗读任务 + 声学特征」是一条家长配合门槛极低、可在微信小程序里完整闭环的采集链路；②它示范了「被试级防泄漏验证」该怎么做——你们做语音量表时若按录音条数随机分折，指标会虚高一大截。青少年心理健康方向值得挂一条常设验证线。</div>
+</div>
+
+<div class="card">
+  <span class="tag">心理健康 · 非言语信号</span>
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42748354/">自杀评估中的非言语行为自动编码与风险检测</a></h3>
+  <div class="meta">JMIR Formative Research · 2026-09-16 · PMID 42748354 · Yale/Weill Cornell/Pitt 团队</div>
+  <p>66 名青年 C-SSRS 评估录像前 3 分钟，PyAFAR 自动编码面部动作单元与头部运动：自杀组眼/嘴开合速度更高（P=.004）；更意外的是<strong>访谈者</strong>的非言语行为区分力更强（命中 81% vs 受试者自身 59%），且访谈者微笑出现与否预测 3 个月后的自杀行为（P=.02），而传统临床评分与自评量表均未预测到。</p>
+  <div class="why"><span class="why-label">为什么与你有关</span>结论扎心但重要：评估「交互过程」比评估「受试者本人」更有信息量。小雪宝做陪伴对话时天然积累双向交互流——孩子的话 + 助手的回应节奏，这提示「对话动力学」本身可能就是被低估的风险信号层；同时给量表平台提了醒：访谈者状态是混杂变量，采双向数据才有机会控制它。</div>
+</div>
+
+<div class="section-title">综述与行业信号</div>
+
+<div class="card">
+  <span class="tag">血液肿瘤 · 领域全景</span>
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42738832/">Putting the I in AML：急性髓系白血病中的 AI 与机器学习</a></h3>
+  <div class="meta">Cells · 2026-08-26 · PMID 42738832 · Padova 血液中心（意大利）</div>
+  <p>按临床决策点（而非技术类别）组织 AML 全流程 AI 综述：骨髓涂片直接读突变、流式自动设门 1 分钟内复现专家、首批血液学 AI 病理设备已过监管审批；VEN+阿扎胞苷疗效预测多外部队列验证。作者自定 CRL-AML 1-5 临床就绪度分级：<strong>数百个模型挤在 1-2 级，尚无一个进入前瞻性临床评估</strong>，并给出三年行动议程。</p>
+  <div class="why"><span class="why-label">为什么与你有关</span>「模型很多、前瞻验证为零」正是儿科白血病 AI 的现状缩影——这与你连续多期追踪的 ALLCatchR2（唯一拿到大规模队列验证的分型工具）形成互文。小雪宝若往血液肿瘤陪伴之外延伸「检查解读」能力，这篇的分级框架可以直接当选题与合作的导航图：找 CRL 2-3 级、有外部验证的切入点，别碰纯概念模型。</div>
+</div>
+
+<div class="section-title">今日速览</div>
+
+<div class="card">
+  <p style="margin-bottom:8px">⚡ <a href="https://news.mit.edu/2026/new-ai-technique-could-make-minimally-invasive-surgeries-safer-more-precise-0916"><strong>MIT xvr：术中 X 光与 3D 扫描亚毫米级 AI 配准</strong></a>（MIT News · 2026-09-16）——无标记物配准让微创手术导航不再依赖昂贵硬件，儿科微创术式是天然受益场景。</p>
+  <p style="margin-bottom:8px">⚡ <a href="https://pubmed.ncbi.nlm.nih.gov/42748420/"><strong>急诊通用自杀风险筛查预警系统研究方案</strong></a>（JMIR Res Protoc · 2026-09-16 · PMID 42748420）——共设计（co-design）路线做预测模型与软件开发，与上期 CARS2 MCID 一样，protocol 本身就是量表平台的模板库素材。</p>
+  <p style="margin-bottom:8px">⚡ <a href="https://doi.org/10.21203/rs.3.rs-10797230/v1"><strong>Pixi Home-Hub：神经发育儿童家庭 AI 辅助监测 <span class="preprint-badge">预印本 · 未经同行评审</span></strong></a>（Research Square · 2026-09-10 · DOI 10.21203/rs.3.rs-10797230/v1）——22 对亲子 14 天生态瞬时评估，孤独症占比最高；完成率 60% 且逐日衰减——给星桥「家庭端参与度曲线」提前打了预防针。</p>
+  <p style="margin-bottom:0">⚡ <a href="https://doi.org/10.21203/rs.3.rs-10823532/v1"><strong>LLM 自动检测临床访谈中的抑郁 <span class="preprint-badge">预印本 · 未经同行评审</span></strong></a>（Research Square · 2026-09-11 · DOI 10.21203/rs.3.rs-10823532/v1）——299 名粤语被试，ASR 转写 + Transformer 集成；「ASR 转写是否掉点」是语音量表落地前必测的问题，实验设计可直接抄。</p>
+</div>
+
+<div class="section-title">今日行动建议</div>
+<div class="card actions">
+  <ol>
+    <li><strong>星桥 × FIAP-Digital 对照评审（本周）</strong>：把 FIAP-Digital 的构念清单（生物负荷/发育窗口/治疗可及性/神经可塑性）与星桥现有数据字段做一次映射，标注「已有/可采/放弃」三档，产出星桥数据架构 v0.2；同时把 Neuroinformatics 那篇的防泄漏评测清单并入实验 SOP。</li>
+    <li><strong>小雪宝语音风险评估预研（下周启动）</strong>：参照 JMIR 声学管线，用现有陪聊录音（须家长授权链路完备）做 16 句标准化朗读的采集可行性测试；先只验证「声学特征管线能跑通 + 被试级交叉验证不虚高」，不谈筛查结论。</li>
+    <li><strong>量表平台协议库再添两件（顺手）</strong>：把急诊自杀风险筛查 protocol（PMID 42748420）的共设计流程、乞力马扎罗预印本的利益相关者地图，各提炼成一页「落地检查表」，纳入平台「社区/基层筛查」交付模板。</li>
+  </ol>
+</div>
+
+<div class="footer">
+  数据来源：AI HOT（aihot.virxact.com）· PubMed（NCBI E-utilities）· medRxiv / Research Square（经 Europe PMC）。<br>
+  检索窗口：2026-09-10 至 2026-09-17（北京时间）；论文按发表日期，资讯按北京时间（UTC+8）。<br>
+  标注<span class="preprint-badge">预印本 · 未经同行评审</span>的条目尚未经过同行评审，结论请谨慎引用。本简报由 AI 辅助生成，仅供个人研究参考，不构成医疗建议。<br>
+  © 2026 AI新青年 · 主理人 Alan
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 全球 AI 前沿简报 · 2026-08-26</title>
+<style>
+:root{
+  --brand:#6366f1;
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --text:#1a1c25;
+  --muted:#666b7d;
+  --line:#e5e7f0;
+  --chip:#eef0fe;
+  --shadow:0 2px 12px rgba(28,30,60,.07);
+  --c-model:#6366f1;
+  --c-product:#0ea5a4;
+  --c-industry:#f59e0b;
+  --c-paper:#8b5cf6;
+  --c-tip:#ec4899;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f1117;
+    --card:#181b24;
+    --text:#e8eaf2;
+    --muted:#9aa0b4;
+    --line:#282c39;
+    --chip:#242840;
+    --shadow:0 2px 14px rgba(0,0,0,.35);
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0;padding:28px 16px 56px;
+  background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.72;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:820px;margin:0 auto}
+
+/* ---------- header ---------- */
+.hero{
+  background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 55%,#4f46e5 100%);
+  color:#fff;border-radius:12px;padding:28px 26px 24px;
+  box-shadow:0 6px 24px rgba(99,102,241,.28);
+}
+.hero h1{margin:0 0 6px;font-size:26px;font-weight:700;letter-spacing:.3px}
+.hero .sub{font-size:14px;opacity:.92;margin:0 0 16px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.hero .meta span{
+  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.22);
+  border-radius:999px;padding:4px 12px;font-size:12.5px;backdrop-filter:blur(4px);
+}
+.who{
+  margin-top:16px;padding:12px 14px;border-radius:10px;
+  background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.2);
+  font-size:12.8px;line-height:1.68;
+}
+.who b{font-weight:600}
+
+/* ---------- section ---------- */
+.sec{margin:34px 0 0}
+.sec-h{
+  display:flex;align-items:center;gap:10px;
+  font-size:17px;font-weight:700;margin:0 0 14px;padding-left:12px;
+  border-left:4px solid var(--brand);
+}
+.sec-h .n{
+  font-size:12px;font-weight:600;color:var(--muted);
+  background:var(--chip);border-radius:999px;padding:2px 9px;
+}
+.sec.model .sec-h{border-left-color:var(--c-model)}
+.sec.product .sec-h{border-left-color:var(--c-product)}
+.sec.industry .sec-h{border-left-color:var(--c-industry)}
+.sec.paper .sec-h{border-left-color:var(--c-paper)}
+.sec.tip .sec-h{border-left-color:var(--c-tip)}
+
+/* ---------- card ---------- */
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);
+  border-top:3px solid var(--brand);
+}
+.sec.model .card{border-top-color:var(--c-model)}
+.sec.product .card{border-top-color:var(--c-product)}
+.sec.industry .card{border-top-color:var(--c-industry)}
+.sec.paper .card{border-top-color:var(--c-paper)}
+.sec.tip .card{border-top-color:var(--c-tip)}
+.card h3{margin:0 0 8px;font-size:16.5px;font-weight:650;line-height:1.5}
+.card h3 a{color:var(--text);text-decoration:none}
+.card h3 a:hover{color:var(--brand);text-decoration:underline}
+.src{font-size:12.5px;color:var(--muted);margin:0 0 10px}
+.src .dot{margin:0 6px;opacity:.5}
+.card p.sum{margin:0;font-size:14.5px;color:var(--text);opacity:.93}
+.hot{
+  display:inline-block;background:#fff1f2;color:#e11d48;
+  border:1px solid #fecdd3;border-radius:6px;
+  font-size:11.5px;font-weight:650;padding:1px 7px;margin-right:7px;vertical-align:2px;
+}
+@media (prefers-color-scheme: dark){
+  .hot{background:#3f1420;color:#fda4af;border-color:#7f1d3a}
+}
+.why{
+  margin:12px 0 0;padding:11px 13px;border-radius:9px;
+  background:var(--chip);border-left:3px solid var(--brand);
+  font-size:13.5px;line-height:1.66;
+}
+.why b{color:var(--brand);font-weight:650}
+.origin{margin:12px 0 0;font-size:13px}
+.origin a{
+  color:var(--brand);text-decoration:none;font-weight:600;
+  border-bottom:1px dashed var(--brand);padding-bottom:1px;
+}
+.origin a:hover{border-bottom-style:solid}
+
+/* ---------- action ---------- */
+.action{
+  margin:36px 0 0;background:var(--card);border:1px solid var(--line);
+  border-radius:12px;padding:20px 22px;box-shadow:var(--shadow);
+  border-top:3px solid var(--c-industry);
+}
+.action h2{margin:0 0 12px;font-size:17px;font-weight:700}
+.action ol{margin:0;padding-left:22px}
+.action li{margin-bottom:9px;font-size:14.3px}
+.action li:last-child{margin-bottom:0}
+
+/* ---------- note / footer ---------- */
+.note{
+  margin:26px 0 0;font-size:13px;color:var(--muted);
+  background:var(--card);border:1px dashed var(--line);
+  border-radius:12px;padding:15px 18px;line-height:1.7;
+}
+footer{
+  margin:32px 0 0;padding-top:18px;border-top:1px solid var(--line);
+  font-size:12.3px;color:var(--muted);line-height:1.75;text-align:center;
+}
+footer a{color:var(--brand);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hero">
+  <h1>AI新青年 · 全球 AI 前沿简报</h1>
+  <p class="sub">每日为主理人 Alan 精选的全球最前沿 AI 动态</p>
+  <div class="meta">
+    <span>📅 2026 年 8 月 26 日</span>
+    <span>🕘 时间窗：近 7 天精选池 + 近 24 小时全量补强</span>
+    <span>✦ 精选 12 条</span>
+    <span>🔥 热榜命中 2 条</span>
+  </div>
+  <div class="who">
+    <b>主理人画像 · 李帅帅（Alan）</b>　三甲儿科规培医师转型 AI，「AI新青年」视频号主理人，受众为青少年与家长。<br>
+    <b>在手项目</b>　小雪宝 LeukemiaPal（白血患儿陪伴）· 星桥计划（孤独症数字疗愈）· 孤独症量表 AI 平台 · 本地 AI 内容团队（Hermes 71 Skills + Wan 2.2 本地视频 + DeepSeek 主模型）· 一人公司<br>
+    <b>筛选口径</b>　模型发布 / 智能体与 Agent / 本地 AI 工具链 / AI 教育 / 机器人具身 / 一人公司服务化；已剔除大众消费 App 更新与纯金融短线。
+  </div>
+</div>
+
+<!-- ================= 模型发布 ================= -->
+<div class="sec model">
+  <h2 class="sec-h">🧠 模型发布 <span class="n">3 条</span></h2>
+
+  <div class="card">
+    <h3><a href="https://aihot.virxact.com/items/cmt8uphwp3qmhro73czv8pbpv" target="_blank" rel="noopener">WeatherNext 预测气旋：提前五天预警五级飓风</a></h3>
+    <p class="src">X：Google AI (@GoogleAI)<span class="dot">·</span>北京时间 2026-08-25 23:37</p>
+    <p class="sum">Google AI 发布 WeatherNext 气旋预测模型，可同时预测风暴路径、强度与规模，比现有系统多出一整天预警时间。2025 飓风季实战中提前五天预测出飓风 Melissa 在牙买加的五级登陆，为美国国家飓风中心首次实时使用 AI 模型；单场风暴可生成多达 1000 次模拟，代码与权重已开源。</p>
+    <p class="origin"><a href="https://x.com/GoogleAI/status/2092275116503707733" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://aihot.virxact.com/items/cmt9bn75v0fenrolyo7t99ml1" target="_blank" rel="noopener">Breeze TTS 2 登顶开源语音合成竞技场</a></h3>
+    <p class="src">X：Artificial Analysis (@ArtificialAnlys)<span class="dot">·</span>北京时间 2026-08-26 07:51</p>
+    <p class="sum">Breeze TTS 2 在 Artificial Analysis 语音竞技场中成为排名第一的开源权重 TTS 模型，Elo 达 1215，领先 Fish Audio S2 Pro 90 分，总排名第 6。</p>
+    <div class="why"><b>为什么值得关注</b>　真正有信息量的不是「开源第一」，而是「开源第一 = 总榜第 6」这个位差：它意味着语音陪伴场景可以做分档——本地开源权重跑常态陪伴（隐私、零边际成本），关键情绪节点再走闭源兜底。对小雪宝、星桥这类需要长时间在线又不能外传儿童语音的产品，这个分档比一味等开源追平更现实。</div>
+    <p class="origin"><a href="https://x.com/ArtificialAnlys/status/2092399623839326550" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://aihot.virxact.com/items/cmt956qkd09oerolynbk16vy4" target="_blank" rel="noopener">Perplexity 便携电脑智能体获英伟达支持</a></h3>
+    <p class="src">X：Aravind Srinivas（Perplexity CEO）<span class="dot">·</span>北京时间 2026-08-26 04:08</p>
+    <p class="sum">Perplexity 发布本地优先智能体 Portable Computer，搭载端侧 27B 模型，在真实知识工作基准上得分 82.6%，超越开源方案 Pi 与 Hermes；后训练版 PPLX 27B 达 85.4%。CEO 感谢英伟达在 DGX Spark 上的合作，并表态推动开放生态以支持高性价比开源权重模型、推理框架与统一内存硬件。</p>
+    <div class="why"><b>为什么值得关注</b>　这条基准里被点名超越的正是 Hermes——也就是你本地内容团队的编排底座。值得注意的是差距来源：82.6% 的基座 → 85.4% 的后训练版，涨幅主要来自「针对真实知识工作的后训练」，而不是换更大模型。对本地 3090 这种算力受限的路线，这其实是个好消息：优化方向在数据与后训练，而非堆参数。</div>
+    <p class="origin"><a href="https://x.com/AravSrinivas/status/2092343275558723710" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+</div>
+
+<!-- ================= 产品发布 ================= -->
+<div class="sec product">
+  <h2 class="sec-h">🚀 产品发布 <span class="n">3 条</span></h2>
+
+  <div class="card">
+    <h3><span class="hot">🔥 热榜 #3</span><a href="https://aihot.virxact.com/items/cmt8qee503kvnro73qp7543yv" target="_blank" rel="noopener">Apple 推出搭载 M5 Max 与 M5 Ultra 的全新 Mac Studio</a></h3>
+    <p class="src">Apple：Newsroom<span class="dot">·</span>北京时间 2026-08-25 21:00</p>
+    <p class="sum">Apple 发布搭载 M5 Max 与全新 M5 Ultra 的 Mac Studio，AI 性能最高提升 4.3 倍，图形性能提升 1.8 倍，存储速度翻倍。M5 Ultra 版本支持最高 512GB 统一内存与 1.2TB/s 内存带宽，可完全在设备端运行大型 LLM，四台集群最高带来 3 倍分布式推理提速；今日起预购，9 月 22 日开售。（同批发布的 M6 与 M5 Ultra 芯片位列今日热榜 #1）</p>
+    <p class="origin"><a href="https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <div class="card">
+    <h3><span class="hot">🔥 热榜 #2</span><a href="https://aihot.virxact.com/items/cmt8z2eko055crolytaitdxv8" target="_blank" rel="noopener">Claude 记忆功能全面打通聊天与 Cowork，用户可逐条查看和编辑</a></h3>
+    <p class="src">Claude：Blog<span class="dot">·</span>北京时间 2026-08-26 02:02</p>
+    <p class="sum">Claude 即日起统一聊天与 Cowork 的记忆，任一场景都能调用此前积累的上下文，记忆在对话过程中实时更新，用户可在设置中按主题查看、编辑或删除每条记忆。健康、信仰等敏感话题默认不存储（可手动开启），敏感识别号、犯罪记录等则始终不保存。</p>
+    <div class="why"><b>为什么值得关注</b>　可直接抄的不是「统一记忆」，而是那套<b>隐私默认值</b>：把健康、信仰划为「默认不记」，把身份证号、犯罪记录划为「永不记」，再给用户一个逐条可查可删的记忆浏览器。星桥与小雪宝面对的恰是儿童健康数据，这套三档分级（永不记 / 默认关 / 默认开）省掉你自己从零设计合规默认值的时间。</div>
+    <p class="origin"><a href="https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://aihot.virxact.com/items/cmt90wf1p06j9roly5e34fmu3" target="_blank" rel="noopener">OpenWorker 新版发布，内置网络安全智能体</a></h3>
+    <p class="src">X：Andrew Ng（DeepLearning.AI 创始人）<span class="dot">·</span>北京时间 2026-08-26 02:16</p>
+    <p class="sum">Andrew Ng 旗下开源智能体 OpenWorker 发布新版，harness 完全开源、安全团队可审计无后门。新版内置代码漏洞扫描、依赖供应链注入检测、云安全配置检查三类网络安全智能体，并支持本地运行开源权重模型以保护敏感代码。</p>
+    <p class="origin"><a href="https://x.com/AndrewYNg/status/2092315079576555806" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+</div>
+
+<!-- ================= 行业动态 ================= -->
+<div class="sec industry">
+  <h2 class="sec-h">🌐 行业动态 <span class="n">1 条</span></h2>
+
+  <div class="card">
+    <h3><a href="https://aihot.virxact.com/items/cmt8vaqtw3r29ro73d67v03bc" target="_blank" rel="noopener">Dylan Patel：Anthropic 与 OpenAI 到 2028 年将控制全球大部分算力</a></h3>
+    <p class="src">Dwarkesh Patel：Podcast &amp; Blog<span class="dot">·</span>北京时间 2026-08-25 23:32</p>
+    <p class="sum">在最新一期播客中，SemiAnalysis 创始人 Dylan Patel 与 Dwarkesh Patel 讨论实验室经济学，预计 Anthropic 与 OpenAI 到 2028 年将控制全球大部分可用 FLOPs——因为它们更善于变现算力，从而能出价高于其他所有方。</p>
+    <p class="origin"><a href="https://www.dwarkesh.com/p/dylan-patel-3" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+</div>
+
+<!-- ================= 论文研究·技术教程 ================= -->
+<div class="sec paper">
+  <h2 class="sec-h">📄 论文研究 · 技术教程 <span class="n">3 条</span></h2>
+
+  <div class="card">
+    <h3><a href="https://aihot.virxact.com/items/cmt8bo2db30oaro735zu90tig" target="_blank" rel="noopener">单个污染页面即可影响 LLM 推荐：FORGE 基准揭示检索增强系统的脆弱性</a></h3>
+    <p class="src">HuggingFace Daily Papers<span class="dot">·</span>北京时间 2026-08-24 08:00</p>
+    <p class="sum">检索增强型 LLM 在消费推荐中易受 GEO 内容污染影响，会成为虚假产品的无意推广者。新基准 FORGE 在 225 个真实产品、15 个类别、5 个消费场景中测试 12 个商业及开源模型，发现全部易受攻击：单个污染页面即可造成最高 27% 的受骗率，替换全部前 3 个检索结果时升至 73.8%。</p>
+    <div class="why"><b>为什么值得关注</b>　最刺眼的数字是「单个页面 → 27%」：污染成本极低，而你的量表平台与医疗知识库正是靠检索喂上下文。这提示防线不该只放在生成端做审查，更要放在<b>检索源准入</b>——白名单化知识来源、对新入库文档做溯源标记，比事后让模型自我纠正有效得多。</div>
+    <p class="origin"><a href="https://arxiv.org/abs/2606.13610" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://aihot.virxact.com/items/cmt9ad4ek0efjrolydq33dqw7" target="_blank" rel="noopener">评测框架无中立：同一模型得分 31% 到 89%</a></h3>
+    <p class="src">X：Elvis Saravia (@omarsar0, DAIR.AI)<span class="dot">·</span>北京时间 2026-08-26 07:13</p>
+    <p class="sum">新论文让 12 个开源权重模型在 26 种同等合理的评测配置下回答相同 3679 道题，仅改变选项顺序、提示词措辞与答案读取方式，gemma4-31b 得分即在 31% 至 89% 间波动，其中 4 个模型在某种配置下都能排第一。配置敏感题目承载了相邻模型间 95.7% 的差距，而基准压缩方法筛出的题目恰恰是最易受配置影响的那批。</p>
+    <div class="why"><b>为什么值得关注</b>　这直接改写本地模型选型的方法论：榜单相邻两名之间的差距，95.7% 来自评测配置而非模型能力——也就是说「A 比 B 高两分」基本没有决策价值。对 3090 上换来换去的取舍，唯一可靠做法是拿自己的真实提示词（量表条目、儿童对话样本）跑一遍小规模私有评测。</div>
+    <p class="origin"><a href="https://x.com/omarsar0/status/2092389950532554920" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://aihot.virxact.com/items/cmt99ajk80dn5rolyo7q1wg3s" target="_blank" rel="noopener">Prime Agent 技术报告：记忆层级机制解析</a></h3>
+    <p class="src">X：Rohan Paul (@rohanpaul_ai)<span class="dot">·</span>北京时间 2026-08-26 06:39</p>
+    <p class="sum">曾助 Opus 5 在 ARC-AGI-3 达到 95.5% 的 harness 发布技术报告，核心是记忆层级：在模型权重与活动上下文之下，另设持久 IPython 会话及磁盘存储的历史、技能与提示词库，模型通过写代码在各层级间搬运状态。长输入以 REPL 变量留存供智能体搜索转换，从而把长上下文问题转化为信息管理问题。</p>
+    <p class="origin"><a href="https://x.com/rohanpaul_ai/status/2092381340968910922" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+</div>
+
+<!-- ================= 技巧与观点 ================= -->
+<div class="sec tip">
+  <h2 class="sec-h">💡 技巧与观点 <span class="n">2 条</span></h2>
+
+  <div class="card">
+    <h3><a href="https://aihot.virxact.com/items/cmt9588t109p9rolyegirxdgx" target="_blank" rel="noopener">AI 智能体应该活多久？</a></h3>
+    <p class="src">Tomer Tunguz 博客<span class="dot">·</span>北京时间 2026-08-24 08:00</p>
+    <p class="sum">长期运行的 AI 智能体会因上下文累积而注意力衰减，临时指令还会残留成永久规则，并带来安全风险。作者建议给日常助手 24 小时生命周期、午夜重置会话，把具体任务委派给只存活 30 秒的单一用途子智能体，并在重置前把持久偏好写入磁盘。</p>
+    <div class="why"><b>为什么值得关注</b>　「临时指令残留成永久规则」是长跑智能体最隐蔽的故障：它不报错，只是慢慢跑偏。这对 Hermes 71 Skills 的启示是把「长期记忆」与「本次会话临时指令」在存储层就物理分开——只有显式写盘的偏好能跨会话存活，其余一律随会话销毁，而不是靠上下文自然遗忘。</div>
+    <p class="origin"><a href="https://www.tomtunguz.com/how-long-should-an-agent-live" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://aihot.virxact.com/items/cmt8zzh0w05nirolyozmvq7i0" target="_blank" rel="noopener">OpenRouter 视频生成 API：一份代码优先的接入指南</a></h3>
+    <p class="src">OpenRouter：Announcements<span class="dot">·</span>北京时间 2026-08-25 08:00</p>
+    <p class="sum">OpenRouter 推出统一的异步视频生成 API：提交任务、轮询状态、下载 MP4 三步走，支持 Seedance、Veo、Wan 等模型，切换模型只需更改一个模型标识符。</p>
+    <p class="origin"><a href="https://openrouter.ai/blog/tutorials/video-generation-api" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+</div>
+
+<!-- ================= 今日行动建议 ================= -->
+<div class="action">
+  <h2>✅ 今日行动建议</h2>
+  <ol>
+    <li><b>实测 Breeze TTS 2 是否够用于儿童陪伴音色。</b>它现在是开源权重 TTS 里的第一名，直接对比你现用方案的自然度与推理延迟；若达标，小雪宝与星桥的常态语音链路就能落到本地，儿童语音不出机器。</li>
+    <li><b>给量表平台与医疗知识库加一层检索源准入。</b>FORGE 显示单个污染页面就能带来 27% 受骗率，先把知识来源白名单化、给新入库文档打溯源标记，成本远低于事后在生成端补审查。</li>
+    <li><b>把模型选型从「看榜单」换成「跑私有评测集」。</b>评测配置能让同一模型在 31%–89% 间浮动，榜单相邻名次几乎无决策价值；用真实量表条目与儿童对话样本攒一个几十题的小评测集，以后换模型只看这个。</li>
+  </ol>
+</div>
+
+<div class="note">
+  <b>筛选说明</b>　今日近 7 天精选池共 15 条，其中 4 条为 8 月 25 日简报已收录的滚动重复（GPT-5.6 登陆 Kiro、MetaRoCE、ChatGPT Work、Vera Rubin NVL72），已剔除；热榜 3 条全部命中精选池，其中 2 条进入本期并标注徽标。为补强模型发布与论文版块，另按既定流程追加近 24 小时全量动态筛选增量条目。医疗 AI 内容已拆分至独立的《每日医疗AI聚焦简报》，本期不重复收录。
+</div>
+
+<footer>
+  数据来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a>　·　每条均保留第三方原始来源链接<br>
+  第三方原文版权归原作者所有；本简报仅作个人研读与选题参考，引用数字与政策请回原文核对。<br>
+  AI新青年 · 全球 AI 前沿简报 · 2026-08-26 生成
+</footer>
+
+</div>
+</body>
+</html>

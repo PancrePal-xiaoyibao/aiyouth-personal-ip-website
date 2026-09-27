@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-08-29</title>
+<style>
+  :root {
+    --teal: #0d9488;
+    --teal-soft: #14b8a6;
+    --teal-bg: rgba(13,148,136,.08);
+    --radius: 12px;
+    --ink: #0f172a;
+    --ink-2: #475569;
+    --ink-3: #64748b;
+    --card: #ffffff;
+    --bg: #f1f5f9;
+    --line: #e2e8f0;
+    --shadow: 0 1px 3px rgba(15,23,42,.08), 0 8px 24px rgba(15,23,42,.06);
+    --warn-bg: #fff7ed;
+    --warn-line: #fdba74;
+    --warn-ink: #9a3412;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --teal: #2dd4bf;
+      --teal-soft: #5eead4;
+      --teal-bg: rgba(45,212,191,.12);
+      --ink: #e2e8f0;
+      --ink-2: #cbd5e1;
+      --ink-3: #94a3b8;
+      --card: #111827;
+      --bg: #0b1120;
+      --line: #1e293b;
+      --shadow: 0 1px 3px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+      --warn-bg: #2a1c0d;
+      --warn-line: #b45309;
+      --warn-ink: #fcd34d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.65;
+    padding: 28px 16px 64px;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  header.hero {
+    background: linear-gradient(135deg, var(--teal), var(--teal-soft));
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 26px 28px;
+    box-shadow: var(--shadow);
+  }
+  .hero h1 { margin: 0 0 6px; font-size: 1.55rem; letter-spacing: .5px; }
+  .hero .persona {
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+    font-size: .9rem; opacity: .96; margin: 10px 0 14px;
+  }
+  .hero .persona .tag {
+    background: rgba(255,255,255,.18); padding: 3px 10px; border-radius: 999px;
+  }
+  .hero .meta { font-size: .82rem; opacity: .92; display: flex; flex-wrap: wrap; gap: 16px; }
+  .hero .meta b { font-weight: 700; }
+  .section { margin-top: 30px; }
+  .section h2 {
+    font-size: 1.12rem; color: var(--teal); margin: 0 0 14px;
+    display: flex; align-items: center; gap: 8px;
+    border-left: 4px solid var(--teal); padding-left: 10px;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 18px 20px; margin-bottom: 14px; box-shadow: var(--shadow);
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  .card:hover { transform: translateY(-2px); border-color: var(--teal-soft); }
+  .card .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .card h3 { margin: 0; font-size: 1.02rem; line-height: 1.45; }
+  .card h3 a { color: var(--ink); text-decoration: none; border-bottom: 1px dashed var(--teal-soft); }
+  .card h3 a:hover { color: var(--teal); }
+  .badge {
+    font-size: .72rem; color: var(--teal); background: var(--teal-bg);
+    border: 1px solid var(--teal-soft); padding: 2px 9px; border-radius: 999px; white-space: nowrap;
+  }
+  .badge.pre { color: var(--warn-ink); background: var(--warn-bg); border-color: var(--warn-line); }
+  .src { font-size: .8rem; color: var(--ink-3); margin: 6px 0 10px; }
+  .src .dot { color: var(--teal); margin: 0 6px; }
+  .summary { font-size: .92rem; color: var(--ink-2); margin: 0 0 10px; }
+  .why {
+    font-size: .88rem; background: var(--teal-bg); border-radius: 8px;
+    padding: 10px 12px; color: var(--ink); margin: 0;
+  }
+  .why b { color: var(--teal); }
+  .actions {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 18px 22px; box-shadow: var(--shadow); margin-top: 14px;
+  }
+  .actions h2 { border: none; padding: 0; margin: 0 0 12px; }
+  .actions ol { margin: 0; padding-left: 20px; }
+  .actions li { margin-bottom: 10px; font-size: .9rem; color: var(--ink-2); }
+  .actions li b { color: var(--ink); }
+  footer {
+    margin-top: 34px; font-size: .78rem; color: var(--ink-3);
+    border-top: 1px solid var(--line); padding-top: 16px; line-height: 1.7;
+  }
+  footer .pill { color: var(--teal); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+    <div class="persona">
+      <span class="tag">主理人 Alan（李帅帅）</span>
+      <span class="tag">三甲儿科规培医师 × AI Builder</span>
+      <span class="tag">受众：青少年 / 家长</span>
+    </div>
+    <div class="meta">
+      <span><b>日期</b>　2026-08-29（周六）</span>
+      <span><b>数据源</b>　AI HOT · PubMed · medRxiv</span>
+      <span><b>精选</b>　6 条硬核医疗 AI</span>
+    </div>
+  </header>
+
+  <!-- ============ 医疗模型与临床落地 ============ -->
+  <section class="section">
+    <h2>🩺 医疗模型与临床落地</h2>
+
+    <div class="card">
+      <div class="top">
+        <h3><a href="https://x.com/thexpin/status/2093373903251107943" target="_blank" rel="noopener">中国批准首款商用脑机接口 NEO：半侵入式、8 电极、全球首例商业植入</a></h3>
+        <span class="badge">临床落地</span>
+      </div>
+      <div class="src">来源：X（@thexpin）　<span class="dot">·</span> 北京时间 2026-08-29 00:23</div>
+      <p class="summary">中国药监局于 2026-03-13 批准博睿康（Neuracle）半侵入式脑机接口 NEO 上市，7 月 13 日上海医院完成全球首例商业植入。NEO 仅 8 个电极、不穿透大脑皮层，审批与产业化速度显著快于 Neuralink 的 1024 电极侵入式 N1，并已规划医保支付路径。</p>
+      <p class="why"><b>为什么与你有关：</b>「星桥计划」的数字疗愈方向里，神经反馈 / BCI 一直是有想象空间但难落地的模块。NEO 给出了国产、可规模化、走医保的参照样本——意味着未来 BCI 辅助训练有机会进入临床付费体系，技术选型文档应尽快把"半侵入式 BCI"列为近期可跟踪的集成窗口。</p>
+    </div>
+  </section>
+
+  <!-- ============ 行业与监管动态 ============ -->
+  <section class="section">
+    <h2>⚖️ 行业与监管动态</h2>
+
+    <div class="card">
+      <div class="top">
+        <h3><a href="https://x.com/kimmonismus/status/2091911293082947773" target="_blank" rel="noopener">医疗 AI 使用建议：患者「主动」、医生「强制」</a></h3>
+        <span class="badge">人在环</span>
+      </div>
+      <div class="src">来源：X（@kimmonismus）　<span class="dot">·</span> 北京时间 2026-08-24 23:31</div>
+      <p class="summary">观点主张：应鼓励患者在就诊前使用 AI 以更好理解自身病情与治疗选择；而对医生，则应强制要求用 AI 复核其治疗方案。本质是给"人在环"做角色分工——AI 赋能患者、约束医生，而非替代任一方。</p>
+      <p class="why"><b>为什么与你有关：</b>这是小雪宝 / 星桥陪伴与筛查产品的设计红线。AI 只做"赋能患者 + 辅助复核"，最终决策权与责任归属必须留在医生 / 家长手里——这条原则应直接写进量表平台的合规表述与产品免责边界。</p>
+    </div>
+  </section>
+
+  <!-- ============ 前沿研究·论文 ============ -->
+  <section class="section">
+    <h2>🔬 前沿研究 · 论文（PubMed）</h2>
+
+    <div class="card">
+      <div class="top">
+        <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42664000/" target="_blank" rel="noopener">机器学习衍生的肌肉减少症指数，与 DLBCL 生存及非复发死亡率相关</a></h3>
+        <span class="badge">血液肿瘤</span>
+      </div>
+      <div class="src">来源：Blood Advances（德国癌症中心 AI in Medicine 研究所）　<span class="dot">·</span> 2026-09-08</div>
+      <p class="summary">一项回顾性研究构建机器学习衍生的肌肉减少症（sarcopenia）指数，证明其与弥漫大 B 细胞淋巴瘤（DLBCL）患者的生存及非复发死亡率显著相关，为高性价比、可解释的风险分层提供证据。</p>
+      <p class="why"><b>为什么与你有关：</b>小雪宝面向白血患儿，营养与体能状态直接决定治疗耐受度。这类"用常规影像 / 检验即可算出的可解释风险分层"思路，可迁移到患儿治疗期陪伴的健康监测模块——例如把体能变化作为预警信号，而非只做情绪陪伴。</p>
+    </div>
+
+    <div class="card">
+      <div class="top">
+        <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42664439/" target="_blank" rel="noopener">生成式 AI 在心理健康中的应用：面向基层医生的实用指南</a></h3>
+        <span class="badge">心理健康</span>
+      </div>
+      <div class="src">来源：Prim Care Companion CNS Disord（Harvard / MGH 精神科）　<span class="dot">·</span> 2026-08-25</div>
+      <p class="summary">Harvard / 麻省总医院精神科团队为基层（非专科）医生撰写的生成式 AI 使用指南，聚焦可执行的使用边界：何时用、如何用、何时必须转介真人。</p>
+      <p class="why"><b>为什么与你有关：</b>小雪宝 / 星桥的主战场正是基层与家庭（非专科）场景。指南里"AI 辅助而非替代、何时转介"的原则，可直接转化成产品安全白皮书与陪伴对话的转介话术，比泛泛谈"安全"更有操作性。</p>
+    </div>
+
+    <div class="card">
+      <div class="top">
+        <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42664008/" target="_blank" rel="noopener">预测互联网 CBT 对抑郁症的「治疗获益」</a></h3>
+        <span class="badge">数字疗法</span>
+      </div>
+      <div class="src">来源：JAMA Network Open（Charité 等）　<span class="dot">·</span> 2026-08-03</div>
+      <p class="summary">研究团队基于大模型 / 数据建模，预测哪些抑郁患者更可能从互联网认知行为疗法（iCBT）中获益——即"数字疗法获益分层"，而非一刀切推送。</p>
+      <p class="why"><b>为什么与你有关：</b>星桥数字疗愈的核心命题之一，就是用 AI 预判哪类青少年 / 家庭更适合某条干预路径。这篇给"数字疗法获益分层"提供了方法学参照，可指导陪伴系统做个性化路径推荐与效果预期管理。</p>
+    </div>
+  </section>
+
+  <!-- ============ 前沿研究·预印本 ============ -->
+  <section class="section">
+    <h2>📄 前沿研究 · 预印本（medRxiv）</h2>
+
+    <div class="card">
+      <div class="top">
+        <h3><a href="https://doi.org/10.64898/2026.05.06.26352558" target="_blank" rel="noopener">ABCD 青少年队列中双相筛查的循证评估基准与分类验证</a></h3>
+        <span class="badge pre">预印本 · 未经同行评审</span>
+      </div>
+      <div class="src">来源：medRxiv（DOI 10.64898/2026.05.06.26352558）　<span class="dot">·</span> 2026-08-22</div>
+      <p class="summary">在 ABCD 大型青少年神经发育队列中，验证两种简短躁狂筛查工具（PGBI-10M、7-Up）的心理测量学基准，评估其在真实人群中识别青少年双相的效用与条目表现。</p>
+      <p class="why"><b>为什么与你有关：</b>这是量表平台的直接养料——示范了如何用"简短筛查条目 + 大样本基准"在青少年群体里做可靠分层。小雪宝 / 星桥的筛查模块可直接借鉴其条目设计与效度验证框架，作为量表上线的质量门禁参考。</p>
+    </div>
+  </section>
+
+  <!-- ============ 今日行动建议 ============ -->
+  <section class="actions">
+    <h2>🎯 今日行动建议（绑定在手项目）</h2>
+    <ol>
+      <li><b>星桥计划：</b>把 NEO 商用 BCI 的「半侵入式 / 医保路径」作为竞品与落地参照，更新数字疗愈技术选型文档，明确"神经反馈训练"模块的近期可集成窗口与合规前提。</li>
+      <li><b>量表平台：</b>以 ABCD Youth 的 PGBI-10M / 7-Up 为模板，梳理青少年情绪筛查量表的「简短条目 + 大样本基准」验证清单，作为下一批量表上线的质量门禁。</li>
+      <li><b>小雪宝 / 星桥 安全白皮书：</b>将"患者主动·医生强制"与 Harvard 基层指南的"AI 辅助而非替代、何时转介"合并成一条产品红线，落到陪伴对话的转介话术与免责声明中。</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p><span class="pill">数据来源</span>　AI HOT（医疗垂直资讯）· PubMed E-utilities（同行评审论文）· medRxiv（预印本，标注「未经同行评审」者未过审）。</p>
+    <p><span class="pill">说明</span>　本简报为「AI新青年」内部内容参考，按主理人 Alan 的儿科 / 血液肿瘤 / 孤独症 / 心理健康方向精选，宁缺毋滥，不编造数据。论文与预印本均保留可点击原文 / DOI / PMID 链接。</p>
+    <p><span class="pill">版权</span>　© 2026 AI新青年（李帅帅 / 破界的帅帅）。内容仅供学习研究，不构成医疗建议；临床决策请咨询持证医师。</p>
+  </footer>
+
+</div>
+</body>
+</html>

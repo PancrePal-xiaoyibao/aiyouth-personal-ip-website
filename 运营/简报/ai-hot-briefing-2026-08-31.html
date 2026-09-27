@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI新青年 · 全球 AI 前沿简报 2026-08-31</title>
+<style>
+  :root{
+    --bg:#f5f6fb; --card:#ffffff; --text:#1f2330; --muted:#6b7280; --border:#e6e8f0;
+    --indigo:#6366f1; --sky:#0ea5e9; --amber:#f59e0b; --emerald:#10b981; --pink:#ec4899;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0e1018; --card:#171a26; --text:#e8eaf2; --muted:#9aa3b8; --border:#262b3d;
+    }
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 60px;}
+  header.hero{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border-radius:18px;
+    padding:26px 26px 22px;box-shadow:0 10px 30px rgba(99,102,241,.25);}
+  header.hero h1{margin:0 0 8px;font-size:25px;font-weight:800;letter-spacing:.5px;}
+  .who{font-size:13.5px;opacity:.95;margin:0 0 14px;}
+  .who b{font-weight:700;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:8px;font-size:12.5px;}
+  .chip{background:rgba(255,255,255,.16);border-radius:999px;padding:4px 12px;backdrop-filter:blur(4px);}
+  .note{margin:18px 0 6px;font-size:13px;color:var(--muted);background:var(--card);
+    border:1px solid var(--border);border-left:4px solid var(--indigo);border-radius:10px;padding:12px 14px;}
+  .sec{display:flex;align-items:center;gap:10px;margin:30px 0 14px;}
+  .sec .dot{width:12px;height:12px;border-radius:4px;flex:none;}
+  .sec h2{margin:0;font-size:18px;font-weight:800;}
+  .sec .cnt{font-size:12.5px;color:var(--muted);margin-left:auto;}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 17px;margin:0 0 13px;
+    box-shadow:0 2px 10px rgba(20,20,40,.05);transition:transform .15s ease,box-shadow .15s ease;}
+  .card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(20,20,40,.10);}
+  .card h3{margin:0 0 7px;font-size:16.5px;line-height:1.45;font-weight:700;}
+  .card h3 a{color:var(--text);text-decoration:none;}
+  .card h3 a:hover{color:var(--indigo);text-decoration:underline;}
+  .src{font-size:12.5px;color:var(--muted);margin:0 0 8px;}
+  .summary{font-size:14px;margin:0;color:var(--text);}
+  .why{font-size:13.5px;color:#5b6472;background:rgba(99,102,241,.07);border-radius:9px;
+    padding:9px 12px;margin-top:10px;border-left:3px solid var(--indigo);}
+  @media (prefers-color-scheme: dark){.why{color:#c3c9da;background:rgba(99,102,241,.13);}}
+  .why b{color:var(--indigo);}
+  .origin{margin-top:11px;font-size:13px;}
+  .origin a{display:inline-block;color:#0ea5e9;text-decoration:none;font-weight:600;border:1px solid var(--border);
+    border-radius:8px;padding:4px 11px;background:rgba(14,165,233,.06);}
+  .origin a:hover{background:#0ea5e9;color:#fff;border-color:#0ea5e9;}
+  .actions{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-top:8px;}
+  .actions h2{margin:0 0 10px;font-size:17px;font-weight:800;color:var(--indigo);}
+  .actions ol{margin:0;padding-left:20px;}
+  .actions li{font-size:14px;margin:6px 0;}
+  footer{margin-top:30px;font-size:12px;color:var(--muted);text-align:center;line-height:1.7;}
+  footer a{color:var(--indigo);text-decoration:none;}
+  .tag{display:inline-block;font-size:11px;font-weight:700;color:#fff;border-radius:6px;padding:2px 8px;margin-bottom:8px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>AI新青年 · 全球 AI 前沿简报</h1>
+    <p class="who">主理人 <b>Alan（李帅帅）</b> · 三甲儿科规培医师转型 AI · 「AI新青年」视频号主理人 · 受众：青少年 / 家长</p>
+    <div class="meta-row">
+      <span class="chip">📅 2026-08-31（周一）</span>
+      <span class="chip">⏱ 时间窗：近 7 天精选池 + 近 24h 全量补强</span>
+      <span class="chip">🔢 精选 12 条</span>
+    </div>
+  </header>
+
+  <div class="note">
+    今日精选池（mode=selected, 7d）15 条中 14 条为近两日已收录的滚动重复（Cursor 断供、GLM-5.3、Qwen3.8 本地、Gemini 3.5 Transcribe、Open ASR、Anthropic 自主训练等），按既定 fallback 追加近 24h 全量池（50 条）筛出新鲜增量，与精选池中唯一新鲜项「Uber 70% PR」合并成 12 条，不再重复收录旧条目。
+  </div>
+
+  <!-- ===== 模型发布 ===== -->
+  <div class="sec"><span class="dot" style="background:var(--indigo)"></span><h2>模型发布</h2><span class="cnt">1 条</span></div>
+
+  <div class="card">
+    <span class="tag" style="background:var(--indigo)">模型发布</span>
+    <h3><a href="https://aihot.virxact.com/items/cmtgdzhsu0ah7roj7iknmcsyo">Reactor 联合 HaoAI 推出 FastH3 无限直播流</a></h3>
+    <p class="src">X：Sky Computing Lab (@haoailab) · 2026-08-31 06:15（北京时间）</p>
+    <p class="summary">Reactor 团队基于开源视频模型 FastH3 做出可无限续播的直播流视频，社区进展很快，且完全开源——把「生成即可持续输出」的视频流带进了开源阵营。</p>
+    <div class="why"><b>为什么值得关注：</b>直接对标你本地的 Wan 2.2 视频生成管线，无限流直播是视频号选题的新玩法，可跟进复现。</div>
+    <p class="origin"><a href="https://x.com/haoailab/status/2094187196257570977" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <!-- ===== 产品发布 ===== -->
+  <div class="sec"><span class="dot" style="background:var(--sky)"></span><h2>产品发布</h2><span class="cnt">3 条</span></div>
+
+  <div class="card">
+    <span class="tag" style="background:var(--sky)">产品发布</span>
+    <h3><a href="https://aihot.virxact.com/items/cmtgehsep0axiroj7okwzby16">Anthropic 为 Claude Code 桌面版开发本地沙箱</a></h3>
+    <p class="src">X：Testing Catalog (@testingcatalog) · 2026-08-31 06:42（北京时间）</p>
+    <p class="summary">Anthropic 正为 Claude Code 桌面版加入「在本地隔离沙箱运行命令」的选项，并提供严格模式——禁止在沙箱外执行 ssh 等命令，对所有会话生效（除非项目设置覆盖）。</p>
+    <div class="why"><b>为什么值得关注：</b>与 Hermes 71 Skills 的本地执行、一人公司无人值守直接相关：给 agent 跑命令加一道沙箱，正是降低越权/逃逸风险的对症方案。</div>
+    <p class="origin"><a href="https://x.com/testingcatalog/status/2094194068351758567" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag" style="background:var(--sky)">产品发布</span>
+    <h3><a href="https://aihot.virxact.com/items/cmtgglk3o0c4lroj77i0wfi6g">开源机器人虽萌，购买前需三思</a></h3>
+    <p class="src">X：Thomas Wolf（Hugging Face 联创/CSO） · 2026-08-31 07:21（北京时间）</p>
+    <p class="summary">Thomas Wolf 提醒：若是一只来自 Pollen Robotics / Hugging Face、长得像相机的小机器人，买之前要想清楚——你可能会就此踏上理解开源、开放权重、私有化数据，以及做「构建者而非 API 消费者」的旅程。</p>
+    <div class="why"><b>为什么值得关注：</b>视频号讲「做 AI 构建者而非 API 消费者」的现成素材；开放权重 + 私有化数据也是你本地工具链的核心主张。</div>
+    <p class="origin"><a href="https://x.com/Thom_Wolf/status/2094203990250541156" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag" style="background:var(--sky)">产品发布</span>
+    <h3><a href="https://aihot.virxact.com/items/cmtgfyfym0boyroj7h8vdf8h9">国内首部 AIGC 长剧《后西游记》开播，首部「边审边播」剧集</a></h3>
+    <p class="src">IT之家 · 2026-08-31 07:28（北京时间）</p>
+    <p class="summary">国内首部 AIGC 长剧《后西游记》「花果山篇」5 集（每集 40 分钟）上线芒果 TV 并登陆湖南卫视，是「广电 21 条」后首部边制作、边审核、边播出的剧集。</p>
+    <div class="why"><b>为什么值得关注：</b>长内容 AIGC 工业化 + 边审边播机制，是 Wan 2.2 视频生成与视频号中长内容路线的行业信号。</div>
+    <p class="origin"><a href="https://www.ithome.com/0/996/265.htm" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <!-- ===== 行业动态 ===== -->
+  <div class="sec"><span class="dot" style="background:var(--amber)"></span><h2>行业动态</h2><span class="cnt">3 条</span></div>
+
+  <div class="card">
+    <span class="tag" style="background:var(--amber)">行业动态</span>
+    <h3><a href="https://aihot.virxact.com/items/cmtf5cfxj01raro07gk66imed">Uber 用 Agent 接管 70% 代码 PR，AI 账单零增长</a></h3>
+    <p class="src">X：阿易 AI Notes (@AYi_AInotes) · 2026-08-30 08:54（北京时间）</p>
+    <p class="summary">Uber 技术长文：全公司 70% 的代码 PR 已由 AI Agent 接管，调用量半年增长近 10 倍，但总 AI 账单没涨，单次会话成本降低 52%。</p>
+    <div class="why"><b>为什么值得关注：</b>一人公司 / 本地内容团队的可参照范本——agent 规模化不等于成本失控，关键在用量治理与缓存/复用。</div>
+    <p class="origin"><a href="https://x.com/AYi_AInotes/status/2093864816079208512" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag" style="background:var(--amber)">行业动态</span>
+    <h3><a href="https://aihot.virxact.com/items/cmtgfyfym0bp3roj73ud35h34">微软收紧员工 AI 预算成本，有员工 28 天挥霍 2.8 万美元 Token</a></h3>
+    <p class="src">IT之家 · 2026-08-31 06:38（北京时间）</p>
+    <p class="summary">微软开始设置 Token 用量监控，并将内部默认负载逐步切到 GPT-5.6 Sol 降本；泄露表格显示有员工 28 天产生约 2.8 万美元 Token 成本，引发高层担忧。</p>
+    <div class="why"><b>为什么值得关注：</b>大厂都在做用量治理，反过来说明自托管 / 本地模型对一人公司的成本可预测性更优。</div>
+    <p class="origin"><a href="https://www.ithome.com/0/996/254.htm" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag" style="background:var(--amber)">行业动态</span>
+    <h3><a href="https://aihot.virxact.com/items/cmtgba21r07m3roj7n6rnzxc1">OpenAI 与 Anthropic 抢购 Mac mini 致缺货</a></h3>
+    <p class="src">X：Kim (@kimmonismus) · 2026-08-31 05:13（北京时间）</p>
+    <p class="summary">据报 OpenAI 购入数万台 Mac mini / Mac Studio 用于强化学习与训练计算机操作智能体，Anthropic 经 AWS 租用 Mac mini，已致 Mac mini 缺货。</p>
+    <div class="why"><b>为什么值得关注：</b>大厂用消费级 Mac 跑 RL / 计算机操作 agent，与你 3090 / 本地 Mac 的部署路线同频，说明本地算力正被重新定价。</div>
+    <p class="origin"><a href="https://x.com/kimmonismus/status/2094171671838224806" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <!-- ===== 论文研究·技术教程 ===== -->
+  <div class="sec"><span class="dot" style="background:var(--emerald)"></span><h2>论文研究 · 技术教程</h2><span class="cnt">2 条</span></div>
+
+  <div class="card">
+    <span class="tag" style="background:var(--emerald)">论文研究</span>
+    <h3><a href="https://aihot.virxact.com/items/cmtgfkdda0bgsroj72usy6qlq">NPO 单线提示优化以更少预算追平 GEPA</a></h3>
+    <p class="src">X：Elvis Saravia（DAIR.AI） · 2026-08-31 07:00（北京时间）</p>
+    <p class="summary">NPO 提示优化器仅用单条提示谱系，在 3500 / 6800 次 rollout 下追平 GEPA，并在 22 个 TextArena 游戏中表现相当；优势随教师模型增强而扩大，说明复杂搜索此前在弥补弱教师推理。</p>
+    <p class="origin"><a href="https://x.com/omarsar0/status/2094198501475590616" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag" style="background:var(--emerald)">技术教程</span>
+    <h3><a href="https://aihot.virxact.com/items/cmtg9j1be06i4roj7w6rtzleh">Google AI 推出 EnvHarness：将静态智能体环境变为自适应训练世界</a></h3>
+    <p class="src">MarkTechPost · 2026-08-31 04:23（北京时间）</p>
+    <p class="summary">Google Cloud AI Research 等发布 EnvHarness，用标准 reset()/step() 接口包装静态环境，在不改动模拟器与人工验证器的前提下重塑任务，把环境变成可编程的自适应训练世界。</p>
+    <p class="origin"><a href="https://www.marktechpost.com/2026/08/30/google-ai-introduces-envharness-a-programmable-layer-that-turns-static-agent-environments-into-adaptive-training-worlds" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <!-- ===== 技巧与观点 ===== -->
+  <div class="sec"><span class="dot" style="background:var(--pink)"></span><h2>技巧与观点</h2><span class="cnt">3 条</span></div>
+
+  <div class="card">
+    <span class="tag" style="background:var(--pink)">技巧</span>
+    <h3><a href="https://aihot.virxact.com/items/cmtgbo7h307vtroj7ugxrery5">语音与实时智能体最低延迟推理 API：以首 token 延迟（TTFT）为先的基准评测</a></h3>
+    <p class="src">MarkTechPost · 2026-08-31 05:24（北京时间）</p>
+    <p class="summary">语音智能体体感取决于「首句延迟 TTFS」而非 TTFT（TTS 要等整句才能发声）。评测覆盖 LLM/STT/TTS/语音到语音全链路，给出分层预算：STT 100–200ms、LLM 300–500ms、TTS 100–200ms，端到端目标 700ms–1.2s。</p>
+    <div class="why"><b>为什么值得关注：</b>给小雪宝 / 星桥的语音陪伴链路设一条可量化的延迟红线——端到端 700ms–1.2s 是本地语音 agent 体验调优的硬指标。</div>
+    <p class="origin"><a href="https://www.marktechpost.com/2026/08/30/lowest-latency-inference-apis-for-voice-and-realtime-agents-a-time-to-first-token-ttft-first-benchmark" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag" style="background:var(--pink)">技巧</span>
+    <h3><a href="https://aihot.virxact.com/items/cmtg1hv0e01jyroa7nxcazbpb">开源 DESIGN.md 终结 AI 前端廉价模板感</a></h3>
+    <p class="src">X：阿易 AI Notes (@AYi_AInotes) · 2026-08-31 00:40（北京时间）</p>
+    <p class="summary">有人把 Linear、Notion、ElevenLabs 等 2000+ 顶级产品的设计语言提炼为 Coding Agent 专用 DESIGN.md，免费开源；含颜色变量、字体层级等令牌与组件级约束，Claude Code / Cursor 即插即用、像素级对齐。</p>
+    <div class="why"><b>为什么值得关注：</b>本地内容团队前端产出的即插即用提质感方案——把这套 DESIGN.md 喂给 Claude Code，省去反复调 CSS 的廉价模板感。</div>
+    <p class="origin"><a href="https://x.com/AYi_AInotes/status/2094103020841631880" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag" style="background:var(--pink)">观点</span>
+    <h3><a href="https://aihot.virxact.com/items/cmtg3rz3o01v4roj7k4ye5hl3">持久化智能体浪潮将至，AI 沟通需去拟人化</a></h3>
+    <p class="src">X：Elvis Saravia（DAIR.AI） · 2026-08-31 01:44（北京时间）</p>
+    <p class="summary">Elvis Saravia 就 OpenAI 与 HuggingFace 事件提三点：全貌仍不明、拟人化叙事助长恐慌、工程师该深研奖励黑客/评估/沙箱；他认为前沿通用模型不该套所有场景，多数任务用受限定制模型更安全。</p>
+    <div class="why"><b>为什么值得关注：</b>直接呼应小雪宝 / 星桥的陪伴 Agent 设计——儿童场景用受限定制模型、去拟人化沟通，既是体验也是合规（儿童数据）选择。</div>
+    <p class="origin"><a href="https://x.com/omarsar0/status/2094118955304563198" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+  </div>
+
+  <!-- ===== 今日行动建议（可选） ===== -->
+  <div class="actions">
+    <h2>今日行动建议</h2>
+    <ol>
+      <li>把开源 DESIGN.md 库接入本地内容团队的 Claude Code，给前端产出统一设计语言、消掉廉价模板感。</li>
+      <li>按语音 TTFT 预算（端到端 700ms–1.2s）给小雪宝 / 星桥语音链路做一次延迟体检，定位 STT / LLM / TTS 哪层超预算。</li>
+      <li>评估 Claude Code 本地沙箱（严格模式禁 ssh）能否套到 Hermes 71 Skills 的本地执行，先把「跑命令」限制在沙箱内。</li>
+    </ol>
+  </div>
+
+  <footer>
+    数据来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a> · 本简报由 AI 自动聚合，仅供选题参考<br>
+    第三方原文版权归原作者所有 · © 2026 AI新青年（Alan）
+  </footer>
+
+</div>
+</body>
+</html>

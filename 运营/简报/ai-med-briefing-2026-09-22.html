@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-09-22</title>
+<style>
+  :root {
+    --bg: #f6f8f8;
+    --card: #ffffff;
+    --text: #1a2b2b;
+    --muted: #5b6b6b;
+    --accent: #0d9488;
+    --accent-soft: rgba(13, 148, 136, 0.10);
+    --border: #e2e8e8;
+    --tag-bg: rgba(13, 148, 136, 0.12);
+    --tag-text: #0d9488;
+    --shadow: 0 2px 10px rgba(13, 60, 56, 0.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1616;
+      --card: #16211f;
+      --text: #e6efee;
+      --muted: #93a5a3;
+      --accent: #2dd4bf;
+      --accent-soft: rgba(45, 212, 191, 0.10);
+      --border: #243230;
+      --tag-bg: rgba(45, 212, 191, 0.14);
+      --tag-text: #2dd4bf;
+      --shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", -apple-system, sans-serif;
+    line-height: 1.7;
+    padding: 24px 16px 48px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  header.hero {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 28px 22px;
+    margin-bottom: 22px;
+    box-shadow: var(--shadow);
+  }
+  .brand { font-size: 13px; letter-spacing: 2px; color: var(--accent); font-weight: 600; margin-bottom: 8px; }
+  h1 { font-size: 26px; font-weight: 700; margin-bottom: 10px; }
+  .meta-line { color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+  .meta-line b { color: var(--text); }
+  .profile {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .profile b { color: var(--text); }
+  .chips { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    font-size: 12.5px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+  .signal-note {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .signal-note b { color: var(--text); }
+  h2.section {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 30px 0 14px;
+    padding-left: 12px;
+    border-left: 4px solid var(--accent);
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow);
+  }
+  .card h3 { font-size: 16.5px; font-weight: 650; margin-bottom: 8px; }
+  .card h3 a { color: var(--text); text-decoration: none; }
+  .card h3 a:hover { color: var(--accent); }
+  .card .src { font-size: 12.5px; color: var(--muted); margin-bottom: 10px; display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .card .src .tag {
+    background: var(--tag-bg); color: var(--tag-text);
+    padding: 1px 9px; border-radius: 999px; font-weight: 500;
+  }
+  .card p { font-size: 14.5px; margin-bottom: 10px; }
+  .why {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 13.5px;
+    color: var(--muted);
+  }
+  .why b { color: var(--accent); font-weight: 600; }
+  .brief-list { margin-top: 4px; }
+  .brief-list .card { padding: 15px 20px; }
+  .brief-list .card h3 { font-size: 15px; margin-bottom: 6px; }
+  .brief-list .card p { font-size: 13.5px; margin-bottom: 0; }
+  .actions {
+    background: var(--card);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 26px;
+  }
+  .actions h2 { font-size: 18px; color: var(--accent); margin-bottom: 12px; }
+  .actions ol { padding-left: 20px; }
+  .actions li { font-size: 14.5px; margin-bottom: 10px; }
+  .actions li b { color: var(--text); }
+  footer {
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    font-size: 12.5px;
+    color: var(--muted);
+    text-align: center;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="brand">AI新青年 · 每日医疗 AI 信号</div>
+  <h1>医疗 AI 聚焦简报</h1>
+  <div class="meta-line">
+    <b>2026-09-22</b>（北京时间）· 窗口 2026-09-15 → 2026-09-22 · 精选 <b>6 条</b>主卡 + 3 条速览
+    · 数据源：AI HOT / PubMed / medRxiv
+  </div>
+  <div class="profile">
+    主理人画像：<b>Alan（破界的帅帅）</b> — 三甲儿科医师 × AI Builder，主理「AI新青年」。在项：
+    <b>小雪宝 LeukemiaPal</b>（白血患儿陪伴助手）、<b>星桥计划</b>（孤独症数字疗愈）、<b>孤独症量表 AI 平台</b>。
+    本简报只收录与儿科 / 血液肿瘤 / 孤独症·心理健康 / 临床落地强相关的硬核信号，宁缺毋滥。
+  </div>
+  <div class="chips">
+    <span class="chip">主卡 6 条</span>
+    <span class="chip">同行评审 4 + 预印本 2</span>
+    <span class="chip">儿科临床 ML 3</span>
+    <span class="chip">数字干预 1</span>
+    <span class="chip">LLM 临床 2</span>
+  </div>
+</header>
+
+<div class="signal-note">
+  <b>今日信号说明：</b>儿童白血病（ALL/AML）专属强命中继续缺席（14 天定向窗 17 条，以成人 AML 为主），
+  本期血液肿瘤叙事带由「儿童癌症幸存者二代遗传风险预测」（St. Jude / JNCI）补位；
+  孤独症 PubMed 定向命中偏通用精神健康，主卡由 ADHD 数字干预 RCT 与儿童精神病语言标志物预印本覆盖神经发育带。
+  AI HOT 本期医疗硬新闻仍弱，仅语音模型一条入速览。未硬凑。
+</div>
+
+<h2 class="section">🏥 前沿研究 · 论文</h2>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42768269/" target="_blank" rel="noopener">ML + EEG 预测 PICU 急性脑损伤：SVM-RBF 二分类 AUROC 0.95，多分类准确率 0.77</a></h3>
+  <div class="src">
+    <span class="tag">同行评审</span>
+    <span>Neurocritical Care（Children's National Hospital）</span>
+    <span>2026-09-21 在线</span>
+    <span>PMID 42768269</span>
+  </div>
+  <p>前瞻性纳入 201 例 PICU 患儿（中位 3.5 岁），用临床变量 + EEG 背景特征（慢波/解组织、癫痫样放电、电发作）训练多种分类器预测急性脑损伤。SVM-RBF 二分类 AUROC 0.95、测试准确率 0.90；单侧 vs 双侧损伤的多分类任务逻辑回归准确率 0.77。把「常规已采集的 EEG 报告字段」变成结构化预警输入，是这套方法真正可复制的原因。</p>
+  <div class="why"><b>为什么与你有关：</b>小雪宝面向的血液肿瘤患儿是 PICU 常客，神经并发症（卒中、可逆性后部脑病）恰恰是化疗中容易被漏判的急症。「用已有临床记录字段 + 少量结构化特征即可达 0.9+ 准确率」的路径，与量表平台「不新增采集负担」的设计原则完全同构，值得写进小雪宝二期功能池。</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42767336/" target="_blank" rel="noopener">加拿大儿童 IBD 网络n=934：个体生存分布（ISD）预测新诊断儿童克罗恩病首次择期肠切除时点</a></h3>
+  <div class="src">
+    <span class="tag">同行评审</span>
+    <span>Journal of Pediatric Surgery（加拿大儿童 IBD 网络）</span>
+    <span>2026-09-21 在线</span>
+    <span>PMID 42767336</span>
+  </div>
+  <p>儿童起病克罗恩病比成人更需要手术，但现有风险评分无法给出「这个孩子、未来某时点」的个体化手术概率。研究用全国前瞻性队列 934 例训练 SuperLearner 预测个体生存分布：基线模型 tMAE 755 天，加入第 10 周纵向数据后 840 天——即预测与真实手术时点平均偏差约两年，穿透型/狭窄型行为与会阴修饰是关键特征。</p>
+  <div class="why"><b>为什么与你有关：</b>「预测未来事件在什么时候发生」而非「是否发生」，正是小雪宝做疗程规划（化疗反应、复发时点）该对齐的输出形态；tMAE 这种「时点偏差」指标比 AUC 更能向家长解释清楚，可直接抄进星桥/小雪宝的评估指标定义。</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42766625/" target="_blank" rel="noopener">「要不要重抽血？」XGBoost 判定儿科急诊重复化验必要性：血常规 91.8% 准确，社区检验 86.7% 属重复</a></h3>
+  <div class="src">
+    <span class="tag">同行评审</span>
+    <span>PLoS ONE（以色列 Clalit 全民健保）</span>
+    <span>2026-09-21</span>
+    <span>PMID 42766625</span>
+  </div>
+  <p>基于全国性 HMO 数据，3 个月–18 岁患儿在社区已查的血常规/电解质/CRP 到急诊后 12 小时内被重查的比例中，仅 13.3% / 16.3% / 19.0% 属「有必要」。现成 XGBoost 用社区检验结果 + 社会人口学特征即可预测重复检验必要性（血常规 91.8%、电解质 89.1%、CRP 79.2%）；在「零假阴性」的临床硬约束下准确率降至 73.9% / 67.3% / 55.4%。</p>
+  <div class="why"><b>为什么与你有关：</b>这是量表平台最该研究的一类论文——「零假阴性约束下的可用准确率」诚实呈现了模型在安全红线内的真实边界。小雪宝的待办/复查提醒若做「这次检查是否必要」的智能过滤，这篇就是验收基准：先定 false negative=0，再报约束内准确率。</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42756258/" target="_blank" rel="noopener">AI 支持 + 节律增强语音意识训练改善 ADHD 幼儿早期阅读：165 例随机对照试验</a></h3>
+  <div class="src">
+    <span class="tag">同行评审</span>
+    <span>Frontiers in Psychology（海南大学，普通话儿童）</span>
+    <span>2026-09-03</span>
+    <span>PMID 42756258</span>
+  </div>
+  <p>165 名普通话幼儿园 ADHD 患儿 1:1:1 随机分组：节律增强语音意识训练（RPA）、纯语音意识训练（PAO）、对照（AI 绘本活动），均采用「AI 支持教学 + 研究助理 facilitation」的混合模式，每周 2×30 分钟共 8 周。RPA 组在汉字认读（均值差 6.92）、音节/韵律意识和节律辨别上显著优于 PAO 组——节律是语音意识的「时间脚手架」，这是中文环境首个 RCT 验证。</p>
+  <div class="why"><b>为什么与你有关：</b>「AI 支持 + 真人在场」的混合交付模式再次被 RCT 背书——这正是星桥计划该采用而非绕开的形态。节律训练可平移为星桥的节奏感知干预模块；同样的「AI 支持干预 + 量表前后测」设计，就是量表平台做效果验证的最短路径。</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://doi.org/10.64898/2026.09.17.26363314" target="_blank" rel="noopener">LLM 伪困惑度捕捉儿童起病精神病的语言偏离：独特的发育性特征与趋势</a></h3>
+  <div class="src">
+    <span class="tag">预印本 · 未经同行评审</span>
+    <span>medRxiv（psychiatry and clinical psychology）</span>
+    <span>2026-09-20 提交</span>
+    <span>DOI 10.64898/2026.09.17.26363314</span>
+  </div>
+  <p>儿童/早期青少年起病精神病（COP）与思维障碍相关的细微语言改变难以量表化。研究用 LLM 的（伪）困惑度联合分析句子结构与用词选择，检测语言对预期模式的偏离，并刻画其发育性变化趋势——把「言语混乱度」变成一个可量化、可纵向追踪的数字标志物。</p>
+  <div class="why"><b>为什么与你有关：</b>困惑度作为语言生物标志物的路线，与 VOCAL 语音标志物共识（09-21 期）同属一条叙事带：星桥的语音/语言通道可以从「语音特征」扩展到「语言统计特征」，且计算全本地、无隐私外流——与量表平台的本地化部署原则天然契合。</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42766421/" target="_blank" rel="noopener">华西二院 8201 例：医疗 LLM「对齐悖论」——GRPO 自动指标最高，盲评专家却更信任保守的 SFT 基线</a></h3>
+  <div class="src">
+    <span class="tag">同行评审</span>
+    <span>Journal of Medical Internet Research（华西第二医院）</span>
+    <span>2026-09-21</span>
+    <span>PMID 42766421</span>
+  </div>
+  <p>在 8201 例真实辅助生殖病历上对比 4 种对齐范式：GRPO 自动字段准确率最高（不孕类型 92.57%），但盲法专家评审中保守 SFT 基线在推理质量与方案可行性上方向性占优，三选一时 SFT 被选为最佳回复 51.2% vs GRPO 26.2%；两者幻觉率 15% / 18.5%，均未达可部署线。作者命名为「对齐悖论」：token 级正确率 ≠ 临床决策质量。</p>
+  <div class="why"><b>为什么与你有关：</b>给小雪宝/量表平台选型或微调医疗 LLM 时的关键提醒——别只盯 benchmark 分数，自动指标与临床盲评可以完全脱钩；上线前必须过「专家盲评 + 幻觉率」双重验收，且验收标准要写进交付文档而非口头承诺。</div>
+</div>
+
+<h2 class="section">⚡ 速览</h2>
+
+<div class="brief-list">
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42714245/" target="_blank" rel="noopener">St. Jude / CCSS：儿童癌症幸存者继发乳腺癌风险预测加入遗传学指标（99 种 PRS + 靶向变异）</a></h3>
+    <p>J Natl Cancer Inst · 2026-09-09 · PMID 42714245。5388 例女性幸存者中，90.9% 的乳腺癌多基因风险分数与继发癌风险显著相关，640 万变异 PRS 每标准差 HR 1.71；遗传因素在治疗暴露之外显著提升 40 岁前风险预测（P&lt;0.001）。小雪宝的「幸存者长期随访」叙事带新增遗传维度依据。<span style="color:var(--muted)">（同行评审）</span></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42768372/" target="_blank" rel="noopener">神经权利视角下的儿童青少年数字心理健康工具：避免过早贴标签</a></h3>
+    <p>Child and Adolescent Mental Health · 2026-09-21 · PMID 42768372。现有神经权利框架以成人为中心，未充分覆盖儿童的发育脆弱性；文章提出保护「发育可能性」、避免早期标签化、尊重渐进自主权的临床与政策建议——星桥证据页的伦理护栏章节可直接引用。<span style="color:var(--muted)">（同行评审，观点文）</span></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://x.ai/news/grok-voice-transcribe-2" target="_blank" rel="noopener">xAI 发布 Grok Voice Transcribe 2.0：准确率较 1.0 翻倍，短短语词错误率 20.6% → 6.8%</a></h3>
+    <p>xAI · 2026-09-18。官方称真实场景准确率翻倍、价格不变，Artificial Analysis 32 个流式模型中准确率第一，多语言提升最大。儿童语音普遍具有短短语、高背景噪声特征，是语音陪伴类产品选型的候选件；注意闭源云端 API，与本地化部署原则冲突，小雪宝若采用需做数据出境评估。<span style="color:var(--muted)">（产品发布）</span></p>
+  </div>
+</div>
+
+<div class="actions">
+  <h2>📌 今日行动建议</h2>
+  <ol>
+    <li><b>给小雪宝立「零假阴性」验收规矩（30 分钟）：</b>参照 PMID 42766625 的呈现方式，把现有各功能（复查提醒、报告解读）的验收指标统一改为「安全约束 + 约束内准确率」两段式写进验收文档，删掉所有裸准确率表述。</li>
+    <li><b>星桥伦理页补「神经权利」一节（1 小时）：</b>下载 PMID 42768372 全文，把「避免过早标签化、保留发育可能性、渐进自主权」三条提炼进星桥计划证据页护栏章节，与已有的 rTMS GRADE 护栏（09-15 期）并列。</li>
+    <li><b>把「专家盲评 + 幻觉率」写进量表平台 LLM 验收 SOP（本周）：</b>按 PMID 42766421 的两层评估设计（字段级自动指标 + 专家盲评 100 例 + 幻觉率红线），给量表平台的判分/解读链路定一条「对齐悖论」防御标准：自动分再高，盲评不过就不上线。</li>
+  </ol>
+</div>
+
+<footer>
+  数据来源：AI HOT（aihot.virxact.com）· PubMed（NCBI E-utilities）· medRxiv（Cold Spring Harbor Laboratory）<br>
+  标注「预印本」的条目<b>未经同行评审</b>，引用与决策请谨慎 · 论文链接指向 PubMed / DOI 原文<br>
+  AI新青年 · 医疗 AI 聚焦简报 · 仅供个人研究与内容创作参考，不构成医疗建议 · © 2026 破界的帅帅（Alan）
+</footer>
+
+</div>
+</body>
+</html>

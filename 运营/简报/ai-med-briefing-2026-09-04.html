@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-09-04</title>
+<style>
+  :root{
+    --bg:#f4f7f8;
+    --card:#ffffff;
+    --text:#12211f;
+    --muted:#5b6b69;
+    --line:#dfe8e7;
+    --accent:#0d9488;
+    --accent-soft:#e6f5f3;
+    --warn:#b45309;
+    --warn-soft:#fef3c7;
+    --chip:#eef2f2;
+    --shadow:0 1px 3px rgba(16,42,40,.07),0 8px 24px rgba(16,42,40,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0d1413;
+      --card:#16211f;
+      --text:#e6efed;
+      --muted:#93a5a2;
+      --line:#263432;
+      --accent:#2dd4bf;
+      --accent-soft:#123330;
+      --warn:#fbbf24;
+      --warn-soft:#3a2c0d;
+      --chip:#1d2b29;
+      --shadow:0 1px 3px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    padding:32px 20px 64px;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.72;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto}
+
+  header.hero{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:30px 30px 26px;
+    box-shadow:var(--shadow);
+    margin-bottom:22px;
+    border-top:4px solid var(--accent);
+  }
+  .kicker{
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;margin-bottom:10px;
+  }
+  h1{margin:0 0 14px;font-size:27px;line-height:1.35;letter-spacing:-.01em}
+  .persona{
+    display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;
+  }
+  .tag{
+    font-size:12.5px;background:var(--chip);color:var(--muted);
+    border-radius:12px;padding:4px 11px;border:1px solid var(--line);
+  }
+  .tag.hl{background:var(--accent-soft);color:var(--accent);border-color:transparent;font-weight:600}
+  .meta{
+    display:flex;flex-wrap:wrap;gap:10px 26px;
+    font-size:13px;color:var(--muted);
+    border-top:1px solid var(--line);padding-top:16px;
+  }
+  .meta b{color:var(--text);font-weight:600}
+
+  .notice{
+    background:var(--accent-soft);
+    border:1px solid var(--line);
+    border-left:3px solid var(--accent);
+    border-radius:12px;
+    padding:14px 18px;margin-bottom:26px;font-size:13.5px;color:var(--text);
+  }
+  .notice strong{color:var(--accent)}
+
+  h2.sec{
+    font-size:16px;margin:34px 0 14px;padding-left:12px;
+    border-left:4px solid var(--accent);line-height:1.4;
+  }
+  h2.sec span{color:var(--muted);font-weight:400;font-size:12.5px;margin-left:8px}
+
+  article.card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:22px 24px;
+    margin-bottom:16px;
+    box-shadow:var(--shadow);
+  }
+  article.card h3{margin:0 0 10px;font-size:17.5px;line-height:1.5}
+  article.card h3 a{color:var(--text);text-decoration:none;border-bottom:2px solid transparent}
+  article.card h3 a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+  .src{font-size:12.5px;color:var(--muted);margin-bottom:12px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .dot{color:var(--line)}
+  .badge{
+    font-size:11px;font-weight:700;border-radius:6px;padding:2px 7px;
+    background:var(--chip);color:var(--muted);border:1px solid var(--line);
+  }
+  .badge.pre{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+  .abs{font-size:14.5px;margin:0 0 14px;color:var(--text)}
+  .why{
+    background:var(--accent-soft);
+    border-radius:12px;
+    padding:13px 16px;font-size:13.5px;
+    border:1px solid transparent;
+  }
+  .why b{color:var(--accent);display:block;margin-bottom:4px;font-size:12.5px;letter-spacing:.03em}
+  .links{margin-top:12px;font-size:12.5px;display:flex;flex-wrap:wrap;gap:14px}
+  .links a{color:var(--accent);text-decoration:none;font-weight:600}
+  .links a:hover{text-decoration:underline}
+
+  .quick{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:6px 24px 16px;box-shadow:var(--shadow);
+  }
+  .quick ul{margin:10px 0 0;padding-left:20px}
+  .quick li{margin-bottom:11px;font-size:13.5px}
+  .quick li a{color:var(--accent);text-decoration:none;font-weight:600}
+  .quick li a:hover{text-decoration:underline}
+  .quick .qmeta{color:var(--muted);font-size:12px}
+
+  .actions{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:22px 26px;margin-top:30px;
+    box-shadow:var(--shadow);border-top:4px solid var(--accent);
+  }
+  .actions h2{margin:0 0 14px;font-size:16px}
+  .actions ol{margin:0;padding-left:22px}
+  .actions li{margin-bottom:13px;font-size:14px}
+  .actions li:last-child{margin-bottom:0}
+  .actions .proj{
+    display:inline-block;font-size:11.5px;font-weight:700;
+    background:var(--accent-soft);color:var(--accent);
+    border-radius:6px;padding:1px 8px;margin-right:7px;vertical-align:1px;
+  }
+
+  footer{
+    margin-top:34px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:12.5px;color:var(--muted);line-height:1.85;
+  }
+  footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">AI新青年 · Medical AI Focus</div>
+    <h1>医疗 AI 聚焦简报</h1>
+    <div class="persona">
+      <span class="tag hl">李帅帅 Alan</span>
+      <span class="tag">三甲儿科规培医师 × AI</span>
+      <span class="tag">「AI新青年」视频号主理人</span>
+      <span class="tag">受众：青少年 / 家长</span>
+    </div>
+    <div class="meta">
+      <span><b>日期</b> 2026-09-04（周五）</span>
+      <span><b>检索窗口</b> 2026-08-28 → 2026-09-04</span>
+      <span><b>精选</b> 6 条</span>
+      <span><b>数据源</b> 行业资讯 · PubMed · medRxiv</span>
+    </div>
+  </header>
+
+  <div class="notice">
+    <strong>今日信号说明：</strong>本期儿科专属命中一般，但<strong>白血病方向首次出现强信号</strong>——通过定向补充检索（机器学习 × 白血病/儿童肿瘤，14 天窗口）补位成功，这是相对前两期的改进，该检索已值得固化进日常流程。孤独症方向拿到 1 篇高价值预印本。按跨期去重原则，已主动跳过 09-01、09-03 用过的 RuiPath 2.0、英国 AI 转录警示、ChatGPT Health × Epic，避免连日自我重复。
+  </div>
+
+  <h2 class="sec">医疗模型与临床落地 <span>可直接搬进工作流的能力</span></h2>
+
+  <article class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42686039/" target="_blank" rel="noopener">用常规检验预测 AML 的 FLT3-ITD 突变：瑞金医院机器学习模型</a></h3>
+    <div class="src">
+      <span>Br J Haematol（英国血液学杂志）</span><span class="dot">·</span><span>2026-09-02</span>
+      <span class="dot">·</span><span class="badge">在线预发表</span>
+    </div>
+    <p class="abs">上海瑞金医院团队用 514 例新诊断 AML 患者（2021–2023 训练 254 例，2024 时间验证 84 例，BeatAML2 队列外部验证 176 例），仅凭<strong>常规实验室检查</strong>预测 FLT3-ITD 突变概率。Boruta 筛选出 5 个候选特征后构建 4 特征模型，梯度提升机（GBM）最优，训练/内部验证/外部验证 AUC 分别为 0.847、0.772、0.760；SHAP 显示原始细胞绝对计数贡献最大。模型已部署为<strong>网页计算器</strong>，用于决定哪些患者应优先做快速分子检测。</p>
+    <div class="why"><b>为什么与你有关</b>这是「小雪宝 LeukemiaPal」最该抄的范式：<strong>不靠昂贵测序、只靠血常规+生化就能给出风险分层</strong>，意味着基层和低资源家庭也能用。它的落地路径（SHAP 可解释 → 网页计算器 → 外部队列验证）比模型本身更值钱——你在做患儿陪伴助手时，"哪些指标值得预警、如何向家长解释为什么"完全可以照搬这套结构。注意外部验证 AUC 掉到 0.760，说明跨人群泛化仍是硬伤，宣传口径要留余地。</div>
+    <div class="links">
+      <a href="https://pubmed.ncbi.nlm.nih.gov/42686039/" target="_blank" rel="noopener">PubMed 原文</a>
+      <a href="https://doi.org/10.1111/bjh.70829" target="_blank" rel="noopener">DOI: 10.1111/bjh.70829</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42645391/" target="_blank" rel="noopener">YOLOv11-Large 外周血涂片白血病细胞检测：14 类同时定位与分类</a></h3>
+    <div class="src">
+      <span>Curr Oncol（Current Oncology）</span><span class="dot">·</span><span>2026-08-18</span>
+      <span class="dot">·</span><span class="badge">开源数据集</span>
+    </div>
+    <p class="abs">美国 Mount Sinai 团队基于开源 <strong>LeukemiaAttri</strong> 数据集（18,664 张标注图、67,347 个目标，40× 与 100× 双倍率），微调 YOLOv11L 检测 13 种白血病相关白细胞亚型 + 1 类伪影。240 epoch mosaic 增强 + 混合精度，单张 NVIDIA H200 训练 250 epoch。内部测试集 mAP50 达 <strong>93.9%</strong>、精确率 94.1%、召回 88.8%、F1 0.913；各类 AP 从单核细胞 89.3% 到原始单核细胞 98.2%。作者明确指出<strong>仍需外部验证</strong>才能确认临床效用。</p>
+    <div class="why"><b>为什么与你有关</b>两个可落地点：一是 <strong>YOLO 系列权重开放、单卡可训可部署</strong>，符合你"本地部署不上传数据"的偏好，血涂片/骨髓形态这类图像任务完全可以在本地跑通 demo；二是它用的是<strong>公开数据集</strong>，你可以直接下载 LeukemiaAttri 做一期"手把手跑通白血病细胞检测"的视频号内容，门槛低、演示效果炸。但要诚实提醒观众：单中心内部测试的高指标 ≠ 临床可用，这正是你作为医生能给出的差异化观点。</div>
+    <div class="links">
+      <a href="https://pubmed.ncbi.nlm.nih.gov/42645391/" target="_blank" rel="noopener">PubMed 原文</a>
+      <a href="https://doi.org/10.3390/curroncol33080486" target="_blank" rel="noopener">DOI: 10.3390/curroncol33080486</a>
+      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13510383/" target="_blank" rel="noopener">PMC 全文</a>
+    </div>
+  </article>
+
+  <h2 class="sec">前沿研究 · 论文 <span>儿科 / 孤独症 / 安全方法论</span></h2>
+
+  <article class="card">
+    <h3><a href="https://doi.org/10.1101/2025.05.17.25327836" target="_blank" rel="noopener">EEG 功能连接可预测孤独症人士适应功能的纵向变化</a></h3>
+    <div class="src">
+      <span>medRxiv（ psychiatry and clinical psychology ）</span><span class="dot">·</span><span>2026-08-28</span>
+      <span class="dot">·</span><span class="badge pre">预印本 · 未经同行评审</span>
+    </div>
+    <p class="abs">对 150 名孤独症与 159 名非孤独症参与者（6–31 岁）做脑电，随访 19 个月，检验<strong>皮层-皮层功能连接</strong>（平均度、小世界指数）能否预测适应功能（教育、就业、独立生活）的变化。结果显示小世界指数在全年龄段显著预测适应功能变化；预测力在 <strong>15–24 岁孤独症青年中最强</strong>——平均度与小世界指数分别额外解释 21% 和 30% 的结局变异，<strong>优于智商与孤独症特征量表</strong>。二分类（改善 vs 未改善）中，含平均度的模型在 15–24 岁组 AUC 达 0.84。</p>
+    <div class="why"><b>为什么与你有关</b>对「星桥计划」是直接的弹药：它证明了<strong>一个客观、可采集、低成本的神经生理指标，预测力能压过传统量表</strong>——这正是数字疗愈产品最缺的"客观疗效终点"。你的孤独症量表 AI 平台可以考虑把 EEG（或更可及的简化版脑电/可穿戴替代指标）作为量表之外的第二层评估维度。但要清醒：这是<strong>预印本、未经同行评审</strong>，且样本量与随访期有限，只能作为方向性参考，不能直接写进产品宣称。</div>
+    <div class="links">
+      <a href="https://doi.org/10.1101/2025.05.17.25327836" target="_blank" rel="noopener">DOI: 10.1101/2025.05.17.25327836</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <h3><a href="https://doi.org/10.64898/2026.08.25.26361317" target="_blank" rel="noopener">ALFIE：面向 64mT 低场强新生儿脑 MRI 的解剖感知增强框架</a></h3>
+    <div class="src">
+      <span>medRxiv（ pediatrics ）</span><span class="dot">·</span><span>2026-08-28</span>
+      <span class="dot">·</span><span class="badge pre">预印本 · 未经同行评审</span>
+    </div>
+    <p class="abs">低场强（64mT）MRI 成本低、可床旁，但图像质量差。研究训练了一个<strong>多任务网络</strong>同时进行图像增强与组织分割，用 75 例配对 64mT/3T 新生儿数据训练、20 例测试，覆盖广泛胎龄与病变谱；训练前对 3T 图像做局部 harmonization 以保留 64mT 原生对比度。增强后图像在皮层、深部灰质、脑室、白质与后颅窝结构的显示均改善，组织分割与 3T 参考标签一致性良好，体积测量与 3T 高度吻合（仅小的系统性区域偏倚），另在 40 例足月对照数据上验证。</p>
+    <div class="why"><b>为什么与你有关</b>这是<strong>"儿科 + 影像 AI + 低成本可及性"三条线同时命中</strong>的一篇。低场强便携 MRI 若配上增强算法，意味着新生儿颅脑筛查有可能下沉到基层和床旁——对儿科出身的你，这是讲"AI 如何真正缩小医疗资源差距"的绝佳案例。方法上也有借鉴点：它刻意<strong>保留原生对比度而非一味"美化"图像</strong>，这种克制在医疗影像增强里是正确取向，值得在内容里点出来（与消费级 AI 修图形成对照）。</div>
+    <div class="links">
+      <a href="https://doi.org/10.64898/2026.08.25.26361317" target="_blank" rel="noopener">DOI: 10.64898/2026.08.25.26361317</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <h3><a href="https://doi.org/10.64898/2026.08.25.26361304" target="_blank" rel="noopener">预测不确定性何时可信？可穿戴 ECG 信号质量评估的方法学检验</a></h3>
+    <div class="src">
+      <span>medRxiv（ health informatics ）</span><span class="dot">·</span><span>2026-08-28</span>
+      <span class="dot">·</span><span class="badge pre">预印本 · 未经同行评审</span>
+    </div>
+    <p class="abs">不确定性量化常被当作医疗 AI 的"安全装置"，但只有在不确度分数真的能反映可靠性时才有意义。研究用 15 名受试者、32,224 个 10 秒同步单导联 ECG + 三轴加速度窗口，在<strong>模糊性、受控噪声污染、外部分布偏移</strong>三种压力下检验。比较多分类逻辑回归与 CART 两个模型族（点估计 → 固定结构后验 → 结构后验），评估期望条件熵与互信息作为偶然/认知不确定性度量。结果显示逻辑回归的<strong>结构后验在分布偏移下仍保留 9 个特征中的 8.5 个</strong>，并聚焦于近乎完整的掩膜。</p>
+    <div class="why"><b>为什么与你有关</b>直接对应你所有健康类产品的<strong>兜底机制设计</strong>：孤独症量表 AI 平台给出评分时，系统必须知道"什么时候该说我不知道、该转人工"。这篇给出的核心警示是——<strong>不确定性分数不是装上就安全，必须在你自己的数据分布上验证过才敢用</strong>。建议把它作为你平台"低置信度自动转人工"规则上线前的方法学检查清单。注意这是预印本，结论尚未经同行评审。</div>
+    <div class="links">
+      <a href="https://doi.org/10.64898/2026.08.25.26361304" target="_blank" rel="noopener">DOI: 10.64898/2026.08.25.26361304</a>
+    </div>
+  </article>
+
+  <h2 class="sec">行业与监管动态 <span>合规与数据治理</span></h2>
+
+  <article class="card">
+    <h3><a href="https://www.marktechpost.com/2026/09/02/anthropic-enterprise-frontier-safeguards-efs" target="_blank" rel="noopener">Anthropic 推出 Enterprise Frontier Safeguards：零数据保留与跨会话滥用检测兼得</a></h3>
+    <div class="src">
+      <span>MarkTechPost（经行业资讯汇总）</span><span class="dot">·</span><span>2026-09-02 15:38（UTC+8）</span>
+    </div>
+    <p class="abs">Anthropic 宣布企业版安全方案：将监控数据存储在<strong>客户自有</strong>的 S3 / Azure Blob / Google Cloud Storage 中，<strong>密钥与人工审核权归客户</strong>，Anthropic 仅保留自动化检测能力。这试图破解长期存在的两难——要"零数据保留"的隐私，就难以做跨会话滥用检测；要安全监控，就意味着服务商留存数据。</p>
+    <div class="why"><b>为什么与你有关</b>你手上所有涉及患者/儿童数据的项目（小雪宝、孤独症量表平台、星桥计划）都要回答同一个问题：<strong>数据到底存在谁那里、谁能看</strong>。这类"客户自持密钥"架构给了一条约中间道路，在做合规方案或跟合作方谈数据边界时可以直接引用。对面向家长的产品，这也应成为你对外沟通里可讲清楚的一条信任状。注意：这是厂商方案，不等同于《个人信息保护法》下的合规结论，涉及儿童个人信息仍需单独评估。</div>
+    <div class="links">
+      <a href="https://www.marktechpost.com/2026/09/02/anthropic-enterprise-frontier-safeguards-efs" target="_blank" rel="noopener">原文链接</a>
+    </div>
+  </article>
+
+  <h2 class="sec">工具与开源速览 <span>补充信号，不计入精选条数</span></h2>
+
+  <div class="quick">
+    <ul>
+      <li>
+        <a href="https://www.ithome.com/0/996/709.htm" target="_blank" rel="noopener">DeepSeek-V4-Flash-Vision-Exp 开源</a>——支持图片输入、文字识别与图表分析，多模态 Agent 能力接近第一梯队。<span class="qmeta">IT之家 · 2026-09-01 07:44（UTC+8）</span>
+        <div class="qmeta">与你有关：开源多模态 + 可本地部署，适合做病历/检验单/图表解读类本地能力验证。</div>
+      </li>
+      <li>
+        <a href="https://www.ithome.com/0/998/136.htm" target="_blank" rel="noopener">英伟达宣布以约 129.3 亿美元收购 Hugging Face</a>——预计 2027 年上半年完成，平台现有超 1,800 万开发者、300 多万模型；官方承诺继续对整个 AI 生态开放。<span class="qmeta">IT之家 · 2026-09-03 20:01（UTC+8）</span>
+        <div class="qmeta">与你有关：开源模型分发枢纽易主，长期看会影响医疗开源模型的获取成本与中立性，值得持续观察。</div>
+      </li>
+      <li>
+        <a href="https://the-decoder.com/google-deepminds-ai-co-scientist-now-plans-experiments-runs-lab-equipment-and-writes-scientific-papers" target="_blank" rel="noopener">Google DeepMind 将 AI 科学家 Co-Scientist 扩展为实验室集成研究伙伴</a>——可规划实验、编写代码、控制设备并撰写论文；其设计的医疗 AI 架构 Agent_H 在健康基准上超越 6 个前沿模型。<span class="qmeta">The Decoder · 2026-08-29 02:46（UTC+8）</span>
+        <div class="qmeta">与你有关：AI 已在"设计医疗 AI"层面跑赢人类设计，是个强传播选题，但需等同行评审细节再下定论。</div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="actions">
+    <h2>今日行动建议</h2>
+    <ol>
+      <li><span class="proj">小雪宝 LeukemiaPal</span>把瑞金那套「常规检验 → 风险分层 → SHAP 解释 → 网页计算器」拆成内容骨架，做一期面向患儿家长的科普：哪些血常规/生化指标的异常组合值得追问医生做分子检测。同时明确标注外部验证 AUC 0.760 的泛化局限——这种克制正是你的医生身份优势。</li>
+      <li><span class="proj">孤独症量表 AI 平台</span>把 EEG 预印本列入「潜在客观指标」观察清单（预印本，仅作方向参考，不入宣称），并同步起草"低置信度自动转人工"规则——用不确定性论文的方法学检查清单，在自有数据上先跑一遍分布偏移测试再上线。</li>
+      <li><span class="proj">流程固化</span>今天的白血病强信号来自<b>定向补充检索</b>（机器学习 × 白血病/儿童肿瘤，14 天窗口）。建议把这条固定为每周一次的常设检索项，避免儿科/血液方向在常规 7 天窗口里反复漏检。</li>
+      <li><span class="proj">内容选题</span>低场强新生儿 MRI + 解剖感知增强，是一个「AI 缩小儿科医疗资源差距」的高质量选题。核心论点可定为：医疗影像增强的目标是还原真实，不是让图变好看。</li>
+    </ol>
+  </div>
+
+  <footer>
+    <div><b>数据来源：</b>行业资讯（AI HOT 聚合，含 IT之家、MarkTechPost、The Decoder 等源站）、PubMed / MEDLINE（美国国立卫生研究院 NCBI）、medRxiv（冷泉港实验室预印本平台）。</div>
+    <div><b>时间口径：</b>论文按发表日期；行业资讯按北京时间（UTC+8）换算。</div>
+    <div><b>重要提示：</b>标注「预印本 · 未经同行评审」的条目尚未经过同行评审，结论可能变动，<b>不得作为临床决策或产品宣称依据</b>。本简报仅作信息聚合与研究线索参考，不构成任何医疗建议或诊疗依据。</div>
+    <div><b>编辑：</b>AI新青年内容团队 · 主理人 李帅帅（Alan）　|　生成时间：2026-09-04</div>
+  </footer>
+
+</div>
+</body>
+</html>

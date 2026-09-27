@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-09-27</title>
+<style>
+  :root{
+    --bg:#f4f7f7; --card:#ffffff; --ink:#12211f; --ink2:#4b5f5c; --ink3:#7d918e;
+    --line:#e2ebe9; --brand:#0d9488; --brand-soft:#e6f5f3; --brand-ink:#0a6d63;
+    --warn:#b45309; --warn-soft:#fef4e6; --pre:#7c3aed; --pre-soft:#f3edff;
+    --shadow:0 1px 3px rgba(13,60,55,.06),0 8px 24px rgba(13,60,55,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0c1615; --card:#122221; --ink:#e8f2f0; --ink2:#a8bfbc; --ink3:#7d918e;
+      --line:#1f3735; --brand:#2dd4bf; --brand-soft:#123330; --brand-ink:#5eead4;
+      --warn:#fbbf24; --warn-soft:#2a2213; --pre:#c4b5fd; --pre-soft:#241d3a;
+      --shadow:0 1px 3px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+    }
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.7;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 20px 56px;}
+
+  header{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:26px 26px 22px;box-shadow:var(--shadow);position:relative;overflow:hidden;}
+  header::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(180deg,var(--brand),transparent);}
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);font-weight:700;margin-bottom:8px;}
+  h1{margin:0 0 4px;font-size:25px;letter-spacing:-.01em;}
+  .sub{color:var(--ink2);font-size:14px;margin:0 0 16px;}
+  .who{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px;}
+  .chip{display:inline-block;font-size:12.5px;padding:4px 11px;border-radius:999px;
+    background:var(--brand-soft);color:var(--brand-ink);font-weight:600;border:1px solid transparent;}
+  .chip.plain{background:transparent;border:1px solid var(--line);color:var(--ink2);font-weight:500;}
+  .srcbox{font-size:12.5px;color:var(--ink3);border-top:1px dashed var(--line);padding-top:13px;margin-top:4px;}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 26px;}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 14px;box-shadow:var(--shadow);}
+  .stat b{display:block;font-size:21px;color:var(--brand);line-height:1.25;}
+  .stat span{font-size:11.5px;color:var(--ink3);}
+
+  h2.sec{font-size:14px;letter-spacing:.05em;color:var(--ink2);text-transform:uppercase;
+    margin:30px 0 13px;padding-left:11px;border-left:3px solid var(--brand);font-weight:700;}
+
+  article{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:19px 21px;margin-bottom:13px;box-shadow:var(--shadow);}
+  article h3{margin:0 0 9px;font-size:17px;line-height:1.45;}
+  article h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--brand);padding-bottom:1px;}
+  article h3 a:hover{color:var(--brand);}
+  .meta{font-size:12.5px;color:var(--ink3);margin-bottom:11px;display:flex;flex-wrap:wrap;gap:7px;align-items:center;}
+  .meta .dot{opacity:.45;}
+  .tag{font-size:11px;padding:2px 8px;border-radius:999px;font-weight:600;}
+  .tag.pre{background:var(--pre-soft);color:var(--pre);}
+  .tag.peer{background:var(--brand-soft);color:var(--brand-ink);}
+  p.abst{margin:0 0 12px;font-size:14.5px;color:var(--ink2);}
+  .why{background:var(--brand-soft);border-radius:10px;padding:12px 14px;font-size:14px;
+    border-left:3px solid var(--brand);color:var(--ink);}
+  .why b{color:var(--brand-ink);}
+  .lnk{font-size:12.5px;margin-top:10px;color:var(--ink3);}
+  .lnk a{color:var(--brand);text-decoration:none;}
+  .lnk a:hover{text-decoration:underline;}
+
+  .brief{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:16px 20px;margin-bottom:11px;box-shadow:var(--shadow);}
+  .brief h4{margin:0 0 7px;font-size:15px;line-height:1.5;}
+  .brief h4 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--brand);}
+  .brief h4 a:hover{color:var(--brand);}
+  .brief p{margin:0;font-size:13.8px;color:var(--ink2);}
+  .brief .meta{margin-bottom:8px;}
+
+  .actions{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:20px 22px;box-shadow:var(--shadow);}
+  .actions ol{margin:0;padding-left:22px;}
+  .actions li{font-size:14.3px;color:var(--ink2);margin-bottom:11px;}
+  .actions li:last-child{margin-bottom:0;}
+  .actions li b{color:var(--ink);}
+
+  .note{background:var(--warn-soft);border-radius:10px;padding:12px 15px;font-size:13.4px;
+    color:var(--ink2);margin-bottom:18px;border-left:3px solid var(--warn);}
+  .note b{color:var(--warn);}
+
+  footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);
+    font-size:12.3px;color:var(--ink3);line-height:1.85;}
+  footer b{color:var(--ink2);}
+  @media (max-width:560px){ .stats{grid-template-columns:repeat(2,1fr);} h1{font-size:21px;} .wrap{padding:18px 14px 44px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">Medical AI Focus · 每日</div>
+  <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+  <p class="sub">主理人 Alan — 三甲医院儿科医师 × AI Builder ｜ 面向「能读懂论文、只关心能不能落地」的读者</p>
+  <div class="who">
+    <span class="chip">儿科 / 血液肿瘤 / 孤独症</span>
+    <span class="chip">临床 AI · 量表 · 数字疗愈</span>
+    <span class="chip plain">2026-09-27（北京时间）</span>
+    <span class="chip plain">窗口 09-20 → 09-27</span>
+  </div>
+  <div class="srcbox">
+    数据源：AI HOT 医疗垂直资讯（4 组关键词）· PubMed E-utilities（主检索 + 儿科 / 血液肿瘤 / 孤独症·心理健康 三组定向）· medRxiv 官方预印本接口（12 页深翻）<br>
+    本期精选 <b>6 条主卡 + 6 条速览</b>；两源全部实时可达，无降级。
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>6</b><span>精选主卡</span></div>
+  <div class="stat"><b>2</b><span>同行评审论文</span></div>
+  <div class="stat"><b>4</b><span>预印本（未评审）</span></div>
+  <div class="stat"><b>4</b><span>内容版块</span></div>
+</div>
+
+<div class="note">
+  <b>今日信号说明：</b>本期最强信号集中在两条方法学主线上 —— ① <b>「分层评测不够」</b>：两套各自合规的组件接起来会创造新风险（见主卡一、三）；② <b>「未观测 ≠ 阴性」</b>：把没观测到的天数当没发生，会系统性虚高依从率与风险率（见速览）。儿科/青少年心理方向供给扎实（3 条主卡直接落在青少年心理健康与儿科患者教育）——<b>儿童 ALL/AML 专属队列仍无强命中</b>，血液肿瘤叙事带由儿童造血干细胞移植精准给药综述补位，已在正文标注。
+</div>
+
+<h2 class="sec">一、临床落地与安全</h2>
+
+<article>
+  <h3><a href="https://doi.org/10.64898/2026.09.22.26363642" target="_blank" rel="noopener">两个各自安全的 AI 系统，接缝处冒出了新的临床风险</a></h3>
+  <div class="meta">
+    <span>medRxiv 预印本（Bergman 等）</span><span class="dot">·</span><span>2026-09-23</span><span class="dot">·</span>
+    <span class="tag pre">未经同行评审</span>
+  </div>
+  <p class="abst">
+    在一套「冻结的、与参考文稿对齐」的合成语料上做双通道评测，覆盖 <b>77 种语言 × 5 档临床复杂度</b>（从简单全科问诊到专家多学科交接）。单看「笔记生成」这一层，严重（HIGH/CRITICAL）错误率仅 <b>3.4%</b>，且不随复杂度上升（1%–6%，趋势检验 p=0.42），也不随语言资源丰富度变化。但把自动语音识别（ASR）接进来做<b>端到端</b>评测后，严重错误率随复杂度陡升，最高档达 <b>24%</b>、低资源语种达 <b>15%</b>（每升一档 OR 1.54，95%CI 1.15–2.07，p=0.004）。严重笔记错误中 <b>87% 源自 ASR、仅 7% 源自笔记生成</b>；「放大」是「纠正」的 3 倍（fate entropy 1.19 bit）。词错率只能解释跨语言方差的 24%。
+  </p>
+  <div class="why">
+    <b>为什么与你有关：</b>小雪宝的语音陪伴链路、量表平台的语音施测链路，都是「ASR + 下游生成/判分」的两段式结构——这正是本文证明<b>会漏检风险的那种拓扑</b>。可直接落地的验收规格有两条：① 安全评测不能停在每一层的词错率/字面准确率，<b>必须评测「孩子/家长最终看到的那一版」</b>；② 「高复杂度 + 低资源语种/方言」要立成独立回归测试档，因为端到端风险恰恰在那里陡升，而单层指标完全看不出来。
+  </div>
+  <div class="lnk">原文：<a href="https://doi.org/10.64898/2026.09.22.26363642" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.22.26363642</a></div>
+</article>
+
+<article>
+  <h3><a href="https://doi.org/10.64898/2026.09.15.26363093" target="_blank" rel="noopener">在「监管审计过的安全环境」里跑联邦学习：芬兰三家大学医院的真实部署</a></h3>
+  <div class="meta">
+    <span>medRxiv 预印本（Nieminen 等 · Helsinki / Turku / Tampere 大学医院）</span><span class="dot">·</span><span>2026-09-21</span><span class="dot">·</span>
+    <span class="tag pre">未经同行评审</span>
+  </div>
+  <p class="abst">
+    把去中心化的 swarm learning 联邦层接入赫尔辛基大学医院（HUS）<b>已通过认证</b>的安全处理环境 Acamedic。关键发现：新增联邦协调层被认定为对既有认证的<b>实质性变更</b>，由此触发芬兰《健康与社会数据二次利用法》（Findata）下的<b>差异化安全评估</b>——逐项评估数据隔离与本地性、身份与访问管理、日志与监控、网络安全、环境保护，并确立一套治理模型：<b>把「基础设施层认证」与「研究级评估（数据 / 模型 / 参数交换 / 输出）」分开</b>。评估识别出 1 项高危、2 项中危、2 项低危问题。落地用例：用统一化的纵向检验数据，在院内训练联邦 DeepSurv 生存模型（急性髓系白血病 AML）。
+  </p>
+  <div class="why">
+    <b>为什么与你有关：</b>这条正对着给科室主任做的「本地部署 vs 公网部署」那道调研题。它给出的最有价值的一击是：<b>增量合规的触发点不是「要不要用 AI」，而是「新增组件是否构成对既有安全认证的实质性变更」</b>——联邦学习恰恰踩在线上。那套「基础设施认证 / 研究级评估」两层分离的框架，可以直接借来切分责任边界、写进方案报价的合规附录。AML 用例另说明：<b>血液肿瘤的纵向检验数据是联邦学习的成熟起手式</b>（数据天然多院、指标同质、事件稀疏需要并量）。
+  </div>
+  <div class="lnk">原文：<a href="https://doi.org/10.64898/2026.09.15.26363093" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.15.26363093</a></div>
+</article>
+
+<article>
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42795013/" target="_blank" rel="noopener">给家长讲清楚儿科病理：自主智能体 vs 五个前沿平台，谁都没通吃</a></h3>
+  <div class="meta">
+    <span>Cancers（Basel）18(18):3047</span><span class="dot">·</span><span>2026-09-20</span><span class="dot">·</span>
+    <span class="tag peer">同行评审</span>
+  </div>
+  <p class="abst">
+    20 个儿科口腔病理与罕见头颈肿瘤条目，由 5 个平台（自主科研智能体 Eli5a v2.0、ChatGPT-5.4、Claude Sonnet 4.6、Perplexity、Doximity）生成患者信息单，3 位专家盲评 GQS、DISCERN、PEMAT 可理解性/可行动性、Flesch-Kincaid 阅读年级。结果：<b>Claude Sonnet 4.6 综合信息质量最佳</b>（GQS 4.25±0.39）；Doximity 与 Claude 的 DISCERN 可靠性最好（70.50 / 70.25）；<b>Eli5a v2.0 可理解性最高</b>（PEMAT-U 95.05±1.23）、阅读年级最低（FKGL 5.45）、但 DISCERN 最低（54.50）。五平台差异全部显著（p&lt;0.001）。作者结论：<b>「信息质量/可靠性」与「大众可读性」之间存在真实取舍</b>，平台选择必须匹配沟通任务，且所有 AI 生成的患者材料上线前必须临床复核。评分者一致性偏低（GQS ICC 0.236 / 0.481）。
+  </p>
+  <div class="why">
+    <b>为什么与你有关：</b>小雪宝向患儿家长输出的每一段解释，都落在这条取舍线上——「讲得准」和「讲得懂」不是同一个分数。两条可直接执行的规格：① <b>按任务分工选载体</b>，别指望一个模型同时拿满两个维度（这里最好的质量分与最好的可读性分属于两个不同平台）；② <b>人工复核要结构化、且不能只安排一个人</b>——因为盲评一致性本身只有 0.24–0.48，意味着「一个人看一眼觉得还行」的通过率里含大量运气。这一点对量表平台的家长端文案同样成立。
+  </div>
+  <div class="lnk">原文：<a href="https://pubmed.ncbi.nlm.nih.gov/42795013/" target="_blank" rel="noopener">PubMed 42795013</a> ｜ DOI：<a href="https://doi.org/10.3390/cancers18183047" target="_blank" rel="noopener">10.3390/cancers18183047</a></div>
+</article>
+
+<h2 class="sec">二、前沿研究 · 论文</h2>
+
+<article>
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42800797/" target="_blank" rel="noopener">青少年心理健康的 ML 自适应干预：微随机试验只在「韧性」一个结局上赢了随机</a></h3>
+  <div class="meta">
+    <span>Translational Psychiatry 16(1):487</span><span class="dot">·</span><span>2026-09-26</span><span class="dot">·</span>
+    <span class="tag peer">同行评审</span>
+  </div>
+  <p class="abst">
+    生态瞬时干预（EMI）若用机器学习分配算法推送内容，是否比随机推送更有效？被试内<b>微随机试验（MRT）</b>：普通人群与心理辅导机构招募的青少年，每人每天随机最多 7 次（1:1）、最多 210 个决策点。49 人纳入（平均 20.6 岁，78% 女性），基线 K10 均值 23.8（轻中度心理痛苦，逾三分之一为中重度）。结果：<b>仅在「瞬时心理韧性」上出现有利于 ML 分配的初始信号</b>（B=0.147，95%CI 0.004–0.290，p=0.044）；对正性情绪与负性情绪的瞬时变化<b>均无证据</b>。可行性与安全性可接受（满意度/接受度/可用性评价良好，无严重不良事件）；非对照前后比较提示心理痛苦小降（d=−0.23）、韧性（d=0.55）与适应性情绪调节（d=0.53）改善。作者明确：需要更大样本、充分检验力的 MRT，并验证<b>预测性能是否真的转化为策略价值</b>。
+  </p>
+  <div class="why">
+    <b>为什么与你有关：</b>星桥的核心技术命题就是「什么时候推什么内容」。这是目前少见的 <b>MRT 级</b>证据，而且结论克制得近乎教科书：ML 分配只在「韧性」这一个近端结局跑赢随机，情绪类结局是<b>零结果</b>。给星桥两条硬提示：① 自适应推送必须<b>事前</b>在 MRT 框架里写清「哪个近端结局算赢」，否则事后挑指标必然自我夸大（本文也是靠事前指定才守住了这个诚实结论）；② 「预测准」与「策略有价值」要分开验收——星桥证据页该把这条写死，否则很容易拿模型 AUC 冒充干预效果。
+  </div>
+  <div class="lnk">原文：<a href="https://pubmed.ncbi.nlm.nih.gov/42800797/" target="_blank" rel="noopener">PubMed 42800797</a> ｜ DOI：<a href="https://doi.org/10.1038/s41398-026-04475-8" target="_blank" rel="noopener">10.1038/s41398-026-04475-8</a></div>
+</article>
+
+<article>
+  <h3><a href="https://doi.org/10.64898/2026.09.21.26363585" target="_blank" rel="noopener">家长报告版青少年自杀风险量表：16 题 + 按年龄性别分层的连续常模</a></h3>
+  <div class="meta">
+    <span>medRxiv 预印本（Deericks / Youngstrom / Westlund Schreiner）</span><span class="dot">·</span><span>2026-09-23</span><span class="dot">·</span>
+    <span class="tag pre">未经同行评审</span>
+  </div>
+  <p class="abst">
+    把成人/青少年自评版 16 题 CHRT 改编为<b>家长报告版</b>（CHRT-PR16，可导出 14 题短版），在全国代表性家长样本（N=2,236，覆盖 6–18 岁）中评估心理测量学性质并建立常模。内部一致性极佳（CHRT-PR16 / PR14 的 ωt 分别 .98 / .96）；<b>PR14 的一般因子方差更高</b>（ωH .83 vs .68），Mokken 分析无单调性违背；PR16 在效标关联上仅「临床意义上微不足道」地略优。用 GAMLSS 做连续常模，<b>零膨胀负二项分布拟合最优</b>；得分轨迹在<b>约 10 岁前后按年龄与性别分叉</b>，男性在上百分位略高。产出年龄 × 性别的分位查表，用于基于测量的照护与风险分层。
+  </p>
+  <div class="why">
+    <b>为什么与你有关：</b>量表平台要做的「家长版 + 常模」两件事，这一篇几乎可以逐段当样板对照。三个可抄的要点：① <b>多信息源是儿科金标准</b>——为同一构念开发家长报告版不是「多一个视角」，是方法学要求；② 常模必须做成<b>连续形式并按年龄性别分层</b>，因为 10 岁附近轨迹会分叉，单一线性常模会同时误判两端；③ 常模准不准的关键在<b>分布假设</b>（这里选了零膨胀负二项），这不是细节而是主因。另外注意：短版（14 题）在因子结构上反而更干净——量表平台的短版不是「砍题」，是要重做结构验证。
+  </div>
+  <div class="lnk">原文：<a href="https://doi.org/10.64898/2026.09.21.26363585" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.21.26363585</a></div>
+</article>
+
+<article>
+  <h3><a href="https://doi.org/10.64898/2026.09.12.26362500" target="_blank" rel="noopener">TAILORx 三期 RCT：AI 从常规 H&amp;E 切片读出「谁会从化疗获益」</a></h3>
+  <div class="meta">
+    <span>medRxiv 预印本（Chan 等 · 含 TAILORx 试验团队）</span><span class="dot">·</span><span>2026-09-20</span><span class="dot">·</span>
+    <span class="tag pre">未经同行评审</span>
+  </div>
+  <p class="abst">
+    在 TAILORx 三期随机试验 6,735 例可用患者中外部检验 Ataraxis Breast CTX——一个把 H&amp;E 形态学特征与临床变量结合、同时输出预后与化疗获益的 AI 模型。<b>未用 TAILORx 数据训练、未重训、未重校准</b>，分析方案预先在 ECOG-ACRIN 批准的 protocol 中指定。结果：单用内分泌组，CTX 预后评分每升 1SD 的无病间期 HR 1.651（95%CI 1.511–1.803），C-index 0.736；化疗+内分泌组相近（HR 1.642，C-index 0.720）；<b>校正 21 基因复发评分（RS）后仍显著</b>。在中间 RS 亚组中，CTX 获益评分的「治疗 × 生物标志物」交互显著（<b>p=0.016</b>）：高获益组 5 年无病间期绝对提升 <b>5.6%</b>，低获益组无可测获益；而用 RS 在相近比例的同一亚组切分，交互并不显著（p=0.20）。
+  </p>
+  <div class="why">
+    <b>为什么与你有关：</b>这是「AI 生物标志物」目前能拿到的<b>最高级别验证形态</b>：预先指定 + 外部不重训 + 三期 RCT 样本 + 治疗交互检验 + 与现行金标准头对头。小雪宝/量表平台若将来要谈「预测某种干预对谁有效」，这份设计可以直接当验收清单照抄。特别值得记下这个细节：<b>与现有标准对比，必须按相近比例切分才可比</b>——否则很容易构造出对自己有利的对比（本文里 RS 换个切法就从显著变不显著）。儿科方向目前还没有同级别的 AI 获益分层研究，这条是范式而非结论。
+  </div>
+  <div class="lnk">原文：<a href="https://doi.org/10.64898/2026.09.12.26362500" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.12.26362500</a></div>
+</article>
+
+<h2 class="sec">三、工具与开源</h2>
+
+<div class="brief">
+  <div class="meta"><span>AI HOT · HuggingFace / 社交平台</span><span class="dot">·</span><span>2026-09-27 15:00（北京时间）</span></div>
+  <h4><a href="https://x.com/frxiaobei/status/2104103804710855125" target="_blank" rel="noopener">开源 2,194 种疾病的模拟医患对话数据集（Claude Opus 5.5 生成）</a></h4>
+  <p>覆盖 <b>2,194 种疾病</b>、平均每段 <b>33 轮</b>对话，从症状、检查一路聊到治疗与随访安排。对小雪宝与量表平台的价值在于：<b>它是一份可离线、可审计、无需真实患者数据的对话底座</b>——可用来做对话流程回归测试、拒答/转人工红线的压力测试，或作为小模型的冷启动语料。⚠️ 合成数据不等于真实分布，尤其儿童与罕见病的口语表达、家长情绪表达几乎必然失真；用于训练前必须自建「真实小样本 vs 合成大样本」的分布差异核验。</p>
+</div>
+
+<div class="brief">
+  <div class="meta"><span>medRxiv 预印本（Wang 等）</span><span class="dot">·</span><span>2026-09-21</span><span class="dot">·</span><span class="tag pre">未经同行评审</span></div>
+  <h4><a href="https://doi.org/10.64898/2026.09.19.26363460" target="_blank" rel="noopener">HealthFlux：把「健康本身」当作预测对象的世界模型</a></h4>
+  <p>从英国生物银行 <b>502,166 人 / 11 个数据域 / 5,647 个特征</b>（临床记录、血检、遗传、蛋白组、代谢组、MRI）学习健康的潜在动力学。混合状态空间架构：观测之间用 ODE 演化、新测量到达时用连续时间循环更新。预测 195 种疾病与死亡，5 年 AUROC <b>0.816</b>（前 SOTA 0.715），三个独立队列复现；无新观测外推仍能预测至十年后；<b>训练中完全排除的疾病也能预测（AUROC 0.769）</b>。⚠️ 全部为成人队列，儿科外推未验证——可看架构思路，别直接套用其数值。</p>
+</div>
+
+<h2 class="sec">四、行业与监管动态</h2>
+
+<div class="brief">
+  <div class="meta"><span>AI HOT · 蓝十字蓝盾协会（BCBSA）分析，多家媒体报道</span><span class="dot">·</span><span>2026-09-27（北京时间）</span></div>
+  <h4><a href="https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs" target="_blank" rel="noopener">美国医院用 AI 写病历，两年推高医疗支出 9.42 亿美元</a></h4>
+  <p>BCBSA 分析指出，医院在提交保险理赔时使用 AI 工具，两年内带来 <b>额外 9.42 亿美元</b>支出；同时观察到患者被记录为「患有复杂病症」的情况急剧增加，但实际治疗并无相应变化。这是目前少数把「AI 进入临床文书后产生的系统性后果」量化下来的公开数据——<b>它是编码/文书侧的后果，不是诊断能力问题</b>。对小雪宝与量表平台的间接提示：自动生成内容一旦进入计费或正式记录链路，其偏差会被结构性放大，生成层必须保留「原始输入 → 改写 → 终稿」的可审计链路。</p>
+</div>
+
+<h2 class="sec">延伸速览</h2>
+
+<div class="brief">
+  <div class="meta"><span>medRxiv 预印本 · Torous 团队</span><span class="dot">·</span><span>2026-09-22</span><span class="dot">·</span><span class="tag pre">未经同行评审</span></div>
+  <h4><a href="https://doi.org/10.64898/2026.09.21.26363541" target="_blank" rel="noopener">「没观测到」不等于「没发生」：贴片未戴解释了过半的「未服药」日</a></h4>
+  <p>997 人日 / 20 例门诊患者，把数字药片（Abilify MyCite）的摄入记录与贴片佩戴数据合并分析。结果：322 个「未检出服药」日中 <b>53.7% 其实是贴片佩戴不足</b>。把全部未检出日算作未依从 → 表观不依从率 32.3%；按佩戴充分条件化后 → 18.1%；真实值被夹在 14.9%–32.3% 之间。<b>凡是以「未记录」为分母的指标（依从性、完成率、复发率），都必须先建立「观测是否有效」的三态编码</b>（检出 / 佩戴充分但未检出 / 未观测）。这条对星桥的行为数据统计是直接的偏倚红线。</p>
+</div>
+
+<div class="brief">
+  <div class="meta"><span>Pharmaceutics 18(9):1154（南京医科大学附属儿童医院）</span><span class="dot">·</span><span>期刊出版日 2026-09-15（本周内经 PubMed 收录）</span><span class="dot">·</span><span class="tag peer">同行评审</span></div>
+  <h4><a href="https://pubmed.ncbi.nlm.nih.gov/42797329/" target="_blank" rel="noopener">儿童造血干细胞移植的白消安精准给药：从 TDM 走到模型引导给药</a></h4>
+  <p>白消安是儿童造血干细胞移植预处理的基石药，治疗窗窄、药代变异大。综述梳理：体表面积是儿童清除率的首要决定因素，成熟度、基础病、合并用药与药物基因组学的贡献<b>在各人群中并不一致</b>；暴露-结局目标值随方案、预处理强度、病种与暴露指标而变。群体 PK + 贝叶斯估计可支持个体化调量，但<b>常规落地仍需外部验证与本地流程兼容</b>；PBPK、PK/PD 与机器学习「有前景但临床验证不足」。本期血液肿瘤叙事带由此条补位——注意它是<b>儿童专属</b>队列，而不是成人数据外推。</p>
+</div>
+
+<div class="brief">
+  <div class="meta"><span>medRxiv 预印本（Aljead 等 · 沙特 SFDA 药物警戒库）</span><span class="dot">·</span><span>2026-09-23</span><span class="dot">·</span><span class="tag pre">未经同行评审</span></div>
+  <h4><a href="https://doi.org/10.64898/2026.09.22.26363643" target="_blank" rel="noopener">儿童孤独症非典型抗精神病药的真实世界安全信号：年龄差异显著、性别无差异</a></h4>
+  <p>沙特 2021–2024 年 <b>701 份儿科（0–19 岁）不良反应报告</b>，用 ROR / PRR / BCPNN 做不成比例分析。<b>82.88% 报告来自 0–9 岁</b>、59.91% 为男性；奥氮平严重报告占比最高（44.44%）。信号分布：利培酮—神经系统，喹硫平—心脏与全身，奥氮平—血液/代谢/精神，阿立哌唑—胃肠。<b>年龄组间 ADR 信号差异显著，性别间无显著差异</b>——支持「年龄特异的不良反应监测」。不建立因果，但为星桥家长端「共病用药问题」提供了可引用的年龄分层证据。</p>
+</div>
+
+<h2 class="sec">今日行动建议</h2>
+
+<div class="actions">
+  <ol>
+    <li><b>把「终稿评测」写进小雪宝语音链路的验收文档（本周内）。</b>照主卡一的三层结构改：ASR 层指标 / 生成层指标 / <b>家长实际收到的那一版</b>的严重错误率。并新增一个「高复杂度 + 方言/低资源语种」回归档，作为发版必过项——单层词错率达标不再视为通过。</li>
+    <li><b>给星桥的自适应推送建一张「事前声明表」再开跑（本周内）。</b>照主卡四：在实验开始前写死「哪个近端结局算赢、判定阈值多少、几个次要结局」，并单独列出模型层指标（AUC 等）与策略层指标（干预效应量），两者不得互相替代。同时照速览第一条，为行为数据加上「观测有效性」三态编码，避免把未观测日算成阴性。</li>
+    <li><b>给量表平台的家长版与常模定「量产规格」（两周内）。</b>照主卡五：新量表先定「多信息源版本」（自评 / 家长 / 教师），常模一律做成<b>连续 + 年龄 × 性别分层分位表</b>，并显式声明所用分布族；短版必须重做结构验证而非直接删题。可把 CHRT-PR 这条当作样板，把「分布假设 + 分位表 + 不一致率」三项写成量表出厂自检清单。</li>
+  </ol>
+</div>
+
+<footer>
+  <b>数据来源：</b>AI HOT（医疗垂直资讯，4 组关键词）· PubMed E-utilities（主检索 + 儿科 / 血液肿瘤·儿童肿瘤 / 孤独症·心理健康 三组定向检索）· medRxiv 官方预印本接口（12 页深翻，去重后 284 条）。<br>
+  <b>证据层级提示：</b>本期 6 条主卡中 2 条为同行评审论文（Translational Psychiatry、Cancers），4 条为预印本；速览中 1 条同行评审（Pharmaceutics）、3 条预印本、2 条机构/媒体报道。<b>标注「未经同行评审」者结论可能随评审变化，不宜作为临床决策依据。</b>所有外链指向原文、DOI 或 PubMed 记录页；本公司不转载全文。<br>
+  <b>免责声明：</b>本简报为面向从业者的信息聚合与解读，不构成诊疗建议、投资建议或产品选型结论。文中数据均引自公开来源，未做二次加工；「为什么与你有关」为基于公开信息的主观分析，不代表原作者观点。<br>
+  © AI新青年 · 主理人 Alan ｜ 2026-09-27（北京时间）｜ 仅供内部参考
+</footer>
+
+</div>
+</body>
+</html>

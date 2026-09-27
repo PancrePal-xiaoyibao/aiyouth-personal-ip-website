@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-08-21</title>
+<style>
+  :root {
+    --bg: #f6faf9;
+    --card: #ffffff;
+    --text: #1a2b29;
+    --muted: #5c6f6d;
+    --primary: #0d9488;
+    --primary-soft: rgba(13,148,136,0.10);
+    --border: #e2ecea;
+    --accent: #14b8a6;
+    --warn: #b45309;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1514;
+      --card: #16201f;
+      --text: #e6efed;
+      --muted: #9ab0ad;
+      --primary: #2dd4bf;
+      --primary-soft: rgba(45,212,191,0.12);
+      --border: #243230;
+      --accent: #14b8a6;
+      --warn: #fbbf24;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 32px 16px 48px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; }
+  .header {
+    background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+    border-radius: 12px;
+    padding: 32px 28px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .header .brand { font-size: 13px; letter-spacing: 2px; opacity: .9; font-weight: 600; }
+  .header h1 { font-size: 26px; margin: 8px 0 10px; font-weight: 700; }
+  .header .sub { font-size: 14px; opacity: .95; }
+  .profile {
+    display: flex; gap: 14px; align-items: center; margin-top: 18px;
+    background: rgba(255,255,255,0.14);
+    border-radius: 10px; padding: 12px 14px;
+  }
+  .profile .avatar {
+    width: 44px; height: 44px; border-radius: 10px; flex: none;
+    background: rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center;
+    font-size: 22px; font-weight: 700;
+  }
+  .profile .p-name { font-size: 15px; font-weight: 700; }
+  .profile .p-desc { font-size: 12.5px; opacity: .92; }
+  .meta-bar {
+    display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0;
+  }
+  .chip {
+    font-size: 12.5px; padding: 6px 12px; border-radius: 20px;
+    background: var(--primary-soft); color: var(--primary);
+    border: 1px solid var(--border); font-weight: 600;
+  }
+  .section { margin: 26px 0 12px; }
+  .section h2 {
+    font-size: 17px; font-weight: 700; display: flex; align-items: center; gap: 8px;
+  }
+  .section h2::before {
+    content: ""; width: 5px; height: 20px; border-radius: 3px;
+    background: var(--primary); display: inline-block;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 22px; margin: 14px 0;
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(13,148,136,0.10); }
+  .card .title {
+    font-size: 16.5px; font-weight: 700; line-height: 1.5; margin-bottom: 6px;
+  }
+  .card .title a { color: var(--text); text-decoration: none; }
+  .card .title a:hover { color: var(--primary); }
+  .card .src {
+    font-size: 12.5px; color: var(--muted); margin-bottom: 10px;
+  }
+  .card .src .tag {
+    display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 6px;
+    background: var(--primary-soft); color: var(--primary); margin-right: 8px; font-weight: 600;
+  }
+  .card .abstract { font-size: 14px; color: var(--text); margin-bottom: 12px; }
+  .card .relevance {
+    font-size: 13.5px; background: var(--primary-soft);
+    border-left: 3px solid var(--primary);
+    padding: 10px 12px; border-radius: 0 8px 8px 0; color: var(--text);
+  }
+  .card .relevance b { color: var(--primary); }
+  .preprint-note {
+    font-size: 11.5px; color: var(--warn); font-weight: 600;
+    background: rgba(180,83,9,0.08); border: 1px dashed var(--warn);
+    border-radius: 6px; padding: 2px 8px; margin-left: 8px; vertical-align: middle;
+  }
+  .action {
+    background: linear-gradient(135deg, rgba(13,148,136,0.08), rgba(20,184,166,0.12));
+    border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; margin-top: 26px;
+  }
+  .action h2 { font-size: 17px; font-weight: 700; margin-bottom: 14px; color: var(--primary); }
+  .action ol { padding-left: 20px; }
+  .action li { margin: 10px 0; font-size: 14.5px; }
+  .action li b { color: var(--primary); }
+  .footer {
+    margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--border);
+    font-size: 12px; color: var(--muted); text-align: center; line-height: 1.9;
+  }
+  .footer a { color: var(--primary); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <div class="brand">AI新青年 · MED AI FOCUS</div>
+    <h1>医疗 AI 聚焦简报</h1>
+    <div class="sub">给「儿科医师 × AI Builder」的每日硬核信号 · 少而精，不注水</div>
+    <div class="profile">
+      <div class="avatar">🚀</div>
+      <div>
+        <div class="p-name">Alan（李帅帅）· 主理人画像</div>
+        <div class="p-desc">三甲儿科规培医师转型 AI ｜ 小雪宝 LeukemiaPal ｜ 星桥计划（孤独症数字疗愈）｜ 孤独症量表 AI 平台</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="meta-bar">
+    <span class="chip">📅 2026-08-21（星期五）</span>
+    <span class="chip">🎯 精选 6 条</span>
+    <span class="chip">🩺 儿科 / 血液肿瘤 / 孤独症 / 临床落地</span>
+    <span class="chip">📚 AI HOT + PubMed + medRxiv</span>
+  </div>
+
+  <!-- 前沿研究 · 论文 -->
+  <div class="section"><h2>前沿研究 · 论文</h2></div>
+
+  <div class="card">
+    <div class="title"><a href="https://pubmed.ncbi.nlm.nih.gov/42622954/" target="_blank">AI 增强的孤独症谱系障碍小学生科学学习：教育机器人 + 虚拟现实准实验研究</a></div>
+    <div class="src"><span class="tag">论文</span>Journal of Autism and Developmental Disorders · 2026-08-20 · <a href="https://pubmed.ncbi.nlm.nih.gov/42622954/" target="_blank" style="color:var(--primary);text-decoration:none;">PMID 42622954</a></div>
+    <div class="abstract">对 34 名 ASD 小学生开展准实验（实验组 vs 传统教学），AI 增强的多感官教学在「光与色彩」概念理解上显著优于对照组，效应量较大；同时观察到好奇心、持续注意、协作、情绪调节与自主性的提升。结论指向 AI 可作为特教场景中教师之外的「共同中介者」。</div>
+    <div class="relevance"><b>为什么与你有关：</b>这是「星桥计划」最直接的证据补充——AI 机器人/VR 对孤独症儿童并非噱头，而是有准实验数据支撑的「共中介」角色。可直接转成视频号一条「AI 陪自闭症孩子上课，有效吗？」的选题，把效应量数据做成可视化卡片。</div>
+  </div>
+
+  <div class="card">
+    <div class="title"><a href="https://pubmed.ncbi.nlm.nih.gov/42623180/" target="_blank">大语言模型用于肿瘤临床指南维护：前瞻性案例研究（Kather 团队）</a></div>
+    <div class="src"><span class="tag">论文</span>JMIR AI · 2026-08-20 · <a href="https://pubmed.ncbi.nlm.nih.gov/42623180/" target="_blank" style="color:var(--primary);text-decoration:none;">PMID 42623180</a></div>
+    <div class="abstract">用 PTCL 指南做前瞻案例：前沿模型预测 2025 年更新仅命中 36.7%–40%，且常夸大证据；但单研究数据抽取准确率最高达 99.2%，并能作为自动化审计器平均每份指南检出 16.5 处形式错误。结论：LLM 目前不足以自主撰写指南，但在证据抽取与质控上已可用。</div>
+    <div class="relevance"><b>为什么与你有关：</b>血液肿瘤方向 + 指南维护是「小雪宝 LeukemiaPal」内容可信度工程的教科书式边界——能做什么（抽取、质控）、不能做什么（自主撰写）说得清清楚楚。提醒你：给白血病患儿家庭做的知识库，AI 生成部分必须配「来源审计」层，别让 LLM 自主产出结论。</div>
+  </div>
+
+  <div class="card">
+    <div class="title"><a href="https://pubmed.ncbi.nlm.nih.gov/42622821/" target="_blank">儿科放射学 AI 的未来展望（社论）</a></div>
+    <div class="src"><span class="tag">论文</span>Pediatric Radiology · 2026-08-20 · <a href="https://pubmed.ncbi.nlm.nih.gov/42622821/" target="_blank" style="color:var(--primary);text-decoration:none;">PMID 42622821</a></div>
+    <div class="abstract">由英国皇家放射学会 AI 顾问委员会联合主席 Offiah 撰写，聚焦儿科影像 AI 的独特挑战——儿童数据稀缺、跨年龄发育差异、法规与伦理门槛，展望 AI 在儿科放射中「辅助而非替代」的定位。</div>
+    <div class="relevance"><b>为什么与你有关：</b>你是有儿科背景的 AI 人，「儿科数据稀缺」正是你做孤独症量表和儿科产品时的稀缺价值点——懂临床 + 懂 AI 的双料身份，是这个领域最缺的人设标签。可作为「儿科 AI 为什么难、为什么值得做」的内容素材。</div>
+  </div>
+
+  <!-- 前沿研究 · 预印本 -->
+  <div class="section"><h2>前沿研究 · 预印本<span style="font-size:12px;color:var(--muted);font-weight:500;">（均未经同行评审）</span></h2></div>
+
+  <div class="card">
+    <div class="title"><a href="https://doi.org/10.64898/2026.08.11.26359946" target="_blank">Grounding Health AI：领域专家代谢健康智能体的架构与评测<span class="preprint-note">未经同行评审</span></a></div>
+    <div class="src"><span class="tag">预印本</span>medRxiv · health informatics · 2026-08-14 · <a href="https://doi.org/10.64898/2026.08.11.26359946" target="_blank" style="color:var(--primary);text-decoration:none;">DOI 10.64898/2026.08.11.26359946</a></div>
+    <div class="abstract">通用大模型生成健康报告会「捏造」衍生临床指标（如杜撰 MAGE 值、虚增餐次）。该团队用四层「接地」架构——深度表型队列 + 21 个领域工具/模型封装 + 声明式技能约束 + 自动化评测——把报告的形式/溯源得分从 0.37 拉到 0.91。结论：可信的领域医疗 AI 是系统工程问题，而非单靠换模型。</div>
+    <div class="relevance"><b>为什么与你有关：</b>这就是你「孤独症量表 AI 平台」该照抄的蓝本——量表分数是「衍生指标」，最怕 AI 算错或杜撰。把「工具层算分 + 声明式约束 + 评测驱动」这套架构搬进量表平台，能直接把「AI 报错分」的翻车风险压到最低。</div>
+  </div>
+
+  <div class="card">
+    <div class="title"><a href="https://doi.org/10.64898/2026.08.12.26360210" target="_blank">大语言模型在真实临床数据推理时会生成污名化语言<span class="preprint-note">未经同行评审</span></a></div>
+    <div class="src"><span class="tag">预印本</span>medRxiv · health informatics · 2026-08-14 · <a href="https://doi.org/10.64898/2026.08.12.26360210" target="_blank" style="color:var(--primary);text-decoration:none;">DOI 10.64898/2026.08.12.26360210</a></div>
+    <div class="abstract">针对临床文档中的污名化语言（负面刻板印象、评判性措辞），研究揭示：随着 LLM 生成的临床文档增多，模型在推理真实临床数据时也会「传染」污名化语言，这与更差的照护与不良健康结局相关。</div>
+    <div class="relevance"><b>为什么与你有关：</b>对孤独症、精神心理类产品是红线级提醒——量表报告、家长沟通话术里，AI 一旦输出「贴标签」式措辞，对家长和孩子是二次伤害。建议给星桥/量表的输出层加一道「语言安全」过滤与措辞规范，这比功能炫技重要得多。</div>
+  </div>
+
+  <!-- 医疗模型与临床落地 -->
+  <div class="section"><h2>医疗模型与临床落地</h2></div>
+
+  <div class="card">
+    <div class="title"><a href="https://x.com/elonmusk/status/2090078247392555471" target="_blank">Grok 4.6 登顶医疗智能体基准 MedAgentBench（约 95.9%）</a></div>
+    <div class="src"><span class="tag">行业</span>AI HOT（源自 xAI） · 北京时间 2026-08-19 22:07</div>
+    <div class="abstract">MedAgentBench 在真实电子健康记录环境中测试 300 项临床任务，要求模型推理、调用工具并执行多步临床工作流。Grok 4.6 以约 95.9% 登顶，超过 GPT-5.6 Sol（约 94.7%）与 Grok 4.5（约 93.4%）。</div>
+    <div class="relevance"><b>为什么与你有关：</b>「医疗智能体」正从问答转向多步临床工作流执行，这是你判断「给本地团队选哪个底座」的实时坐标。注意别被榜单带节奏——MedAgentBench 测的是工具调用与流程，不等于儿科/孤独症等垂直场景的真实能力，选型仍要回到你自己的评测集。</div>
+  </div>
+
+  <!-- 行业与监管动态 -->
+  <div class="section"><h2>行业与监管动态</h2></div>
+
+  <div class="card">
+    <div class="title"><a href="https://the-decoder.com/as-ai-beats-doctors-regulators-shouldnt-force-a-human-into-the-loop-jama-piece-says" target="_blank">JAMA 评论：AI 超越医生时，监管者不应强制「人在环」</a></div>
+    <div class="src"><span class="tag">行业</span>AI HOT（源自 JAMA 评论 / The Decoder） · 北京时间 2026-08-18 19:43</div>
+    <div class="abstract">《JAMA》评论预测自主 AI 在医学推理上将超越任何「医生+AI」组合，并呼吁监管不要把人类介入写死进规则。文章援引：ChatGPT o3 在 377 个复杂病例中 60% 首先给出正确诊断，而 20 名内科医生仅 15.9%；预计到 2030 年自主 AI 可胜任部分认知类医疗工作流。</div>
+    <div class="relevance"><b>为什么与你有关：</b>这是与昨天「AI 生成结论须配来源审计」形成辩证张力的一条——行业在「去人类把关」与「安全兜底」之间撕扯。对你做面向青少年/家长的产品是明确信号：技术越激进，你越要主动打「可信、可解释、家长可控」这张安全牌，这是差异化，不是包袱。</div>
+  </div>
+
+  <!-- 今日行动建议 -->
+  <div class="action">
+    <h2>🎯 今日行动建议（绑定在手项目）</h2>
+    <ol>
+      <li><b>星桥计划：</b>把孤独症 AI 学习研究（PMID 42622954）的效应量数据做成 1 张可视化卡片，转一条视频号选题「AI 陪自闭症孩子上课，有效吗？」，一次讲清「共中介」而非「替代老师」的定位。</li>
+      <li><b>小雪宝 LeukemiaPal：</b>参照肿瘤指南 LLM 研究（PMID 42623180）的边界结论，给知识库 AI 生成内容加一道「来源审计 + 不自主下结论」的约束层，作为对家长的可信度承诺。</li>
+      <li><b>孤独症量表 AI 平台：</b>立即把「Grounding Health AI」的「工具算分 + 声明式约束 + 评测驱动」架构落到量表得分生成环节，并在输出层加污名化语言过滤（对应 DOI 10.64898/2026.08.12.26360210）。</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <div>数据来源：<a href="https://aihot.virxact.com" target="_blank">AI HOT</a> ｜ <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank">PubMed</a> ｜ <a href="https://www.medrxiv.org" target="_blank">medRxiv</a>（预印本未经同行评审）</div>
+    <div>本简报由 AI 自动生成，仅作信息参考，不构成医疗建议。医疗决策请咨询专业医师。</div>
+    <div>© AI新青年 · 2026-08-21</div>
+  </div>
+
+</div>
+</body>
+</html>

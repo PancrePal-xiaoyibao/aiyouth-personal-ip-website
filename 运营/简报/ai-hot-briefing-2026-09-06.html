@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI新青年 · 全球 AI 前沿简报 2026-09-06</title>
+<style>
+:root{--bg:#f7f7fb;--card:#ffffff;--fg:#1a1a2e;--muted:#6b7280;--line:#e5e7eb;
+--pri:#6366f1;--chip:#eef2ff;--soft:#f3f4f6;}
+@media (prefers-color-scheme: dark){
+:root{--bg:#0f1117;--card:#171a23;--fg:#e8e8ef;--muted:#9ca3af;--line:#262a36;
+--chip:#1e2233;--soft:#1c2029;}
+}
+*{box-sizing:border-box;}
+body{margin:0;padding:24px 16px 60px;background:var(--bg);color:var(--fg);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+line-height:1.7;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:860px;margin:0 auto;}
+.hero{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border-radius:16px;
+padding:28px 26px;margin-bottom:26px;}
+.hero h1{margin:0 0 8px;font-size:26px;letter-spacing:.5px;}
+.hero .sub{opacity:.92;font-size:14px;margin-bottom:14px;}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;}
+.pill{background:rgba(255,255,255,.18);border-radius:999px;padding:4px 12px;font-size:12.5px;}
+.sec{margin:30px 0 14px;display:flex;align-items:center;gap:10px;}
+.sec .bar{width:5px;height:20px;border-radius:3px;}
+.sec h2{margin:0;font-size:19px;}
+.sec .n{color:var(--muted);font-size:13px;font-weight:400;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+padding:18px 20px;margin-bottom:14px;}
+.card h3{margin:0 0 8px;font-size:16.5px;line-height:1.55;}
+.card h3 a{color:var(--fg);text-decoration:none;border-bottom:1px solid transparent;}
+.card h3 a:hover{color:var(--pri);border-bottom-color:var(--pri);}
+.score{color:var(--pri);font-weight:700;font-size:14px;white-space:nowrap;}
+.src{color:var(--muted);font-size:12.5px;margin-bottom:10px;}
+.src b{color:var(--fg);font-weight:600;}
+.sum{margin:0 0 10px;font-size:14.5px;}
+.why{background:var(--chip);border-left:3px solid var(--pri);border-radius:0 8px 8px 0;
+padding:10px 14px;margin:0 0 10px;font-size:13.5px;}
+.why .why-label{color:var(--pri);font-weight:700;}
+.why p{margin:6px 0 0;}
+.origin{margin:6px 0 0;font-size:13px;}
+.origin a{color:var(--pri);text-decoration:none;}
+.act{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--pri);
+border-radius:12px;padding:18px 20px;margin-top:28px;}
+.act h2{margin:0 0 10px;font-size:17px;}
+.act ol{margin:0;padding-left:20px;font-size:14.5px;}
+.act li{margin-bottom:8px;}
+.foot{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);
+color:var(--muted);font-size:12.5px;line-height:1.9;}
+@media(max-width:600px){.hero h1{font-size:21px;}body{padding:16px 10px 40px;}}
+</style></head><body><div class="wrap">
+<div class="hero">
+<h1>AI新青年 · 全球 AI 前沿简报</h1>
+<div class="sub">主理人 李帅帅（Alan）· 三甲儿科规培医师转型 AI ·「AI新青年」视频号主理人 · 受众为青少年与家长</div>
+<div class="meta">
+<span class="pill">2026-09-06</span>
+<span class="pill">时间窗：近 3 日</span>
+<span class="pill">精选 20 条</span>
+<span class="pill">模型发布 / 产品 / 行业 / 论文教程 / 观点</span>
+</div></div>
+<div class="sec">
+<span class="bar" style="background:#6366f1"></span>
+<h2>模型发布</h2><span class="n">5 条</span>
+</div>
+<article class="card">
+<h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/" target="_blank" rel="noopener">Introducing agentic video understanding with Gemini</a> <span class="score">【9.0分】</span></h3>
+<div class="src"><b>Google DeepMind</b> · 9月1日（Google DeepMind 博客）</div>
+<p class="sum">Gemini 不再按固定帧率被动「看完」整个视频，而是在智能体循环里自己决定看哪一段、以什么速度看、通过哪种模态看（画面帧 / 音频 / 字幕），只取回答真正需要的片段。覆盖 Gemini 3.7 Flash、3.6 Flash、3.5 Flash-Lite，3.7 Flash 处在准确率-成本帕累托前沿。核心数字：token 消耗最多降 88%，分析成本最多降 66%，准确率最高还提升 7%。解锁的能力包括亚秒级瞬间检索（传统 1 FPS 会漏掉紧凑剪辑边界）、数小时长视频的大海捞针搜索、对可疑时间窗以更高 FPS 重采样做异常检测、动作与物体计数。接入方式只是在 API 的 video 输入里把 processing 设成 "agentic"，按标准 token 计价、无额外功能费。已上 Google AI Studio 与 Gemini Enterprise Agent Platform，未来几个月会进 YouTube 观看页的 Ask YouTube。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>一个参数换 88% 的 token 降幅，这是今天最容易验证的一条。你的本地内容团队每天要处理大量视频素材，即便最终跑本地方案，也值得先用同一批素材跑一次 agentic 与固定 1 FPS 的对比，把「省在哪、准在哪」量化出来——这个对照数据本身就是内容。更值得留意的是它的思路：与其把长视频硬塞进上下文，不如让模型自己决定采样策略。同样的范式可以直接搬到你的长文档与长会诊记录处理上。</p></div>
+<p class="origin"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/" target="_blank" rel="noopener">Gemini Omni 1.1 Flash lets you build with more control</a> <span class="score">【8.4分】</span></h3>
+<div class="src"><b>Google DeepMind</b> · 8月27日（Google DeepMind 博客）</div>
+<p class="sum">Gemini Omni 1.1 Flash 是一套面向开发者的「创意控制 + 生成式视频」能力更新，定位生产就绪，API 模型名 gemini-omni-1.1-flash。四项关键控制：场景扩展（可分析最多 10 秒前文，此前只参考最后 1 秒，以 10 秒为增量累计延长到最长 40 秒）；首帧/尾帧插值（指定镜头首尾，中间由模型生成，可做环绕运镜、变焦转场、无缝循环）；360p 快速草稿（比 720p 快最多 60%，成本约为 1/3，用于分镜迭代，一次生成 3~4 个变体逐因素对比）；输出可上采样到 1080p 或 4K。还可引用最多 3 秒视频作参考，配合图像与文本保持角色与视觉一致性。已在 Google AI Studio 与 Gemini Enterprise Agent Platform 开放，Adobe Firefly、Figma Weave、GMI Cloud、Runway 已接入生产。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>「最长 40 秒 + 首尾帧可控 + 360p 草稿三分之一成本」这三件事凑齐，才第一次让 AI 视频有了导演感而不是抽奖感。你做本地视频生成最痛的正是控不住镜头与角色一致性，这里的取舍逻辑可以直接借鉴：先用廉价草稿把创意空间跑完，再只对选定方案做高分辨率渲染。即便不用它的 API，这套「草稿—筛选—精修」的三级成本结构也该成为你本地流水线的默认设计。</p></div>
+<p class="origin"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://research.meta.ai/blog/introducing-muse-spark-1-3" target="_blank" rel="noopener">Meta 发布 Muse Spark 1.3：主打长程智能体与编码，工具调用少 20%、token 少 25%</a> <span class="score">【7.4分】</span></h3>
+<div class="src"><b>Meta AI Research 官方博客</b> · 9月2日（Meta AI Research 官方博客）</div>
+<p class="sum">Meta 发布 Muse Spark 1.3，主打长程智能体任务与编码，已上 Muse Code 与 Meta Model API（含 max reasoning 档）。行为层面的改动比跑分更值得看：在单一长线程里同时维持多个工作流，主动补全计划缺口、记住已学到的信息；提示词含糊时主动澄清，卡住时向用户求助，执行高后果操作前先确认；对自身能力边界的校准更准，撞墙时不再硬编结果。效率上相对 1.2 少约 20% 工具调用、约 25% token。安全侧强化了抗提示注入与对不可逆动作的识别。第三方 Artificial Analysis 显示 1.3 综合智能指数约 61 分（xhigh）、限量预览的 max 档 62 分，与 GPT-5.6 Sol、Claude Opus 5、Grok 4.6 High 处在同一档；Meta 自述在 DeepSWE v1.1 上得 75.4。扎克伯格称 Muse Spark 的开放权重版本「即将」发布，但 1.3 是否开源权重尚未决定。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>真正值得抄的不是分数，是「少 25% token」的实现路径——它靠的是主动澄清与提前求助，而不是压榨推理。这与你派 Claude Code 干活的体感是同一件事：一次性把需求说清楚，比让模型在错误方向上烧三轮便宜得多，值得写进你给 Claude Code 的任务书模板。另一条是开放权重的悬念：Muse Spark 一旦真开源，本地 agent 又多一个可选底座，值得盯。</p></div>
+<p class="origin"><a href="https://research.meta.ai/blog/introducing-muse-spark-1-3" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://microsoft.ai/news/pushing-the-quality-cost-frontier-with-mai-image-2-6/" target="_blank" rel="noopener">Pushing the quality-cost frontier with MAI-Image-2.6</a> <span class="score">【7.7分】</span></h3>
+<div class="src"><b>Microsoft AI 官方</b> · 9月4日（Microsoft AI 官方）</div>
+<p class="sum">微软发布 MAI-Image-2.6 并同步推出面向高吞吐生产场景的 MAI-Image-2.6-Flash。质量上 2.6 在 Arena 文生图与图像编辑均排第 2，在 Artificial Analysis 文生图第 2、图像编辑第 1；微软称其每 Elo 的价格表现为全球最佳。Flash 版比 GPT-Image-2-Medium 快 2.8 倍、效率高 72%。两者都支持多图参考编辑（把不同图片里的人、产品、风格、场景合成到一起）、联网取实时信息做 web grounding、最高 1.5K 分辨率与动态宽高比。已在 Microsoft Foundry 公开预览，可在 MAI Playground 免费试用。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>多图参考编辑 + web grounding 这个组合，对每天的公众号封面几乎是量身定做的：把品牌色、人物形象、当日主题关键词一起丢进去，一次性出可挑的多个版本，比反复改提示词快得多。你现在的封面是本地脚本生成，值得拿同一组素材做一次质量与耗时对比——如果 Flash 档能在几秒内稳定出可用图，就能把封面从「工序」降级成「自动步骤」。注意它是付费 API，先算清楚每天几张的量级再决定。</p></div>
+<p class="origin"><a href="https://microsoft.ai/news/pushing-the-quality-cost-frontier-with-mai-image-2-6/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/" target="_blank" rel="noopener">Google 发布 WeatherNext 3：每小时更新、5 公里分辨率，降水准确率提升最多 60%</a> <span class="score">【5.7分】</span></h3>
+<div class="src"><b>Google DeepMind / Google Research</b> · 9月3日（Google DeepMind / Google Research）</div>
+<p class="sum">Google DeepMind 与 Google Research 发布 WeatherNext 3，接的是实时观测而不是数值天气预报（NWP）再分析数据——后者有约六小时数据延迟，会让降水、地表温度这类快变量产生偏差。它直接吃全球地球静止卫星拼图，每小时出一次预报；关键地表变量分辨率达 5 公里，其他地表变量 10 公里，风速等大气变量 25 公里，比上一代 25 公里 / 六小时一次提升约五倍。架构沿用 Functional Generative Network，潜变量从 768 加到 1024，mesh transformer 从 24 层加深到 32 层，产出 15 天、64 成员的集合预报。降水上相对 IMERG 的 CRPS 提升最多 60%、相对 MRMS 提升 30%、相对雨量计在短预见期提升 10%。还新增了面向可再生能源的变量：100 米高度风速（风机高度）与高分辨率云量、太阳辐射。即日起接入 Google 搜索、Gemini、地图、Maps Platform 天气 API 与 Earth Engine。论文也如实列了缺陷：单个样本有六边形网格伪影、部分输出头在六小时边界有跳变、站点头存在整体偏暖或偏冷。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>这条跟你的项目没有直接关联，收进来是因为它代表了 AI for Science 的一个成熟信号：不是跑分更好，而是已经进了 Google 搜索和地图给几十亿人用，并且官方主动把伪影和偏差写进论文。那个「100 米风速 + 云量 + 辐射」的细节也说明，模型设计正在从通用预测转向为具体产业（这里是电网调度）定制输出变量——这个产品化路径比模型本身更值得琢磨。</p></div>
+<p class="origin"><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<div class="sec">
+<span class="bar" style="background:#0ea5e9"></span>
+<h2>产品发布</h2><span class="n">3 条</span>
+</div>
+<article class="card">
+<h3><a href="https://github.com/okf-memory/okf-agent-memory" target="_blank" rel="noopener">OKF Agent Memory – Git-native persistent memory for AI coding agents</a> <span class="score">【8.8分】</span></h3>
+<div class="src"><b>GitHub</b> · 9月5日（GitHub，Hacker News 9月6日 06:15 收录）</div>
+<p class="sum">OKF Agent Memory 给 AI 编码智能体做了一层 git 原生的持久记忆：知识以带 YAML frontmatter 的纯 Markdown 存在仓库的 knowledge/ 目录里，用 git diff / git log 就能审查和回溯，不需要任何外部数据库。它基于 Google 的 Open Knowledge Format v0.2，支持来源溯源（sources）、信任分级（generated vs verified）与生命周期元数据（status / stale_after）。核心机制是渐进式披露——靠层级 index.md 与链接图让智能体只加载需要的概念，配合「先搜索再写入」原则防止概念重复，官方称可削减 80% 的 token 膨胀。检索用内存 BM25，延迟低于 300 微秒，验证图谱约 4 毫秒，零 API 成本。单二进制、纯 Go 零依赖，内置 MCP server（okf mcp），一条 okf bootstrap 可把整套记忆栈（knowledge/、.agents/skills/、AGENTS.md、Makefile）注入任意项目。MIT 协议。仓库里还有与 Mem0、Letta 及裸 Markdown 的对比文档，以及在 8 个以上本地与云端模型上的可复现基准。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>这条几乎是为你的工作方式定做的：你已经有 AGENTS.md 和 .workbuddy/memory 这套约定，但它们是「一个文件越写越长」，而 OKF 把它变成了可版本控制、可渐进加载的知识图谱，且检索完全本地、零 API 成本。最该抄的是两个设计：一是「先搜索再写入」——你现在每次会话回写记忆，其实缺的正是这一步去重闸门；二是渐进式披露的 index.md 层级，能直接解决记忆文件膨胀后塞不进上下文的问题。装上 MCP 大概十分钟，值得今天就试一个项目。</p></div>
+<p class="origin"><a href="https://github.com/okf-memory/okf-agent-memory" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://www.phntmcore.com/" target="_blank" rel="noopener">Show HN: Phntm-ONE: I built a local AI desk assistant</a> <span class="score">【7.0分】</span></h3>
+<div class="src"><b>Hacker News</b> · 9月6日 05:03（Show HN）</div>
+<p class="sum">作者 Jacob 一人做出 PHNTM One：一台放在桌上的私有 AI 设备，树莓派 5 / 8GB 内存装进 10.1 英寸触摸屏外壳，本地跑 Gemma 3 4B（Q4_K_M），断网可用，$549 一次性买断、无订阅、无账号、零遥测。默认「什么都不会离开这台盒子」；可选自带 API key 调用前沿模型，但关闭是默认，且设备会标注每一条答案中哪些离开了本机。交互靠桌面触摸屏的呼吸球体，或扫码后在手机浏览器里开一个直连设备的私有聊天（不经应用商店、不经云中转）。系统跑 Debian，SSH 开放且写进文档。作者把怀疑者关心的东西全公开了：完整物料清单（零件成本 $409.95，毛利约 $100）、不间断运行的连续性说明（我们不存在的服务器，所以它不会变砖）、未编辑的模型输出记录（含错误答案）、与云音箱和聊天 App 的逐项对比（含自家会输的行）、每台机器的序列号与烤机数据。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>549 美元买一个 4B 模型，账面上显然不划算——真正值钱的是他那套「把可验证性做成卖点」的做法：物料清单、错误输出、自家会输的对比项，全部公开。这个思路对你的一人公司是直接可迁移的：客户买的不只是能力，还有「我能不能自己验证你说的话」。另一头，扫码直连设备、不经云的私有聊天，是本地 AI 产品化的一个干净形态，做本地部署方案时可以参照它的通信路径。</p></div>
+<p class="origin"><a href="https://www.phntmcore.com/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1w8asps/eidon_an_allinone_selfhosted_ai_platform_chat/" target="_blank" rel="noopener">Eidon：单个 Docker 容器的一体化自托管 AI 平台（聊天 / 智能体 / 自动化）</a> <span class="score">【6.6分】</span></h3>
+<div class="src"><b>Reddit r/LocalLLaMA</b> · 9月6日 03:57（Reddit r/LocalLLaMA）</div>
+<p class="sum">作者自述做了一个叫 Eidon 的一体化自托管 AI 平台：聊天、智能体（Grok bot 那种风格）、自动化、工具调用都包含在内，单个 Docker 容器部署，可接 Ollama / LM Studio，AGPL 协议，刚迭代到 v4。原帖标题强调「one single Docker container」，定位是把目前要拼好几套东西才能凑齐的自托管栈压成一个容器。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>价值判断要保守：这条只有 Reddit 原帖标题与 RSS 摘要可核，正文抓不到（r/LocalLLaMA 网页取不到正文是常态），功能细节与完成度未经我独立验证，建议先看仓库再决定。之所以仍然收进来，是因为它指向一个真实趋势——自托管栈正在从「自己拼 Ollama + n8n + 各种 UI」走向「一个容器给全」。你给客户做本地部署时，交付复杂度往往是比模型能力更大的障碍，这类一体化方案值得放进备选清单持续观察。细节以原帖为准。</p></div>
+<p class="origin"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1w8asps/eidon_an_allinone_selfhosted_ai_platform_chat/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<div class="sec">
+<span class="bar" style="background:#f59e0b"></span>
+<h2>行业动态</h2><span class="n">4 条</span>
+</div>
+<article class="card">
+<h3><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/claude-nukes-a-developers-700-gb-home-directory-while-testing-a-script-to-ensure-it-wouldnt-do-so-automatic-model-downgrade-may-have-contributed-to-the-screw-up" target="_blank" rel="noopener">Claude安全机制大翻车！AI怒删开发者700GB主目录</a> <span class="score">【9.3分】</span></h3>
+<div class="src"><b>Tom's Hardware</b> · 8月26日事发 / 8月28日 Tom's Hardware 报道（机器之心 8月30日转载）</div>
+<p class="sum">开发者 Sebastien Guillemot 让 Claude Fable 5 写个脚本清理 /tmp 里智能体留下的垃圾。因为涉及硬删除，Fable 5 主动发起对抗性审查，Anthropic 的运行框架判定风险高，把执行模型从 Fable 5 一路降到 Opus 5、再降到 Opus 4.8。Opus 4.8 跑安全测试时正确识别出 /tmp 与主目录都不可删——测试通过。但测试结束后清理产物那一步复用了同一个变量名，而那个变量此刻指向的正是主目录，于是 rm -rf 落在了主目录上。约 700GB、一周工作成果被删，而本来该清的 /tmp 一根毛没少。当事人贴出的代码显示是「先赋值、后校验」：PIN_CANARY 先被赋成待删路径，紧接着才校验，校验失败触发 EXIT trap 与 pin_cleanup，而删除对象正是这个变量——拒绝路径自己执行了删除。他靠 git、nix 与会话日志找回了大部分数据，但那是一台没有完整备份的开发机。社区对这套降级机制的三个集中吐槽是：过于敏感、一旦触发黏住整个会话、以及最讽刺的一点——越危险的任务越交给更弱的模型。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>这条今天就该落地两件事。第一，把你派 Claude Code 的权限收窄：rm -rf、清库、改账号、部署上线这些不可逆操作移出「以后不再询问」的允许列表，设成每次都问；危险测试一律丢进可丢弃的容器或虚拟机。第二，备份要放在 Agent 权限之外——git 救得了进版本管理的代码，图片、密钥和本地数据它救不了。更值得记住的是那层反讽：安全机制把最贵的一次判断交给了能力更弱的模型。你自己的自动化管线里如果也有「遇险自动降级/自动换手」的设计，务必检查降级后的模型是否还扛得住当前任务的精度要求。</p></div>
+<p class="origin"><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/claude-nukes-a-developers-700-gb-home-directory-while-testing-a-script-to-ensure-it-wouldnt-do-so-automatic-model-downgrade-may-have-contributed-to-the-screw-up" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://www.techpolicy.press/americas-two-largest-school-districts-impose-ai-moratoriums/" target="_blank" rel="noopener">America's two largest school districts impose AI moratoriums</a> <span class="score">【8.6分】</span></h3>
+<div class="src"><b>TechPolicy.Press</b> · 9月5日（TechPolicy.Press）</div>
+<p class="sum">开学前一周，全美最大的两个学区同时转向收紧。纽约市教育局宣布新学年禁止 K-8 年级所有面向学生的 AI，高中生只允许使用一份经过审批的工具有限清单；这比 3 月那版「几乎全部学生使用都归为黄灯、交由教师自行判断」的草案严得多——草案在家长强烈反对后被承认「没打中靶心」，暑期还暂停了软件采购。同一天，洛杉矶联合学区宣布对全部约 37.8 万名学生实施为期一年的生成式 AI 禁用，连学区官员都感到突然。推动力量是自下而上的家长、教师与学生联盟（NYC 的 AIM Coalition、LA 的 Schools Beyond Screens），组织度远超 2023 年那轮 ChatGPT 封禁。两个学区都有一年时间来制定长期政策，而这次想悄悄回滚不会像上次那么容易。联盟仍不满意：部分学校仍要开 AI 试点、对教职工使用 AI 限制太少、缺工具评估指标。一位八年级教师的理由指向青少年：我们知道聊天机器人是什么，我们知道青少年心理健康危机是什么，也知道连成年人都倾向于把它当免费心理咨询——这时候忽视高中生的需求是很危险的。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>对你的受众（青少年与家长）来说，这是近期最硬的一条外部信号：全世界最大的两个公立教育系统，在家长和教师的压力下，把 AI 挡在了初中以下门外。它把「该不该让孩子用 AI」从个人选择变成了制度选择，而这个论证过程（谁推动的、反对者担心什么、留了什么口子）本身就是极好的内容骨架。更关键的是那位教师的理由——担心的不是成绩，是把聊天机器人当心理依靠。这条线跟你做孤独症与儿童陪伴产品的伦理边界是直接相通的，值得单独做一期。</p></div>
+<p class="origin"><a href="https://www.techpolicy.press/americas-two-largest-school-districts-impose-ai-moratoriums/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://www.qbitai.com/2026/09/484649.html" target="_blank" rel="noopener">陶哲轩吐槽GPT-6孪生素数新突破：令人无语的一幕</a> <span class="score">【7.9分】</span></h3>
+<div class="src"><b>量子位</b> · 9月5日 12:24（量子位）</div>
+<p class="sum">一向积极拥抱 AI 的陶哲轩发了一条警告：AI 抢答数学难题，反而可能阻碍数学的真正发展。直接诱因是 GPT-6 Astra 一发布就用 Lean 形式化证明把孪生素数猜想连续素数间距上界从 246 推到 186，Anthropic 与 Axiom 同期宣布做到 188 与 212，他对这种竞速的评价是「这可真是令人无语的一幕」。他的核心论点不是反对 AI for Math：如果迭代者提前知道最终正确的拟设是什么，就很容易抑制对其他路线的探索，而那些看似死胡同的路线「为什么会失败」往往极具启发性。他以纳维-斯托克斯方程全局正则性为例——历史上人类攻克这个问题的尝试，产出了 Leray-Hopf 弱解、Gagliardo-Nirenberg-Ladyzhenskaya 不等式、Prodi-Serrin 部分正则性定理、Beale-Kato-Majda 爆破判据等一批奠基性成果，他自己没解决爆破问题，却在尝试中意外把流体计算、图灵普适性和辛拓扑联系到了一起。如果一家公司在内部闭门迭代、直接吐出一个人类无法理解的答案，问题在技术意义上被解决了，数学本身却几乎没获得新增价值。他提醒牛津数学家 Julia Stadlmann 恰好赶在 8 月 31 日凭平滑模数的新估计把上界推到 240——若再晚一点，这份工作可能就被淹没了。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>这条给出了「AI 做出成果」之外一个很少被讨论的判据：成果有没有给人类留下可继承的中间产物。放到你的场景里，判断一个 AI 辅助流程值不值得做，不只要看它有没有交付结果，还要看过程是否留下了可解释、可复用的中间物——否则你只是在用黑盒换时间，能力并没有沉淀下来。另外「AI 抢发会淹没人类同期成果」这个效应，对你做知识库与内容创作同样成立：当 AI 产出以数量碾压时，人的原创工作反而更容易被埋，这可能是接下来几年内容行业最实际的一个风险。</p></div>
+<p class="origin"><a href="https://www.qbitai.com/2026/09/484649.html" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/" target="_blank" rel="noopener">Piloting the world's first double-blind AI evaluations</a> <span class="score">【7.2分】</span></h3>
+<div class="src"><b>Google DeepMind</b> · 8月27日（Google DeepMind 博客）</div>
+<p class="sum">DeepMind 联合新加坡 AI 安全研究所、OpenMined、AVERI、MLCommons，试点了针对专有前沿模型的「双盲评估」：外部评估方看不到模型权重，Google 看不到评估方的测试题。技术上跑在 Google Cloud 的 Confidential Space GPU enclave 里，用密码学证据保证两侧数据分别对各自所有者保密，从而消除基准污染，也免去过去「要么交测试题、要么交模型权重」的二选一。被评估的是 Gemini Flash Lite。文章只给了高层结论，具体方法论与发现指向单独的技术报告。意义在于把过去靠零日志协议与合同条款维持的保密，升级成了可验证的技术保障，尤其适用于网络安全与政府这类高敏感评估场景。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>落地性对你不高（这套东西你用不上），但它的存在本身是个信号：基准污染已经严重到需要上机密计算来解决。这跟下面 BenchMIRT 那条要连起来看——一边是有人在做更可信的评估流程，另一边是有人在拆穿现有基准到底测了什么。你跟客户讲「怎么判断一个 AI 能力宣称可不可信」时，这两条正好是一组现成素材：可信评估需要双盲隔离，而读榜单需要先问它测的到底是什么。</p></div>
+<p class="origin"><a href="https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<div class="sec">
+<span class="bar" style="background:#10b981"></span>
+<h2>论文研究 · 技术教程</h2><span class="n">5 条</span>
+</div>
+<article class="card">
+<h3><a href="https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality/" target="_blank" rel="noopener">Empty shelves or lost keys? Recall is the bottleneck for parametric factuality</a> <span class="score">【8.2分】</span></h3>
+<div class="src"><b>Google Research</b> · 8月12日（Google Research 博客）</div>
+<p class="sum">Google Research 提出「知识画像」框架，把事实性错误拆成编码失败与回忆失败两类，并用 WikiProfile 基准（2150 条维基百科事实、每事实 10 个任务、13 个模型、约 450 万条采样）实测。结论是前沿模型的参数化事实性瓶颈已经从存储转向提取：Gemini-3-Pro 与 GPT-5 已编码 95%~98% 的事实，但仍有 26%~34% 无法直接回忆，即便开启 thinking 仍有 11%~12% 答不出。thinking 能恢复 40%~65% 的「已编码但直接回忆失败」的事实，对未编码事实只恢复 5%~15%——说明 thinking 主要作用是帮助访问已有知识，而不是做无中生有的推理。Gemma 3 系列的 scaling 分析显示，模型变大能大幅减少编码失败，但回忆失败依然可观且在剩余错误中占比更高。稀有事实的编码率差距小而直接回忆差距大；反向诅咒在开放式生成中明显，在多项选择里却几乎消失，说明知识在参数里、只是取不出来。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>这条对你手上的知识库项目有直接方法论价值：它给出了一个可操作的诊断顺序——模型答错一个领域事实，先分清是「没存过」还是「存了取不出」，两者解法完全不同，前者要补数据，后者要靠推理时计算与后训练。你给医院或科室搭知识库时也一样：很多「AI 不知道」其实是检索与提问方式的问题，不是库里没有。另外一个能立刻用的结论是，对长尾、反向表述的问题，开启 thinking 的收益最大——值得把它做成你问答流程里的条件触发策略，而不是全程开或全程关。</p></div>
+<p class="origin"><a href="https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://huggingface.co/blog/allenai/benchmirt" target="_blank" rel="noopener">BenchMIRT: What are LLM benchmarks actually measuring?</a> <span class="score">【7.8分】</span></h3>
+<div class="src"><b>HuggingFace Blog</b> · 9月1日（HuggingFace 博客 / Ai2）</div>
+<p class="sum">Ai2 用多维项目反应理论（MIRT）在单题层面审计 LLM 基准：用 100 个开放权重模型、16 个基准、超过 34K 道题的评测结果，同时估计模型侧的各项能力与题目侧的难度与区分度。它在无监督的情况下稳定恢复出两个主导维度——safety 与 general reasoning，且重复分析都会出现。由此拆穿了几个常见误解：BBQ 名义上测社会偏见、常被归为安全类，实际与通用推理的关联更强；WMDP 测危险双用途知识，也与通用推理关联更强，且通用推理越强的模型得分反而越低（因为该基准把拒绝回答视作理想）；HarmBench 内部混杂，标准有害请求题与上下文题偏 safety，而版权题偏通用推理；WildJailbreak 把有害越狱题与良性提示平均成了一个分。实用层面：只保留 10% 的题目通常就能维持几乎相同的强弱判断，保留 50% 时往往比全量更贴近底层能力；预测模型在未见题目上的表现准确率 79%，简单基线 70%。局限也写明了：所用模型均为 2025 年 3 月前发布，维度依赖这 16 个基准的输入集。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>最实用的一条是「10% 的题目就够用」——如果你或客户正在为模型选型跑一大堆评测，这给出了一条明确的降本路径：先用题目级分析找出信息量高的题，剩下的全砍。另一个能立刻用上的判断习惯：看到某个安全类基准分数低，别直接下结论说这个模型不安全，先问这个分数里有多少是推理能力不足混进去的。还要注意它自己点出的风险——题目级信息也能被用来删掉最有信息量的安全题，做出一个更容易通过的「弱化评测」，看别人家的评测报告时值得多留个心眼。</p></div>
+<p class="origin"><a href="https://huggingface.co/blog/allenai/benchmirt" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://huggingface.co/blog/train-multi-vector-encoder" target="_blank" rel="noopener">Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers</a> <span class="score">【9.0分】</span></h3>
+<div class="src"><b>HuggingFace Blog</b> · HuggingFace 博客（Sentence Transformers v6.0）</div>
+<p class="sum">Sentence Transformers v6.0 新增 MultiVectorEncoder，这篇给出完整可复现的多向量（晚交互 / ColBERT 风格）检索模型微调配方。多向量为每个 token 保留一个小向量、用 MaxSim 算子求和，比整段压成一个向量保留更多细粒度信号，代价是索引更大。三个最关键的实证结论：一是必须解除长度截断——医学语料 passage 平均 941 token，通用模型按短文本训练会静默截断，造成最高 0.24 NDCG@10 的损失，超过不同架构之间的差距；二是起点选择反直觉，从 -unsupervised checkpoint（大规模对比预训练之后、通用监督微调之前）出发做领域适配效果最好，从已完全微调的成品 checkpoint 继续反而几乎不涨甚至退步；三是多向量对比损失默认 scale=1.0，不要照搬稠密损失的 20.0，否则 softmax 饱和、梯度消失。最终单张 RTX 3090 训练 14.5 小时得到 mLateOn-medical，在 20 万条语料上 NDCG@10 达 0.9139，比最强的零样本模型高 0.062，首位命中率从 75.8% 提到 84.9%。只用 10 万对训练 75 分钟，差距仅 0.012。索引体积问题也有解：1-bit PLAID 量化可把 45 GB 压到 3.37 GB 而只损失 0.0155。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>这条是今天最该动手的一条，而且是直接命中你的知识库项目：你的领域语料（医学、科室文档）恰恰是长文档 + 专业术语，正是多向量相对稠密向量优势最大的场景。三个可立刻执行的点——解除长度 cap、从 -unsupervised 出发、loss scale 用 1.0——都是照做就能见效的配置项。成本也现实：单卡 3090 跑 75 分钟就有接近满配的效果，一个下午能跑完一轮。建议先拿一小批真实科室文档做一次稠密 vs 多向量的对照，这个对照结果本身就是给客户讲「为什么我们的知识库检索更准」的最好证据。</p></div>
+<p class="origin"><a href="https://huggingface.co/blog/train-multi-vector-encoder" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://www.qbitai.com/2026/09/484293.html" target="_blank" rel="noopener">九问ScienceDiscovery实现树搜索驱动RSI，加速科学发现，小时级写出通用积分器，低成本找出物理科学规律</a> <span class="score">【7.8分】</span></h3>
+<div class="src"><b>量子位</b> · 9月4日 16:57（量子位）</div>
+<p class="sum">openJiuwen 社区的 ScienceDiscovery 把科研代码的试错过程交给树搜索：每一版产物是树上的一个节点，可被再次选中改写、可暂时搁置几十版后再捡回来，失败版本同样入树并标记。每轮四步——选父版本、模型改写、沙箱评分挂新节点、把这次访问记账到全部祖先。关键在不训练模型、不调参数、不改搜索规则，每轮变的只有产物本身。三个案例：半无穷区间振荡积分，scipy.integrate.quad 基线 −3.40（19 道里只有 3 道进入 3% 容差），搜索到第 119 版达到 −0.0007（19 道全算准，平均相对误差 0.07%），2 小时产生 236 个版本、全程无人干预，且那套 247 行程序在未参与打分的 19 道题上同样有效；₂F₁ 双精度求值，glm-5.2 跑 48 次扩展、598 秒，1000 个未见点上平均正确位数从 9.836 升到 11.771；AlgoTune 代码加速平均 2.279 倍，超过官方榜最高的 claude-opus-4.6（1.837）和需先 RL 训模型的 MetaEvolve（2.045）。符号回归上每题平均只花 16.5 次模型调用，用 deepseek-v4-flash 成本不足 3 元，而其他方法在 250 次上下。选择规则的设计是精髓：按名次给预算（深挖），但同一节点每被选中一次权重就衰减一次（铺开）——最终版本的父节点第 116 版，来自一个早已被超越、得分仅 −2.22 的第 65 版。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>最值得抄的是那条选择规则，而不是成绩：只改写当前最优版本，那条路径根本不会出现。这对你的多智能体与内容生产管线是同一个道理——如果选题或改写策略只盯着眼下最好的一版，早先被搁置的分支就永远不会复活，而真正的突破往往在那些分支上。第二个可落地点是「不训练模型、只演进产物」这个思路：你手上很多重复性工作（脚本、模板、评测集）都可以变成一棵被自动评分改写的树，前提是能给出一个几秒到几十秒就能跑完的自动评分。文章最后也点明了边界——验证慢一个数量级，整个循环就慢一个数量级。</p></div>
+<p class="origin"><a href="https://www.qbitai.com/2026/09/484293.html" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://www.qbitai.com/2026/09/484611.html" target="_blank" rel="noopener">这个世界模型训练完就“退场”，机器人反而更能干了</a> <span class="score">【6.9分】</span></h3>
+<div class="src"><b>量子位</b> · 9月5日 12:18（量子位）</div>
+<p class="sum">光象科技联合清华李升波课题组发布第一代物理原生世界模型 Phi-WM 1.0 ActEffect，反其道而行：世界模型只留在训练场，部署时直接退出链路。做法是让策略先交出三版完整动作提案（前馈分支的「第一反应」、MIP 动作头的粗提案、在粗提案上精修的最终版），受控世界模型分别预测三版会造成的后果，与训练数据里的真实未来观测比较，要求精提案优于粗提案、粗提案优于前馈提案，并给排序损失加梯度截断防止模型靠把差答案变得更差来取胜。世界模型只看当前画面与动作、不读任务语言，未来状态放进冻结的 DINOv3 特征空间，因此不用生成逼真画面、只需抓住物体位姿与场景结构如何变。训练完成后世界模型与未来观测分支一起拿掉，只留 MIP 动作头。结果：LIBERO 98.8%、加入七类分布偏移的 LIBERO-PLUS 80.3%（对比 Fast-WAM 51.5%）、29 维动作空间的 RoboCasa-GR1 67.5%（比第二名 ABot-M0 高 9.2 个百分点）。消融显示去掉后果反馈掉到 97.0%、换掉 DINOv3 特征空间掉到 97.3%。团队已与多家头部车企合作，Phi-Bot X1 在蔚来焊接上下料场景连续运行 3 天、累计作业 21.5 小时零失误，但该记录来自整套工业系统而非新模型本身。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>「把多想一会儿留给训练，把更短的链路留给执行」这个取舍很有普遍性：每多一层在线推理，在单机上只是多一行开销，复制到几十个工位就是几十份显卡和功耗。这条对你做本地部署方案的论证方式是个提醒——客户算的是复制成本，不是单机成绩。同时要诚实标注边界：三个数字都来自仿真，真机数据还没补上，现在就当结论用会过头。</p></div>
+<p class="origin"><a href="https://www.qbitai.com/2026/09/484611.html" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<div class="sec">
+<span class="bar" style="background:#ec4899"></span>
+<h2>技巧与观点</h2><span class="n">3 条</span>
+</div>
+<article class="card">
+<h3><a href="https://www.infoq.cn/article/6Jc130IN2OaXqsPDIzmJ?utm_source=rss&utm_medium=article" target="_blank" rel="noopener">人人都能整个“自己的DeepSeek Harness”，那我们为啥还在给Claude Code们充会员？</a> <span class="score">【9.0分】</span></h3>
+<div class="src"><b>InfoQ 中文</b> · 9月4日（InfoQ 中文）</div>
+<p class="sum">InfoQ 访谈 TiDB 唐刘、腾讯研究院茹炳晟、Floatboat 架构师 Remy、字节 Trae 天猪，主题是当模型拉不开差距、Harness 又日趋同质化时，Coding Agent 还能靠什么拉开差距。几个硬判断：Amp 联合创始人 Thorsten Ball 用 315 行 Go 写出了能读文件、搜索、编辑的 Coding Agent，最内层 Agent Loop 只有几百行、正在成为标准件；TiDB 的做法是「薄 Agent Loop，厚 Control Plane」——Loop 层直接用开源项目 Pi，自己只做任务编排、权限、持久状态、Sandbox、失败恢复，因为 Loop 是变化最快也最容易同质化的一层，换模型换 Agent Core 都不用推倒重来。茹炳晟把好的 Coding Harness 拆成三层：理解存量系统（需求—设计—代码的映射、Code Graph 定位）、项目约束与推理（规则要可见、要有检查与多轮反思）、确定性验证（必须接 CI，Agent 说「修好了」不算数，要有外部不变量证明）。多智能体上唐刘持反潮流观点：模型越强，显式编排就越少，会从命令式走向声明式；要敬畏「通信即复杂度」，好的多智能体系统看起来应该非常安静，每个 Agent 在自己的边界里完成工作。分水岭是长程稳定性——真正的问题是错误能否在变成故障之前被拦住，他主张「重试很危险，快速失败的价值被低估」，并配套 Checkpoint、持久状态与从最近可信点恢复。Remy 给出量化：同一个模型，任务越长、状态越复杂、验证越稀疏，Harness 拉开的差距越大，长程任务上能多贡献 23%。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>这条直接关系到你每天在用的工作流——你默认把编码任务派给 Claude Code，而这篇文章的核心判断恰恰是「模型已经拉不开差距，差别在模型之外的那一半系统」。三个可以今天就改的点：一是给派出去的任务书补上「验收标准」，把能自动判分的条件写清楚，否则 Agent 说做完了你无法证伪；二是「薄 Loop、厚控制面」——你自己的自动化管线也该把易变的模型调用层和稳定的权限／状态／回滚层分开，这样换模型不用重写；三是把 fail fast 当默认策略，宁可第十步就报错，也不要让错误在上下文里攒到第五十步。另外唐刘那句「好的多智能体系统看起来非常安静」，值得贴在你派活的原则里。</p></div>
+<p class="origin"><a href="https://www.infoq.cn/article/6Jc130IN2OaXqsPDIzmJ?utm_source=rss&utm_medium=article" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1w862br/six_months_on_an_ondevice_android_agent_where_the/" target="_blank" rel="noopener">端侧安卓智能体：行为应当是一张可编辑的图，而不是一段提示词</a> <span class="score">【6.4分】</span></h3>
+<div class="src"><b>Reddit r/LocalLLaMA</b> · 9月6日 00:57（Reddit r/LocalLLaMA）</div>
+<p class="sum">一位开发者（原文用俄文写就、用 LLM 翻译润色，声明项目、代码、测量与论证均为本人所做）做了六个月的安卓端侧智能体，核心主张是：行为应当是一张可编辑的图，而不是一段提示词。他把自己的方案放到社区里请人「拆开来看」。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>细节抓不到——r/LocalLLaMA 的网页正文取不到是常态，这条只能依据标题与 RSS 摘要，功能和实测数据都未经我独立验证，别当结论用。收进来的理由是那个主张本身值得留意：把行为从自然语言提示词换成可编辑的图，意味着行为变成可以 diff、可以版本控制、可以定点修改的结构，而不是每次改一句提示词就全局漂移。这跟上面 OKF 那条「记忆 git 原生」是同一个方向的努力——都在把智能体的非结构化部分结构化。如果你后面要给人讲解 Agent 工程，这条可以作为「提示词工程之后是什么」的一个具体例子。细节以原帖为准。</p></div>
+<p class="origin"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1w862br/six_months_on_an_ondevice_android_agent_where_the/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1w89mdu/what_the_artificial_analysis_gpt6_astra_mess/" target="_blank" rel="noopener">What the Artificial Analysis / GPT-6 Astra mess actually teaches us</a> <span class="score">【6.7分】</span></h3>
+<div class="src"><b>Reddit r/LocalLLaMA</b> · 9月6日 03:11（Reddit r/LocalLLaMA）</div>
+<p class="sum">原帖以 Artificial Analysis 与 GPT-6 Astra 的争议为引，给出的教训是：封闭、不可复现的元基准（meta benchmark）价值有限——当更新的数字无法被独立复现、而竞品模型又各执一词时，这类榜单的可信度会迅速流失。</p>
+<div class="why"><span class="why-label">为什么值得关注</span><p>内容取自标题与 RSS 摘要，正文抓不到，论证细节未经我验证。之所以仍然收进来，是因为它和另外两条形成了完整的三角：DeepMind 在做双盲评估（让评估更可信）、Ai2 在做 BenchMIRT（拆穿基准到底测了什么）、社区在质疑不可复现的榜单。三者合起来指向同一件事——2026 年看模型，看榜单的姿势要比看榜单本身更重要。你给客户做选型建议时，把「这个分数能不能被独立复现」当成第一个问题问，比争论哪个模型第一有用得多。细节以原帖为准。</p></div>
+<p class="origin"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1w89mdu/what_the_artificial_analysis_gpt6_astra_mess/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<div class="act"><h2>今日行动建议</h2><ol>
+<li>今天就把不可逆操作收权：在 Claude Code（以及任何会碰文件系统的 Agent）里，把 rm -rf、清库、改账号、部署上线移出「以后不再询问」的允许列表，设成每次确认；危险测试一律丢进可丢弃的容器。备份必须放在 Agent 权限之外——700GB 那条事故里，git 救回了代码，救不回图片和本地数据。</li>
+<li>给项目装一次 OKF Agent Memory（`okf bootstrap` 十分钟），重点验证它两条设计能不能解决你的痛点：「先搜索再写入」的去重闸门，以及 index.md 层级带来的渐进式加载。你的 .workbuddy/memory 现在正卡在越写越长、塞不进上下文这一步。</li>
+<li>拿一批真实科室长文档做一次稠密向量 vs 多向量（Late Interaction）的检索对照。Sentence Transformers v6.0 的配方已经给全了——解除长度 cap、从 -unsupervised checkpoint 出发、loss scale 用 1.0，单卡 3090 跑 75 分钟就有接近满配的效果。这个对照结果本身就是给客户讲「检索为什么更准」的证据。</li>
+</ol></div>
+<div class="foot">
+数据来源：AI HOT 24 条 + 扩展信源 144 条（国内头部 43 / 一手信源 23 / 海外社区 30 / 个人创作者 8 / 广谱雷达 40）（从 168 条中精选 20 条，每条均附原文链接）
+<br>本简报为通用前沿版，医疗 AI 内容已拆分至独立简报。</div>
+</div></body></html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-08-23</title>
+<style>
+  :root {
+    --teal: #0d9488;
+    --teal-dark: #0f766e;
+    --teal-soft: #ccfbf1;
+    --bg: #f6f9f9;
+    --card: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --warn: #b45309;
+    --warn-soft: #fef3c7;
+    --shadow: 0 1px 3px rgba(15,23,42,.08), 0 8px 24px rgba(15,23,42,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --teal: #2dd4bf;
+      --teal-dark: #14b8a6;
+      --teal-soft: #134e4a;
+      --bg: #0b1120;
+      --card: #131c2e;
+      --ink: #e2e8f0;
+      --muted: #94a3b8;
+      --line: #25324a;
+      --warn: #fbbf24;
+      --warn-soft: #422006;
+      --shadow: 0 1px 3px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 32px 20px 64px; }
+  header.hero {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    color: #fff;
+    border-radius: 12px;
+    padding: 28px 30px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  header.hero::after {
+    content: "🩺";
+    position: absolute;
+    right: 18px; top: 10px;
+    font-size: 72px;
+    opacity: .18;
+  }
+  .kicker { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; opacity: .9; margin: 0 0 6px; }
+  h1 { margin: 0 0 14px; font-size: 26px; font-weight: 800; line-height: 1.25; }
+  .profile { display: flex; flex-wrap: wrap; gap: 10px 18px; font-size: 13.5px; opacity: .96; }
+  .profile b { font-weight: 700; }
+  .meta-row { margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.25); font-size: 13px; opacity: .95; display: flex; flex-wrap: wrap; gap: 6px 16px; }
+  .meta-row span { white-space: nowrap; }
+
+  .section { margin-top: 36px; }
+  .section h2 {
+    font-size: 17px; font-weight: 800; margin: 0 0 14px;
+    padding-left: 12px; border-left: 4px solid var(--teal);
+    color: var(--teal-dark);
+  }
+  @media (prefers-color-scheme: dark) { .section h2 { color: var(--teal); } }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(15,23,42,.12), 0 14px 32px rgba(15,23,42,.08); }
+  .card .tag {
+    display: inline-block; font-size: 11.5px; font-weight: 700;
+    color: var(--teal-dark); background: var(--teal-soft);
+    padding: 2px 9px; border-radius: 999px; margin-bottom: 10px;
+  }
+  .card h3 { margin: 0 0 8px; font-size: 16.5px; font-weight: 750; line-height: 1.4; }
+  .card h3 a { color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent; }
+  .card h3 a:hover { color: var(--teal-dark); border-bottom-color: var(--teal); }
+  .src { font-size: 12.5px; color: var(--muted); margin: 0 0 12px; }
+  .src .dot { margin: 0 7px; opacity: .5; }
+  .summary { font-size: 14.5px; margin: 0 0 12px; }
+  .why {
+    background: var(--teal-soft);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 13.5px;
+    color: var(--ink);
+  }
+  .why b { color: var(--teal-dark); }
+  @media (prefers-color-scheme: dark) { .why b { color: var(--teal); } }
+  .why .lbl { font-weight: 800; display: block; margin-bottom: 3px; }
+
+  .preprint {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    color: var(--warn); background: var(--warn-soft);
+    padding: 2px 8px; border-radius: 6px; margin-left: 8px; vertical-align: middle;
+  }
+
+  .actions {
+    margin-top: 40px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 24px;
+    box-shadow: var(--shadow);
+  }
+  .actions h2 { font-size: 17px; margin: 0 0 14px; color: var(--teal-dark); padding-left: 12px; border-left: 4px solid var(--teal); }
+  @media (prefers-color-scheme: dark) { .actions h2 { color: var(--teal); } }
+  .actions ol { margin: 0; padding-left: 20px; }
+  .actions li { margin-bottom: 11px; font-size: 14.5px; }
+  .actions li b { color: var(--teal-dark); }
+  @media (prefers-color-scheme: dark) { .actions li b { color: var(--teal); } }
+
+  footer {
+    margin-top: 36px; padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 12px; color: var(--muted); line-height: 1.8;
+  }
+  footer a { color: var(--teal-dark); text-decoration: none; }
+  .count-pill { font-weight: 800; color: var(--teal-dark); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="kicker">AI新青年 · 每日医疗 AI 聚焦简报</p>
+    <h1>医疗 AI 聚焦简报</h1>
+    <div class="profile">
+      <span>🎙️ 主理人 <b>Alan（李帅帅）</b></span>
+      <span>👨‍⚕️ 三甲儿科规培医师 × AI Builder</span>
+      <span>🎯 受众：青少年 / 家长</span>
+    </div>
+    <div class="profile" style="margin-top:8px;">
+      <span>📌 在手项目：小雪宝 LeukemiaPal（白血患儿陪伴）· 星桥计划（孤独症数字疗愈）· 孤独症量表 AI 平台</span>
+    </div>
+    <div class="meta-row">
+      <span>📅 日期：2026-08-23（周日）</span>
+      <span>🔎 时间窗：2026-08-16 ~ 2026-08-23（7 天）</span>
+      <span>📊 精选条数：<span class="count-pill">6</span> 条</span>
+      <span>🗂️ 数据源：AI HOT / PubMed / medRxiv</span>
+    </div>
+  </header>
+
+  <!-- ===== 前沿研究·论文 ===== -->
+  <section class="section">
+    <h2>前沿研究 · 论文</h2>
+
+    <div class="card">
+      <span class="tag">孤独症 / 多感官</span>
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42628959/" target="_blank" rel="noopener">多感官整合在精神疾患中的"出错"机制：从描述走向规范模型</a></h3>
+      <p class="src">来源：Multisensory Research（2026-08-18，online ahead of print） · PMID 42628959<span class="dot">·</span>同行评审</p>
+      <p class="summary">一篇观点综述，由三位多感官整合领域研究者对谈，梳理该领域如何解释多感官整合在孤独症、精神分裂症、阅读障碍等神经发育/精神疾患中的"出错"机制，并指出从描述性现象向规范模型（最大似然估计、因果推断、相关性检测）的范式转向。</p>
+      <div class="why"><span class="lbl">为什么与你有关 · 星桥计划</span>多感官整合正是孤独症核心缺陷之一。这篇把"为什么孤独症对多感官刺激的加工异常"落到<b>可计算的规范模型框架</b>，可直接成为星桥多模态（视觉+听觉+触觉）干预设计的理论底座。</div>
+    </div>
+
+    <div class="card">
+      <span class="tag">儿科 / 神经发育</span>
+      <h3><a href="https://doi.org/10.64898/2026.08.17.26360370" target="_blank" rel="noopener">神经发育障碍儿童的胃肠道功能障碍显著高发——不只是孤独症的问题</a><span class="preprint">未经同行评审</span></h3>
+      <p class="src">来源：medRxiv（pediatrics，2026-08-19） · DOI 10.64898/2026.08.17.26360370</p>
+      <p class="summary">基于逾 20 年电子健康记录、42,204 名神经发育障碍（ADHD、孤独症等）儿童队列，证实 GI 功能障碍在 NDD 儿童中显著高发，且与功能损害、行为症状、就医负担相关；强调这是"不止孤独症"的共病问题。</p>
+      <div class="why"><span class="lbl">为什么与你有关 · 星桥计划 / 小雪宝</span>星桥面向孤独症儿童家庭，GI/喂养/腹痛是家长高频咨询点。这条给内容团队一个扎实的科普抓手——把"孤独症不止是社交障碍"落到真实共病数据，也能反哺小雪宝式的"陪伴 + 分流就医建议"设计。</div>
+    </div>
+
+    <div class="card">
+      <span class="tag">心理治疗 / LLM 文档</span>
+      <h3><a href="https://doi.org/10.1101/2025.06.25.25330252" target="_blank" rel="noopener">临床扎根的心理治疗 AI 抄写：用 iCARE 框架把 LLM 对齐专家级文档</a><span class="preprint">未经同行评审</span></h3>
+      <p class="src">来源：medRxiv（psychiatry，2026-08-19） · DOI 10.1101/2025.06.25.25330252</p>
+      <p class="summary">提出 iCARE 框架，把 LLM 心理治疗的"AI 抄写员"基准对齐到专家级文档——主张心理治疗 AI 文档应建立在完整的病史 / 临床评估 / 风险评估结构之上，再压缩成任意简版，而非只产出简短行政化记录。</p>
+      <div class="why"><span class="lbl">为什么与你有关 · 孤独症量表 AI 平台 / 星桥</span>直击你的核心痛点——结构化临床评估数据怎么采、怎么存、怎么对齐专家。iCARE 的<b>"全结构 → 可压缩"</b>思路，正是你做量表采集与多角色评估（家长/治疗师/医师）对齐的参考范式。</div>
+    </div>
+
+    <div class="card">
+      <span class="tag">儿科 / AI 安全</span>
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42629325/" target="_blank" rel="noopener">ChatGPT-4o 的 HPV 疫苗推荐风格随年龄/性别漂移：一项固定提示词审计</a></h3>
+      <p class="src">来源：Human Vaccines &amp; Immunotherapeutics（2026，Epub 2026-08-21） · PMID 42629325<span class="dot">·</span>同行评审</p>
+      <p class="summary">对 ChatGPT-4o 做固定提示词审计（720 次、156 个种子提示、6 个年龄段 × 2 种性别框架），发现疫苗推荐的说理风格随年龄/性别显著漂移（从推定、强推荐到共同决策、建议拒绝）。</p>
+      <div class="why"><span class="lbl">为什么与你有关 · 小雪宝 LeukemiaPal</span>小雪宝会面向白血病患儿家长做健康咨询。这篇是现成的<b>"偏见测试"范本</b>——若让小雪宝给疫苗/营养/返校建议，必须先做这类固定提示词审计，把年龄/性别漂移风险挡在发布前。</div>
+    </div>
+  </section>
+
+  <!-- ===== 医疗模型与临床落地 / 工具与开源 ===== -->
+  <section class="section">
+    <h2>医疗模型与临床落地 · 工具与开源</h2>
+
+    <div class="card">
+      <span class="tag">可穿戴 / 多智能体</span>
+      <h3><a href="https://research.google/blog/an-ai-tool-for-prioritizing-candidate-biomarkers-from-wearable-sensor-data" target="_blank" rel="noopener">Google 推出 Biomarker Discovery Framework：从可穿戴数据多智能体筛选候选生物标志物</a></h3>
+      <p class="src">来源：Google Research Blog（本周窗口内）</p>
+      <p class="summary">多智能体系统，通过"迭代假设生成 → 统计分析 → 文献推理"六阶段闭环 + 11 项对抗性验证，从可穿戴传感器数据筛选候选生物标志物；在 3 个队列（9,279 人次观测）恢复已知信号并提升下游预测，且保留人工监督。</p>
+      <div class="why"><span class="lbl">为什么与你有关 · 星桥计划 / 量表平台</span>两者都涉及"用可穿戴（睡眠、活动）做数字表型监测"。Google 这套<b>"闭环假设 + 对抗验证 + 人工监督"</b>框架，是你在本地/端侧做情绪与行为表型监测可直接借鉴的蓝图，也契合你"可本地部署"的偏好。</div>
+    </div>
+  </section>
+
+  <!-- ===== 行业与监管动态 ===== -->
+  <section class="section">
+    <h2>行业与监管动态</h2>
+
+    <div class="card">
+      <span class="tag">证据纪律 / 监管警示</span>
+      <h3><a href="https://x.com/emollick/status/2089156476568842516" target="_blank" rel="noopener">"AI 治病"言论需更精确：临床试验与证据之间存在巨大鸿沟</a></h3>
+      <p class="src">来源：X（Ethan Mollick，本周窗口内）</p>
+      <p class="summary">回应"AI 治愈疾病"的过热言论——其真实含义至多只是"数据中心里的天才群体理论上能发明治病之物"，与真实试验、证据、FDA 审批之间存在巨大鸿沟；目前尚无 AI 公司提出 5–10 年治愈哪怕一种疾病的切实计划，单是心血管三期试验就约需五年。</p>
+      <div class="why"><span class="lbl">为什么与你有关 · 全部项目</span>给所有项目一盆冷水也是一面镜子。小雪宝 / 星桥 / 量表平台都不要止步于"演示惊艳"，要尽早规划<b>临床验证路径与合规边界</b>——Mollick 的"敬畏疾病"正对应你内容里反复强调的"证据优先、不过度承诺"。</div>
+    </div>
+  </section>
+
+  <!-- ===== 今日行动建议 ===== -->
+  <section class="actions">
+    <h2>今日行动建议（绑定在手项目）</h2>
+    <ol>
+      <li><b>星桥·理论底座：</b>把第 1 条的多感官规范模型纳入星桥干预设计文档，作为"多模态刺激为何有效"的论证骨架；本周列一份"多感官整合 × 孤独症"的科普选题。</li>
+      <li><b>量表平台·对齐范式：</b>用第 3 条（iCARE「全结构 → 可压缩」）改造你的量表采集流程——先定义家长 / 治疗师 / 医师三类角色各自录入的字段与压缩规则。</li>
+      <li><b>小雪宝·安全闸：</b>参照第 4 条的固定提示词审计法，给小雪宝设计一组"疫苗 / 营养 / 返校"年龄 × 性别偏见测试集，上线前必跑。</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p><b>数据来源：</b>AI HOT 医疗垂直资讯 · PubMed（NCBI E-utilities）· medRxiv 预印本平台。</p>
+    <p>⚠️ 标注「未经同行评审」的条目为 medRxiv 预印本，结论未经正式评审，引用与落地前请谨慎核验原始数据。</p>
+    <p>© 2026 AI新青年（主理人 Alan / 李帅帅）。本简报为内部研究参考，不构成医疗建议；原文链接以各数据源页面为准。</p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-09-03</title>
+<style>
+  :root{
+    --bg:#f5f7f8;
+    --panel:#ffffff;
+    --panel-soft:#f0f4f4;
+    --text:#16211f;
+    --text-soft:#4d5f5c;
+    --text-mute:#7b8c89;
+    --brand:#0d9488;
+    --brand-soft:#e2f2f0;
+    --brand-line:#b8ded9;
+    --line:#e2e8e8;
+    --warn-bg:#fef6e7;
+    --warn-line:#f0d9a8;
+    --warn-text:#7a5a12;
+    --pre-bg:#fdf1f4;
+    --pre-line:#f0ccd6;
+    --pre-text:#8a3350;
+    --shadow:0 1px 2px rgba(13,40,38,.05), 0 6px 20px rgba(13,40,38,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0e1514;
+      --panel:#161f1e;
+      --panel-soft:#1c2726;
+      --text:#e8efee;
+      --text-soft:#a9bcb9;
+      --text-mute:#7d918f;
+      --brand:#2dd4bf;
+      --brand-soft:#12302c;
+      --brand-line:#235049;
+      --line:#253231;
+      --warn-bg:#2a2216;
+      --warn-line:#4a3a1c;
+      --warn-text:#e6c887;
+      --pre-bg:#2a1a1f;
+      --pre-line:#4a2833;
+      --pre-text:#eda3ba;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    }
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    padding:32px 18px 64px;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto;}
+
+  /* ---------- Header ---------- */
+  header{
+    background:linear-gradient(135deg,var(--brand) 0%,#0f766e 100%);
+    color:#fff;
+    border-radius:12px;
+    padding:30px 30px 26px;
+    box-shadow:var(--shadow);
+  }
+  @media (prefers-color-scheme: dark){
+    header{background:linear-gradient(135deg,#0f766e 0%,#134e4a 100%);}
+  }
+  .kicker{
+    display:inline-block;
+    font-size:12px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    background:rgba(255,255,255,.16);
+    padding:4px 12px;
+    border-radius:12px;
+    margin-bottom:14px;
+  }
+  h1{margin:0 0 6px;font-size:27px;line-height:1.35;letter-spacing:.5px;}
+  .date{font-size:14px;opacity:.92;margin-bottom:18px;}
+  .profile{
+    background:rgba(255,255,255,.13);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:12px;
+    padding:13px 16px;
+    font-size:14.5px;
+    line-height:1.7;
+  }
+  .profile b{font-weight:600;}
+  .meta-row{
+    display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;
+  }
+  .chip{
+    background:rgba(255,255,255,.15);
+    border-radius:12px;
+    padding:5px 13px;
+    font-size:13px;
+  }
+
+  /* ---------- Source note ---------- */
+  .sources{
+    margin-top:16px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-left:4px solid var(--brand);
+    border-radius:12px;
+    padding:16px 20px;
+    font-size:13.5px;
+    color:var(--text-soft);
+    box-shadow:var(--shadow);
+  }
+  .sources h3{margin:0 0 8px;font-size:14px;color:var(--text);}
+  .sources ul{margin:0;padding-left:20px;}
+  .sources li{margin:3px 0;}
+
+  /* ---------- Section ---------- */
+  section{margin-top:34px;}
+  .sec-title{
+    display:flex;align-items:center;gap:10px;
+    font-size:17px;font-weight:600;color:var(--text);
+    margin:0 0 16px;padding-bottom:10px;
+    border-bottom:2px solid var(--line);
+  }
+  .sec-dot{
+    width:9px;height:9px;border-radius:50%;
+    background:var(--brand);flex:none;
+  }
+  .sec-count{
+    margin-left:auto;font-size:12.5px;font-weight:400;
+    color:var(--text-mute);
+  }
+
+  /* ---------- Card ---------- */
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:22px 24px;
+    margin-bottom:16px;
+    box-shadow:var(--shadow);
+  }
+  .card-top{
+    display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+    font-size:12.5px;color:var(--text-mute);
+    margin-bottom:10px;
+  }
+  .tag{
+    background:var(--brand-soft);
+    color:var(--brand);
+    border:1px solid var(--brand-line);
+    border-radius:12px;
+    padding:2px 10px;
+    font-size:12px;
+    font-weight:500;
+  }
+  @media (prefers-color-scheme: dark){ .tag{color:var(--brand);} }
+  .tag-pre{
+    background:var(--pre-bg);color:var(--pre-text);
+    border:1px solid var(--pre-line);border-radius:12px;
+    padding:2px 10px;font-size:12px;font-weight:500;
+  }
+  .card h3{
+    margin:0 0 10px;
+    font-size:18px;line-height:1.5;
+  }
+  .card h3 a{
+    color:var(--text);
+    text-decoration:none;
+    border-bottom:2px solid var(--brand-line);
+    padding-bottom:1px;
+    transition:border-color .15s, color .15s;
+  }
+  .card h3 a:hover{color:var(--brand);border-bottom-color:var(--brand);}
+  .card h3 a::after{content:" ↗";font-size:13px;color:var(--brand);}
+  .src{
+    font-size:13px;color:var(--text-mute);
+    margin:0 0 12px;
+  }
+  .src b{color:var(--text-soft);font-weight:600;}
+  .abs{
+    font-size:14.5px;color:var(--text-soft);
+    margin:0 0 16px;
+  }
+  .why{
+    background:var(--panel-soft);
+    border-left:3px solid var(--brand);
+    border-radius:0 12px 12px 0;
+    padding:14px 18px;
+    font-size:14.5px;
+    color:var(--text);
+  }
+  .why .lbl{
+    display:block;
+    font-size:12.5px;font-weight:600;
+    color:var(--brand);
+    letter-spacing:.04em;
+    margin-bottom:6px;
+  }
+
+  /* ---------- Action ---------- */
+  .actions{
+    margin-top:34px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-top:3px solid var(--brand);
+    border-radius:12px;
+    padding:24px 26px;
+    box-shadow:var(--shadow);
+  }
+  .actions h2{margin:0 0 14px;font-size:17px;}
+  .actions ol{margin:0;padding-left:22px;}
+  .actions li{margin-bottom:13px;font-size:14.5px;color:var(--text);}
+  .actions li:last-child{margin-bottom:0;}
+  .actions b{color:var(--brand);}
+
+  /* ---------- Note ---------- */
+  .note{
+    margin-top:22px;
+    background:var(--warn-bg);
+    border:1px solid var(--warn-line);
+    border-radius:12px;
+    padding:15px 19px;
+    font-size:13.8px;
+    color:var(--warn-text);
+  }
+  .note b{font-weight:600;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    margin-top:34px;padding-top:20px;
+    border-top:1px solid var(--line);
+    font-size:12.8px;color:var(--text-mute);line-height:1.85;
+  }
+  footer b{color:var(--text-soft);}
+  .foot-pre{color:var(--pre-text);font-weight:600;}
+
+  @media (max-width:600px){
+    body{padding:18px 12px 44px;}
+    header{padding:24px 20px 20px;}
+    h1{font-size:22px;}
+    .card{padding:18px 17px;}
+    .actions{padding:20px 18px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">AI新青年 · 医疗垂直</div>
+    <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+    <div class="date">2026 年 9 月 3 日（周四） · 覆盖窗口 2026-08-27 → 2026-09-03</div>
+    <div class="profile">
+      <b>主理人画像 · Alan（李帅帅）</b><br>
+      三甲儿科规培医师转型 AI · 「AI新青年」视频号主理人 · 受众为青少年与家长<br>
+      在手项目：小雪宝 LeukemiaPal（白血病患儿陪伴助手）· 星桥计划（孤独症数字疗愈）· 孤独症量表 AI 平台 · 本地 AI 内容团队 · 一人公司<br>
+      兴趣坐标：儿科 / 血液肿瘤 · 孤独症与心理健康 · 数字疗愈 · 临床 AI 与医疗大模型 · 影像病理 AI · AI 辅助诊断与量表评估
+    </div>
+    <div class="meta-row">
+      <span class="chip">精选 6 条</span>
+      <span class="chip">4 个版块</span>
+      <span class="chip">同行评审 3 · 预印本 2 · 行业动态 1</span>
+    </div>
+  </header>
+
+  <div class="sources">
+    <h3>数据源说明</h3>
+    <ul>
+      <li><b>医疗科技资讯聚合</b>：近 7 天，按「医疗 / medical / healthcare / 医院」四组关键词采集并去重，共 27 条候选。</li>
+      <li><b>PubMed 同行评审文献库</b>：近 7 天，「人工智能」×（儿科 / 白血病 / 肿瘤 / 孤独症 / 心理健康）共 304 条命中，筛出题录 10 条，对最相关 3 篇取全文摘要。</li>
+      <li><b>medRxiv 生命科学预印本</b>：2026-08-27 → 2026-09-03 区间共 30 篇，按儿科、肿瘤、精神心理、健康信息学、数字健康类目筛选。</li>
+    </ul>
+  </div>
+
+  <!-- ============ 版块 1 ============ -->
+  <section>
+    <div class="sec-title"><span class="sec-dot"></span>医疗模型与临床落地<span class="sec-count">1 条</span></div>
+
+    <div class="card">
+      <div class="card-top">
+        <span class="tag">儿科影像 AI</span>
+        <span class="tag">多中心验证</span>
+        <span>2026-07</span>
+      </div>
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42682383/" target="_blank" rel="noopener">儿科股骨颈骨折深度学习检测：多中心验证与临床阅片者研究</a></h3>
+      <p class="src">来源：<b>International Journal of Surgery</b>（Wolters Kluwer）· 华中科技大学同济医学院附属协和医院骨科等 4 中心 · PMID 42682383</p>
+      <p class="abs">纳入 4 家三甲医院 640 名 8 岁以下患儿的 794 张髋关节 X 线片，训练 YOLOv11 目标检测模型自动定位与诊断股骨颈骨折。内部测试 AUROC 0.911（95% CI 0.864–0.949），外部验证 0.873（0.792–0.935）；内部敏感度/特异度 84.9%/85.5%。5 名医师参与的阅片者研究显示，AI 辅助显著抬升低年资医师准确率（平均 ΔAUROC +0.083，P = 0.007）与阅片者间一致性（Fleiss' κ 从 0.49 升至 0.61），单张推理耗时 56.2 ms。</p>
+      <div class="why">
+        <span class="lbl">为什么与你有关</span>
+        这是「儿科影像 AI 能量化证明落地价值」的标准范本——它没有去证明 AI 打赢专家，而是证明<b>AI 把低年资医师拉近专家</b>，并给出 κ 一致性这种采购方能看懂的指标。小雪宝若要进院，价值主张应照此改写为「提升基层与低年资的一致性、降低漏诊」，而不是「替代专家」。另外 56.2 ms 的单张推理意味着这类模型在院内一张常规显卡上就能跑起来，与你坚持的本地部署路线完全兼容。
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 版块 2 ============ -->
+  <section>
+    <div class="sec-title"><span class="sec-dot"></span>前沿研究 · 同行评审论文<span class="sec-count">2 条</span></div>
+
+    <div class="card">
+      <div class="card-top">
+        <span class="tag">儿科慢病</span>
+        <span class="tag">陪伴型 LLM</span>
+        <span>2026-08-22</span>
+      </div>
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42683704/" target="_blank" rel="noopener">将 ChatGPT 整合进南非儿童青少年糖尿病照护：医护人员与学者的视角</a></h3>
+      <p class="src">来源：<b>African Journal of Primary Health Care &amp; Family Medicine</b> 2026;18(1):e1–e11 · 南非大学（UNISA）信息科学系 · PMID 42683704</p>
+      <p class="abs">对儿科内分泌医师、糖尿病专家、糖尿病教育者与资深学者开展半结构访谈，主题分析析出四大主题：① 对 ChatGPT 的正反两面感知；② 围绕数据安全、可靠性与技术过度依赖的伦理担忧；③ 影响接受度的因素（可用性、信任、准确性）；④ 整合障碍（技术、社会、财务）。结论强调：要把这类工具真正用起来，必须有政策法规框架、基础设施与政府支持配套。</p>
+      <div class="why">
+        <span class="lbl">为什么与你有关 · 小雪宝 LeukemiaPal</span>
+        这是目前离小雪宝最近的一篇「负面清单」——它把陪伴型 LLM 落地儿童慢病时的真实阻力一次列全。四条主题可以直接翻译成产品的四条设计红线：① <b>数据安全</b>：患儿病程数据不出本地、可导出可删除；② <b>可靠性</b>：不做诊断结论，每条回答挂可核验出处；③ <b>过度依赖</b>：设情绪依赖监测与转人工阈值，家长端明确提示「AI 不能替代主治团队」；④ <b>整合障碍</b>：提前想清楚谁付费、谁维护。对外讲项目时，这四条本身就是一个很有说服力的开场。
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <span class="tag">儿科肿瘤</span>
+        <span class="tag">小样本建模</span>
+        <span>2026-08-31</span>
+      </div>
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42682825/" target="_blank" rel="noopener">SA-FGPN：面向儿科脑肿瘤基因表达分类的稳定性感知特征门控渐进学习</a></h3>
+      <p class="src">来源：<b>Digital Health</b> 2026;12:20552076261484299 · 中南大学湘雅医学院附属儿童医院（湖南省儿童医院）放射科 · PMID 42682825</p>
+      <p class="abs">针对转录组数据「几万个特征、只有一百来个样本」的 D≫N 困境，提出 SA-FGPN：泄漏受控预处理 + 低秩转录组压缩 + 渐进式非线性降维 + 残差投影瓶颈 + 特征交互建模 + 稳定性感知特征门控。在 130 例儿科脑肿瘤样本、54,676 个探针级特征的数据集上，重复分层 5 折交叉验证 10 次取得准确率 0.9847 ± 0.0142、macro-F1 0.9728 ± 0.0201、macro-AUC 0.9916 ± 0.0078；30 次随机分层划分下最高准确率 0.9897，稳定优于经典机器学习方法。可解释性采用 fold-averaged Integrated Gradients 定位关键探针。</p>
+      <div class="why">
+        <span class="lbl">为什么与你有关 · 血液肿瘤方向</span>
+        儿科肿瘤的样本量天然就是小（这篇只有 130 例），所以<b>方法论比分数更值得抄</b>：低秩压缩解决 D≫N 过拟合、稳定性感知门控解决「换个随机种子选出的特征就全变」的老毛病、Integrated Gradients 给临床与生物学家一个能对话的可解释层。你做血液肿瘤时如果要碰 MRD 预测或分子分型，这套组合拳是必学项——继续堆大模型参数在这种样本量下只会放大不稳定性。顺带一提，这是一支国内儿童医院影像科团队自己做出来的，说明这条路不需要大厂算力也能走。
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 版块 3 ============ -->
+  <section>
+    <div class="sec-title"><span class="sec-dot"></span>前沿研究 · 预印本<span class="sec-count">2 条 · 未经同行评审</span></div>
+
+    <div class="card">
+      <div class="card-top">
+        <span class="tag-pre">预印本 · 未经同行评审</span>
+        <span class="tag">语音生物标志物</span>
+        <span>2026-08-27</span>
+      </div>
+      <h3><a href="https://doi.org/10.64898/2026.08.25.26361344" target="_blank" rel="noopener">整合认知、语言与声学特征识别认知障碍：一项概念验证研究</a></h3>
+      <p class="src">来源：<b>medRxiv</b>（精神医学与临床心理学）· 澳大利亚昆士兰大学心理学院（Gail A. Robinson 团队）· DOI 10.64898/2026.08.25.26361344</p>
+      <p class="abs">从 1 分钟自然语音样本中提取声学与语言特征，与覆盖注意、语言、记忆、执行功能的多域认知评估相融合，用于区分认知未受损者与遗忘型轻度认知障碍 / 早期阿尔茨海默病。在多个机器学习模型下，三者融合的分类表现显著优于仅用认知特征或仅用语音特征的模型（AUC 0.96–0.98，两项比较均 p &lt; .05）。作者认为这为基层可及、可扩展的多模态筛查工具提供了依据。</p>
+      <div class="why">
+        <span class="lbl">为什么与你有关 · 星桥计划 + 孤独症量表平台</span>
+        这篇直接给了你一条已被验证的技术路线：<b>1 分钟语音 + 量表分数 → 多模态融合 → AUC 0.96+</b>。它的关键结论不是「语音有用」，而是「语音是<b>独立于量表的增量信号</b>」——融合显著优于任一单模态。这意味着你的量表平台完全可以先从「语音 + 量表」双通道切入孤独症风险筛查，采样成本几乎为零、家长接受度高，而不必一上来就上视频分析、眼动追踪这类重资产模态。建议把这条列为星桥计划下一阶段的技术验证主线。
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <span class="tag-pre">预印本 · 未经同行评审</span>
+        <span class="tag">临床信任设计</span>
+        <span>2026-08-27</span>
+      </div>
+      <h3><a href="https://doi.org/10.64898/2026.08.24.26361252" target="_blank" rel="noopener">肿瘤医师对 AI 生成文献综述偏好的驱动因素：一项随机混合方法研究</a></h3>
+      <p class="src">来源：<b>medRxiv</b>（健康信息学）· 美国斯坦福大学（Manisha Desai 团队）· DOI 10.64898/2026.08.24.26361252</p>
+      <p class="abs">34 位肿瘤科医师对 4 个盲法 AI 系统、5 个临床情境给出 294 次评分，并做 20 场半结构访谈（用预设的 LLM 辅助质性分析流水线处理）。反直觉的核心结果：引用来源相同的情况下，做了「证据分级」加工过的报告，整体效用评分反而显著低于标准版（均差 −0.96，95% CI −1.26 ~ −0.66，P &lt; .001）。质性分析提炼出六大主题与七项设计要求——医师看重快速定位、证据检索与可核验引用，偏好简洁可扫读、带量化结局、指南加粗可辨、显式标注不确定性、引用可追溯的报告；而引用错配、出处埋没、证据误分级、过度自信的推荐、组织混乱会直接摧毁信任。</p>
+      <div class="why">
+        <span class="lbl">为什么与你有关 · 量表平台的报告呈现层</span>
+        一句话总结：<b>在临床场景里，准确不等于可信，呈现方式本身就是疗效的一部分</b>。量表 AI 平台与小雪宝的输出界面应按那七项要求改版——结论前置、出处可点开核验、不确定性显式标注、引用与正文严格对齐。更值得记住的是那个反直觉教训：<b>为了「看起来更专业」而做的加工（证据分级）反而让医生打分更低</b>，别把 AI 报告越做越重。另外，「预设的 LLM 辅助质性访谈分析流水线」本身就是一个可复用的产品形态，一人公司可以把它包装成面向临床科研的访谈分析服务。
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 版块 4 ============ -->
+  <section>
+    <div class="sec-title"><span class="sec-dot"></span>行业与监管动态<span class="sec-count">1 条</span></div>
+
+    <div class="card">
+      <div class="card-top">
+        <span class="tag">EHR 集成</span>
+        <span class="tag">医疗数据合规</span>
+        <span>2026-09-01 20:00（北京时间）</span>
+      </div>
+      <h3><a href="https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources" target="_blank" rel="noopener">ChatGPT Health 接入 Epic 电子病历，并开放 9 个官方医疗数据源</a></h3>
+      <p class="src">来源：<b>OpenAI 官方动态</b>（TechCrunch 同期报道）· Epic 覆盖超过 3.25 亿患者记录</p>
+      <p class="abs">在患者授权前提下，临床医生可让 ChatGPT 直接读取 Epic 中的病历、化验结果、用药与专科记录，用于就诊前梳理病史与临床时间线；部分部署可在病历界面内直接调用。同时推出 Healthcare Public Data，接入 PubMed、DailyMed、ClinicalTrials.gov、CMS、RxNorm 等 9 个官方医疗数据源。</p>
+      <div class="why">
+        <span class="lbl">为什么与你有关 · 一人公司选位</span>
+        医疗 AI 的竞争焦点正在从「模型懂不懂医学」转向「能不能拿到患者的真实上下文」。对你的一人公司而言，结论不是去跟 EHR 集成硬碰硬，而是吃下 EHR 之外的空白地带：<b>院外连续性陪伴</b>（小雪宝）、<b>居家量表与语音采集</b>（星桥）、以及把这 9 个公开数据源做成中文临床检索层。同时要意识到，「患者授权 + 数据可携带」正在成为所有健康产品的合规基线——现在就把授权流程与审计日志做进架构，比以后返工便宜得多。
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 行动建议 ============ -->
+  <div class="actions">
+    <h2>今日行动建议</h2>
+    <ol>
+      <li><b>小雪宝 · 出一页设计红线。</b>把 PMID 42683704 的四条阻力（数据安全 / 可靠性 / 技术过度依赖 / 整合障碍）逐条写成产品对策，形成《陪伴式 AI 设计红线》一页纸。这既是开发约束，也是对外讲项目时最有说服力的一张图。</li>
+      <li><b>星桥计划 · 两天跑一次最小验证。</b>按 DOI 10.64898/2026.08.25.26361344 的路线：采集 1 分钟语音 + 现有量表分数，跑一次多模态融合基线，看 AUC 是否显著超过单模态。成本极低，出数很快，无论结果正负都是可讲的内容素材。</li>
+      <li><b>量表平台 · 给 AI 报告做减法。</b>照 DOI 10.64898/2026.08.24.26361252 的七项设计要求改版输出层：结论前置、引用可点核验、不确定性显式标注。记住「证据分级反而让医生打分更低」这个教训——不要为了看起来专业而堆砌加工。</li>
+    </ol>
+  </div>
+
+  <div class="note">
+    <b>今日信号说明：</b>本期 7 天窗口内<b>未出现强命中的白血病专项硬核 AI 论文</b>，未硬凑；儿科肿瘤方向以「脑肿瘤转录组机器学习」（PMID 42682825）替代，方法上仍可迁移到血液肿瘤。此外，前几期已覆盖的两条——华为云 × 瑞金医院病理大模型 RuiPath 2.0、英国监管机构警示医疗 AI 转录工具出错——本期未重复收录。若希望提高血液肿瘤命中率，建议把文献窗口从 7 天扩到 30 天，并对「白血病 × 机器学习」单独开一路检索。
+  </div>
+
+  <footer>
+    <b>数据来源</b>：医疗科技资讯聚合（近 7 天）· PubMed 同行评审文献库（近 7 天）· medRxiv 生命科学预印本（2026-08-27 → 2026-09-03）。<br>
+    <span class="foot-pre">标注「预印本 · 未经同行评审」的条目尚未经过同行评审，结论仅供参考，不应作为临床决策依据。</span><br>
+    本简报由「AI新青年」内容管线自动生成，所有条目均保留原文 / DOI / PMID 链接，摘要为原始摘要的中文改写，未添加未经来源支持的数据。<br>
+    © 2026 AI新青年 · 医疗 AI 聚焦简报 · 内部参考，转载请注明出处
+  </footer>
+
+</div>
+</body>
+</html>

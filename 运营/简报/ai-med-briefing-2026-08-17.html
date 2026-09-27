@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-08-17</title>
+<style>
+  :root {
+    --teal: #0d9488;
+    --teal-strong: #0f766e;
+    --teal-soft: #ccfbf1;
+    --ink: #0f172a;
+    --ink-2: #334155;
+    --ink-3: #64748b;
+    --line: #e2e8f0;
+    --bg: #f6f8f9;
+    --card: #ffffff;
+    --tag-bg: #f0fdfa;
+    --tag-ink: #0f766e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e6edf3;
+      --ink-2: #b6c2cf;
+      --ink-3: #8b98a5;
+      --line: #2d3748;
+      --bg: #0d1117;
+      --card: #161b22;
+      --tag-bg: #122a2a;
+      --tag-ink: #5eead4;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    padding: 32px 16px 48px;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; }
+
+  /* 头部 */
+  header.hero {
+    background: linear-gradient(135deg, #0d9488 0%, #0f766e 60%, #134e4a 100%);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 30px 28px 26px;
+    margin-bottom: 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  header.hero::after {
+    content: "";
+    position: absolute; right: -40px; top: -40px;
+    width: 200px; height: 200px; border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+  }
+  .hero-kicker {
+    display: inline-block; font-size: 12px; letter-spacing: 2px;
+    background: rgba(255,255,255,0.16); padding: 3px 10px; border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  .hero h1 { font-size: 26px; font-weight: 700; margin-bottom: 10px; letter-spacing: 0.5px; }
+  .hero .sub { font-size: 14px; opacity: 0.94; }
+  .hero .meta-row {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;
+  }
+  .hero .chip {
+    font-size: 12px; background: rgba(255,255,255,0.14);
+    padding: 4px 12px; border-radius: 20px;
+  }
+
+  /* 画像卡 */
+  .profile {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; margin-bottom: 22px;
+  }
+  .profile .avatar {
+    width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0;
+    background: var(--teal-soft); color: var(--teal-strong);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; font-weight: 700;
+  }
+  .profile .p-body .p-name { font-size: 15px; font-weight: 700; margin-bottom: 3px; }
+  .profile .p-body .p-desc { font-size: 13px; color: var(--ink-2); }
+
+  /* 板块标题 */
+  .section-title {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 17px; font-weight: 700; margin: 26px 0 12px;
+    color: var(--ink);
+  }
+  .section-title .bar {
+    width: 5px; height: 20px; border-radius: 3px; background: var(--teal);
+    display: inline-block;
+  }
+
+  /* 卡片 */
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 18px 20px; margin-bottom: 14px;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(13,148,136,0.10); }
+  .card .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .tag {
+    font-size: 11px; padding: 2px 9px; border-radius: 6px;
+    background: var(--tag-bg); color: var(--tag-ink); font-weight: 600;
+  }
+  .tag.src { background: var(--tag-bg); }
+  .tag.preprint { background: #fef3c7; color: #92400e; }
+  .card .title {
+    font-size: 16px; font-weight: 700; line-height: 1.45; margin-bottom: 6px;
+  }
+  .card .title a { color: var(--ink); text-decoration: none; }
+  .card .title a:hover { color: var(--teal); }
+  .card .meta { font-size: 12px; color: var(--ink-3); margin-bottom: 10px; }
+  .card .meta b { color: var(--ink-2); font-weight: 600; }
+  .card .summary { font-size: 14px; color: var(--ink-2); margin-bottom: 12px; }
+  .card .why {
+    font-size: 13px; background: var(--tag-bg);
+    border-left: 3px solid var(--teal);
+    padding: 10px 12px; border-radius: 0 8px 8px 0; color: var(--ink-2);
+  }
+  .card .why b { color: var(--teal-strong); }
+
+  /* 行动建议 */
+  .actions {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 20px 22px; margin-top: 6px;
+  }
+  .actions ol { list-style: none; counter-reset: act; }
+  .actions li {
+    counter-increment: act; position: relative; padding-left: 34px;
+    margin-bottom: 14px; font-size: 14px; color: var(--ink-2);
+  }
+  .actions li:last-child { margin-bottom: 0; }
+  .actions li::before {
+    content: counter(act); position: absolute; left: 0; top: 2px;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--teal); color: #fff; font-size: 13px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .actions li b { color: var(--ink); }
+
+  /* 页脚 */
+  footer {
+    margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line);
+    font-size: 12px; color: var(--ink-3); line-height: 1.8;
+  }
+  footer b { color: var(--ink-2); }
+  .note-sparse {
+    background: #fffbeb; border: 1px solid #fde68a; border-radius: 12px;
+    padding: 14px 18px; font-size: 13px; color: #92400e; margin: 12px 0;
+  }
+  @media (prefers-color-scheme: dark) {
+    .note-sparse { background: #1f1a0b; border-color: #5a4716; color: #fbbf24; }
+    .tag.preprint { background: #3a2c0a; color: #fbbf24; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="hero-kicker">MEDTECH AI BRIEFING</span>
+    <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+    <div class="sub">每日一份「少而精」的硬核医疗 AI 精选，服务临床落地与在手项目决策</div>
+    <div class="meta-row">
+      <span class="chip">📅 2026-08-17（周一）</span>
+      <span class="chip">🎯 精选 6 条</span>
+      <span class="chip">🧪 数据源：AI HOT / PubMed / medRxiv</span>
+    </div>
+  </header>
+
+  <div class="profile">
+    <div class="avatar">A</div>
+    <div class="p-body">
+      <div class="p-name">主理人画像：李帅帅（Alan）· 儿科医师 × AI</div>
+      <div class="p-desc">三甲儿科规培医师转型 AI Builder｜「AI新青年」视频号主理人｜在手项目：小雪宝 LeukemiaPal（白血患儿陪伴）、星桥计划（孤独症数字疗愈）、孤独症量表 AI 平台、本地 AI 内容团队。兴趣：儿科 / 血液肿瘤 / 孤独症与心理健康 / 数字疗愈 / 临床 AI / 可本地部署的开源医疗模型。</div>
+    </div>
+  </div>
+
+  <!-- 板块 1：医疗模型与临床落地 -->
+  <div class="section-title"><span class="bar"></span>医疗模型与临床落地</div>
+
+  <div class="card">
+    <div class="tag-row">
+      <span class="tag src">AI HOT · Artificial Intelligence News</span>
+      <span class="tag">多模态 · 临床问诊</span>
+    </div>
+    <div class="title"><a href="https://www.artificialintelligence-news.com/news/google-tests-amie-for-clinical-video-consultations" target="_blank" rel="noopener">Google 将 AMIE 投入临床视频问诊实测：与标准化病人多指标对齐</a></div>
+    <div class="meta"><b>Google / DeepMind</b> · 2026-08-12 22:56（北京时间）</div>
+    <div class="summary">Google 研究型医疗 AI 系统 AMIE（Video）与专业「标准化病人」进行同步视频问诊，覆盖心肺、腹部、头颈、神经精神及骨骼肌肉等多类主诉，在多项核心指标上获得与初级保健医生相当的临床评估者评分；涉及真实患者的研究正在推进。</div>
+    <div class="why"><b>为什么与你有关：</b>AMIE 验证了「语音 + 视频多模态问诊陪伴」的临床可行性——这正是小雪宝 LeukemiaPal 从纯文本向语音/视频陪伴升级的直接对标物，可反向拆解它的交互设计与评估维度。</div>
+  </div>
+
+  <div class="card">
+    <div class="tag-row">
+      <span class="tag src">AI HOT · 面壁智能 OpenBMB</span>
+      <span class="tag">可本地部署 · 抗幻觉</span>
+    </div>
+    <div class="title"><a href="https://x.com/OpenBMB/status/2088264377573257223" target="_blank" rel="noopener">面壁智能 SciDC：用「规则约束解码」给本地医疗模型套上缰绳，无需微调</a></div>
+    <div class="meta"><b>面壁智能 / 清华 NLP / 南京大学</b> · 2026-08-14 22:00（北京时间）</div>
+    <div class="summary">SciDC 将科学知识转化为解码约束，让本地部署的领域模型只能在专家规则定义的可行域内生成。无需微调，在临床诊断等任务上平均准确率显著提升（Qwen3-14B 临床诊断 51.4→63.0），真实医疗记录精确匹配从 33.5% 提升至 45.1%。</div>
+    <div class="why"><b>为什么与你有关：</b>「规则约束解码」是抑制量表评估与用药建议幻觉的实用路子，可直接评估移植到孤独症量表 AI 平台——本地跑 Qwen3 系列即可，无需昂贵微调，契合你的一人公司 + 本地团队成本结构。</div>
+  </div>
+
+  <!-- 板块 2：前沿研究·论文 -->
+  <div class="section-title"><span class="bar"></span>前沿研究 · 论文</div>
+
+  <div class="card">
+    <div class="tag-row">
+      <span class="tag src">PubMed · JTCVS Open</span>
+      <span class="tag">影像/病理 AI · 临床落地</span>
+    </div>
+    <div class="title"><a href="https://pubmed.ncbi.nlm.nih.gov/42604329/" target="_blank" rel="noopener">飞秒无标记成像 + AI：胸外科肿瘤术中病理评估的快速替代方案（复旦大学中山医院团队）</a></div>
+    <div class="meta"><b>JTCVS Open</b> · 2026-06-17 · DOI: 10.1016/j.xjon.2026.101930 · PMID: 42604329</div>
+    <div class="summary">前瞻性纳入 144 例胸外科肿瘤患者（259 份肺、96 份食管标本），用飞秒激光无标记成像免切片染色生成多模态非线性光学信号，叠加基于预训练 UNI v1 + 注意力多实例学习的深度模型。肺肿瘤分类 AUC 达 0.953，术中中位耗时 5.4 分钟 vs 冰冻切片 36.3 分钟（P&lt;.001），并能做 3μm 层深容积切缘评估。</div>
+    <div class="why"><b>为什么与你有关：</b>这是「中国团队 + 可落地病理 AI」的优质样板：从数据防泄漏的切分设计（specimen-level / patient-level）到 UNI 基座模型的工程路径，都可作为你向临床同仁讲解 AI 诊断评估方法学的案例素材。</div>
+  </div>
+
+  <div class="card">
+    <div class="tag-row">
+      <span class="tag src">PubMed · Psychiatry Research</span>
+      <span class="tag">心理健康 · 数字疗愈</span>
+    </div>
+    <div class="title"><a href="https://pubmed.ncbi.nlm.nih.gov/42603525/" target="_blank" rel="noopener">心理健康从业者如何看待生成式 AI 进心理干预：提出「认知信任」与「混合治疗联盟」框架</a></div>
+    <div class="meta"><b>Psychiatry Research</b> · 2026-08-07 · DOI: 10.1016/j.psychres.2026.117371 · PMID: 42603525</div>
+    <div class="summary">跨国定性研究（美/加/英/德/澳/新/伊朗/土耳其 34 名从业者）梳理出生成式 AI 进心理干预的四大主题：热情与怀疑并存；扩大可及、个性化支持、减负的机会；对回答质量、治疗联盟、伦理与数据安全的担忧；以及强调问责、人机互补与负责任的创新。研究据此提出「认知信任（epistemic trust）」与「混合治疗联盟（hybrid therapeutic alliance）」两个解释框架。</div>
+    <div class="why"><b>为什么与你有关：</b>「混合治疗联盟」直击星桥计划的核心命题——孤独症数字疗愈如何让家长与从业者信任 AI 而非排斥。这两个框架可直接写入星桥计划产品设计文档的「信任设计」章节。</div>
+  </div>
+
+  <div class="card">
+    <div class="tag-row">
+      <span class="tag src">PubMed · BJU International</span>
+      <span class="tag">肿瘤 · 诊断评估</span>
+    </div>
+    <div class="title"><a href="https://pubmed.ncbi.nlm.nih.gov/42605566/" target="_blank" rel="noopener">AI 预测非肌层浸润性膀胱癌 BCG 反应：数字病理平台 12 中心外部验证的系统综述</a></div>
+    <div class="meta"><b>BJU International</b> · 2026-08-17 · DOI: 10.1111/bju.70404 · PMID: 42605566</div>
+    <div class="summary">系统综述纳入 15 项研究（&gt;24,900 例）。数字病理平台 CHAI 经 12 个国际中心验证，可分层高级别复发（HR 2.08）、进展（HR 3.87）与 BCG 无应答（HR 2.31），是唯一提供「预测价值」初信号的模型（BCG vs 吉西他滨/多西他赛交互 P=0.029）。但仅 40% 研究做过外部验证、无前瞻性研究，5 项存在高偏倚风险。</div>
+    <div class="why"><b>为什么与你有关：</b>这篇的价值在「方法学的清醒」：即便强如 12 中心验证，仍强调前瞻验证 + 校准报告 + 治疗×生物标志物交互分析缺一不可。你给孤独症量表平台做 AI 评估时，应同样把「外部验证 + 前瞻验证」作为门槛，而不是只看单中心 AUC。</div>
+  </div>
+
+  <!-- 板块 3：行业与监管动态 -->
+  <div class="section-title"><span class="bar"></span>行业与监管动态</div>
+
+  <div class="card">
+    <div class="tag-row">
+      <span class="tag src">AI HOT · IT之家</span>
+      <span class="tag">医疗大模型 · 行业趋势</span>
+    </div>
+    <div class="title"><a href="https://www.ithome.com/0/990/373.htm" target="_blank" rel="noopener">Anthropic CEO IPO 前罕见长文：预告 5-10 年 AI 治愈多数疾病，加速押注生物医学</a></div>
+    <div class="meta"><b>Anthropic / Dario Amodei</b> · 2026-08-16 20:13（北京时间）</div>
+    <div class="summary">IPO 前夕，Dario Amodei 长文正面回应 AI 权力集中质疑，并预告未来 5-10 年 AI 将能治愈多数人类疾病；Anthropic 正加速押注生物医学 AI，预计未来几个月公开早期研究进展，同时支持建立类 FINRA 的 AI 监管机构。</div>
+    <div class="why"><b>为什么与你有关：</b>头部实验室集体重注「生物医学 AI」，意味着未来数月会有可关注的医学大模型与诊疗基准发布——这是你视频号「AI 医疗」内容的确定性选题来源，也是判断小雪宝/星桥计划技术选型窗口的行业风向标。</div>
+  </div>
+
+  <!-- 行动建议 -->
+  <div class="section-title"><span class="bar"></span>今日行动建议</div>
+  <div class="actions">
+    <ol>
+      <li><b>小雪宝语音陪伴预研：</b>以 Google AMIE 视频问诊为对标，梳理开源「ASR + 本地 LLM + TTS」组合的语音陪伴可行性，产出一篇对比笔记（含交互设计维度与评估指标），归档入知识库。</li>
+      <li><b>量表平台抗幻觉实验：</b>研究面壁智能 SciDC 的「规则约束解码」思路，评估能否把孤独症量表评估的评分规则 / 建议话术固化为解码约束，用本地 Qwen3 系列跑一组 A/B 对比，验证幻觉率下降幅度。</li>
+      <li><b>星桥计划信任设计补页：</b>将「认知信任 + 混合治疗联盟」框架落入星桥计划产品设计文档，重点回答「家长/从业者如何信任 AI 疗愈」这一页，为后续向从业者宣讲做准备。</li>
+    </ol>
+  </div>
+
+  <footer>
+    <div><b>数据来源：</b>AI HOT（医疗垂直资讯聚合）· PubMed E-utilities（同行评审论文）· medRxiv（预印本）。</div>
+    <div><b>说明：</b>今日 medRxiv 源无有效返回，预印本板块本次省略；所涉论文均经同行评审，本简报不构成任何诊疗建议。资讯时间已换算为北京时间（ISO+8h）。</div>
+    <div><b>版权：</b>简报由「AI新青年」自动生成，内容素材归原发布方所有；转载请保留原文链接与 PMID/DOI。</div>
+  </footer>
+
+</div>
+</body>
+</html>

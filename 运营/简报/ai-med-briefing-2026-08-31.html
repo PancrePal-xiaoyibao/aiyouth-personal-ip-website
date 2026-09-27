@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-08-31</title>
+<style>
+  :root{
+    --teal:#0d9488; --teal-soft:#0d948815; --teal-line:#0d948840;
+    --bg:#f6f8f8; --card:#ffffff; --text:#0f2b2a; --muted:#5b7170;
+    --chip:#0d94881a; --border:#e3ebea; --shadow:0 2px 14px rgba(13,148,136,.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0c1414; --card:#132020; --text:#e6f1f0; --muted:#9bb3b1;
+      --chip:#0d948826; --border:#223534; --shadow:0 2px 18px rgba(0,0,0,.45);
+      --teal-soft:#0d94881f;
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.65;padding:28px 16px 60px;
+  }
+  .wrap{max-width:840px;margin:0 auto}
+  header.hero{
+    background:linear-gradient(135deg,var(--teal) 0%,#0ea5a0 100%);
+    color:#fff;border-radius:12px;padding:26px 26px 22px;box-shadow:var(--shadow);
+    position:relative;overflow:hidden;
+  }
+  header.hero::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;
+    background:radial-gradient(circle,rgba(255,255,255,.18),transparent 70%);border-radius:50%}
+  .kicker{font-size:13px;letter-spacing:2px;opacity:.92;font-weight:600}
+  h1{font-size:25px;margin:6px 0 10px;font-weight:800;letter-spacing:.5px}
+  .profile{display:flex;flex-wrap:wrap;gap:10px 18px;font-size:13.5px;opacity:.95;margin-top:4px}
+  .profile b{font-weight:700}
+  .meta{margin-top:14px;font-size:12.5px;opacity:.9;display:flex;flex-wrap:wrap;gap:6px 14px}
+  .meta span{background:rgba(255,255,255,.16);padding:3px 10px;border-radius:999px}
+  .sec-title{
+    display:flex;align-items:center;gap:10px;margin:30px 4px 14px;font-size:18px;font-weight:800;color:var(--teal);
+  }
+  .sec-title .bar{width:5px;height:20px;background:var(--teal);border-radius:3px;display:inline-block}
+  .card{
+    background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:18px 19px;margin-bottom:14px;box-shadow:var(--shadow);
+    transition:transform .15s ease,border-color .15s ease;
+  }
+  .card:hover{transform:translateY(-2px);border-color:var(--teal-line)}
+  .card h3{font-size:16.5px;line-height:1.45;margin-bottom:8px}
+  .card h3 a{color:var(--text);text-decoration:none;border-bottom:1.5px solid var(--teal-line)}
+  .card h3 a:hover{color:var(--teal);border-color:var(--teal)}
+  .tagline{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 11px;font-size:12px;color:var(--muted)}
+  .tagline .t{background:var(--chip);color:var(--teal);padding:2px 9px;border-radius:999px;font-weight:600}
+  .tagline .src{color:var(--muted)}
+  .sum{font-size:14px;color:var(--text);margin-bottom:10px}
+  .why{
+    font-size:13.5px;background:var(--teal-soft);border-left:3px solid var(--teal);
+    padding:9px 13px;border-radius:0 8px 8px 0;color:var(--text);
+  }
+  .why b{color:var(--teal)}
+  .preprint{font-size:11.5px;color:#b45309;background:#fef3c7;display:inline-block;
+    padding:2px 8px;border-radius:6px;font-weight:700;margin-left:6px}
+  @media (prefers-color-scheme: dark){.preprint{color:#fbbf24;background:#3a2e0c}}
+  .actions{
+    background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-top:14px;box-shadow:var(--shadow);
+  }
+  .actions h2{font-size:17px;color:var(--teal);margin-bottom:10px}
+  .actions ol{margin:0;padding-left:20px}
+  .actions li{font-size:14px;margin-bottom:9px}
+  .actions li b{color:var(--teal)}
+  .note{
+    font-size:12.5px;color:var(--muted);background:var(--chip);border:1px dashed var(--teal-line);
+    border-radius:10px;padding:11px 14px;margin:16px 0;line-height:1.6;
+  }
+  footer{margin-top:26px;font-size:12px;color:var(--muted);text-align:center;line-height:1.7;
+    border-top:1px solid var(--border);padding-top:16px}
+  footer a{color:var(--teal);text-decoration:none}
+  .count-pill{position:absolute;right:22px;top:22px;background:rgba(255,255,255,.2);
+    padding:5px 13px;border-radius:999px;font-size:13px;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="count-pill">精选 6 条</div>
+    <div class="kicker">AI NEW YOUTH · MEDICAL AI BRIEFING</div>
+    <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+    <div class="profile">
+      <span>主理人 <b>Alan（李帅帅）</b></span>
+      <span>🩺 三甲儿科规培医师 × 🤖 AI Builder</span>
+      <span>受众：青少年 / 家长</span>
+    </div>
+    <div class="meta">
+      <span>📅 2026-08-31（周一）</span>
+      <span>📡 时间窗：近 7 天（08-24 → 08-31）</span>
+      <span>🗂 数据源：AI HOT · medRxiv</span>
+    </div>
+  </header>
+
+  <div class="note">
+    ⚠️ <b>数据来源说明：</b>本期同行评审原文（PubMed / Europe PMC）因本机出口 IP 被 NCBI 临时封禁、且代理 TLS 握手失败，未能取数；Semantic Scholar / Crossref 亦受限。故「前沿研究」板块以 <b>medRxiv 预印本</b>呈现（均标注「未经同行评审」）。如需严格同行评审原文，建议扩大时间窗或稍后重试。内容未经任何编造，宁缺毋滥。
+  </div>
+
+  <!-- 板块 1：医疗模型与临床落地 -->
+  <div class="sec-title"><span class="bar"></span>医疗模型与临床落地</div>
+
+  <div class="card">
+    <h3><a href="https://www.ithome.com/0/996/195.htm" target="_blank" rel="noopener">华为云联合瑞金医院发布瑞智病理大模型 RuiPath 2.0</a></h3>
+    <div class="tagline">
+      <span class="t">医疗大模型</span>
+      <span class="src">来源：IT之家 · 北京时间 2026-08-30 17:12</span>
+    </div>
+    <p class="sum">华为云与上海瑞金医院联合发布第二代病理大模型 RuiPath 2.0，面向病理切片的多模态理解与科室级辅助判读落地，延续国内头部医院「大模型 + 专病」的落地路线。</p>
+    <div class="why"><b>为什么与你有关：</b>小雪宝 LeukemiaPal 若接入检验/骨髓报告结构化，可借鉴其「病理图像 + 文本」多模态范式；也提示你做医疗内容时，专病大模型的「院内落地 vs 消费端陪伴」定位差异值得在视频号讲清楚。</div>
+  </div>
+
+  <!-- 板块 2：工具与开源 -->
+  <div class="sec-title"><span class="bar"></span>工具与开源</div>
+
+  <div class="card">
+    <h3><a href="https://www.marktechpost.com/2026/08/25/ibm-releas" target="_blank" rel="noopener">IBM 发布 Granite 4.2：开放企业模型带来原生推理与智能体强化学习</a></h3>
+    <div class="tagline">
+      <span class="t">开源 · 可本地部署</span>
+      <span class="src">来源：MarkTechPost · 北京时间 2026-08-25 13:48</span>
+    </div>
+    <p class="sum">IBM 推出 Granite 4.2 系列开放权重企业模型，主打原生推理能力与智能体强化学习训练，定位可在企业/本地环境自托管、兼顾合规与可控性。</p>
+    <div class="why"><b>为什么与你有关：</b>「可本地部署的开源医疗模型」正是你的长期偏好——量表平台与小雪宝的患儿隐私数据，用 Granite 这类开源模型本地化推理可规避云端合规风险，是 MVP 技术选型的可比对象。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://huggingface.co/blog/open-asr-leaderboard-g" target="_blank" rel="noopener">Open ASR 排行榜新增首个「全球南方」语言：印地语与印度英语评测集</a></h3>
+    <div class="tagline">
+      <span class="t">多语言语音</span>
+      <span class="src">来源：Hugging Face Blog · 北京时间 2026-08-28 08:00</span>
+    </div>
+    <p class="sum">Hugging Face 的 Open ASR 排行榜首次纳入印地语与印度英语评测集，补全低资源/多语言语音识别的公开基准，推动非英语、方言友好型语音技术建设。</p>
+    <div class="why"><b>为什么与你有关：</b>星桥计划与小雪宝的语音陪伴/筛查模块迟早要面对方言与少数民族语言场景；多语言 ASR 基准的成熟，意味着你可用开源语音模型做更包容的患儿/家长交互，而不必依赖单一英文栈。</div>
+  </div>
+
+  <!-- 板块 3：前沿研究·论文（预印本） -->
+  <div class="sec-title"><span class="bar"></span>前沿研究 · 论文（预印本）</div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.64898/2026.08.24.26361037" target="_blank" rel="noopener">TikTok 上 AI 生成心理健康内容的标识与披露研究</a><span class="preprint">未经同行评审</span></h3>
+    <div class="tagline">
+      <span class="t">数字健康 · 内容安全</span>
+      <span class="src">来源：medRxiv（health informatics）· 2026-08-24 · DOI 10.64898/2026.08.24.26361037</span>
+    </div>
+    <p class="sum">研究指出 TikTok 已成为重要健康信息源，而 AI 生成内容（AIGC）正成为健康误导载体；当 AIGC 以真人形态给出健康建议时，「披露标签」是观众判断内容是否合成的唯一可靠线索。</p>
+    <div class="why"><b>为什么与你有关：</b>直中小雪宝的 family-education 内容向——你做家长科普时，应主动给「AI 生成/辅助」内容加披露标签，把「平台合规 + 家长知情权」做成产品与内容的红线，而非被动等监管。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.64898/2026.08.21.26360471" target="_blank" rel="noopener">用提示消融跨 LLM 与微调编码器检测自发言语中的「自我修正」</a><span class="preprint">未经同行评审</span></h3>
+    <div class="tagline">
+      <span class="t">语音生物标志物 · 孤独症</span>
+      <span class="src">来源：medRxiv（health informatics）· 2026-08-25 · DOI 10.64898/2026.08.21.26360471</span>
+    </div>
+    <p class="sum">「自我修正」（说话中放弃并重构）被提出作为语音认知筛查的可解释标记；研究系统比较了 LLM 提示消融与微调编码器在自发言语中自动检测自我修正的效果，因其依赖语境而非固定词表，检测难度高。</p>
+    <div class="why"><b>为什么与你有关：</b>星桥计划的数字疗愈/早期筛查可把「语音自我修正」作为孤独症言语特征的可解释信号，配合开源 ASR 做自由对话采集——比纯黑箱量表更易向家长解释，也利于建立筛查证据链。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.64898/2026.08.20.26360740" target="_blank" rel="noopener">临床概念抽取与「证据有界」术语链接的多中心模型对比与消融</a><span class="preprint">未经同行评审</span></h3>
+    <div class="tagline">
+      <span class="t">临床 NLP · 术语治理</span>
+      <span class="src">来源：medRxiv（health informatics）· 2026-08-24 · DOI 10.64898/2026.08.20.26360740</span>
+    </div>
+    <p class="sum">临床术语管线需先从病历文本抽取候选片段，再判断其是否映射到已有概念或需人工复核；研究通过多中心模型对比与消融实验，评估「证据有界」的术语链接如何提升映射可靠性与可追溯性。</p>
+    <div class="why"><b>为什么与你有关：</b>量表平台的「条目语义对齐 + 来源证据回填」直接复用该思路——用证据有界的术语链接给每条量表结果挂上可追溯文献，既能增强专业可信度，也契合你「本地部署 + 隐私」的架构取向。</div>
+  </div>
+
+  <!-- 今日行动建议 -->
+  <div class="actions">
+    <h2>📌 今日行动建议（绑定在手项目）</h2>
+    <ol>
+      <li><b>星桥计划：</b>把 medRxiv「自发言语自我修正」语音标记思路并入 MVP 语音陪伴模块——用开源/多语言 ASR（参照 Open ASR 基准）采集患儿自由对话的语音特征，作为孤独症早期筛查的可解释信号，本周先跑一个最小样例。</li>
+      <li><b>小雪宝 LeukemiaPal：</b>参考 RuiPath 2.0 的病理多模态范式，规划「骨髓/检验报告结构化」能力；同时把 TikTok AI 内容披露研究转化为家长端「AI 生成内容提示」合规模块，写入 family-education 内容安全底线。</li>
+      <li><b>量表平台：</b>复用 medRxiv「临床概念抽取 + 证据有界术语链接」管线，做量表条目的自动语义对齐与来源证据回填，优先支持本地部署（Granite 4.2 等开源模型）以保障患儿数据隐私。</li>
+    </ol>
+  </div>
+
+  <footer>
+    数据来源：AI HOT 垂直资讯（IT之家 / Hugging Face / MarkTechPost 等）· medRxiv 预印本平台<br>
+    本期同行评审原文（PubMed / Europe PMC）因出口网络限制未取数，研究板块以预印本呈现，<b>预印本均未经同行评审</b>，结论可能变动<br>
+    © 2026 AI新青年（Alan · 李帅帅）· 本简报为内部内容参考，不构成医疗建议
+  </footer>
+
+</div>
+</body>
+</html>

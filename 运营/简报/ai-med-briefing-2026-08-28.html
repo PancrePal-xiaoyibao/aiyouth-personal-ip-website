@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-08-28</title>
+<style>
+  :root{
+    --teal:#0d9488;
+    --teal-soft:#0d948814;
+    --teal-line:#0d948833;
+    --bg:#ffffff;
+    --card:#f8fafb;
+    --ink:#0f172a;
+    --ink-2:#475569;
+    --ink-3:#94a3b8;
+    --border:#e2e8f0;
+    --shadow:0 1px 3px rgba(15,23,42,.06),0 8px 24px rgba(15,23,42,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --teal:#2dd4bf;
+      --teal-soft:#2dd4bf1a;
+      --teal-line:#2dd4bf3a;
+      --bg:#0b1220;
+      --card:#121b2e;
+      --ink:#e8eef6;
+      --ink-2:#a8b3c4;
+      --ink-3:#6b7689;
+      --border:#22304a;
+      --shadow:0 1px 3px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.65;
+    padding:32px 16px 64px;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto}
+  header{
+    border-bottom:2px solid var(--teal-line);
+    padding-bottom:22px;margin-bottom:30px;
+  }
+  .kicker{color:var(--teal);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  h1{font-size:30px;font-weight:800;margin:6px 0 14px;letter-spacing:-.01em}
+  .profile{
+    display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+    background:var(--teal-soft);border:1px solid var(--teal-line);
+    border-radius:12px;padding:12px 16px;margin-bottom:14px;font-size:14px;color:var(--ink-2)
+  }
+  .profile b{color:var(--ink)}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--ink-3)}
+  .chip{background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px}
+  .chip b{color:var(--teal)}
+  section{margin:34px 0}
+  .sec-title{
+    display:flex;align-items:center;gap:10px;
+    font-size:18px;font-weight:800;margin-bottom:16px;color:var(--ink)
+  }
+  .sec-title::before{content:"";width:6px;height:20px;border-radius:4px;background:var(--teal);display:inline-block}
+  .card{
+    background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:20px 22px;margin-bottom:16px;box-shadow:var(--shadow);
+    border-left:4px solid var(--teal);
+    transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .card:hover{transform:translateY(-2px)}
+  .card-head{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;justify-content:space-between;margin-bottom:8px}
+  .card a.title{font-size:17px;font-weight:700;color:var(--ink);text-decoration:none;line-height:1.4}
+  .card a.title:hover{color:var(--teal);text-decoration:underline}
+  .src{font-size:12px;color:var(--ink-3);white-space:nowrap}
+  .src .date{color:var(--teal);font-weight:600}
+  .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:999px;background:var(--teal-soft);color:var(--teal);border:1px solid var(--teal-line);margin-left:6px;vertical-align:middle}
+  .badge.pre{background:#fef3c7;color:#b45309;border-color:#fde68a}
+  @media (prefers-color-scheme: dark){.badge.pre{background:#422006;color:#fbbf24;border-color:#78350f}}
+  .summary{font-size:14.5px;color:var(--ink-2);margin:10px 0}
+  .why{
+    font-size:14px;color:var(--ink);background:var(--teal-soft);
+    border:1px solid var(--teal-line);border-radius:10px;padding:11px 14px;margin-top:10px
+  }
+  .why b{color:var(--teal)}
+  .actions{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px}
+  .actions ol{margin:6px 0 0 20px}
+  .actions li{margin:9px 0;font-size:14.5px;color:var(--ink-2)}
+  .actions li b{color:var(--ink)}
+  .tag{display:inline-block;font-size:12px;font-weight:700;color:var(--teal);margin-right:6px}
+  footer{margin-top:40px;border-top:1px solid var(--border);padding-top:18px;font-size:12.5px;color:var(--ink-3);line-height:1.7}
+  footer a{color:var(--teal);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">AI 新青年 · 每日医疗 AI 聚焦</div>
+    <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+    <div class="profile">
+      <span>主理人 <b>Alan（李帅帅）</b></span>
+      <span>·</span>
+      <span><b>三甲儿科规培医师 × AI Builder</b></span>
+      <span>·</span>
+      <span>受众：青少年 / 家长 · 视频号「AI新青年」</span>
+    </div>
+    <div class="meta">
+      <span class="chip">日期 <b>2026-08-28</b></span>
+      <span class="chip">时间窗 <b>2026-08-21 → 08-28</b>（7 天）</span>
+      <span class="chip">精选 <b>6</b> 条</span>
+      <span class="chip">数据源 <b>AI HOT · PubMed · medRxiv</b></span>
+    </div>
+  </header>
+
+  <!-- ============ 医疗模型与临床落地 ============ -->
+  <section>
+    <div class="sec-title">医疗模型与临床落地</div>
+
+    <div class="card">
+      <div class="card-head">
+        <a class="title" href="https://www.ithome.com/0/995/255.htm" target="_blank" rel="noopener">英国实施全球首例 AI 实时辅助脑外科手术，成功切除脑部肿瘤</a>
+        <span class="src">IT之家（RSS） · <span class="date">2026-08-27 19:13 北京时间</span></span>
+      </div>
+      <p class="summary">英国完成全球首例由 AI 实时辅助的脑外科手术：系统在肿瘤切除全程持续提供影像导航与边界识别，成功切除脑部肿瘤。这标志医疗 AI 从「读片给建议」迈向「术中实时决策辅助」的高价值临床场景。</p>
+      <div class="why"><b>为什么与你有关 ·</b> 星桥数字疗愈 / 小雪宝——「实时反馈闭环」正是陪伴与疗愈产品可借鉴的工程范式；同时再次印证术中「人在环」不可省，呼应你近期医疗 AI 科普里反复强调的监管底线。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <a class="title" href="https://www.ithome.com/0/993/315.htm" target="_blank" rel="noopener">联影医疗 × 天津大学发布全球首个磁共振脑机接口全栈方案 uMR 神观</a>
+        <span class="src">IT之家（RSS） · <span class="date">2026-08-23 23:18 北京时间</span></span>
+      </div>
+      <p class="summary">联影与天津大学推出 uMR 神观——全球首个磁共振脑机接口（MRI-BCI）全栈式解决方案，打通「脑信号采集—解码—反馈」闭环，面向神经康复与功能调控，把脑机接口从实验室推到临床装备层面。</p>
+      <div class="why"><b>为什么与你有关 ·</b> 直中<b>星桥计划</b>——BCI 是孤独症数字疗愈 / 神经调控的前沿载体；该全栈方案可作为星桥「多模态神经反馈」路线的技术参照与选型标杆，值得立项评估可行性。</div>
+    </div>
+  </section>
+
+  <!-- ============ 前沿研究·论文 ============ -->
+  <section>
+    <div class="sec-title">前沿研究 · 论文（PubMed）</div>
+
+    <div class="card">
+      <div class="card-head">
+        <a class="title" href="https://pubmed.ncbi.nlm.nih.gov/42658587/" target="_blank" rel="noopener">Focal, intervention-specific, and titrated: Which AI tools are FIT for mental health care?</a>
+        <span class="src">J Consult Clin Psychol（Harvard） · <span class="date">2026 Aug</span></span>
+      </div>
+      <p class="summary">哈佛团队提出心理 AI 工具的「FIT」评估框架——<b>F</b>ocal（聚焦单一问题）、<b>I</b>ntervention-specific（限定治疗流程）、<b>T</b>itrated（剂量与时长随场景校准），作为对话式心理 AI 的三条落地护栏，降低过度泛化与角色越界风险。</p>
+      <div class="why"><b>为什么与你有关 ·</b> 直中<b>星桥 / 小雪宝</b> 心理陪伴产品设计——给出可落地的「工具准入」清单；你的<b>量表平台</b>可直接把 FIT 三维度做成评估项，量化每个陪伴 Agent 的安全边界。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <a class="title" href="https://pubmed.ncbi.nlm.nih.gov/42658452/" target="_blank" rel="noopener">Beyond Accuracy: Defining the Role of Artificial Intelligence in Pediatric Electrocardiography</a>
+        <span class="src">Indian Pediatr · <span class="date">2026-08-27（online ahead of print）</span></span>
+      </div>
+      <p class="summary">印度儿科心脏病团队撰文界定 AI 在儿科心电图中的角色：除「准确率」外，更需明确 AI 是辅助而非替代、适用边界与临床责任归属——一篇面向儿科场景的「角色定义」评论。</p>
+      <div class="why"><b>为什么与你有关 ·</b> 直中<b>小雪宝</b>（儿科场景）+ 量表平台的「超越准确率」安全论调——与 FIT 框架互为呼应：任何儿科 AI 都应先定义角色边界，再谈性能指标。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <a class="title" href="https://pubmed.ncbi.nlm.nih.gov/42657654/" target="_blank" rel="noopener">A Shift in Trust: An Analysis of the Use of AI Chatbots Among People Living With Bipolar Disorder</a>
+        <span class="src">Bipolar Disord（UMC Utrecht） · <span class="date">2026 Sep</span></span>
+      </div>
+      <p class="summary">乌得勒支团队访谈双相障碍患者使用 ChatGPT 做自我反思 / 情绪支持，发现 AI 把信任从临床医生迁移至自身，出现「角色模糊」；越脆弱的用户越依赖，伴过度信赖与低估 AI 局限的风险。</p>
+      <div class="why"><b>为什么与你有关 ·</b> 直中<b>小雪宝 / 星桥</b> 陪伴对话安全红线——真实世界证据：情感依恋型对话必须设「人在环 + 危机升级路由」，避免削弱用户对专业医疗的信任。</div>
+    </div>
+  </section>
+
+  <!-- ============ 预印本·前沿研究 ============ -->
+  <section>
+    <div class="sec-title">预印本 · 前沿研究（medRxiv）</div>
+
+    <div class="card">
+      <div class="card-head">
+        <a class="title" href="https://doi.org/10.64898/2026.08.13.26360304" target="_blank" rel="noopener">Lifespan brain structural variation reveals shared organization across mental health conditions<span class="badge pre">未经同行评审</span></a>
+        <span class="src">medRxiv（ENIGMA consortium） · <span class="date">2026-08-21</span></span>
+      </div>
+      <p class="summary">ENIGMA 联盟汇总 10,135 名神经发育 / 精神疾患（含孤独症、双相、焦虑、抑郁等）与 11,998 名对照，用规范建模刻画个体脑结构偏离，发现跨诊断的共享皮层组织轴——提示不同疾病在脑层面存在共同脆弱性。</p>
+      <div class="why"><b>为什么与你有关 ·</b> 直中<b>星桥</b>（孤独症神经机制）+ <b>量表平台</b>——跨诊断共享生物标志物的思路，可启发量表平台增设「神经发育维度」字段，支撑星桥早期筛查的生物学分层。</div>
+    </div>
+  </section>
+
+  <!-- ============ 今日行动建议 ============ -->
+  <section>
+    <div class="actions">
+      <div class="sec-title">今日行动建议</div>
+      <ol>
+        <li><span class="tag">星桥</span><b>立项调研 BCI 神经反馈可行性。</b> 以 uMR 神观全栈方案为参照，评估星桥接入「多模态神经反馈」的技术路径与成本；同时把 FIT 三维度（focused / specific / titrated）写进星桥陪伴 Agent 的系统提示与评估卡。</li>
+        <li><span class="tag">小雪宝 · 量表平台</span><b>补齐陪伴对话安全护栏。</b> 参照 FIT 框架与双相 chatbot 信任研究，在对话层加入「角色边界声明 + 危机升级路由」；将「超越准确率」的角色定义沉淀进量表平台合规文档。</li>
+        <li><span class="tag">内容团队</span><b>拍一期「AI 在环 vs 人在环」短视频。</b> 用「英国 AI 实时辅助脑外科手术」为钩子，向公众讲清医疗 AI 的能力边界与监管底线，强化你「懂临床的 AI 科普」人设。</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>数据来源：</b>AI HOT 医疗垂直资讯 · PubMed E-utilities（同行评审论文）· medRxiv（预印本）。</p>
+    <p><b>版权提示：</b>本简报由「AI新青年」自动生成，仅供内部选题与学习参考，不构成医疗或投资建议。预印本条目均标注「未经同行评审」，结论以正式发表版本为准。</p>
+    <p>原文 / DOI / PMID 链接已随每条保留，点击标题即可跳转核验。</p>
+  </footer>
+</div>
+</body>
+</html>

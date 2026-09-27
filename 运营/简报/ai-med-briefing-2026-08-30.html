@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-08-30</title>
+<style>
+  :root{
+    --teal:#0d9488; --teal-soft:#0d94881a; --teal-line:#0d948833;
+    --bg:#f7faf9; --card:#ffffff; --ink:#1a2b29; --sub:#5b6b68; --line:#e4ecea;
+    --tag:#0d948814; --warn:#b45309; --warnbg:#fef3c7;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0f1716; --card:#16211f; --ink:#e8f1ef; --sub:#9fb2af; --line:#26352f;
+      --teal-soft:#0d948822; --teal-line:#0d948855; --tag:#0d948926;
+      --warn:#fbbf24; --warnbg:#3a2a0e;
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       background:var(--bg);color:var(--ink);line-height:1.6;padding:28px 16px 60px}
+  .wrap{max-width:840px;margin:0 auto}
+  header.hero{background:linear-gradient(135deg,var(--teal) 0%,#0f766e 100%);color:#fff;
+       border-radius:12px;padding:26px 24px;margin-bottom:22px;box-shadow:0 6px 22px rgba(13,148,136,.18)}
+  header.hero h1{font-size:23px;font-weight:800;letter-spacing:.5px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:14px;font-size:13px;opacity:.95}
+  .meta b{font-weight:700}
+  .pill{background:rgba(255,255,255,.18);border-radius:999px;padding:3px 11px;font-size:12px}
+  .avatar{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:13.5px;
+       background:rgba(255,255,255,.14);border-radius:12px;padding:10px 14px}
+  .avatar .dot{width:9px;height:9px;border-radius:50%;background:#a7f3d0;box-shadow:0 0 0 4px rgba(167,243,208,.3)}
+  section{margin:26px 0}
+  .sec-h{display:flex;align-items:center;gap:9px;font-size:16px;font-weight:800;color:var(--teal);
+       margin-bottom:13px;padding-left:11px;border-left:4px solid var(--teal)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px;
+       margin-bottom:14px;transition:.18s}
+  .card:hover{border-color:var(--teal-line);box-shadow:0 4px 16px rgba(13,148,136,.10);transform:translateY(-2px)}
+  .card h3{font-size:15.5px;line-height:1.45;margin-bottom:8px}
+  .card h3 a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--teal-line)}
+  .card h3 a:hover{color:var(--teal);border-color:var(--teal)}
+  .row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;font-size:12px;color:var(--sub)}
+  .chip{background:var(--tag);color:var(--teal);border-radius:999px;padding:2px 10px;font-weight:600}
+  .chip.gray{background:var(--line);color:var(--sub)}
+  .sum{font-size:14px;color:var(--ink);margin-bottom:10px}
+  .rel{background:var(--teal-soft);border-left:3px solid var(--teal);border-radius:0 10px 10px 0;
+       padding:10px 13px;font-size:13.5px;color:var(--ink)}
+  .rel b{color:var(--teal)}
+  .preprint{display:inline-block;background:var(--warnbg);color:var(--warn);font-size:11px;font-weight:700;
+       border-radius:6px;padding:2px 8px;margin-left:6px;vertical-align:middle}
+  .actions{background:var(--card);border:1px dashed var(--teal-line);border-radius:12px;padding:18px 20px}
+  .actions h2{font-size:15px;color:var(--teal);margin-bottom:11px}
+  .actions ol{margin-left:18px}
+  .actions li{font-size:13.8px;margin-bottom:9px}
+  .actions li b{color:var(--teal)}
+  footer{margin-top:34px;font-size:12px;color:var(--sub);text-align:center;border-top:1px solid var(--line);padding-top:16px}
+  footer .srcs{margin-bottom:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+    <div class="avatar">
+      <span class="dot"></span>
+      <span><b>主理人 Alan（李帅帅）</b> · 三甲儿科规培医师转型 AI ｜「AI新青年」视频号主理人，受众=青少年 / 家长</span>
+    </div>
+    <div class="meta">
+      <span class="pill">📅 2026-08-30（周日）</span>
+      <span class="pill">🔎 精选 6 条</span>
+      <span class="pill">🗂 数据源：AI HOT / PubMed / medRxiv</span>
+      <span class="pill">🪟 时间窗：近 7 天（2026-08-23 → 08-30）</span>
+    </div>
+  </header>
+
+  <!-- ============ 医疗模型与临床落地 ============ -->
+  <section>
+    <div class="sec-h">🩺 医疗模型与临床落地</div>
+
+    <article class="card">
+      <h3><a href="https://www.ithome.com/0/995/870.htm" target="_blank" rel="noopener">全球首例：武汉大学人民医院实现眼球植入半侵入式视网膜脑机接口，患者重见光明</a></h3>
+      <div class="row">
+        <span class="chip">IT之家</span>
+        <span class="chip gray">2026-08-29（北京时间）</span>
+        <span class="chip gray">临床落地 · 脑机接口</span>
+      </div>
+      <p class="sum">肖璇教授团队完成全球首例高分辨率半侵入式视网膜 BCI 临床应用：一名失明 4 年的 60 岁患者，术后开机仅一周即可辨认、书写汉字与英文字母，并独立行走。方案将刺激芯片植入巩膜、不穿透眼球，采用无线传输且设备可完整取出迭代更换，规避了眼内手术的高危并发症。</p>
+      <div class="rel"><b>为什么与你有关：</b>直中「星桥计划」。BCI 是数字疗愈的硬科技底座；该方案"可取出、可迭代"的非穿透设计，对星桥规划"非侵入→半侵入"神经反馈产品路线极具参照价值——把"可升级硬件 + 临床安全边界"作为产品红线写进路线图。</div>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://arstechnica.com/health/2026/08/ai-wont-replace-radiologists-but-it-will-dramatically-change-their-jobs" target="_blank" rel="noopener">AI 不会取代放射科医生，但将彻底改变他们的工作</a></h3>
+      <div class="row">
+        <span class="chip">Ars Technica</span>
+        <span class="chip gray">2026-08-25（北京时间）</span>
+        <span class="chip gray">影像 / 病理 AI · 行业研判</span>
+      </div>
+      <p class="sum">截至 2026 年初，FDA 已批准约 1400 款 AI 医疗设备，其中近四分之三用于放射科；部分工具能识别人眼不可见的异常、达到甚至超越资深放射科医生水平。一项涵盖 43 项临床试验的分析显示，AI 辅助结肠镜检查比传统方式发现更多息肉。与此同时，放射科从业人数未来 30 年预计仍增长 26% 以上。</p>
+      <div class="rel"><b>为什么与你有关：</b>影像 / 病理 AI 是医疗 AI 落地的主战场。对小雪宝 LeukemiaPal 的"辅助诊断 + 人在环"定位是直接参照：AI 做增强而非替代，正合小雪宝 family-education 中"AI 辅助、医生 / 家长决策"的基调——这一叙事也可转化成你视频号的选题。</div>
+    </article>
+  </section>
+
+  <!-- ============ 前沿研究·论文 ============ -->
+  <section>
+    <div class="sec-h">📄 前沿研究 · 论文（PubMed）</div>
+
+    <article class="card">
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42645391/" target="_blank" rel="noopener">基于 YOLOv11-Large 的外周血涂片白血病细胞检测模型</a></h3>
+      <div class="row">
+        <span class="chip">Curr Oncol</span>
+        <span class="chip gray">2026-08-18 · PMID 42645391</span>
+        <span class="chip gray">白血病 · 计算机视觉</span>
+      </div>
+      <p class="sum">在开放数据集 LeukemiaAttri（18,664 张标注图、67,347 个目标）上，YOLOv11L 同步完成 14 类白血病相关白细胞的定位与分类；内部测试 mAP50 达 93.9%、F1 0.913，单卡 H200 微调即可复现，且数据集与流程开源。</p>
+      <div class="rel"><b>为什么与你有关：</b>直中「小雪宝 LeukemiaPal」。外周血涂片自动识别是白血病居家监测 / 科普可视化的天然素材；开源数据集 + 单卡可训，利于你做"本地轻量化部署"演示，把论文里的检测框变成给孩子家长看得懂的动画讲解。</div>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42660134/" target="_blank" rel="noopener">超越"最大等级"：真实世界数字健康技术如何捕获、预测与管理血液肿瘤治疗毒性</a></h3>
+      <div class="row">
+        <span class="chip">Lancet Haematol</span>
+        <span class="chip gray">2026-09 · PMID 42660134</span>
+        <span class="chip gray">血液肿瘤 · 数字健康</span>
+      </div>
+      <p class="sum">Lancet 血液学子刊综述主张：用电子患者报告结局（ePRO）、可穿戴设备等数字健康技术连续采集真实世界数据，结合 AI / 合成数据 / 数字孪生，预测与管理血液肿瘤治疗毒性，弥补传统"最大等级"评估粒度不足的短板。</p>
+      <div class="rel"><b>为什么与你有关：</b>直中「小雪宝 LeukemiaPal」。白血病患儿化疗期的副作用居家监测，正是 ePRO + 可穿戴的用武之地；这篇为小雪宝"治疗陪伴 + 副作用预警"功能提供了循证框架，可纳入需求池作为下一阶段功能锚点。</div>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42666557/" target="_blank" rel="noopener">NeuroCypher ASD：基于知识图谱表示的机器学习幼儿 ASD 筛查框架</a></h3>
+      <div class="row">
+        <span class="chip">J Healthc Inform Res</span>
+        <span class="chip gray">2026-09 · PMID 42666557</span>
+        <span class="chip gray">孤独症 · 量表筛查</span>
+      </div>
+      <p class="sum">框架融合表格机器学习与知识图谱：用问卷 + 人口学特征估计 ASD 风险，图谱支持病例比较、模式探索与自然语言查询；内置 SHAP 可解释性与异常检测模块，特别适配学校等规模化筛查场景。</p>
+      <div class="rel"><b>为什么与你有关：</b>同时直中「星桥计划」与「孤独症量表 AI 平台」。知识图谱 + 可解释筛查正是量表平台的蓝图——把量表条目结构化、支持自然语言查询与异常提示，可直接参考其 hybrid 工作流设计你的平台架构。</div>
+    </article>
+  </section>
+
+  <!-- ============ 工具与开源（预印本） ============ -->
+  <section>
+    <div class="sec-h">🧰 工具与开源（预印本）</div>
+
+    <article class="card">
+      <h3><a href="https://doi.org/10.64898/2026.08.21.26358650" target="_blank" rel="noopener">WISE-Screen：基于智能手机高保真眼动的 ASD 自动筛查与表型框架</a><span class="preprint">未经同行评审</span></h3>
+      <div class="row">
+        <span class="chip">medRxiv · health informatics</span>
+        <span class="chip gray">2026-08-24 · DOI 10.64898/2026.08.21.26358650</span>
+        <span class="chip gray">孤独症 · 数字生物标志物</span>
+      </div>
+      <p class="sum">手机端实时 ASD 筛查 + 多维表型框架，用智能手机采集眼动数据；Scanpath 与 Domain-task 双管线在 35 名 ADOS-2 确诊者（年龄 2.5–17 岁）上留一法交叉验证，集成模型 ROC-AUC 达 0.91。相比金标准 ADOS-2，大幅降低硬件与培训门槛，面向社区可规模化部署。</p>
+      <div class="rel"><b>为什么与你有关：</b>直中「星桥计划」+「量表平台」，与上一条 NeuroCypher 形成"问卷知识图谱 + 眼动数字生物标志物"双轨。手机可部署的眼动筛查，正是星桥早期普筛产品可借鉴的形态——把"高保真眼动"作为低成本筛查入口。</div>
+    </article>
+  </section>
+
+  <!-- ============ 今日行动建议 ============ -->
+  <section class="actions">
+    <h2>🎯 今日行动建议（绑定在手项目）</h2>
+    <ol>
+      <li><b>小雪宝 LeukemiaPal：</b>把 YOLOv11 外周血涂片识别（开放 LeukemiaAttri 数据集）列为"科普可视化 + 居家监测概念验证"的最小可用 demo 候选；同时参照 Lancet 血液肿瘤 ePRO + 可穿戴毒性监测框架，向需求池补一条"治疗副作用日记"功能点。</li>
+      <li><b>星桥计划：</b>以 WISE-Screen（手机眼动）+ NeuroCypher（知识图谱问卷）组成"数字生物标志物 + 结构化量表"双轨早期普筛 MVP 蓝图，本周内产出一页产品对照卡（灵敏度 / 部署成本 / 适用年龄），用于下场直播备课。</li>
+      <li><b>孤独症量表 AI 平台：</b>以 NeuroCypher 的"知识图谱 + SHAP 可解释 + 异常检测"为参考架构，在设计文档补一节"量表条目 → 图谱节点映射 + 自然语言查询"草图，作为平台 v1 的可解释性基线。</li>
+    </ol>
+  </section>
+
+  <footer>
+    <div class="srcs">数据来源：AI HOT 医疗资讯 · PubMed（NIH NCBI E-utilities）· medRxiv 预印本平台</div>
+    <div>© 2026 AI新青年 · Alan（李帅帅）｜本简报为内部研究参考，不构成医疗建议；预印本条目未经同行评审，数据以原文为准。</div>
+  </footer>
+
+</div>
+</body>
+</html>

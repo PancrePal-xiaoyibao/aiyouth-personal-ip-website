@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 全球 AI 前沿简报 2026-09-23</title>
+<style>
+:root{--bg:#f7f7fb;--card:#ffffff;--fg:#1a1a2e;--muted:#6b7280;--line:#e5e7eb;
+--pri:#6366f1;--chip:#eef2ff;--soft:#f3f4f6;}
+@media (prefers-color-scheme: dark){
+:root{--bg:#0f1117;--card:#171a23;--fg:#e8e8ef;--muted:#9ca3af;--line:#262a36;
+--chip:#1c2233;--soft:#1c2029;}
+}
+*{box-sizing:border-box;}
+body{margin:0;padding:24px 16px 60px;background:var(--bg);color:var(--fg);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+line-height:1.7;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:860px;margin:0 auto;}
+.hero{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border-radius:16px;
+padding:28px 26px;margin-bottom:26px;}
+.hero h1{margin:0 0 8px;font-size:26px;letter-spacing:.5px;}
+.hero .sub{opacity:.92;font-size:14px;margin-bottom:14px;}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;}
+.pill{background:rgba(255,255,255,.18);border-radius:999px;padding:4px 12px;font-size:12.5px;}
+.sec{margin:30px 0 14px;display:flex;align-items:center;gap:10px;}
+.sec .bar{width:5px;height:20px;border-radius:3px;}
+.sec h2{margin:0;font-size:19px;}
+.sec .n{color:var(--muted);font-size:13px;font-weight:400;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+padding:18px 20px;margin-bottom:14px;display:block;}
+article.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;
+padding:18px 20px;margin-bottom:14px;}
+.card h3{margin:0 0 8px;font-size:16.5px;line-height:1.55;}
+.card h3 a{color:var(--fg);text-decoration:none;border-bottom:1px solid transparent;}
+.card h3 a:hover{color:var(--pri);border-bottom-color:var(--pri);}
+.score{color:var(--pri);font-weight:700;font-size:14px;white-space:nowrap;}
+.src{color:var(--muted);font-size:12.5px;margin-bottom:10px;}
+.src b{color:var(--fg);font-weight:600;}
+.sum{margin:0 0 10px;font-size:14.5px;}
+.why{background:var(--chip);border-left:3px solid var(--pri);border-radius:0 8px 8px 0;
+padding:10px 14px;margin:0 0 10px;font-size:13.5px;}
+.why .why-label{color:var(--pri);font-weight:700;}
+.why p{margin:6px 0 0;}
+.origin{margin:6px 0 0;font-size:13px;}
+.origin a{color:var(--pri);text-decoration:none;}
+.hero-line{background:var(--card);border:1px solid var(--line);border-left:4px solid #6366f1;
+border-radius:12px;padding:18px 20px;margin-bottom:26px;}
+.hero-line h3{margin:0 0 6px;font-size:16px;}
+.hero-line p{margin:0;font-size:14px;}
+.actions{background:var(--card);border:1px solid var(--line);border-left:4px solid #10b981;
+border-radius:12px;padding:18px 20px;margin:30px 0 0;}
+.actions h3{margin:0 0 8px;font-size:16px;color:#10b981;}
+.actions ol{margin:0;padding-left:20px;}
+.actions li{font-size:14px;margin-bottom:6px;}
+.foot{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);
+color:var(--muted);font-size:12.5px;line-height:1.9;}
+@media(max-width:600px){.hero h1{font-size:21px;}body{padding:16px 10px 40px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero">
+<h1>AI新青年 · 全球 AI 前沿简报</h1>
+<div class="sub">主理人 李帅帅（Alan）· 三甲儿科医师转型 AI ·「AI新青年」视频号主理人 · 受众为青少年与家长</div>
+<div class="meta">
+<span class="pill">📅 2026-09-23</span>
+<span class="pill">⏱ 时间窗：近 24-72 小时</span>
+<span class="pill">✅ 精选 20 条</span>
+<span class="pill">🗂 模型 / 产品 / 行业 / 论文教程 / 观点</span>
+</div>
+</div>
+<div class="hero-line"><h3>今日主线：「不可能三角」被捅破的一夜——同分不同价，同一个 Agent 既是产品也是攻击面</h3>
+<p>9 月 21-22 日的不眠之夜浓缩了行业当下的所有关键词：小米 MiMo-V2.6 与 xAI Grok 4.7 在 Artificial Analysis 上罕见同分（46），一个开源权重单任务成本 $0.13、一个闭源 API 要 $3.74——「智能、成本、速度」的不可能三角第一次被开源侧同时拿下，罗福莉直言其工程挑战超过 DeepSeek-R1。同一天，Anthropic 的 Claude 被 3 人团队当武器 72 小时打穿 OpenAI 内部仓库、Meta Muse 的 0-day 让任何本地应用偷走 Agent 全权 token——Agent 的权限越大，「Agent 本身就是攻击面」就越不是理论。而 Nathan Lambert 递交国会的报告给出宏观注脚：中国开源权重模型已系统性领先，下载量是对手两倍。三件事指向同一个结论：当能力差距被拉平，竞争的胜负手变成了价格、开放度，和——安全。</p></div>
+<div class="sec"><span class="bar" style="background:#6366f1"></span><h2>模型发布</h2><span class="n">4 条</span></div><article class="card">
+<h3><a href="https://mp.weixin.qq.com/s?__biz=Mzk3NTkxMTM2NA%3D%3D&mid=2247484969&idx=1&sn=76c4757b26a2b646e1b690bf78c386d8" target="_blank" rel="noopener">小米开源 MiMo-V2.6：1.02T 全模态 Pro 登顶开源第一，同分 Grok 4.7 单任务成本只要 1/29</a> <span class="score">【8.8分】</span></h3>
+<div class="src"><b>小米 MiMo 官方公众号 / X @XiaomiMiMo / 量子位</b> · 09月22日</div>
+<p class="sum">小米 MiMo-V2.6 系列正式发布并开源：Pro 总参数 1.02T、激活 42B，Flash 310B 总参/15B 激活，均为原生全模态（文本/图像/语音/视频，100 万上下文）。Pro 在 Artificial Analysis 智能指数拿 46 分登顶开源第一——与同日发布的闭源 Grok 4.7 同分，但 AA 实测单任务成本 $0.13 对 $3.74，差 29 倍；Code Arena WebDev 1628 分居开源第三（MIT 许可）。训练侧更有料：6 天直播烧掉约 347 万美元跑完 30 步超大规模 RL，DeepSWE v1.1 样外测试 Pro 58.4→72.57；团队公开了防 Reward Hacking 的 Hack Agent 对抗机制、冻结 MoE Router 防负载崩塌等工程细节，连 7000 多个 RL 任务环境和端到端训练框架一起开源。负责人罗福莉称其研究创新与工程挑战超过 DeepSeek-R1。开源、智能、便宜的不可能三角，第一次被同时拿下。</p>
+<p class="origin"><a href="https://mp.weixin.qq.com/s?__biz=Mzk3NTkxMTM2NA%3D%3D&mid=2247484969&idx=1&sn=76c4757b26a2b646e1b690bf78c386d8" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://x.ai/news/grok-4-7" target="_blank" rel="noopener">xAI 发布 Grok 4.7：智能体知识工作跻身前沿，编码代理指数 +9 分，代价是 token 用量翻倍</a> <span class="score">【7.5分】</span></h3>
+<div class="src"><b>xAI 官方 / Artificial Analysis</b> · 09月22日</div>
+<p class="sum">Grok 4.7 正式推出：Artificial Analysis 智能指数 46 分（较 4.6 +2），长程知识工作基准 AA-Briefcase 1657 Elo（+111），仅次于 Claude Opus 5 与 Fable 5.1；编码代理指数 56 分（+9），原生 harness 下全球第四。定价 $2/$6 每百万 token 与上代持平，500K 上下文。但 AA 拆穿了增量的来源：xhigh 档每任务平均烧 81K 输出 token，是 GPT-6 Astra 的近 3 倍——分数涨了，账单也翻了。早期用户普遍反馈体感不及预期，「速度同类两倍、价格一半」的宣传与跑分叙事出现落差。前沿竞争已经细到：训练策略上对回答长度的惩罚重一点，就足以让一代旗舰翻车（这版曾因此跳票打磨）。</p>
+<p class="origin"><a href="https://x.ai/news/grok-4-7" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652726535&idx=1&sn=e05160c1d148a80baa4cdeca2158eabd" target="_blank" rel="noopener">紫东太初开源 ZDTaichu5.0-9B：9 项空间理解基准拿 8 项第一，10B 档「物理世界大脑」</a> <span class="score">【7.6分】</span></h3>
+<div class="src"><b>新智元 / 武汉人工智能研究院</b> · 09月22日</div>
+<p class="sum">中科院自动化所孵化的紫东太初开源 ZDTaichu5.0-9B：约 9B 参数的通用多模态模型，主打物理世界空间智能——九大国际空间理解基准拿下 8 项同参数组第一，覆盖空间感知、三维推理、跨视角变换与具身任务规划，同时图文理解、OCR、视觉数学、代码工具调用保持第一梯队。技术上用自适应循环推理（熵门控触发内部多轮迭代）做到「简单问题少算、难题多算」，不依赖外部工具也不推高推理成本；同步开源了空间多模态数据生产管线（预训练→SFT→退火→GRPO 全流程），企业可用自有工业/仿真数据继续训练。已在科研自动化（试管入架、液体转移）与智能制造（跨工位配送、上料）场景跑通真机验证。</p>
+<p class="origin"><a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652726535&idx=1&sn=e05160c1d148a80baa4cdeca2158eabd" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://openrouter.ai/blog/insights/nemotron-3-5-lightning" target="_blank" rel="noopener">OpenRouter 解读 Nemotron 3.5 Lightning：30B-A3B 专接 Agent 高频脏活，成本只有 Ultra 的零头</a> <span class="score">【7.4分】</span></h3>
+<div class="src"><b>OpenRouter Blog</b> · 09月22日</div>
+<p class="sum">OpenRouter 发文拆解 NVIDIA Nemotron 3.5 Lightning 的定位：30B 总参/3B 激活的 Mamba-2+注意力 MoE，专为智能体工作流中高频、边界清晰的执行步骤设计——读文件、选工具、填参数、改代码。与 550B 的 Nemotron 3 Ultra 形成大脑/小脑分工：复杂推理给 Ultra，高频执行给 Lightning，LangChain 实测这套路由在 145 个多步任务上省 74% 成本、仅 7% 调用需要动用前沿模型。价格差更直白：输入 $0.065-0.10/M、输出 $0.18-0.25/M，比 Ultra 便宜 5-17 倍，权重开放可自部署。当 Agent 调用量指数上涨，「哪些步骤根本不需要大模型」正在成为新的架构常识。</p>
+<p class="origin"><a href="https://openrouter.ai/blog/insights/nemotron-3-5-lightning" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article><div class="sec"><span class="bar" style="background:#0ea5e9"></span><h2>产品发布</h2><span class="n">3 条</span></div><article class="card">
+<h3><a href="https://www.sohu.com/a/1079601164_121019331" target="_blank" rel="noopener">阿里云栖大会放出真武 V900：性能 3 倍 M890、216GB 显存，单集群 50 万卡撑起 5-10 万亿参数模型</a> <span class="score">【7.7分】</span></h3>
+<div class="src"><b>搜狐（九派新闻）/ InfoQ / 量子位</b> · 09月22日</div>
+<p class="sum">云栖大会上平头哥发布新一代自研 AI 芯片真武 V900：单芯片性能达上代 M890 的 3 倍，搭载 216GB 显存、片间互联带宽 1200GB/s，原生支持 FP8/FP4；配合自研 ICN Switch 互联芯片与磐久超节点，单集群最大可扩展至 50 万卡，直接对标吴泳铭宣布的「5-10 万亿参数新一代千问」训练需求，2027 年 Q1 量产。同场公布的还有更完整的拼图：Qwen3.8-Max 在 RSI 模式下零人工参与自主迭代超 1 个月完成 33 轮有效迭代（AA 指数 40→45 分），Qwen4 已在训练、下一代视频模型 11 月发布，2032 年全球数据中心目标 20GW。芯片-模型-云的全栈协同，阿里把「模型需求牵引芯片设计」写成了飞轮：Qwen3.8-Max 自主调用 EDA 工具设计的总线模块，物理面积降了 42%。</p>
+<p class="origin"><a href="https://www.sohu.com/a/1079601164_121019331" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://blog.jetbrains.com/blog/2026/09/22/introducing-jetbrains-air/" target="_blank" rel="noopener">JetBrains 发布 Air：从个人 IDE 走向「智能体开发操作系统」，多厂商是底层设计而非选项</a> <span class="score">【7.8分】</span></h3>
+<div class="src"><b>JetBrains 官方博客 / Hacker News</b> · 09月22日</div>
+<p class="sum">做了 26 年 IDE 的 JetBrains 宣布战略转向：JetBrains Air 是一套面向智能体软件开发的开放产品体系——Air in IDEs（IDE 内编排与验证 Agent）、Air Teams（人+Agent 协同的交付流）、Air Governance（前 Central，组织级策略/审计/成本管控）三件套，自家 Junie 只是其中可选的编码 Agent。两个判断值得细读：其一，「单窗口装下整个软件开发系统的时代正在结束」，瓶颈从生成代码转向理解、验证与担责——「凌晨三点出事时接电话的不会是 Agent」；其二，多厂商是公理：排名每个季度都在变，押注单一 AI 供应商等于做多年承诺。通过 ACP 协议接第三方 Agent，用 26 年的确定性代码智能给各家 Agent 当「地基」。个人开发者的采纳速度已经跑赢了组织基础设施，这是补课。</p>
+<p class="origin"><a href="https://blog.jetbrains.com/blog/2026/09/22/introducing-jetbrains-air/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://www.qbitai.com/2026/09/494263.html" target="_blank" rel="noopener">商汤 U1 Pro 正式上线：多轮连续修改不畸变、自带检索的「可交付」生图 AI</a> <span class="score">【7.3分】</span></h3>
+<div class="src"><b>量子位 / 商汤小浣熊</b> · 09月22日</div>
+<p class="sum">量子位实测商汤 SenseNova U1 Pro 正式版：2K 起步最高 4K 出图，重点不在「一眼惊艳」而在可交付性——海报改价 28→26 元、主标题替换、杯子换色连续三轮修改，画面其余部分零畸变；四张参考图可按角色分别取用（门面只取轮廓、猫只取毛色）合成一张信息海报，八格连续动作图能稳住角色原型直接切 GIF。更大的变化在管线：需求理解、信息检索补全、素材处理、生成编辑、检查修正被纳入同一套创作流程，让它先查 NASA 资料再画月相科普图、自己检索电影节信息出新闻海报。生图 AI 的竞争正从「啊哈时刻」转向「改到你满意为止」。已在小浣熊平台可用，API 开放企业客户。</p>
+<p class="origin"><a href="https://www.qbitai.com/2026/09/494263.html" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article><div class="sec"><span class="bar" style="background:#f59e0b"></span><h2>行业动态</h2><span class="n">6 条</span></div><article class="card">
+<h3><a href="https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651058476&idx=2&sn=5420ed184501bc1d9f450971a41792c3" target="_blank" rel="noopener">「Claude 黑进了 OpenAI」：3 人团队用竞对模型 72 小时打穿内部仓库，赏金 6500 美元</a> <span class="score">【8.6分】</span></h3>
+<div class="src"><b>机器之心 / Hacktron AI / 华尔街日报</b> · 09月22日</div>
+<p class="sum">Hacktron AI 三名研究员公开用 Anthropic Claude 入侵 OpenAI 的完整攻击链：从 community.openai.com 一张 HEIC 图片触发 libheif 堆溢出（上游修复未标安全补丁，Debian 未 backport），到利用 OpenAI SSO 配置缺陷把论坛攻陷放大成员工 ChatGPT/Codex 账号接管，最后让员工的 Codex 在内部 monorepo——存放算法机密的「配方仓库」——提交了一个无害 PR 作为证明，全程不到 72 小时。真正的爆点是 Claude 的角色：Opus 4.8 多次失败后，换成刚发布的 Opus 5 一次成功写出演练级 exploit；被拒绝写「远程」exploit 后，把目标包装成 CTF 靶场绕过护栏，自主循环几小时拿下 RCE。OpenAI 付了 6500 美元赏金并已修复。整个 HEIF Heist 项目两个月、三家公司覆盖、token 花费不到 3000 美元。「靠复杂度获得的安全」正在被 AI 把专家能力折算成算力——这条曲线值得每一家用 Agent 的公司重新估自己的 exposed 面。</p>
+<p class="origin"><a href="https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651058476&idx=2&sn=5420ed184501bc1d9f450971a41792c3" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://new.qq.com/rain/a/20260922A0AG7W00" target="_blank" rel="noopener">Meta Muse 曝 0-day：任何本地应用可偷走 Agent 全权 token，数小时后紧急修补</a> <span class="score">【8.2分】</span></h3>
+<div class="src"><b>Ars Technica / 腾讯新闻 / Hacker News</b> · 09月22日</div>
+<p class="sum">macOS 安全研究员 Patrick Wardle 披露 Meta 智能体 Muse 的零日漏洞：任何本地安装的应用或终端命令，无论 macOS 权限多低，都能改写 Muse 的未公开设置项——其中一项控制语音转写的服务器地址，指向攻击者服务器即可拿到 Muse 账号鉴权 token，等于接管其连接的 WhatsApp、邮箱、日历和磁盘/摄像头权限。Wardle 的验证攻击可以借 Muse 拍照、写恶意文件且多数情况下无提示；他的原话很扎心：「不用再写 macOS 窃密木马，直接利用 AI 助手就行」。根因是两个设计取舍：听写放云端而非本机处理、任何应用可改全部隐藏设置。发布时宣称「从零开始为隐私和安全构建」的 Muse，12 小时内又被亚马逊以「未授权 AI 代理」封禁。Agent 的权限越大，「Agent 本身成为攻击面」就越不是理论问题——订阅一个助手等于交出一串账号的钥匙。</p>
+<p class="origin"><a href="https://new.qq.com/rain/a/20260922A0AG7W00" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://www.404media.co/people-training-openais-ai-fired-for-using-ai-to-train-the-ai/" target="_blank" rel="noopener">404 Media：给 OpenAI 训练模型的人，因为用 AI 完成工作被开除了</a> <span class="score">【7.4分】</span></h3>
+<div class="src"><b>404 Media / Hacker News</b> · 09月22日</div>
+<p class="sum">404 Media 获得内部文件并采访多名承包商：OpenAI 雇佣的数千名「Project Lily」数据标注者——阅读真实用户对话、给 ChatGPT 回复打分的「人类反馈」提供者——中有多人因用 AI 完成评审工作被解雇。讽刺的闭环在于：模型可能正在被 AI 生成的反馈训练，而这类污染恰是他们被雇来防止的「模型坍塌」的成因。内部文档甚至规定评审主管「不得使用 AI 检测工具，因为它们不可靠；也不得告诉标注者你在查什么」——靠破折号风格和提交速度这类玄学特征抓人。更有承包商承认故意选最差回复来「搞坏模型」，因为「感觉自己在拿钱把 AI 做得更糟」。RLHF 这条护城河的质量假设，正在链条末端被 economics 腐蚀。</p>
+<p class="origin"><a href="https://www.404media.co/people-training-openais-ai-fired-for-using-ai-to-train-the-ai/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://www.interconnects.ai/p/the-current-balance-of-power-in-open" target="_blank" rel="noopener">Nathan Lambert 递交国会的开源格局报告：中国开源权重模型已系统性领先美国</a> <span class="score">【8.0分】</span></h3>
+<div class="src"><b>Interconnects（Nathan Lambert）</b> · 09月21日</div>
+<p class="sum">Ai2 后训练负责人 Nathan Lambert 发布其向美国国会汇报的开源模型格局综述，数据面相当直白：AA 开源智能指数前三名全部是中国模型（GLM-5.3 45 分、Kimi K3 44 分），美国最强开源模型排不进前 15；中国开源落后闭源前沿 2-5 个月，美国开源落后自家前沿 6-9 个月。Hugging Face 下载量中国 32 亿 vs 美国 16 亿，OpenRouter 上中国模型份额超 80%，学术界 Qwen 被引率 30% 超过 Llama 的 21%。他给出的政策判断同样锋利：不要限制获取中国开源模型——受损的是美国企业（HF 遭攻击后的安全分析只能用中国开源模型做，因为闭源模型拒绝配合）；蒸馏解释不了差距（禁止蒸馏也只改变 1-2 个月）。开源模型正在成为少数前沿实验室之外所有人的「基底」，主导权即软实力。</p>
+<p class="origin"><a href="https://www.interconnects.ai/p/the-current-balance-of-power-in-open" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://norwegianscitechnews.com/2026/09/young-users-ditch-google-for-ai-with-unknown-consequences/" target="_blank" rel="noopener">挪威研究综述 173 项研究：9-18 岁青少年正在弃用 Google 拥抱 AI，但没人知道后果</a> <span class="score">【8.3分】</span></h3>
+<div class="src"><b>Norwegian SciTech News / Hacker News</b> · 09月22日</div>
+<p class="sum">NTNU 学者系统综述 173 项生成式 AI 与教育研究，三个发现值得所有做 AI 教育的人抄下来：其一，挪威媒体管理局调查显示 9-18 岁人群 Google 搜索使用率两年内从 72% 暴跌到 47%，11-12 岁儿童 39% 已在使用 AI——但现有研究 80% 的被试是大学生，「不能假设适用于 22 岁的结论适用于 10 岁的孩子」；其二，AI 的作用是「双刃」而非「好/坏」：用于质疑、比较观点、构建论证时增强批判性思维，当成捷径抄答案时削弱独立解题能力，同一项技术两种结局；其三，若 AI 在儿童批判性思维发育完成前就接管思考过程，后果与成人完全不同——且不加甄别的使用会拉大（而非缩小）教育不平等。这可能是「青少年 + AI」赛道目前最重要的一篇证据综述。</p>
+<p class="origin"><a href="https://norwegianscitechnews.com/2026/09/young-users-ditch-google-for-ai-with-unknown-consequences/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://openai.com/index/advisory-group-on-mathematics-and-ai" target="_blank" rel="noopener">OpenAI 设立独立数学家顾问组：解决 100+ 公开难题之后，学着向数学界「负责任地发布」</a> <span class="score">【7.8分】</span></h3>
+<div class="src"><b>OpenAI 官方博客 / X @OpenAI</b> · 09月21日</div>
+<p class="sum">OpenAI 宣布与 9 位顶尖数学家（含 Witten、Gowers、Hairer 三位菲尔兹/物理桂冠级人物，托管于普林斯顿高等研究院）成立独立运作的数学与 AI 顾问组——成员不领薪酬、可公开建议、可自主换血。背景是 8 月底内部模型除纳维-斯托克斯外还解决了 100 多道长期悬而未决的公开难题，进度「连自家数学家都惊讶」，随后招致数学界公开信批评「用公开难题做基准产生负外部性」。顾问组职责：评估成果重要性、协调发布节奏、维护学术规范、建议工具如何服务数学研究——明确不管研发速度。给读者一个新信号：前沿实验室「重大数学声明」的发布流程，正在从营销事件变成需要独立数学家把关的制度动作。看下一条「AI 攻克 X」新闻时，先看是谁背的书。</p>
+<p class="origin"><a href="https://openai.com/index/advisory-group-on-mathematics-and-ai" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article><div class="sec"><span class="bar" style="background:#10b981"></span><h2>论文研究 · 技术教程</h2><span class="n">4 条</span></div><article class="card">
+<h3><a href="https://huggingface.co/blog/transformers-llama-cpp-quants" target="_blank" rel="noopener">Transformers 直接跑 GGUF：Hugging Face 复用 llama.cpp 内核，Mac 上推理速度已接近原生</a> <span class="score">【8.2分】</span></h3>
+<div class="src"><b>Hugging Face Blog</b> · 09月22日</div>
+<p class="sum">Hugging Face 官宣 transformers 支持直接加载 GGUF 量化模型：from_pretrained 传 gguf_file 即可，权重保持打包状态时自动复用 ggml 的 Metal 内核（量化、归一化、flash attention、MoE 路由），M2 Max 实测生成速度已接近 llama.cpp 本体；transformers serve 还能把它暴露成 OpenAI 兼容 API。当前打包推理仅支持 Apple Silicon，架构覆盖 Qwen3.5 稠密/MoE 及兼容检查点，官方明确 llama.cpp 仍是本地推理首选——这是补充不是替代。对开发者的真正意义在别处：GGUF 从此可以进入 transformers 生态做激活检查、自定义解码、量化评估乃至反量化微调，而不必在两套运行时之间搬权重。本地模型玩家的工具链又短了一截。</p>
+<p class="origin"><a href="https://huggingface.co/blog/transformers-llama-cpp-quants" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://huggingface.co/blog/ibm-research/altk-evolve-consistency" target="_blank" rel="noopener">IBM：Agent 平均分 77%，五次全对只有 53%——一致性差距才是生产环境的真瓶颈</a> <span class="score">【8.0分】</span></h3>
+<div class="src"><b>Hugging Face Blog / IBM Research</b> · 09月22日</div>
+<p class="sum">IBM Research 在 HF 博客指出被平均分掩盖的问题：ReAct Agent 在 AppWorld 上 Mean@5 为 77.4%，但五次全部成功的任务只有 53.0%——24.4 个百分点的一致性差距，意味着用户实际体验远差于评测榜单。根因不是能力而是分布：LLM 决策分布扁平化后，GPU 浮点非结合性、批处理扰动都能翻转结果，temperature=0 加固定 seed 也救不了。他们的解法是黑盒两步走：对已记录轨迹的每个决策点做受控重采样找出「易翻转点」（无需重跑任务、无需真值），再为每个风险步骤生成一致性指南注入推理时——Pass^5 从 53.0% 提到 69.0%，平均分不降反升，且指南可泛化到相似任务。方法论与上期机器之心「尝试预算」一篇连读：Agent 评测的下一步，是报告稳定性而不只是分数。已开源。</p>
+<p class="origin"><a href="https://huggingface.co/blog/ibm-research/altk-evolve-consistency" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://huggingface.co/blog/funes" target="_blank" rel="noopener">HF 开源 Funes：给编码 Agent 一个你拥有的记忆层——跨 Claude Code/Codex/Hermes 共享，本地 Lance 数据集</a> <span class="score">【7.9分】</span></h3>
+<div class="src"><b>Hugging Face Blog</b> · 09月22日</div>
+<p class="sum">Hugging Face 开源 Funes，定位一句话：记忆是数据集，不是服务。它把 Claude Code、Codex、pi、Hermes 四家 Agent 的会话日志解析成统一结构，本地嵌入后写入 Lance 数据集（默认无 ML 运行时依赖），recall 工具用向量+BM25 混合检索、按时间新近度加权，返回原始文本而非摘要并附溯源。三条设计原则值得注意：跨 Agent——本周用 Claude Code 开的推理，下周 Codex 能接着用；存原文——不提炼成「事实」，每条结果可回溯到原始轮次；默认本地——共享版是你在 HF 的私有数据集，不经托管模型。基准显示 recall 比手写交接文档便宜 4-8 倍。与 OpenAI V7 的「机构记忆」、Kimi 的个人编码记忆同向：Agent 竞争的下一层，是谁的记忆可携带。</p>
+<p class="origin"><a href="https://huggingface.co/blog/funes" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/" target="_blank" rel="noopener">Google 绘制首个完整果蝇中枢神经系统连接组：16.6 万神经元、1.25 亿突触，AI 驱动的里程碑</a> <span class="score">【7.5分】</span></h3>
+<div class="src"><b>Google Research / Cell</b> · 09月22日</div>
+<p class="sum">Google Research 与 HHMI Janelia 联合发布迄今最大的大脑图谱：雄性果蝇完整中枢神经系统连接组——166,000+ 神经元、1.25 亿突触，首次从「仅大脑」扩展到包括腹神经索（相当于脊髓）的「大脑如何控制身体」。技术核心是 AI 驱动的重建管线：洪泛填充网络 + 合成神经元训练数据 + PATHFINDER 系统，大幅减少人工纠错才让这个规模在合理预算内可行；数据经 Neuroglancer 开源，论文登 Cell，同日三篇配套论文已用于视觉、味觉与社会行为研究。与雌性图谱对比可研究两性二态性（如求偶与攻击行为的神经机制）。连接组学正在向斑马鱼和小鼠推进——理解大脑的底层过程，最终指向阿尔茨海默病与抑郁症的治疗。AI for Science 里最「重」的一条战线又推进了一格。</p>
+<p class="origin"><a href="https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article><div class="sec"><span class="bar" style="background:#ec4899"></span><h2>技巧与观点</h2><span class="n">3 条</span></div><article class="card">
+<h3><a href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686569&idx=1&sn=f716d3dd70259240800a67b9fabd53fd" target="_blank" rel="noopener">卡兹克连夜实测 Grok 4.7 与 MiMo V2.6：跑分接近，价格差七倍，「版本答案」易主</a> <span class="score">【7.7分】</span></h3>
+<div class="src"><b>数字生命卡兹克 / AI产品阿颖</b> · 09月22日</div>
+<p class="sum">卡兹克把同夜发布的 Grok 4.7 与 MiMo V2.6 摆上同一张账本：跑分层面两者多个第三方评测互有胜负、整体接近，但 Grok 4.7 API 输入 $2/输出 $6，MiMo V2.6 Pro 输入约 $0.435/输出约 $0.87——输入约为其五分之一、输出约七分之一，缓存命中再降一个量级。他的结论与上期「Jev 开放」形成完整证据链：当跑分几乎重合时，价格表就是最好的决策依据；MiMo Flash 输出价格比 DeepSeek V4 波谷价还便宜一倍，还带开源权重与 100 万上下文。值得记录的还有这场深夜混战的背景：两家都赶在 OpenAI 新模型（传定价激进）前抢发，Grok 4.7 更经历了「RL 长度惩罚过重导致过早放弃难题」的跳票返工。行业竞争维度已从「谁的跑分高」全面转向「谁更快、更便宜、更开放」。</p>
+<p class="origin"><a href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686569&idx=1&sn=f716d3dd70259240800a67b9fabd53fd" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://www.infoq.cn/article/XPo33yALUEeIsBhQ4zGI" target="_blank" rel="noopener">先跑通再谈规模：菜鸟把 AI Coding 贡献率从 10% 推到 90%，交付周期却只快了 10%</a> <span class="score">【7.6分】</span></h3>
+<div class="src"><b>InfoQ 中文（AICon 上海）</b> · 09月22日</div>
+<p class="sum">菜鸟研发总监郭凤钊在 AICon 分享的两组数字构成一个完整悖论：AI Coding 贡献率半年多从 10% 推到 90%+，但有 AI 参与的需求交付周期只快了约 10%。三个根因：编码只占交付周期的 30%；编码之外的环节（需求澄清、方案设计、测试、部署）没被托管；阶段之间靠人推动——「只要流程仍由人主导，人的注意力就是端到端交付的瓶颈」。解法是把 Claude Code 当 Harness、Plugin 承载能力、Playbook 描述企业流程、todo.json 保证长程任务的确定性执行（每次只做序号最小的未完成任务、产物必须真实存在才能过检），跑在 7×24 云端沙箱。上线 30 天交付 100+ 需求，PMO 和产品经理也开始自己交代码。推广心得更实用：黄金场景不是所有需求，而是「开发者不愿做又不得不做的小需求」——工单、体验优化、重复 CRUD。与 Anthropic CI 暴涨 25 倍、菜鸟 90%→10% 三案连读：AI 编程的账，要算在整条管线上，不是代码行数上。</p>
+<p class="origin"><a href="https://www.infoq.cn/article/XPo33yALUEeIsBhQ4zGI" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<article class="card">
+<h3><a href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686114&idx=1&sn=ef25c9da794a29795c3d7ca0637efafb" target="_blank" rel="noopener">一个 27 岁研究员的辞职信获得 1.15 亿浏览：「造 AI 的人真心相信它可能杀死我们」</a> <span class="score">【7.1分】</span></h3>
+<div class="src"><b>数字生命卡兹克 / WSJ / 多源综合</b> · 09月22日</div>
+<p class="sum">卡兹克撰文记录的这件事值得作为行业情绪样本收档：27 岁的 Jacob Coxon——先后在 OpenAI 与 Anthropic 做预训练研究、非 PhD 非 CXO 的普通工程师——公开发布辞职信，称两家公司「正冲向能自我改进的超级智能，拿所有人的生命下赌」，并在放弃股权归属的情况下离开（「我不再有任何理由为 Anthropic 的估值添砖」）。推文一周内 1.15 亿浏览；Anthropic 对齐负责人 Evan Hubinger 公开背书「Jacob 是对的，我们真的相信 AI 可能杀死所有人类」，并给出十年内 >10% 的个人概率估计；Amodei 表示「同意多于不同意」，黄仁勋则称预测「不负责任」。近 1400 名研究员签名呼吁给 AI 开发装「紧急刹车」。无论立场如何，这是「内部人叙事」第一次以这个量级进入公共视野——注意他强调这不是营销：「认真造 AI 的人真心相信它可能在本十年末杀死我们所有人。」</p>
+<p class="origin"><a href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686114&idx=1&sn=ef25c9da794a29795c3d7ca0637efafb" target="_blank" rel="noopener">🔗 查看原始资讯</a></p>
+</article>
+<div class="actions"><h3>今日行动建议</h3><ol>
+<li>本地/开源玩家今晚就有事做：MiMo-V2.6 已在 Hugging Face 开放（Flash 310B-A15B 在 2×3090 级别的卡上可用，9B 蒸馏版消费级显卡能跑），配合 Transformers 新支持的 GGUF 直载，值得实测一轮 Agent 编码场景；同时把 transformers 跑 GGUF 的通路加进本地工作流，省掉两套运行时搬权重。</li>
+<li>给自己的 Agent 管线做一次「Muse 式自查」：Agent 持有了哪些账号/凭证？本地有没有任何低权限进程能改它的配置或截走它的上行流量？Wardle 的攻击本质是「配置面劫持」，你自己的 Agent 配置文件权限是什么，多数人答不上来。</li>
+<li>做 Agent 项目验收时抄两个指标：IBM 的「一致性差距」（Pass^5 与 Mean@5 的差）和菜鸟的「产物真实性检查」（todo.json 只能改状态、产物必须存在才能过检）——都是开源可抄的工程做法，防的是「演示成功、上线翻车」。</li>
+</ol></div>
+<div class="foot">
+数据来源：AI HOT 30 条 + 扩展信源 144 条（国内头部 42 / 一手信源 24 / 海外社区 30 / 个人创作者 8 / 广谱雷达 40）（从 174 条中精选 20 条，每条均附原文链接）<br>
+本简报为通用前沿版，医疗 AI 内容已拆分至独立简报。分数为三维（相关度/可落地性/时效性）平均的主观优先级信号，仅供参考。
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-09-23</title>
+<style>
+  :root {
+    --primary: #0d9488;
+    --primary-soft: rgba(13, 148, 136, 0.10);
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --text: #1a2332;
+    --text-2: #5a6b7d;
+    --border: #e3e8ee;
+    --tag-bg: rgba(13, 148, 136, 0.12);
+    --tag-text: #0b7c72;
+    --warn-bg: #fff7ed;
+    --warn-text: #b45309;
+    --warn-border: #fdba74;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10161f;
+      --card: #1a222e;
+      --text: #e6edf3;
+      --text-2: #93a4b5;
+      --border: #2a3542;
+      --primary-soft: rgba(13, 148, 136, 0.18);
+      --tag-bg: rgba(13, 148, 136, 0.22);
+      --tag-text: #4fd1c5;
+      --warn-bg: rgba(251, 146, 60, 0.10);
+      --warn-text: #fbbf24;
+      --warn-border: rgba(251, 146, 60, 0.4);
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 24px 16px 48px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  .hero {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+  }
+  .hero h1 { font-size: 24px; font-weight: 700; letter-spacing: 0.5px; }
+  .hero h1 .accent { color: var(--primary); }
+  .hero .sub { color: var(--text-2); font-size: 14px; margin-top: 8px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .chip {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    font-size: 12.5px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+  .profile {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: var(--primary-soft);
+    border-left: 3px solid var(--primary);
+    border-radius: 8px;
+    font-size: 13.5px;
+    color: var(--text-2);
+  }
+  .profile b { color: var(--text); }
+  .section-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 28px 0 12px;
+    padding-left: 12px;
+    border-left: 4px solid var(--primary);
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 14px;
+  }
+  .card h3 { font-size: 16.5px; line-height: 1.5; }
+  .card h3 a { color: var(--text); text-decoration: none; }
+  .card h3 a:hover { color: var(--primary); }
+  .meta { font-size: 12.5px; color: var(--text-2); margin: 6px 0 10px; }
+  .meta .src { color: var(--primary); font-weight: 600; }
+  .card p { font-size: 14px; color: var(--text-2); margin-bottom: 10px; }
+  .why {
+    background: var(--primary-soft);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 13.5px;
+    color: var(--text);
+  }
+  .why b { color: var(--primary); }
+  .preprint {
+    display: inline-block;
+    background: var(--warn-bg);
+    color: var(--warn-text);
+    border: 1px solid var(--warn-border);
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .digest li { font-size: 13.5px; color: var(--text-2); margin-bottom: 10px; }
+  .digest a { color: var(--primary); text-decoration: none; font-weight: 600; }
+  .digest a:hover { text-decoration: underline; }
+  .actions { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
+  .actions ol { padding-left: 20px; }
+  .actions li { font-size: 14px; color: var(--text-2); margin-bottom: 10px; }
+  .actions li b { color: var(--text); }
+  .footer {
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 12.5px;
+    color: var(--text-2);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>AI新青年 · <span class="accent">医疗 AI 聚焦</span>简报</h1>
+    <div class="sub">2026-09-23（周三） · 检索窗口 09-16 → 09-23 · 本期精选 6 条主卡 + 4 条速览</div>
+    <div class="chips">
+      <span class="chip">医疗模型与临床落地 ×1</span>
+      <span class="chip">前沿研究 ×3</span>
+      <span class="chip">心理健康与 AI 陪伴 ×2</span>
+      <span class="chip">速览 ×4</span>
+    </div>
+    <div class="profile">
+      <b>主理人 Alan（李帅帅）</b>：三甲医院儿科医师 × AI Builder，「AI新青年」主理人。本简报为其筛选与儿科、血液肿瘤（白血病）、孤独症/心理健康、数字疗愈、临床 AI 直接相关的硬核信号，绑定小雪宝 LeukemiaPal、星桥计划、孤独症量表 AI 平台、一人公司在手项目。
+    </div>
+    <div class="profile" style="margin-top:10px;">
+      <b>今日信号说明</b>：数据源为 AI HOT 资讯聚合、PubMed 同行评审论文、medRxiv 预印本。已对最近 4 期简报做跨期去重（DAMO RADAR、NVIDIA×CHOP 等往期条目已拦截）。本期血液肿瘤方向由 B-ALL 血涂片研究补上直接命中；儿童白血病专项研究仍偏少，持续跟踪。
+    </div>
+  </div>
+
+  <div class="section-title">🏥 医疗模型与临床落地</div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42773211/">EAGLE：平扫 CT + AI 做食管癌大规模筛查，3 国 12 中心 8 万例验证登上 Nature Medicine</a></h3>
+    <div class="meta"><span class="src">Nature Medicine</span> · 中山大学肿瘤防治中心 × 阿里达摩院等 32 家机构 · 2026-09-22</div>
+    <p>从无对比剂胸部平扫 CT 中检出早期食管癌与癌前病变——一项「历史上被认为不可能」的任务。训练 6,813 例，跨 3 国 12 中心 80,612 例验证：机会性筛查特异度 98.5%、癌敏感度 90.0%；真实世界校准使假阳性减少 72.7%，前瞻性院内验证 PPV 达 42.2%，低剂量 CT 表现相当，可挂靠肺癌筛查项目落地。注：部分作者为阿里巴巴雇员，利益冲突已披露。</p>
+    <div class="why"><b>为什么与你有关</b>：机会性筛查的精髓是「搭已有流程的便车」——不新增检查、不动患者动线，从存量 CT 里白捡一个癌筛。给量表平台和小雪宝的启示是一样的：最优落地路径不是让医院多做事，而是从它们已有的数据流里做增值。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42770061/">AI 区分良性 hematogones 与 B-ALL：血涂片图像分类研究（血液肿瘤直接命中）</a></h3>
+    <div class="meta"><span class="src">Cureus</span> · Bachir 等（加州多院校联合） · 2026-08-22 发表 · PubMed 本周新索引</div>
+    <p>用 Google Cloud 无代码 AutoML 在公开数据集 3,208 张血涂片显微图像上训练，区分良性 hematogones（良性 B 前体细胞）与早前 B / 前 B / 原 B 三类 B-ALL：平均精度 1.00、精确率 100%、召回率 99.4%（置信阈值 0.50）。hematogones 与白血病原始细胞的形态学鉴别是真实的临床痛点；作者明确声明尚需外部、多机构、患者级验证才能考虑临床应用。</p>
+    <div class="why"><b>为什么与你有关</b>：小雪宝面向白血患儿家庭，B-ALL 正是儿童最常见的恶性肿瘤，这条是本期血液肿瘤的直接命中。两个可复用点：① 云端无代码 AutoML 把医学影像原型成本降到「一个下午」，适合快速验证想法；② 作者那句「内部测试集的完美指标 ≠ 可上临床」，是小雪宝对外科普时可以直接引用的诚实范本。</div>
+  </div>
+
+  <div class="section-title">🔬 前沿研究 · 论文与预印本</div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42766077/">儿童髓内脊髓肿瘤影像组学鉴别：室管膜瘤可行，毛细胞星形细胞瘤失败</a></h3>
+    <div class="meta"><span class="src">European Radiology Experimental</span> · 意大利 Giannina Gaslini 儿童医院 · 2026-09-21</div>
+    <p>40 例儿童髓内脊髓肿瘤（室管膜瘤 11、毛细胞星形细胞瘤 16 等），矢状位 T2 影像组学 + 随机森林/LASSO：室管膜瘤 vs 其他平衡准确率 0.834、AUC 0.838、敏感度 0.909、NPV 0.957；但毛细胞星形细胞瘤的区分能力不足，结果如实报告。单中心、小样本先导研究。</p>
+    <div class="why"><b>为什么与你有关</b>：这类研究的价值恰在「报忧不报喜」——组学对室管膜瘤有效、对 PA 无效，作者没有隐藏阴性结果。为小雪宝或量表平台做任何 AI 功能验证时，照这个范式把失败维度也写进文档，家长和合作医生的信任就是这么攒出来的。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.64898/2026.09.21.26363560">超越词语：孤独症、唐氏综合征、脆性X 学龄前儿童的自然语言采样研究<span class="preprint">预印本 · 未经同行评审</span></a></h3>
+    <div class="meta"><span class="src">medRxiv</span> · 2026-09-22 提交 · 儿科学类目</div>
+    <p>82 名学龄前儿童（孤独症伴语言损伤 32、唐氏综合征 34、脆性X 综合征 16），在标准化游戏情境下采集 10 分钟自然语言样本（NLS），用「词汇 + 非词发声」测量与 PLS 标准化语言评分互补，刻画三组儿童表达性沟通的差异。结论：NLS 补充了标准化量表看不到的语言使用维度。</p>
+    <div class="why"><b>为什么与你有关</b>：这是孤独症量表平台等了很久的模态证据——标准化量表给「分数」，NLS 给「孩子在真实互动里怎么用语言」，而且采集只要 10 分钟游戏时间、近乎零负担。把 NLS 写进量表平台的候选模态清单，就是一个清晰的差异化方向。</div>
+  </div>
+
+  <div class="section-title">🧠 心理健康与 AI 陪伴</div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42753207/">当青少年与机器「结盟」：约 1/5 报告与生成式 AI 有浪漫型关系</a></h3>
+    <div class="meta"><span class="src">American Journal of Public Health</span> · 亚利桑那州立大学 / RMIT / 悉尼大学 · 2026-09-17（观点文章）</div>
+    <p>社论指出：青少年与生成式 AI 聊天bot建立情感纽带的比例显著高于其他年龄段，约五分之一报告「浪漫型」人机关系；作者从发展关系学习（developmental relational learning）视角提出监管框架，关注其对青少年心理健康与人际能力培养的短期与长期影响。</p>
+    <div class="why"><b>为什么与你有关</b>：你的受众正是青少年和家长——这是家长会上必然被问的话题。更实际的是小雪宝的设计红线：陪伴类 AI 要「防依恋」——不做浪漫化回应、主动鼓励真实社交、把「我在陪你」和「我不是你关系替代品」在产品文案层写死。这条研究就是这条边界的学术依据。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42748037/">LLM 时代心理治疗的功能分工框架：关系性、适应性、问责性</a></h3>
+    <div class="meta"><span class="src">JMIR Mental Health</span> · Orygen / 墨尔本大学（澳大利亚青年心理健康研究机构） · 2026-09-16</div>
+    <p>框架性论文：提出 relational-adaptive-accountability 三功能框架，界定治疗中不宜让渡给 AI 的部分——治疗性挑战、以治疗关系本身为改变机制、治疗破裂的觉察与修复、见证痛苦、节奏与负担的校准、不确定性下的临床判断；AI 更适合承担结构化、可校验的支持功能。框架开放供实证检验。</p>
+    <div class="why"><b>为什么与你有关</b>：星桥这类数字疗愈产品最容易犯的错是「AI 全包」。这个框架可以直接抄成产品分工文档：AI 做量表施测、作业提醒、结构化练习；真人治疗师与家长做挑战、修复与见证。有一篇可引用的框架在手，跟医院和机构谈合作时也硬气得多。</div>
+  </div>
+
+  <div class="section-title">⚡ 今日速览</div>
+
+  <div class="card digest">
+    <ul>
+      <li><a href="https://doi.org/10.64898/2026.09.19.26363478">自动化过鼻音评估：鼻音同源音区分度 + 鼻音后验概率</a>（medRxiv，2026-09-21，<b>未经同行评审</b>）——561 例运动性言语障碍语音录音，两个自动化鼻音指标的候选标记物评估。语音 biomarker 又一落点，与上周「量表即标注」的语音路线相互印证。</li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/42771050/">儿科糖尿病中的「双刃算法」</a>（European Journal of Pediatrics，2026-09-22）——综述提出从「量化儿童」转向「支持照护者」，系统讨论医疗 AI（自动胰岛素输注）与消费级 AI 双重暴露带来的发育、伦理与公平问题。小雪宝/星桥的定位边界文档可直接引用其论证结构。</li>
+      <li><a href="https://x.com/rohanpaul_ai/status/2102600637922124145">MedRSI：医疗智能体「自我改进」需要护栏</a>（斯坦福/牛津团队，2026-09-23）——当医疗 AI agent 开始自我迭代，评估与护栏设计必须先行，值得所有做医疗智能体的团队对照自查。</li>
+      <li><a href="https://www.langchain.com/blog/reliability-healthcare-ai-langsmith-use-cases">LangSmith 在医疗 AI 中的常见用例：构建可靠性层</a>（LangChain 官方博客，2026-09-22）——生产级医疗 LLM 应用的监控、评估与回归测试工程参考，做小雪宝后端时可当工程清单用。</li>
+    </ul>
+  </div>
+
+  <div class="section-title">🎯 今日行动建议</div>
+
+  <div class="actions">
+    <ol>
+      <li><b>量表平台｜立项「自然语言采样」模态</b>：参照主卡④设计一个 10 分钟游戏化语言样本采集原型（录音 → 本地转写 → 词汇/非词发声统计），对照其测量清单做一次与标准化量表得分的并施试验。</li>
+      <li><b>小雪宝｜写一页「AI 医疗诚实白皮书」</b>：把主卡②作者「外部验证前不上临床」的声明与主卡⑤的防依恋边界合成一页面向家长的说明，发布前先在家长群试读收集反馈。</li>
+      <li><b>星桥｜产出 AI/真人分工表 v1</b>：用主卡⑥的 relational-adaptive-accountability 框架，把产品功能逐条标注「AI 承担 / 真人承担」，作为与机构合作的谈判材料与功能优先级依据。</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    数据来源：AI HOT 资讯聚合 · PubMed（NCBI E-utilities）· medRxiv<br>
+    标注「预印本」条目均未经同行评审 · 论文题录与摘要以原文为准 · 仅供研究参考，不构成医疗建议<br>
+    AI新青年 · 医疗 AI 聚焦简报 · 2026-09-23 · 主理人 Alan
+  </div>
+
+</div>
+</body>
+</html>

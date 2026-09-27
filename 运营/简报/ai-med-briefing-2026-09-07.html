@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-09-07</title>
+<style>
+:root{
+  --bg:#f6f8f9; --card:#ffffff; --text:#12211f; --muted:#5b6f6d;
+  --line:#e2eae9; --accent:#0d9488; --accent-soft:#e6f5f3; --accent-dark:#0b7a70;
+  --warn:#b45309; --warn-soft:#fef6e7; --chip:#eef3f3;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0c1514; --card:#14211f; --text:#e6efee; --muted:#96aaa8;
+    --line:#243634; --accent:#2dd4bf; --accent-soft:#123230; --accent-dark:#5eead4;
+    --warn:#fbbf24; --warn-soft:#2c2415; --chip:#1b2b29;
+  }
+}
+*{box-sizing:border-box;}
+body{
+  margin:0; padding:28px 18px 60px; background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.7; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:860px;margin:0 auto;}
+header.hero{
+  background:var(--card); border:1px solid var(--line); border-radius:12px;
+  padding:28px 26px; margin-bottom:22px; border-left:5px solid var(--accent);
+}
+h1{margin:0 0 6px;font-size:26px;letter-spacing:.4px;}
+.sub{color:var(--muted);font-size:14px;margin-bottom:16px;}
+.profile{
+  background:var(--accent-soft); border-radius:12px; padding:12px 16px;
+  font-size:14px; margin-bottom:16px; color:var(--text);
+}
+.meta{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{
+  background:var(--chip); color:var(--muted); border-radius:12px;
+  padding:4px 12px; font-size:12.5px;
+}
+h2.sec{
+  font-size:17px; margin:30px 0 14px; padding-left:11px;
+  border-left:4px solid var(--accent); color:var(--text);
+}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:12px;
+  padding:20px 22px; margin-bottom:15px;
+}
+.card h3{margin:0 0 8px;font-size:16.5px;line-height:1.5;}
+.card h3 a{color:var(--accent);text-decoration:none;}
+.card h3 a:hover{text-decoration:underline;}
+.src{font-size:12.5px;color:var(--muted);margin-bottom:11px;}
+.src b{color:var(--accent-dark);font-weight:600;}
+.abs{font-size:14.5px;margin-bottom:12px;}
+.why{
+  background:var(--accent-soft); border-radius:12px; padding:11px 15px;
+  font-size:14px; border-left:3px solid var(--accent);
+}
+.why b{color:var(--accent-dark);}
+.badge{
+  display:inline-block;background:var(--warn-soft);color:var(--warn);
+  font-size:11.5px;padding:2px 9px;border-radius:12px;margin-left:6px;
+  vertical-align:middle;font-weight:600;
+}
+ul.quick{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:18px 22px 18px 40px;margin:0 0 15px;font-size:14.5px;
+}
+ul.quick li{margin-bottom:11px;}
+ul.quick li:last-child{margin-bottom:0;}
+ul.quick a{color:var(--accent);text-decoration:none;}
+ul.quick a:hover{text-decoration:underline;}
+.note{
+  background:var(--card);border:1px dashed var(--line);border-radius:12px;
+  padding:16px 20px;font-size:13.5px;color:var(--muted);margin-bottom:15px;
+}
+.action{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:20px 24px;margin-top:26px;border-top:4px solid var(--accent);
+}
+.action h2{margin:0 0 12px;font-size:17px;}
+.action ol{margin:0;padding-left:22px;font-size:14.5px;}
+.action li{margin-bottom:12px;}
+.action li:last-child{margin-bottom:0;}
+footer{
+  margin-top:30px;padding-top:18px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--muted);text-align:center;line-height:1.9;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+  <div class="sub">为「破界的帅帅 / Alan」定制 · 少而精，只留硬核 signal</div>
+  <div class="profile">
+    <b>主理人画像：</b>李帅帅（Alan）· 三甲儿科规培医师转型 AI ·「AI新青年」视频号主理人 · 受众为青少年与家长。
+    在手项目：<b>小雪宝 LeukemiaPal</b>（白血病患儿陪伴助手）、<b>星桥计划</b>（孤独症数字疗愈）、
+    <b>孤独症量表 AI 平台</b>、<b>本地 AI 内容团队</b>、<b>一人公司</b>。
+  </div>
+  <div class="meta">
+    <span class="chip">日期：2026-09-07</span>
+    <span class="chip">覆盖窗口：2026-08-31 → 2026-09-07</span>
+    <span class="chip">精选：6 条主卡 + 5 条速览</span>
+    <span class="chip">数据源：AI HOT / PubMed / medRxiv</span>
+  </div>
+</header>
+
+<div class="note">
+  <b>今日信号说明：</b>本期<b>孤独症与发育行为方向信号最强</b>（定向检索 19 命中中挑出 3 篇硬核论文，含 1 篇中国团队研究）；
+  血液肿瘤仅 1 条强命中且为<b>成人 AML</b>，<b>儿科白血病仍无强命中</b>，未硬凑——已将「儿童白血病 × 可解释风险模型」列入下方行动建议的定向检索项。
+  另已主动跳过前几期用过的条目（华为 RuiPath 2.0、英国医疗 AI 转录警示、ChatGPT 接入 Epic、蚂蚁医疗 MoE、瑞金 AML FLT3-ITD、medRxiv 多智能体儿科生长障碍 SPROUT、medRxiv 孤独症表型四维连续体），避免连日自我重复。
+</div>
+
+<h2 class="sec">一、医疗模型与临床落地</h2>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42701435/" target="_blank">AI 辅助临床全外显子测序：来自 822 例儿科诊断的洞察与结局</a></h3>
+  <div class="src"><b>Genetics in Medicine Open</b> · 美国匹兹堡大学医学中心（UPMC）临床基因组实验室 · 2026-07-31</div>
+  <div class="abs">
+    单中心回顾性研究，对 822 例连续儿科患者行临床全外显子测序，并将一款商用 AI 平台整合进分析流程，
+    联合遗传信息与先证者人类表型本体（HPO）术语做变异优先级排序。结果：22%（181/822）获得明确分子诊断，
+    40%（325/822）为意义未明变异（VUS）；在完全解决的病例中报告的 152 个致病/可能致病变异里，
+    <b>98.7% 被 AI 成功标记，75.0% 排进「最可能」前 10 名</b>。作者同时强调，AI 能加速表型驱动的变异优先级排序，
+    但仍需在临床工作流中审慎验证与优化。
+  </div>
+  <div class="why">
+    <b>为什么与你有关：</b>这是「AI 不替代医生、但重排医生注意力」在儿科遗传病里的硬数据——98.7% 召回率意味着
+    AI 适合做<b>安全网</b>而非终审。小雪宝做陪伴与科普时，可以引用这个数字回应家长「AI 会不会漏诊」的焦虑：
+    真正难的不是找到变异，而是剩下 40% 的 VUS 如何解释——这恰是「陪伴型 AI」比「诊断型 AI」更有发挥空间的地方。
+  </div>
+</div>
+
+<h2 class="sec">二、前沿研究 · 孤独症与发育行为（本期重点）</h2>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42676443/" target="_blank">把 AI 支持的早期孤独症识别当作公共卫生基础设施：基于情景经济模型的美国测算</a></h3>
+  <div class="src"><b>Frontiers in Public Health</b> · Auburn University 经济系 / Mercer University · 2026-08-17</div>
+  <div class="abs">
+    研究构建了一个校准的情景式成本模型，检验 AI 缩短孤独症识别路径后对社会成本的影响。
+    以已发表的 <b>2025 年美国全国负担约 4610 亿美元</b>为基准校准，用队列存量模型推演至 2050 年；
+    AI 被建模为筛查、分诊、转诊与医生主导诊断路径中的「加速器」。结果：
+    基础部署情景下，到 2050 年<b>累计折现净成本仍为正（约 +520 亿美元）</b>，但年度净成本急剧趋近于零；
+    高强度部署情景在 <b>2040 年代中期出现年度净节省</b>。作者明确声明这是<b>条件性推演，不是已实现节省的估计</b>，
+    其成立取决于及时干预可及性、服务能力充足、公平实施与下游支持需求的持久下降。
+  </div>
+  <div class="why">
+    <b>为什么与你有关：</b>这是<b>星桥计划</b>目前最缺的一类弹药——<b>卫生经济学论证</b>。
+    它给出的关键洞察是反直觉的：<b>早筛本身不省钱，省钱的是「早筛之后接得上的干预」</b>。
+    你在向合作方/家长讲星桥时，可以直接把「我们的价值不在筛查这一下，而在筛查后的干预闭环」作为核心叙事，
+    并援引本文的 25 年回本窗口设定合理预期，避免被质疑「AI 筛查到底省不省钱」。
+  </div>
+</div>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42664569/" target="_blank">可解释眼动机器学习：从临床/典型分离，到孤独症与全面发育迟缓的鉴别</a></h3>
+  <div class="src"><b>Research in Developmental Disabilities</b> · 深圳大学人因工程研究所 × 深圳市宝安区妇幼保健院发育行为儿科（中国团队）· 2026-08-28</div>
+  <div class="abs">
+    168 名 18–48 月龄幼儿（45 名 ASD、56 名 GDD、67 名典型发育 TD）观看一段社交动态的「躲猫猫」视频，
+    采集眼动数据，分别用传统兴趣区（AOI）特征与 AOI 组合特征训练五种分类器，采用两阶段分类框架，
+    并用 SHAP 解释特征贡献。结果：组合特征持续优于单一 AOI 特征；
+    <b>区分 TD 与临床组时随机森林准确率 80.36%</b>（敏感度 84.16%，特异度 74.63%）；
+    <b>区分 ASD 与 GDD 时 KNN 准确率 79.21%</b>（敏感度 71.11%，特异度 85.71%）。
+    SHAP 显示<b>跨区域注意分布特征</b>贡献最大。作者指出需在更大、多中心、更均衡的样本中验证。
+  </div>
+  <div class="why">
+    <b>为什么与你有关：</b>对<b>孤独症量表 AI 平台</b>是教科书级参照：① 真正临床痛点是 <b>ASD vs GDD 鉴别</b>（不是 ASD vs 正常），
+    本文 79.21% 说明这条路可行但远未解决；② 范式是「<b>量表/问卷之外补一个客观行为模态</b>」——眼动只需一段视频，
+    比脑电、影像都更适合基层与家庭场景；③ 中国团队 + 中国样本，本土化门槛最低，可优先考虑合作或复现。
+    注意作者自己强调的局限：单中心、样本不均衡，别把它当成熟产品。
+  </div>
+</div>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42666557/" target="_blank">NeuroCypher ASD：融合知识图谱表示的机器学习用于幼儿孤独症筛查</a></h3>
+  <div class="src"><b>Journal of Healthcare Informatics Research</b> · 爱琴海大学智能系统实验室（希腊）· 2026-09</div>
+  <div class="abs">
+    现有孤独症筛查高度依赖结构化问卷，但这些数据在实务中并不易解读与使用。作者提出 NeuroCypher ASD 框架：
+    表格模型用<b>问卷回答 + 人口学特征</b>估计 ASD 风险，<b>知识图谱</b>则负责组织数据，支持病例比较、模式探索与自然语言查询。
+    系统在<b>防数据泄漏的评估协议</b>下对比表格、图与混合三类模型。为强化可解释性，框架内置 <b>SHAP 分析</b>、
+    嵌入维度与原始问卷特征之间的近似映射，以及一个<b>异常检测模块</b>用于标出需人工复核的非典型个案。
+    作者定位其主要应用场景为<b>学校环境</b>下的筛查工作流。
+  </div>
+  <div class="why">
+    <b>为什么与你有关：</b>这是<b>孤独症量表 AI 平台</b>可以直接照抄的产品架构：预测（表格模型）+ 解释（SHAP 映射回原题）
+    + 检索（知识图谱 + 自然语言问询）+ 兜底（异常检测标记 atypical 个案交人工）。
+    其中「<b>把嵌入维度近似映射回原始问卷条目</b>」这一招最值钱——它让 AI 输出能翻译成家长和医生看得懂的
+    「是哪几道题导致风险升高」，这正是量表类产品从「打分工具」升级为「决策助手」的分水岭。
+  </div>
+</div>
+
+<h2 class="sec">三、前沿研究 · 血液肿瘤</h2>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42670491/" target="_blank">机器学习个体化预测成人 AML 首次完全缓解后不做异基因移植的结局 —— HARMONY 研究</a></h3>
+  <div class="src"><b>HemaSphere</b>（欧洲血液学协会）· HARMONY Alliance 多国联盟 · 2026-08-30</div>
+  <div class="abs">
+    异基因造血干细胞移植（allo-HSCT）是 AML 的重要治愈手段，现行推荐基于风险分组，但<b>同一风险组内异质性很大</b>。
+    研究纳入 HARMONY 数据库中 2550 例 18–70 岁、接受强化疗且有细胞遗传学与二代测序数据、
+    在首次完全缓解（CR1）期未接受 allo-HSCT 的患者，用基于<b>贝叶斯加性回归树（BART）</b>的非参数机器学习模型
+    整合临床变量与基因组异常做个体化结局估计，并在 <b>714 例 UK-NCRI 试验队列</b>中外部验证。
+    在估计 5 年总生存、5 年无复发生存、5 年累积复发率方面，HARMONY ML 模型的时间依赖 AUC 均优于 ELN2022 风险分层
+    （<b>0.741 vs 0.700；0.752 vs 0.705；0.742 vs 0.708</b>），外部验证队列结论一致。
+    模型还揭示出 ELN2022 组内显著异质性：识别出<b>相当比例的「预后良好」患者其预测 5 年累积复发率 > 40%</b>，
+    这部分人可能从 CR1 期移植中获益。
+  </div>
+  <div class="why">
+    <b>为什么与你有关：</b>对<b>小雪宝 LeukemiaPal</b> 有双重价值。价值一是<b>科普选题</b>：
+    「被判定为低危却仍可能复发」是患儿家长最真实、也最少被讲清楚的恐惧，本文给了可引用的量化锚点（预测 5 年 CIR &gt; 40%）。
+    价值二是<b>产品边界提醒</b>：模型明确说明未来需整合可测量残留病灶（MRD）——陪伴型产品在做「病情解读」功能时，
+    必须守住「只解释、不预测预后」的红线，这类个体化风险估计只能由主治团队完成。
+    注意：本队列为<b>成人</b>，儿科外推需谨慎。
+  </div>
+</div>
+
+<h2 class="sec">四、预印本 · 医疗 AI 方法学</h2>
+
+<div class="card">
+  <h3><a href="https://doi.org/10.64898/2026.08.30.26361745" target="_blank">真实临床可及性约束下的成本感知主动特征获取，用于鉴别诊断</a><span class="badge">未经同行评审</span></h3>
+  <div class="src"><b>medRxiv</b>（Health Informatics）· 预印本 · 2026-08-31</div>
+  <div class="abs">
+    主动特征获取（AFA）自适应地决定「下一项开什么检查」，有望减少急症诊疗中的不必要化验。但作者指出，
+    现有临床 AFA 评估默认<b>任何特征都能按需取得</b>，且<b>按就诊而非按患者切分数据</b>，两者都会虚高表现。
+    本研究基于 MIMIC-IV 构建 64,766 次急性入院队列（39,884 名患者、21 种疾病、55 个特征分布在 30 个检测 panel），
+    采用<b>患者级切分、12 小时决策截点、来自实际检测记录的每位患者可及性掩码</b>，并按 2026 年 Medicare 费率按 panel 计价。
+    在 30–60 美元预算区间、五次患者级重采样下，以「蒙特卡洛期望信息增益减成本惩罚」打分的 EIG-Cost 方法表现最佳：
+    在 30 美元预算下取得最高 macro-F1 <b>0.188（95% CI 0.185–0.191）</b> 且成本最低（<b>17.28 美元</b>），
+    在全部五次重采样中均优于最强基线（p &lt; 0.001，Cohen's d = 4.0），并在每个预算档位领先。
+    值得注意的是，<b>八种已发表方法中有三种坍缩为「仅生命体征」基线（macro-F1 ≈ 0.040）</b>，
+    即便提高预算也不再获取任何特征——这是对可及性<b>真实适应失败</b>，而非预算不足。
+    尽管绝对准确率不高，EIG-Cost 的概率校准良好（期望校准误差 0.04）。
+  </div>
+  <div class="why">
+    <b>为什么与你有关：</b>这篇是本期<b>对孤独症量表 AI 平台方法论价值最高</b>的一条。
+    「主动特征获取」翻译成量表语言就是<b>自适应施测</b>：不是一次问完 40 题，而是<b>每题都问「下一题问什么信息量最大」</b>。
+    更关键的是它打脸了整个领域：<b>8 个已发表方法里 3 个在真实约束下直接失效</b>——
+    这提醒你，量表平台如果只做「全量题目喂模型」，评测分数再好看也可能是虚高；
+    应该按患者级切分、引入「这道题在真实场景能不能问到」的可及性掩码，并给每道题标一个「时间/配合成本」。
+  </div>
+</div>
+
+<h2 class="sec">五、行业与开源速览</h2>
+<ul class="quick">
+  <li><b>跨人群基因组预测：迁移学习的收益会随目标样本量增长而消失</b> —— Google Research 研究发现，在代表性不足人群的基因组预测中，迁移学习带来的增益并非稳定，而是随目标人群样本量增加趋于失效。<a href="https://research.google/blog/transfer-learning-for-genomic-prediction-in-underrepresented-populations" target="_blank">查看原文</a>（2026-09-02）· 与本期 AI 外显子测序一文互为对照：<b>「换个族裔还能打吗」是所有医疗 AI 的必答题</b>。</li>
+  <li><b>小米开源表格结构化数据大模型 Xiaomi-TabLDM</b>，在 OpenML-CTR23 榜单回归任务登顶。<a href="https://www.ithome.com/0/998/683.htm" target="_blank">查看报道</a>（2026-09-05）· 临床表格数据（检验值、量表得分、随访记录）长期是树模型主场，<b>开源表格大模型值得纳入一人公司的「临床建模工具箱」观察清单</b>。</li>
+  <li><b>英伟达拟以约 129.3 亿美元收购 Hugging Face</b>，黄仁勋承诺维持其开放平台定位，预计 2027 年上半年完成。<a href="https://www.ithome.com/0/998/248.htm" target="_blank">查看报道</a>（2026-09-04）· 若你的一人公司依赖开源医疗模型做本地部署，<b>模型分发中枢的归属变化需提前关注</b>。</li>
+  <li><b>真实世界 REFORM-AML 队列：AML 分子图谱与风险分层</b> —— 丹麦 2,512 例 AML 患者（2015–2022），比较 ELN2017 与 ELN2022 的生存分层表现。<a href="https://doi.org/10.64898/2026.08.27.26361552" target="_blank">查看预印本</a>（2026-08-31）<span class="badge">未经同行评审</span> · 与前述 HARMONY 研究构成互补：<b>一个讲「ML 能否超越现有分层」，一个讲「现有分层在真实人群里稳不稳」</b>。</li>
+  <li><b>arXiv 论文提出把大语言模型建模为「认知病毒」的传播模型</b>。<a href="https://arxiv.org/abs/2609.03344" target="_blank">查看原文</a>（2026-09-05）· 对<b>小雪宝</b>这类长期陪伴产品是一记警钟：<b>陪伴型 AI 的影响是累积性的</b>，安全评估不能只看单轮回复是否合规，要看长期交互后的观念漂移。</li>
+</ul>
+
+<div class="action">
+  <h2>今日行动建议</h2>
+  <ol>
+    <li><b>量表平台：把「自适应施测」写进需求文档（本周可启动）。</b>
+      直接借鉴 medRxiv 那篇 EIG-Cost 的框架：给孤独症量表的每一道题标注「信息增益 / 作答成本（时间+配合度）」，
+      用贪心策略决定下一题，目标是在<b>不损失筛查效能的前提下把题量压缩 30–50%</b>。
+      务必同步建立<b>按儿童（而非按测评记录）切分</b>的评测集，并引入「该题在真实门诊/家庭场景能否问到」的可及性掩码——
+      论文里 3/8 方法失效正是栽在这里。可先在一台本地机器上跑通原型，符合「本地 AI 内容团队」的交付节奏。</li>
+    <li><b>星桥计划：补一份「中国场景的卫生经济学一页纸」。</b>
+      用 42676443 的模型骨架（负担基准 → 部署强度情景 → 25 年回本窗口）做本土化替换：
+      把美国 4610 亿美元负担基准换成国内可引用的孤独症社会成本数据，把「干预可及性」设为关键敏感性变量。
+      产出物是一页纸 + 一张情景曲线图，用于合作方沟通。<b>核心叙事要落在「早筛不省钱，闭环才省钱」</b>——
+      这既是论文结论，也天然是星桥「筛查 + 数字疗愈」一体化方案的差异化卖点。</li>
+    <li><b>小雪宝：开一条「儿科白血病 × 可解释风险模型」的定向检索线。</b>
+      本期血液肿瘤唯一强命中仍为成人队列（HARMONY, 18–70 岁），儿科白血病连续多期无硬核信号。
+      建议把「儿童 ALL/AML + 可解释机器学习 + MRD」设为常设检索词，窗口放宽到 30 天，每周扫一次；
+      同时先用现有素材做一期科普：<b>「为什么同样是低危，医生还是建议移植？」</b>，
+      引用 HARMONY 的组内异质性发现（部分预后良好患者预测 5 年复发率 &gt; 40%），
+      但务必标注该数据来自<b>成人</b>队列，并在文末守住「具体方案请与主治团队确认」的边界。</li>
+  </ol>
+</div>
+
+<footer>
+  数据来源：AI HOT（医疗资讯聚合）· PubMed / E-utilities（同行评审文献）· medRxiv（预印本）。<br>
+  窗口：2026-08-31 → 2026-09-07 · 新闻时间为北京时间（ISO+8h），论文按发表日期。<br>
+  标注「未经同行评审」的条目为预印本，结论尚未经同行评议，引用请谨慎。<br>
+  本简报内容版权归 AI新青年所有，转载请注明出处。
+</footer>
+
+</div>
+</body>
+</html>

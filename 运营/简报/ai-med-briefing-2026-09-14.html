@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-09-14</title>
+<style>
+:root{
+  --bg:#f6f8f9; --card:#ffffff; --tx:#12232b; --tx2:#4a6068; --tx3:#7b9199;
+  --line:#e2ebee; --brand:#0d9488; --brand-soft:#e6f4f2; --brand-dark:#0f766e;
+  --warn:#b45309; --warn-soft:#fef3c7; --chip:#eef3f5;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0c1518; --card:#132024; --tx:#e6f1f3; --tx2:#a9c2c8; --tx3:#7d979e;
+    --line:#24383e; --brand:#2dd4bf; --brand-soft:#10312e; --brand-dark:#5eead4;
+    --warn:#fbbf24; --warn-soft:#3a2c0d; --chip:#1a2c31;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:var(--bg);color:var(--tx);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:32px 20px 64px}
+.hero{background:linear-gradient(135deg,var(--brand-soft) 0%,var(--card) 100%);
+  border:1px solid var(--line);border-radius:12px;padding:28px 26px;margin-bottom:26px}
+.kicker{display:inline-block;background:var(--brand);color:#fff;font-size:12px;font-weight:700;
+  letter-spacing:.08em;padding:4px 10px;border-radius:12px;margin-bottom:14px}
+h1{margin:0 0 10px;font-size:27px;line-height:1.35;letter-spacing:-.01em}
+.profile{font-size:14px;color:var(--tx2);margin:0 0 16px}
+.profile b{color:var(--tx)}
+.metarow{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{background:var(--chip);border:1px solid var(--line);border-radius:12px;
+  padding:5px 12px;font-size:12.5px;color:var(--tx2)}
+.chip.ok{border-color:var(--brand);color:var(--brand-dark);font-weight:600}
+h2{font-size:17px;margin:34px 0 14px;padding-left:11px;border-left:4px solid var(--brand);line-height:1.3}
+h2 small{display:block;font-size:12.5px;font-weight:400;color:var(--tx3);margin-top:3px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:20px 22px;margin-bottom:16px;transition:border-color .18s}
+.card:hover{border-color:var(--brand)}
+.ct{font-size:17.5px;font-weight:700;line-height:1.5;margin:0 0 9px}
+.ct a{color:var(--tx);text-decoration:none;border-bottom:2px solid var(--brand-soft)}
+.ct a:hover{color:var(--brand-dark);border-bottom-color:var(--brand)}
+.meta{font-size:12.5px;color:var(--tx3);margin-bottom:11px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.meta .src{color:var(--brand-dark);font-weight:600}
+.meta .dot{opacity:.45}
+.tag{display:inline-block;font-size:11.5px;padding:2px 8px;border-radius:12px;
+  background:var(--brand-soft);color:var(--brand-dark);font-weight:600}
+.tag.pre{background:var(--warn-soft);color:var(--warn)}
+.abs{font-size:14.5px;color:var(--tx2);margin:0 0 13px}
+.why{background:var(--brand-soft);border-left:3px solid var(--brand);border-radius:0 8px 8px 0;
+  padding:11px 15px;font-size:14px;color:var(--tx)}
+.why b{color:var(--brand-dark)}
+ul.act{list-style:none;padding:0;margin:0}
+ul.act li{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:16px 18px 16px 46px;margin-bottom:12px;position:relative;font-size:14.5px;color:var(--tx2)}
+ul.act li::before{content:"▸";position:absolute;left:18px;top:16px;color:var(--brand);font-weight:700}
+ul.act li b{color:var(--tx)}
+.lite{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 22px 14px}
+.lite li{font-size:14px;color:var(--tx2);margin-bottom:11px;line-height:1.65}
+.lite li a{color:var(--brand-dark);text-decoration:none;border-bottom:1px solid var(--brand-soft)}
+.lite li a:hover{border-bottom-color:var(--brand)}
+.note{font-size:13px;color:var(--tx3);background:var(--chip);border:1px dashed var(--line);
+  border-radius:12px;padding:13px 16px;margin:20px 0 0}
+.note b{color:var(--tx2)}
+footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--tx3);line-height:1.9}
+footer b{color:var(--tx2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <span class="kicker">MEDICAL AI BRIEFING</span>
+    <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+    <p class="profile">主理人 <b>Alan（李帅帅）</b>｜三甲儿科规培医师转型 AI · 受众为青少年与家长<br>
+    在手项目：小雪宝 LeukemiaPal（白血病患儿陪伴助手）· 星桥计划（孤独症数字疗愈）· 孤独症量表 AI 平台 · 本地 AI 内容团队 · 一人公司</p>
+    <div class="metarow">
+      <span class="chip">2026-09-14（周一）</span>
+      <span class="chip">窗口 2026-09-07 → 2026-09-14</span>
+      <span class="chip ok">精选 6 条 · 速览 5 条</span>
+      <span class="chip">来源：行业资讯 / 同行评审期刊 / 预印本</span>
+    </div>
+  </div>
+
+  <h2>一、临床落地与模型<small>影像、检验与安全的工程化证据</small></h2>
+
+  <div class="card">
+    <p class="ct"><a href="https://pubmed.ncbi.nlm.nih.gov/42730927/" target="_blank" rel="noopener">新生儿仰卧位胸片气胸 AI：AUC 0.975，但左肺定位只有 67.6%</a></p>
+    <div class="meta"><span class="src">Pediatric Radiology</span><span class="dot">·</span><span>2026-09-12</span><span class="dot">·</span><span class="tag">儿科影像</span></div>
+    <p class="abs">日本筑波大学医院小儿外科团队用 2011–2024 年 NICU 的 6,159 张胸片（288 例气胸患儿 648 张 vs 3,377 例对照 5,511 张）训练 ResNet-18——先用公开成人正常胸片预训练再做知识蒸馏。测试集 AUC 0.975，敏感度 87.6%、特异度 95.3%、准确率 94.5%、阴性预测值 98.5%，但阳性预测值只有 68.5%。Grad-CAM 肺侧定位与临床判定一致率：右肺 91.3%（84/92）、左肺仅 67.6%（48/71）。新生儿暂时性呼吸增快（TTN）与胎龄是独立误分类因素。</p>
+    <p class="why"><b>为什么与你有关：</b>这是一份"能报但别报死"的儿科 AI 范本——高 NPV（98.5%）意味着它适合做<b>排除性筛查</b>而非确诊，正好是小雪宝症状初筛模块该抄的判定逻辑。更关键的是左右肺定位的 24 个百分点落差，说明儿科影像模型的<b>空间可解释性远未达标</b>；你给家长做科普内容时，这个数字比"AUC 0.975"更值得讲——它能直接拆掉"AI 比医生准"的粗糙叙事。</p>
+  </div>
+
+  <div class="card">
+    <p class="ct"><a href="https://pubmed.ncbi.nlm.nih.gov/42675854/" target="_blank" rel="noopener">血常规散点图也能跑 AI：EfficientNet-B0 把 4,297 张 WBC-Diff 图分成 19 类，假阴率 2.5%</a></p>
+    <div class="meta"><span class="src">Cancer Medicine</span><span class="dot">·</span><span>2026-09</span><span class="dot">·</span><span class="tag">血液肿瘤</span><span class="tag">可本地部署</span></div>
+    <p class="abs">重庆医科大学附属第一医院检验科用 4,297 张白细胞分类散点图（含健康对照，共 19 类）横向对比 11 个模型：Swin-Tiny 精度最高（70.44%），但最终选了 EfficientNet-B0——准确率 67.90%，仅 4.0M 参数、0.42 GFLOPs，CPU 推理比 Swin-Tiny 快 2.8 倍。作为上游分流端点（正常 vs 异常），敏感度达 0.975（测试集）/0.984（独立留出集），假阴率 2.5%/1.6%，仅 2.2% 的异常图被误送进"正常"组。Grad-CAM 显示激活区域落在已知细胞群区带（如 M1 的原始粒细胞区、CML 的中性-嗜碱细胞簇）。</p>
+    <p class="why"><b>为什么与你有关：</b>这是小雪宝最容易落地的一块拼图。它证明了两件事：<b>①</b> 血常规散点图这种「每个白血病患儿家属手机里都会有的报告」里藏着可机器读的信号；<b>②</b> 精度最高的模型（Swin-Tiny）不是最优解，<b>4M 参数 / 0.42 GFLOPs 的 CPU 可跑模型</b>才是——这正好是你"本地部署、不出院区"路线的可行性证据。设计上「敏感度优先、特异度兜底」的两级架构（先判有无异常，再分 19 类）建议直接照抄。</p>
+  </div>
+
+  <div class="card">
+    <p class="ct"><a href="https://doi.org/10.64898/2026.09.02.26362074" target="_blank" rel="noopener">真正漏掉急症的不是"患者轻描淡写"，而是"表现不典型"</a></p>
+    <div class="meta"><span class="src">medRxiv 预印本</span><span class="dot">·</span><span>2026-09-08</span><span class="dot">·</span><span class="tag pre">未经同行评审</span><span class="tag">AI 安全</span></div>
+    <p class="abs">研究团队在固定前沿模型上做提示词消融，并在 8 个模型（两家厂商）上复现。把 40 个明确急症写成 5 种表述（中性、轻度淡化、强烈否认、第三方安抚、良性干扰项）：所有组别敏感度都 ≥97.5%，且跨表述几乎无波动——<b>患者淡化危险信号基本无害</b>。真正的风险在另一端：76 个细微或非典型表现的急症，才是模型失手的地方。作者据此提出一套"cannot-miss 纪律"并要求<b>确定性强制执行</b>（不是靠提示词软约束）。</p>
+    <p class="why"><b>为什么与你有关：</b>这条直接改写小雪宝的安全红线设计。之前行业（包括你 09-13 期看到的 LUMANA 严重度分级思路）普遍把力气花在"识别用户语气强弱"，而这份证据说：<b>语气不是变量，非典型性才是</b>。所以回归测试题库不该按"家长说得多严重"分层，而应按<b>早期/轻微/非典型表现</b>分层建库；且红线要写成代码里的确定性分支，而不是提示词里的一句"请注意"。</p>
+  </div>
+
+  <h2>二、前沿研究 · 同行评审论文<small>儿科肿瘤数据基建、孤独症干预与移植预后</small></h2>
+
+  <div class="card">
+    <p class="ct"><a href="https://pubmed.ncbi.nlm.nih.gov/42729951/" target="_blank" rel="noopener">AI 支持孤独症治疗干预系统综述：14 项研究过关，但一个成人受试者都没有</a></p>
+    <div class="meta"><span class="src">Frontiers in Psychiatry</span><span class="dot">·</span><span>2026-08-28</span><span class="dot">·</span><span class="tag">孤独症</span><span class="tag">星桥计划</span></div>
+    <p class="abs">波兰西里西亚医科大学团队检索 5 个数据库（2016-01 至 2025-12），纳入标准极严：确诊 ASD、干预样本 N≥6、AI 作为治疗/教育/康复核心组件、多会话且有明确时间框架。最终仅 14 项研究入围（机器人、VR、可穿戴）。AI 主要作为<b>社交中介</b>起作用，通过降低认知负荷改善社交情绪结局（ADOS、SRS 评分）；起效机制集中在<b>实时任务自适应</b>与<b>眼动等行为精准监测</b>。但干预剂量异质性极大（中位 4–12 小时），样本普遍小于 20 人、男性主导，<b>成人参与者完全空缺</b>。</p>
+    <p class="why"><b>为什么与你有关：</b>这是星桥计划能拿到的最贴近的产品形态清单：AI 当"社交中介"而非"治疗师"，靠实时自适应 + 眼动监测降认知负荷——这个机制描述可以直接翻译成你的功能规格。更值钱的是那三个缺口：<b>剂量无标准、样本 <20、成人表型为零</b>。你在中国做，如果能把干预剂量写成可复现协议、并把女性与青少年/成人表型纳入，这本身就是一篇能发的研究设计，也是产品差异化的护城河。</p>
+  </div>
+
+  <div class="card">
+    <p class="ct"><a href="https://pubmed.ncbi.nlm.nih.gov/42728728/" target="_blank" rel="noopener">700+ 神经母细胞瘤患儿数据跨院联动：隐私计算撑起儿科肿瘤 AI</a></p>
+    <div class="meta"><span class="src">Methods of Information in Medicine</span><span class="dot">·</span><span>2026-09-11</span><span class="dot">·</span><span class="tag">儿科肿瘤</span><span class="tag">数据合规</span></div>
+    <p class="abs">欧盟 PRIMAGE 项目（奥地利 AIT、St. Anna 儿童癌症研究所、西班牙 La Fe 医院等）建了一套分布式隐私保护的儿科肿瘤数据基础设施：用欧洲患者身份服务（EUPID）的哈希与语音匹配协议做假名化，把临床、生物样本与影像三方数据在不出域的前提下链接起来，符合 GDPR。已成功链接并上传 <b>700 余例神经母细胞瘤患者</b>数据，AI 模型在其上预测临床结局。</p>
+    <p class="why"><b>为什么与你有关：</b>儿童癌症罕见（欧洲年新发 3.5 万+），单中心样本永远不够——这正是小雪宝和任何儿科 AI 项目的死穴。PRIMAGE 给出的答案是<b>"数据不动、模型动"的假名化联动</b>。对你的一人公司而言，这不只是技术方案，更是<b>可卖的商业模式</b>：医院最怕数据出域，你能提供一套可审计的跨院联动基建，比卖一个准确率数字更容易拿到单子。建议把 EUPID 的哈希+语音匹配思路记进你的合规清单。</p>
+  </div>
+
+  <div class="card">
+    <p class="ct"><a href="https://pubmed.ncbi.nlm.nih.gov/42712399/" target="_blank" rel="noopener">14,430 例移植队列：堆叠集成模型预测慢性 GVHD，且随时间"越算越准"</a></p>
+    <div class="meta"><span class="src">Frontiers in Immunology</span><span class="dot">·</span><span>2026-08-25</span><span class="dot">·</span><span class="tag">白血病移植</span></div>
+    <p class="abs">京都大学牵头，基于日本造血细胞移植统一登记数据，纳入 2010–2018 年间 14,430 例首次移植后第 100 天仍存活、无慢性 GVHD 且无复发的血液恶性肿瘤患者，用 14 个移植前变量预测 24 个月结局。堆叠集成（SEM）在 cGVHD、非复发死亡（NRM）、全因死亡（ACM）三个终点上 C-index 分别为 0.574 / 0.652 / 0.642，优于 Cox-PH（0.553 / 0.635 / 0.615）、随机生存森林与 XGBoost，Dynamic-DeepHit 垫底（0.508 / 0.607 / 0.564）。<b>随移植后急性 GVHD 信息在第 30/60/100 天逐步累积，C-index 持续抬升</b>（cGVHD 0.581→0.602→…）。</p>
+    <p class="why"><b>为什么与你有关：</b>小雪宝的随访模块不该是"一次评估管全程"，这份数据给了明确理由：<b>预测力随随访信息累积而上升</b>，所以产品要做成动态刷新的时间轴模型。另一个可复用的判断是——Dynamic-DeepHit 这类复杂深度模型在这份表格数据上<b>显著输给集成树</b>（0.508 vs 0.574），提醒你别为了"用上深度学习"而牺牲基线性能。<b>注意：本队列为血液恶性肿瘤患者、以成人为主，儿科外推需谨慎。</b></p>
+  </div>
+
+  <h2>三、速览<small>五条值得记一笔</small></h2>
+  <div class="lite">
+    <ul>
+      <li><b>多模态行为分析鉴别双相 vs 单相抑郁</b>——日本全国招募 366 例，对面容、眼神、语音韵律做 AI 整合分析，四折三次重复交叉验证准确率 78%、AUC 0.76；关键特征是中性表情与眼神的<b>时间不稳定性</b>。<a href="https://pubmed.ncbi.nlm.nih.gov/42725756/" target="_blank" rel="noopener">Psychiatry and Clinical Neurosciences（2026-09-11）</a>｜对你的量表平台：行为信号的判别力可能不在"均值"而在"波动性"，这是个便宜且可采集的维度。</li>
+      <li><b>维生素 D 对孤独症症状严重度的"遮蔽效应"</b>——广西中医药大学与柳州妇幼保健院，699 名 24–71 月龄儿童，结构方程模型显示维生素 D 经发育水平的间接效应为负、直接效应为正，相互抵消致总效应不显著；机器学习进一步发现<b>特征重要性会随维生素 D 状态漂移</b>（充足组以语言为主，不足组语言权重下降、运动维度上升）。<a href="https://pubmed.ncbi.nlm.nih.gov/42729753/" target="_blank" rel="noopener">Frontiers in Psychiatry（2026-08-28）</a>｜提醒：用 ML 做 ASD 评估时，营养状态是必须控制的混杂变量。</li>
+      <li><b>把自由文本变成"可审计概念层"的智能体框架</b>——LLM 只在有界弱标注阶段介入，随后用本地抽取器处理全文并聚合成纵向概念瓶颈。在肿瘤停药与 MIMIC-IV 再入院两任务上 AUROC 分别 0.700→0.761、0.576→0.609，性能与 BioClinicalBERT 端到端相当但可追溯，成本 <b>24 美元 vs 全量处理的 10,648 美元</b>。<a href="https://doi.org/10.64898/2026.09.02.26362086" target="_blank" rel="noopener">medRxiv（2026-09-07）· 未经同行评审</a>｜对一人公司：这是把"贵得做不起"变成"24 美元能跑"的现成路径。</li>
+      <li><b>IDH 突变髓系肿瘤：哪些共突变预示克隆收缩</b>——79 例（ivosidenib 36 例 / enasidenib 43 例），43% 达复合血液学缓解；ivosidenib 缓解者 IDH1 VAF 显著下降（p=0.010），RUNX1 与 BCOR 突变在不完全缓解者中富集且独立关联更短疗程（HR 2.53 / 2.31）。<a href="https://doi.org/10.64898/2026.09.03.26361825" target="_blank" rel="noopener">medRxiv（2026-09-08）· 未经同行评审</a>｜成人髓系肿瘤，儿科直接外推有限，但"VAF 动态变化作为疗效替代终点"的思路可借鉴。</li>
+      <li><b>产业侧两条</b>：<a href="https://www.ithome.com/1/001/650.htm" target="_blank" rel="noopener">中国移动发布 AI 可信计算 AITC（多形态机密算力与机密 Token，09-12）</a>——国内合规算力基建再进一步，小雪宝若走"本地/信创"路线值得跟踪；<a href="https://www.lgresearch.ai/blog/view?seq=697" target="_blank" rel="noopener">LG AI Research 发布表格基础模型 EXAONE Tabular，纯合成数据预训练（09-09）</a>——量表与临床表格这类小样本结构化数据，终于有了专用基础模型路线。</li>
+    </ul>
+  </div>
+
+  <h2>四、今日行动建议<small>绑定在手项目，可直接动手</small></h2>
+  <ul class="act">
+    <li><b>小雪宝 · 血常规模块开最小闭环：</b>照抄重庆医大那篇的两级设计——第一级只判「正常 vs 异常」（目标敏感度 ≥0.975、假阴率 <3%），第二级才做多分类；模型优先选 4M 参数 / 0.42 GFLOPs 量级、CPU 可跑的 EfficientNet-B0 档，而不是精度最高的 Swin-Tiny。本周可先做的一步：把散点图采集与脱敏流程写成一页 SOP。</li>
+    <li><b>小雪宝 · 重建安全回归题库：</b>按本期 medRxiv 证据把题库分层标准从「家长表述语气」改为「症状典型性」——先攒 30–50 条<b>早期/轻微/非典型</b>的急症描述（如不典型腹痛、低热伴精神差），跑一遍当前模型看漏 escalated 多少。同时把红线从提示词挪进代码分支，做成确定性强制。</li>
+    <li><b>星桥计划 · 把干预协议写成可发表的设计：</b>参照那篇系统综述的入选标准（N≥6、多会话、明确剂量），先定死你自己的剂量框架（建议落在中位 4–12 小时区间的下沿起步），并把<b>女性与青少年/成人表型</b>纳入招募——这是全球文献里的空白位。同步给量表平台加一条：评估时采集并控制维生素 D 等营养状态变量。</li>
+  </ul>
+
+  <p class="note"><b>今日信号说明：</b>本期主检索命中 282 条，儿科定向 176 条、白血病/儿童肿瘤 25 条、孤独症 19 条。已与最近四期简报做 PMID/DOI 去重（21 个 PMID + 14 个 DOI），6 条主卡均为首次出现。本期<b>儿童白血病（ALL/AML）仍无专属强命中</b>，血液肿瘤方向由「血常规散点图 AI」与「移植后 cGVHD 预后」两条补位，后者为成人为主队列，已在正文标注；预印本侧本周儿科与孤独症 AI 供给明显偏薄，已如实呈现未硬凑。建议：若连续多期仍无儿童白血病强信号，可把该主题单独扩窗至 30 天并常设检索。</p>
+
+  <footer>
+    <b>数据来源：</b>行业资讯聚合（AI HOT）· PubMed / MEDLINE（美国国立卫生研究院 NCBI）· medRxiv 预印本平台。<br>
+    <b>时间窗口：</b>2026-09-07 → 2026-09-14（论文按发表日期，资讯按北京时间 UTC+8 换算）。<br>
+    <b>提示：</b>标注「未经同行评审」的条目为预印本，结论尚未经同行评审，不得作为临床决策依据。本简报仅供研究与内容创作参考，不构成医疗建议。<br>
+    © 2026 AI新青年 · 医疗 AI 聚焦简报　|　主理人 Alan（李帅帅）
+  </footer>
+
+</div>
+</body>
+</html>

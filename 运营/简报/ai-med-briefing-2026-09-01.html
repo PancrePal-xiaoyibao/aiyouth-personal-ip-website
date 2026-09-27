@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-09-01</title>
+<style>
+  :root {
+    --teal: #0d9488;
+    --teal-dark: #0f766e;
+    --teal-soft: #ccfbf1;
+    --radius: 12px;
+    --bg: #f7f9f9;
+    --card-bg: #ffffff;
+    --text: #1f2937;
+    --text-soft: #51606b;
+    --border: #e3e9e8;
+    --shadow: 0 1px 3px rgba(15,118,110,.08), 0 6px 18px rgba(15,118,110,.06);
+    --tag-bg: #ecfdf9;
+    --warn-bg: #fff7ed;
+    --warn-border: #fed7aa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1416;
+      --card-bg: #171f21;
+      --text: #e6edf0;
+      --text-soft: #9fb0b4;
+      --border: #243033;
+      --shadow: 0 1px 3px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+      --tag-bg: #0c2b28;
+      --teal-soft: #134e4a;
+      --warn-bg: #2a1d10;
+      --warn-border: #5a3a1a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 28px 20px 56px; }
+
+  header.hero {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 26px 26px 24px;
+    box-shadow: var(--shadow);
+  }
+  header.hero h1 { margin: 0 0 4px; font-size: 25px; letter-spacing: .5px; }
+  header.hero .sub { opacity: .92; font-size: 14px; }
+  .persona {
+    display: flex; gap: 14px; align-items: center;
+    margin-top: 16px; padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,.22);
+  }
+  .avatar {
+    width: 46px; height: 46px; border-radius: 50%;
+    background: rgba(255,255,255,.18);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex: none;
+  }
+  .persona .meta { font-size: 13.5px; }
+  .persona .meta b { font-size: 15px; }
+  .persona .meta span { opacity: .9; }
+
+  .meta-bar {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px;
+  }
+  .chip {
+    background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.25);
+    color: #fff; font-size: 12.5px;
+    padding: 4px 11px; border-radius: 999px;
+  }
+
+  .section-title {
+    display: flex; align-items: center; gap: 9px;
+    margin: 34px 0 14px; font-size: 17px; font-weight: 700;
+    color: var(--teal-dark);
+  }
+  @media (prefers-color-scheme: dark){ .section-title { color: var(--teal-soft); } }
+  .section-title::before {
+    content: ""; width: 5px; height: 18px; border-radius: 3px;
+    background: var(--teal); display: inline-block;
+  }
+  .count {
+    font-size: 12px; font-weight: 600; color: var(--text-soft);
+    background: var(--tag-bg); padding: 2px 9px; border-radius: 999px;
+    border: 1px solid var(--border);
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px 16px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow);
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  .card:hover { transform: translateY(-2px); border-color: var(--teal); }
+  .card h3 { margin: 0 0 8px; font-size: 16.5px; line-height: 1.45; }
+  .card h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid transparent; }
+  .card h3 a:hover { color: var(--teal-dark); border-bottom: 1px solid var(--teal); }
+  @media (prefers-color-scheme: dark){ .card h3 a { color: var(--text); } .card h3 a:hover { color: var(--teal-soft); } }
+
+  .src-row { font-size: 12.5px; color: var(--text-soft); margin-bottom: 10px; display: flex; flex-wrap: wrap; gap: 6px 12px; }
+  .src-row .src { color: var(--teal-dark); font-weight: 600; }
+  @media (prefers-color-scheme: dark){ .src-row .src { color: var(--teal-soft); } }
+  .preprint-tag {
+    background: var(--warn-bg); color: #b45309;
+    border: 1px solid var(--warn-border);
+    font-size: 11px; padding: 1px 8px; border-radius: 999px; font-weight: 600;
+  }
+  .card .abs { font-size: 14px; color: var(--text); margin: 0 0 12px; }
+  .why {
+    background: var(--tag-bg); border-left: 3px solid var(--teal);
+    border-radius: 8px; padding: 10px 13px; font-size: 13.5px;
+    color: var(--text);
+  }
+  .why b { color: var(--teal-dark); }
+  @media (prefers-color-scheme: dark){ .why b { color: var(--teal-soft); } }
+  .why .lbl { font-weight: 700; }
+
+  .advice {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 4px 20px 16px; box-shadow: var(--shadow);
+  }
+  .advice ol { margin: 10px 0 0; padding-left: 20px; }
+  .advice li { margin-bottom: 12px; font-size: 14px; }
+  .advice li b { color: var(--teal-dark); }
+  @media (prefers-color-scheme: dark){ .advice li b { color: var(--teal-soft); } }
+
+  footer {
+    margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--border);
+    font-size: 12px; color: var(--text-soft); line-height: 1.7;
+  }
+  footer .srcs { margin-bottom: 8px; }
+  .disclaim { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: 8px; padding: 9px 12px; color: #92400e; }
+  @media (prefers-color-scheme: dark){ .disclaim { color: #fbbf24; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+    <div class="sub">少而精的硬核医疗 AI 信号 · 每日精选</div>
+    <div class="persona">
+      <div class="avatar">🩺</div>
+      <div class="meta">
+        <b>主理人：Alan（李帅帅）</b><br/>
+        <span>三甲儿科规培医师转型 AI ·「AI新青年」视频号主理人 · 受众：青少年 / 家长</span>
+      </div>
+    </div>
+    <div class="meta-bar">
+      <span class="chip">📅 2026-09-01</span>
+      <span class="chip">🪟 数据窗口：2026-08-25 → 2026-09-01（近 7 天）</span>
+      <span class="chip">🔎 精选 6 条</span>
+      <span class="chip">📡 来源：AI HOT / PubMed / medRxiv</span>
+    </div>
+  </header>
+
+  <!-- 医疗模型与临床落地 -->
+  <div class="section-title">医疗模型与临床落地 <span class="count">2 条</span></div>
+
+  <div class="card">
+    <h3><a href="https://www.ithome.com/0/996/195.htm" target="_blank" rel="noopener">华为云联合瑞金医院发布瑞智病理大模型 RuiPath 2.0：7B 参数，覆盖 19 个常见癌种</a></h3>
+    <div class="src-row"><span class="src">IT之家（行业）</span><span>· 2026-08-30（北京时间）</span><span>· 影像 / 病理 AI</span></div>
+    <p class="abs">RuiPath 2.0 参数量 7B，覆盖 19 个常见癌种，诊断任务扩展至 205 项，可覆盖病理医生 90% 以上日常诊断场景——把大模型下沉到单卡可跑的体量。</p>
+    <div class="why"><span class="lbl">为什么与你有关：</span>你长期关注「可本地部署的开源医疗模型」。7B 体量意味着院内 / 本地 GPU 即可部署，白血病患儿长期随访涉及的血象、骨髓影像判读，正是这类病理小模型可切入的场景；也是你评估「一人公司」能否自托管医疗模型的现成参照。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://www.ithome.com/0/996/485.htm" target="_blank" rel="noopener">英国监管机构警示：医疗 AI 转录工具频繁出错，威胁患者安全</a></h3>
+    <div class="src-row"><span class="src">IT之家（监管 / 提示）</span><span>· 2026-08-31（北京时间）</span><span>· 临床落地 / 患者安全</span></div>
+    <p class="abs">NHS 监管机构警告：用于转录医患问诊的 AI 工具可能误识药名与疾病名（如把 MRI 结果记作「脱髓鞘」、混淆药名、漏掉续方提醒），且错误多由患者而非医生发现。英格兰已有 27 种 AI 医疗记录工具在用，但 MHRA 尚未将其归为医疗器械，缺乏全境监管。</p>
+    <div class="why"><span class="lbl">为什么与你有关：</span>这是「陪伴 / 转录类产品上线前必读」。小雪宝、星桥若涉及语音转写或医患对话记录，这篇直接点出风险点——药名 / 诊断术语纠错、错误归因给患者、强制人工复核。把这份警示转成你产品的「上线前安全清单」。</div>
+  </div>
+
+  <!-- 前沿研究·论文 -->
+  <div class="section-title">前沿研究 · 论文 <span class="count">3 条</span></div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42671861/" target="_blank" rel="noopener">Affective Generative AI Use and Youth Mental Health（生成式 AI 的情感性使用与青少年心理健康）</a></h3>
+    <div class="src-row"><span class="src">JAMA Pediatrics</span><span>· 2026-08-31</span><span>· PMID: 42671861</span><span>· DOI: 10.1001/jamapediatrics.2026.3904</span></div>
+    <p class="abs">基于安大略省 39,761 名 4–12 年级学生横断面调查：21.1% 曾用 AI 获取情感支持；情感性 AI 使用与情绪问题显著相关，临床情绪问题风险近乎翻倍（患病率比 1.98）。结论：把生成式 AI 当作「情感避难所」是青少年心理困扰的独立标志。</p>
+    <div class="why"><span class="lbl">为什么与你有关：</span>直击星桥计划与青少年心理健康方向。它证明「陪伴 ≠ 无害」——产品必须区分功能性辅助与替代性情感依赖，并在对话中内置危机识别与转介护栏，而非鼓励把 AI 当唯一出口。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42671864/" target="_blank" rel="noopener">Pediatric Use of Artificial Intelligence for Support and Advice（儿童用 AI 获取支持与建议）</a></h3>
+    <div class="src-row"><span class="src">JAMA Pediatrics（社论）</span><span>· 2026-08-31</span><span>· PMID: 42671864</span><span>· DOI: 10.1001/jamapediatrics.2026.4058</span></div>
+    <p class="abs">JAMA Pediatrics 编辑部评论：儿童用 AI 寻求支持与建议，究竟是发展性实践（developmental practice），还是对真实求助行为的替代（help-seeking substitution）？呼吁厘清边界、建立适龄指引。</p>
+    <div class="why"><span class="lbl">为什么与你有关：</span>小雪宝 LeukemiaPal 面向白血病患儿及兄弟姐妹，他们也会用 AI 问「我是不是快好了」。这篇提醒你：产品定位要清楚「陪伴 ≠ 医疗建议替代」，并在话术层面对「寻求医疗建议」类提问设边界与转介。</div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.64898/2026.08.21.26360471" target="_blank" rel="noopener">Detecting Self-Repairs from Spontaneous Speech with Prompt Ablation Across LLMs and Fine-Tuned Encoder（自发语音中的自我修正检测）</a></h3>
+    <div class="src-row"><span class="src">medRxiv · health informatics</span><span class="preprint-tag">未经同行评审</span><span>· 2026-08-25</span><span>· DOI: 10.64898/2026.08.21.26360471</span></div>
+    <p class="abs">在 DementiaBank ADReSS 语料上比较生成式 LLM 与微调 DistilBERT 对「自我修正」（说话中放弃并重述）的检测：GPT-5 最优（F1=0.73），且对提示设计不敏感。自我修正被视为可解释、可本地化的认知筛查语音标记。</p>
+    <div class="why"><span class="lbl">为什么与你有关：</span>为星桥计划与「孤独症量表 AI 平台」提供方法学支撑——把「语音自修正」作为孤独症 / 认知筛查的可解释 biomarker，且可由小模型本地化落地，与你的语音陪伴场景天然耦合。</div>
+  </div>
+
+  <!-- 工具与开源 -->
+  <div class="section-title">工具与开源 <span class="count">1 条</span></div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.64898/2026.08.21.26361049" target="_blank" rel="noopener">MARLA：面向临床医生的自主医学 AI 研究循环（Clinician-Oriented Medical-AI Research Loop Agent）</a></h3>
+    <div class="src-row"><span class="src">medRxiv · radiology and imaging</span><span class="preprint-tag">未经同行评审</span><span>· 2026-08-25</span><span>· DOI: 10.64898/2026.08.21.26361049</span></div>
+    <p class="abs">提出 MARLA 智能体框架：给定临床医生定义的研究意图，自动把高层目标翻译成可执行的分层研究循环，分解子任务、调度代码智能体、监控进度并据实验反馈迭代，让无 AI 专家背景的医生也能产出可训练、可验证的多模态医学 AI。</p>
+    <div class="why"><span class="lbl">为什么与你有关：</span>你正是「有临床背景的 AI 自学者」。这类 agentic 框架是把你的儿科 / 血液肿瘤 domain know-how 直接变成可跑模型的最短路径，也契合「一人公司」以最小团队撬动模型研发的思路。</div>
+  </div>
+
+  <!-- 今日行动建议 -->
+  <div class="section-title">今日行动建议 <span class="count">绑定在手项目</span></div>
+  <div class="advice">
+    <ol>
+      <li><b>星桥计划：</b>把 JAMA Pediatrics 青少年情感性 AI 研究列为「护栏设计」输入——在陪伴对话中区分功能性辅助 vs 情感依赖，加入危机识别与转介机制；并评估把「语音自修正」作为认知筛查 biomarker 的本地化可行性。</li>
+      <li><b>小雪宝 LeukemiaPal：</b>针对英国 NHS 转录警示，起草一份「语音 / 转写模块上线前安全清单」（药名与诊断术语纠错、错误归因给患者、强制人工复核），把监管风险前置到设计阶段。</li>
+      <li><b>一人公司 / 量表平台：</b>借鉴 MARLA 思路，把你儿科 / 血液肿瘤的选题直接落成可训练的多模态小模型；同时跟踪 RuiPath 2.0（7B 病理）是否开源，以评估本地部署路径。</li>
+    </ol>
+  </div>
+
+  <footer>
+    <div class="srcs">📡 <b>数据来源：</b>AI HOT 医疗垂直聚合（医疗 / medical / healthcare / 医院 多关键词拉取） · PubMed E-utilities（同行评审论文，检索式含 pediatric / leukemia / oncology / autism / mental health，近 7 天） · medRxiv（预印本，2026-08-25 → 2026-09-01）。</div>
+    <div class="disclaim">⚠️ 预印本条目（medRxiv）标注「未经同行评审」，结论可能随评审更新；论文与新闻均保留原文 / DOI / PMID 链接，请以来源页面与正式发表版本为准。本简报为信息聚合，不构成医疗或投资建议。</div>
+    <div style="margin-top:8px;">© 2026 AI新青年 · 医疗 AI 聚焦简报 · 主理人 Alan（李帅帅）｜本内容由 AI 自动聚合生成，仅供内部参考。</div>
+  </footer>
+
+</div>
+</body>
+</html>

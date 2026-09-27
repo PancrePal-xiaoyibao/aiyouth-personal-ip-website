@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-08-19</title>
+<style>
+  :root {
+    --brand: #0d9488;
+    --brand-dim: rgba(13, 148, 136, 0.14);
+    --brand-glow: rgba(13, 148, 136, 0.28);
+    --bg: #f5f7f8;
+    --card: #ffffff;
+    --text: #1a2430;
+    --text-soft: #51606f;
+    --text-faint: #8290a0;
+    --border: #e3e9ec;
+    --tag-bg: #eef3f4;
+    --warn: #b45309;
+    --warn-bg: #fff4e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1419;
+      --card: #16202a;
+      --text: #e8eef3;
+      --text-soft: #a8b6c4;
+      --text-faint: #71808f;
+      --border: #25323e;
+      --tag-bg: #1d2a35;
+      --warn: #fbbf24;
+      --warn-bg: #2a2418;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 32px 16px;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; }
+
+  /* 顶部 */
+  .hero {
+    background: linear-gradient(135deg, #0d9488 0%, #0f766e 55%, #134e4a 100%);
+    border-radius: 12px;
+    padding: 32px 28px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(13,148,136,0.25);
+  }
+  .hero::after {
+    content: "";
+    position: absolute; right: -60px; top: -60px;
+    width: 220px; height: 220px; border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+  }
+  .hero .kicker {
+    font-size: 13px; letter-spacing: 3px; opacity: 0.85; font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .hero h1 { font-size: 27px; font-weight: 800; letter-spacing: 1px; }
+  .hero .sub { margin-top: 8px; font-size: 14.5px; opacity: 0.92; }
+  .hero .meta {
+    margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .hero .chip {
+    background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 999px; padding: 4px 12px; font-size: 12.5px; font-weight: 600;
+  }
+
+  /* Alan 画像 */
+  .portrait {
+    display: flex; gap: 14px; align-items: center;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px 18px; margin-top: 18px;
+  }
+  .portrait .avatar {
+    flex: 0 0 auto; width: 52px; height: 52px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--brand), #134e4a);
+    color: #fff; font-weight: 800; font-size: 20px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .portrait .who { font-size: 14.5px; font-weight: 700; }
+  .portrait .role { font-size: 13px; color: var(--text-soft); }
+  .portrait .projects { font-size: 12.5px; color: var(--text-faint); margin-top: 4px; }
+
+  /* 版块 */
+  .section { margin-top: 28px; }
+  .section h2 {
+    font-size: 17px; font-weight: 800; color: var(--brand);
+    display: flex; align-items: center; gap: 8px; margin-bottom: 12px;
+  }
+  .section h2::before {
+    content: ""; width: 5px; height: 20px; border-radius: 3px;
+    background: var(--brand); display: inline-block;
+  }
+
+  /* 卡片 */
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 20px; margin-bottom: 14px;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .card:hover {
+    border-color: var(--brand);
+    box-shadow: 0 6px 22px var(--brand-glow);
+  }
+  .card .top { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 8px; }
+  .tag {
+    font-size: 11.5px; font-weight: 700; padding: 2px 9px; border-radius: 6px;
+    background: var(--tag-bg); color: var(--text-soft);
+  }
+  .tag.src { background: var(--brand-dim); color: var(--brand); }
+  .tag.preprint { background: var(--warn-bg); color: var(--warn); }
+  .card h3 { font-size: 16.5px; font-weight: 700; line-height: 1.45; margin-bottom: 6px; }
+  .card h3 a { color: var(--text); text-decoration: none; }
+  .card h3 a:hover { color: var(--brand); text-decoration: underline; }
+  .card .src-line { font-size: 12.5px; color: var(--text-faint); margin-bottom: 10px; }
+  .card .sum { font-size: 14.5px; color: var(--text); margin-bottom: 12px; }
+  .card .why {
+    font-size: 13.5px; color: var(--text-soft);
+    background: var(--tag-bg); border-left: 3px solid var(--brand);
+    border-radius: 6px; padding: 10px 12px;
+  }
+  .card .why b { color: var(--brand); }
+
+  /* 行动建议 */
+  .actions {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 22px; margin-top: 28px;
+  }
+  .actions h2 { font-size: 17px; font-weight: 800; color: var(--brand); margin-bottom: 12px; }
+  .actions ol { padding-left: 20px; }
+  .actions li { font-size: 14.5px; margin-bottom: 10px; color: var(--text); }
+  .actions li b { color: var(--brand); }
+
+  /* 页脚 */
+  .footer {
+    margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--border);
+    font-size: 12px; color: var(--text-faint); text-align: center; line-height: 1.9;
+  }
+  .footer .srcs { font-weight: 600; color: var(--text-soft); }
+  a { color: var(--brand); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="kicker">MEDICAL AI BRIEFING</div>
+    <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+    <div class="sub">面向儿科医师 × AI Builder 的硬核医疗 AI 每日速递</div>
+    <div class="meta">
+      <span class="chip">📅 2026-08-19（周三）</span>
+      <span class="chip">🎯 精选 6 条</span>
+      <span class="chip">📡 数据源：AI HOT · PubMed · medRxiv</span>
+      <span class="chip">🗓 时间窗：近 7 天</span>
+    </div>
+  </div>
+
+  <div class="portrait">
+    <div class="avatar">帅</div>
+    <div>
+      <div class="who">主理人 · Alan（李帅帅）</div>
+      <div class="role">三甲儿科规培医师 → AI Builder ·「AI新青年」视频号主理人</div>
+      <div class="projects">在手项目：小雪宝 LeukemiaPal · 星桥计划 · 孤独症量表 AI 平台 · 本地 AI 内容团队</div>
+    </div>
+  </div>
+
+  <!-- 前沿研究·论文 -->
+  <div class="section">
+    <h2>前沿研究 · 论文</h2>
+
+    <div class="card">
+      <div class="top">
+        <span class="tag src">PubMed</span><span class="tag">血液肿瘤 · 白血病</span><span class="tag">形态学 AI</span>
+      </div>
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42612139/" target="_blank">自动化数字外周血与骨髓细胞形态学（ADM）工作流：聚焦关键细胞误分类风险</a></h3>
+      <div class="src-line">Journal of Visualized Experiments (JoVE) · 2026-07-28 · PMID 42612139 · DOI 10.3791/71690</div>
+      <div class="sum">该系统梳理了 AI 驱动的自动化数字细胞形态学（ADM）对外周血与骨髓涂片的完整工作流——标准化制片染色、自动显微镜多倍率成像、AI 定位并预分类有核细胞（含巨核细胞），随后由专家强制复核。文章特别指出：**肿瘤性淋巴细胞、小淋巴母/原始粒细胞、颗粒性单核母细胞、异型浆细胞等关键细胞一旦误分类，可能直接导致误诊**，是 ADM 目前最重大的临床风险。</div>
+      <div class="why"><b>为什么与你有关：</b>这篇直击白血病的 AI 初筛场景，与小雪宝 LeukemiaPal 的技术底座高度同构。它给出的「AI 预分类 + 专家强制复核 + 关键细胞误分类黑名单」正是陪伴助手应内置的护栏设计——尤其提醒你，在面向家长的内容里必须明确「AI 是辅助、绝不替代医生诊断」的边界。</div>
+    </div>
+
+    <div class="card">
+      <div class="top">
+        <span class="tag src">PubMed</span><span class="tag">儿科 · 脑肿瘤</span><span class="tag">影像组学</span>
+      </div>
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42611869/" target="_blank">分割策略如何影响儿童脑肿瘤影像组学特征稳定性（扩散加权成像）</a></h3>
+      <div class="src-line">PLoS One · 2026-08-18 · PMID 42611869 · DOI 10.1371/journal.pone.0356382</div>
+      <div class="sum">基于 106 例儿童脑肿瘤患者的回顾性队列，系统评估了 ROI 勾画「保守 vs 外扩」两种策略对 19 个一阶影像组学特征稳定性的影响。结果显示外扩显著放大特征变异性（11 个特征效应量 d&gt;0.8），导致诊断模型准确率下降 3.8%–5.6%；而纳入多策略特征 + 稳定特征筛选可部分缓解。结论倾向：**排除模糊边界区域优于纳入**。</div>
+      <div class="why"><b>为什么与你有关：</b>这是给「量表/影像 AI」的一堂方法学课——边界勾画的不确定性会直接污染下游模型。你在孤独症量表 AI 平台做特征工程时，应警惕输入标准不统一带来的隐性漂移，落地前必须做特征稳定性与跨标注者一致性评估。</div>
+    </div>
+
+    <div class="card">
+      <div class="top">
+        <span class="tag src">PubMed</span><span class="tag">儿科队列</span><span class="tag">内镜 AI · 跨人群泛化</span>
+      </div>
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42611818/" target="_blank">AI 自动化 Mayo 内镜评分：跨成人 + 儿科、跨地域队列的泛化验证</a></h3>
+      <div class="src-line">Journal of Crohn's &amp; Colitis · 2026-08-05 · PMID 42611818 · DOI 10.1093/ecco-jcc/jjag122</div>
+      <div class="sum">开发并验证了一个预测溃疡性结肠炎 Mayo 内镜评分（MES）的深度学习框架，训练于土耳其队列（564 成人），外验于中国队列（308 成人）与美国 Emory 儿科队列（80 儿童）。采用图像修复 + 傅里叶空间图像协调（FSIH）消除机构间域偏移，二元缓解模型 AUC 达 0.95–0.98，四级评分 QWK 0.81–0.85，接近专家间一致性（0.88）。</div>
+      <div class="why"><b>为什么与你有关：</b>「跨机构、跨年龄段的域偏移」正是孤独症量表平台最难啃的骨头——不同医院、不同评定者、不同年龄段的数据分布差异巨大。FSIH 这类图像协调思路，可迁移为量表数据的「标准化 / 去批次效应」方案，是你平台可复用的一条技术路线。</div>
+    </div>
+  </div>
+
+  <!-- 医疗模型与临床落地 -->
+  <div class="section">
+    <h2>医疗模型与临床落地</h2>
+
+    <div class="card">
+      <div class="top">
+        <span class="tag preprint">medRxiv · 未经同行评审</span><span class="tag">心理健康 · 语音</span><span class="tag">数字评估</span>
+      </div>
+      <h3><a href="https://doi.org/10.64898/2026.08.11.26360092" target="_blank">基于声学 + 语义信息的双重指数评估精神病症状（跨语言）</a></h3>
+      <div class="src-line">medRxiv · 2026-08-12 · DOI 10.64898/2026.08.11.26360092 · 精神病学与临床心理学</div>
+      <div class="sum">在既往「语义特征复合指数」基础上，新增构建了一个由语音声学特征派生的「声学指数」，评估两者联合在 PANSS 症状预测中的表现。数据集覆盖 5 种语言、221 例精神分裂症谱系患者，重点预测阳性/阴性/一般症状。研究旨在解决语音计算精神病学中特征冗余、交互效应与高互相关带来的可解释性难题。</div>
+      <div class="why"><b>为什么与你有关：</b>这是「星桥计划」孤独症数字疗愈最直接的前沿对标——用**声学 + 语义双通道**做客观、跨语言的心理症状量化评估，且强调可解释性。可迁移到孤独症儿童的语音交互评估：用语音声学特征辅助量表打分，正是你量表平台从「主观填表」走向「客观信号融合」的突破口。</div>
+    </div>
+
+    <div class="card">
+      <div class="top">
+        <span class="tag preprint">medRxiv · 未经同行评审</span><span class="tag">AI 抄写员</span><span class="tag">临床落地</span>
+      </div>
+      <h3><a href="https://doi.org/10.64898/2026.01.12.26343538" target="_blank">环境式 AI 抄写员（ambient AI scribe）对病历负担与生产力的纵向影响</a></h3>
+      <div class="src-line">medRxiv · 2026-08-12 · DOI 10.64898/2026.01.12.26343538 · 健康信息学</div>
+      <div class="sum">一项准实验性中断时间序列研究，纳入 220 名基层临床医生、36 家诊所、共 314,845 次就诊，比较 AI 抄写员启用前后 150 天的变化。结果显示病历书写时间下降 7%，「睡衣时间」（下班后补写）与下班时间外工作时长减少，同时笔记长度、24 小时内闭合率与工作相对价值单位（wRVU）均有改善。</div>
+      <div class="why"><b>为什么与你有关：</b>这是「临床 AI 是否真正提效」的硬证据，与你「一人公司 + 本地 AI 内容团队」的运营直接相关——AI 抄写员证明 AI 能在不牺牲质量的前提下压缩文档工作量。你在做本地医疗内容生产流水线时，可借鉴其「以真实工作量为结局指标」的评估框架，量化 AI 工具的实际 ROI。</div>
+    </div>
+  </div>
+
+  <!-- 行业与监管动态 -->
+  <div class="section">
+    <h2>行业与监管动态</h2>
+
+    <div class="card">
+      <div class="top">
+        <span class="tag src">AI HOT</span><span class="tag">JAMA · 监管</span><span class="tag">人机协同</span>
+      </div>
+      <h3><a href="https://the-decoder.com/as-ai-beats-doctors-regulators-shouldnt-force-a-human-into-the-loop-jama-piece-says" target="_blank">JAMA 评论：当 AI 超越医生时，监管者不应强制人类介入</a></h3>
+      <div class="src-line">JAMA（经 The Decoder 报道）· 2026-08-18 · 北京时间 19:43</div>
+      <div class="sum">《JAMA》发表评论预测自主 AI 在医学推理上将超越任何「医生 + AI」组合，呼吁监管者不要把「人类介入」硬写进规则。文中援引：ChatGPT o3 在 377 个复杂病例中 60% 首选诊断正确（20 名内科医生仅 15.9%）；GPT-4 单独诊断推理得分 92%，而使用同一模型的医生仅 76%。预计到 2030 年自主 AI 可胜任部分认知类医疗工作流。</div>
+      <div class="why"><b>为什么与你有关：</b>这是「人机协同」定位的底层政策风向标。它提醒你：小雪宝 / 量表平台的合规叙事不该停留在「永远需要人」的老套话术，而应升级为「**何时需要人、何时可自主**」的分级授权框架——这既是监管趋势，也是你面向家长/院方做信任背书的差异化卖点。</div>
+    </div>
+
+    <div class="card">
+      <div class="top">
+        <span class="tag src">AI HOT</span><span class="tag">医疗大模型</span><span class="tag">评测指数</span>
+      </div>
+      <h3><a href="https://x.com/elonmusk/status/2089416747720061154" target="_blank">Grok 4.6 跻身医疗 AI 指数前三，距榜首仅差 1 分</a></h3>
+      <div class="src-line">Artificial Analysis Healthcare &amp; Medical Index（经 xAI/Elon Musk）· 2026-08-18 · 北京时间 02:19</div>
+      <div class="sum">Grok 4.6 在 Artificial Analysis 的医疗健康指数中跻身前三，high 档得分 50（满分 51），超越 GPT-5.6 Sol、Kimi K3 与 Gemini 3.7 Flash。该指数综合评估模型在医疗知识、临床推理、患者文档、非幻觉及智能体工作流方面的实际表现。</div>
+      <div class="why"><b>为什么与你有关：</b>这是你选型「可本地部署 / 可调用的医疗基座模型」时的横向坐标。重点不是 Grok 本身，而是「医疗知识 + 临床推理 + 非幻觉 + 智能体工作流」这一评估维度——它正是小雪宝和量表平台在选底层模型时该逐项打分的清单，建议你建立自己的 mini-benchmark。</div>
+    </div>
+  </div>
+
+  <!-- 今日行动建议 -->
+  <div class="actions">
+    <h2>今日行动建议</h2>
+    <ol>
+      <li><b>小雪宝 LeukemiaPal：</b>把血液形态学 ADM 论文的「关键细胞误分类黑名单」落成产品护栏——在陪伴助手的知识回答中强制附加「AI 结果仅供参考，诊断以骨髓/外周血专家复核为准」的边界提示，并整理成一份面向家长的「AI 能帮什么 / 不能帮什么」说明卡。</li>
+      <li><b>孤独症量表 AI 平台：</b>参考「跨人群域偏移协调」思路，为量表数据设计一套标准化/去批次效应方案，优先做一个「跨评定者一致性」的自检指标，作为平台对外可信度的硬指标。</li>
+      <li><b>星桥计划：</b>把「声学 + 语义双指数」作为下一版语音交互评估的原型方向，先小样本采集几段儿童语音做声学特征可行性验证，确认能否与现有量表分数形成可解释的映射。</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <div class="srcs">数据来源：AI HOT（医疗垂直资讯）· PubMed（E-utilities 同行评审）· medRxiv（预印本）</div>
+    <div>预印本内容<b>未经同行评审</b>，仅供学术参考，不构成任何诊疗建议。资讯与论文摘要均为二手转述，请以原文为准。</div>
+    <div>© 2026 AI新青年 · 每日医疗 AI 聚焦简报 · 由 Alan 的 AI 助手自动生成</div>
+  </div>
+
+</div>
+</body>
+</html>

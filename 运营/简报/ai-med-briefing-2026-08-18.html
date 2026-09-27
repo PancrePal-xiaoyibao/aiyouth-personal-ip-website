@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 · 2026-08-18</title>
+<style>
+  :root {
+    --accent: #0d9488;
+    --accent-soft: rgba(13, 148, 136, 0.12);
+    --accent-border: rgba(13, 148, 136, 0.35);
+    --bg: #f5f7f8;
+    --card: #ffffff;
+    --text: #1a2b2a;
+    --text-dim: #5c6f6e;
+    --muted: #829190;
+    --tag-bg: #eef3f2;
+    --divider: #e6eceb;
+    --chip: #0d9488;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --accent: #2dd4bf;
+      --accent-soft: rgba(45, 212, 191, 0.12);
+      --accent-border: rgba(45, 212, 191, 0.35);
+      --bg: #0d1416;
+      --card: #141d1f;
+      --text: #e2edec;
+      --text-dim: #a6b8b6;
+      --muted: #748a88;
+      --tag-bg: #1c2a2b;
+      --divider: #243334;
+      --chip: #2dd4bf;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+    padding: 32px 20px 60px;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; }
+
+  /* 头部 */
+  header.hero {
+    background: linear-gradient(135deg, var(--accent) 0%, #0f766e 100%);
+    color: #fff;
+    border-radius: 12px;
+    padding: 30px 28px 26px;
+    margin-bottom: 24px;
+  }
+  .hero .kicker {
+    font-size: 12px; letter-spacing: 2px; opacity: .85; font-weight: 600;
+    text-transform: uppercase; margin-bottom: 8px;
+  }
+  .hero h1 { font-size: 25px; font-weight: 700; line-height: 1.35; margin-bottom: 12px; }
+  .hero .profile {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    font-size: 13.5px; opacity: .96;
+  }
+  .hero .profile .badge {
+    background: rgba(255,255,255,.22); border: 1px solid rgba(255,255,255,.35);
+    padding: 3px 10px; border-radius: 999px; font-size: 12px;
+  }
+  .hero .meta {
+    margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .hero .meta .chip {
+    background: rgba(255,255,255,.18); padding: 4px 12px; border-radius: 999px;
+    font-size: 12.5px;
+  }
+
+  /* 版块 */
+  section.block { margin-bottom: 28px; }
+  .block-title {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 16.5px; font-weight: 700; margin-bottom: 14px;
+  }
+  .block-title::before {
+    content: ""; width: 5px; height: 20px; border-radius: 3px;
+    background: var(--accent);
+  }
+  .block-title .count {
+    font-size: 12px; font-weight: 600; color: var(--chip);
+    background: var(--accent-soft); padding: 2px 9px; border-radius: 999px;
+  }
+
+  /* 卡片 */
+  article.card {
+    background: var(--card);
+    border: 1px solid var(--divider);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 14px;
+    transition: border-color .15s ease;
+  }
+  article.card:hover { border-color: var(--accent-border); }
+  .card .top {
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
+    margin-bottom: 10px;
+  }
+  .card h3 { font-size: 16.5px; font-weight: 700; line-height: 1.45; }
+  .card h3 a { color: var(--text); text-decoration: none; }
+  .card h3 a:hover { color: var(--accent); text-decoration: underline; }
+  .card .src {
+    flex-shrink: 0; font-size: 11.5px; color: var(--chip);
+    background: var(--accent-soft); border: 1px solid var(--accent-border);
+    padding: 2px 9px; border-radius: 6px; white-space: nowrap;
+  }
+  .card .meta-line {
+    font-size: 12.5px; color: var(--muted); margin-bottom: 10px;
+    display: flex; flex-wrap: wrap; gap: 6px 14px;
+  }
+  .card .meta-line .date { font-weight: 600; }
+  .card .abstract {
+    font-size: 14px; color: var(--text-dim); margin-bottom: 12px;
+  }
+  .card .relate {
+    font-size: 13.5px; color: var(--text);
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+  }
+  .card .relate b { color: var(--chip); }
+  .card .preprint {
+    display: inline-block; font-size: 11px; font-weight: 600; color: #c2703d;
+    background: rgba(194,112,61,.12); border: 1px solid rgba(194,112,61,.3);
+    padding: 1px 8px; border-radius: 6px; margin-left: 6px;
+  }
+
+  /* 行动建议 */
+  section.actions .advice {
+    background: var(--card); border: 1px solid var(--divider);
+    border-radius: 12px; padding: 6px 0; overflow: hidden;
+  }
+  .advice .item {
+    display: flex; gap: 14px; padding: 14px 22px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .advice .item:last-child { border-bottom: none; }
+  .advice .num {
+    flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
+    background: var(--accent); color: #fff; font-weight: 700; font-size: 13px;
+    display: flex; align-items: center; justify-content: center; margin-top: 2px;
+  }
+  .advice .item p { font-size: 14px; color: var(--text); }
+
+  footer {
+    margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--divider);
+    font-size: 12px; color: var(--muted); text-align: center; line-height: 1.9;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">AI新青年 · Medical AI Briefing</div>
+    <h1>医疗 AI 聚焦简报</h1>
+    <div class="profile">
+      <span class="badge">主理人 Alan（李帅帅）</span>
+      <span class="badge">儿科医师 × AI Builder</span>
+    </div>
+    <div class="meta">
+      <span class="chip">📅 2026-08-18（北京时间）</span>
+      <span class="chip">🎯 精选 6 条硬核医疗 AI</span>
+      <span class="chip">📡 数据源：AI HOT / PubMed / medRxiv</span>
+    </div>
+  </header>
+
+  <section class="block">
+    <div class="block-title">医疗模型与临床落地 <span class="count">2 条</span></div>
+
+    <article class="card">
+      <div class="top">
+        <h3><a href="https://x.com/OpenBMB/status/2088264377573257223" target="_blank" rel="noopener">面壁智能 SciDC：把专家规则变成解码约束，本地医疗模型幻觉大幅下降</a></h3>
+        <span class="src">AI HOT</span>
+      </div>
+      <div class="meta-line">
+        <span>来源：面壁智能 OpenBMB × 清华NLP × 南京大学</span>
+        <span class="date">2026-08-14 22:00（北京时间）</span>
+      </div>
+      <p class="abstract">SciDC 把科学知识转成解码约束，让本地部署的领域模型只能在专家规则定义的可行域内生成，无需微调。临床诊断任务平均准确率 +11.6（Qwen3-4B 42.5→54.1，Qwen3-14B 51.4→63.0）；在真实医疗记录上，Qwen3-14B 的精确匹配从 33.5% 提升到 45.1%。</p>
+      <div class="relate"><b>为什么与你有关：</b>小雪宝 / 星桥计划若走本地部署，幻觉是第一大风险。SciDC 给了你一条「不重训模型、直接叠加规则约束」的路径——先把「不妄下诊断、不给剂量、危机立即转人工」等红线写进硬约束，就能显著压住陪伴场景的胡言乱语。</div>
+    </article>
+
+    <article class="card">
+      <div class="top">
+        <h3><a href="https://x.com/elonmusk/status/2089416747720061154" target="_blank" rel="noopener">Grok 4.6 跻身医疗 AI 指数前三，临床推理与「非幻觉」成核心标尺</a></h3>
+        <span class="src">AI HOT</span>
+      </div>
+      <div class="meta-line">
+        <span>来源：xAI（Artificial Analysis Healthcare &amp; Medical Index）</span>
+        <span class="date">2026-08-18 02:19（北京时间）</span>
+      </div>
+      <p class="abstract">Grok 4.6 在 Artificial Analysis 医疗健康指数中位列前三（high 档 50 分，距最高 51 仅差 1 分），超越 GPT-5.6 Sol、Kimi K3、Gemini 3.7 Flash。该指数专门评估医疗知识、临床推理、患者文档、非幻觉与智能体工作流五项能力。</p>
+      <div class="relate"><b>为什么与你有关：</b>医疗大模型竞赛已进入「非幻觉 + 临床推理」的精细化阶段。你做量表平台 / 陪伴助手选后端模型时，把「非幻觉」「临床推理」纳入横向对比维度，比单纯看通用跑分更有参考价值。</div>
+    </article>
+  </section>
+
+  <section class="block">
+    <div class="block-title">前沿研究 · 论文 <span class="count">3 条</span></div>
+
+    <article class="card">
+      <div class="top">
+        <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42607290/" target="_blank" rel="noopener">LLM 主题建模识别抑郁：多语言四队列研究（含中文队列）</a></h3>
+        <span class="src">PubMed</span>
+      </div>
+      <div class="meta-line">
+        <span>期刊：JMIR Mental Health</span>
+        <span class="date">2026-08-17</span>
+        <span>PMID 42607290</span>
+      </div>
+      <p class="abstract">对法 / 意 / 中 / 西四个独立队列的自发语音转录做 LLM 无监督聚类，聚类归属与 PHQ-9、BDI、GAD-7 等临床量表显著相关（法国人群 PHQ-9 η²=0.19），并能产出人类可读的自然语言主题描述。「感受与睡眠」类问题临床关联最强，年龄与性别是常被忽略的混杂因素。</p>
+      <div class="relate"><b>为什么与你有关：</b>这是「自由语言 → 结构化情绪信号」的直接证据，与星桥计划和你的孤独症量表平台高度同源——用 LLM 把孩子的自发言语变成可解释、可打分的评估维度，正好是你量表增强模块的技术路线。</div>
+    </article>
+
+    <article class="card">
+      <div class="top">
+        <h3><a href="https://doi.org/10.64898/2026.08.08.26359861" target="_blank" rel="noopener">数字化心理健康工具在边缘化青年中的可接受性与实施<span class="preprint">未经同行评审</span></a></h3>
+        <span class="src">medRxiv</span>
+      </div>
+      <div class="meta-line">
+        <span>机构：University of Galway（爱尔兰）</span>
+        <span class="date">2026-08-11</span>
+        <span>预印本</span>
+      </div>
+      <p class="abstract">对 11 款循证数字心理健康工具做混合方法研究（爱尔兰 / 北爱尔兰边缘化青年），发现仅 2 款超过 SUS 可用性基准；可用性、机构信任、文化相关性、情绪需求是核心实施决定因素。建议与青年社区共设计，优先在青年工作场景落地。</p>
+      <div class="relate"><b>为什么与你有关：</b>星桥计划面向孤独症 / 青少年，这篇直接回答「边缘化青少年到底要什么样的数字疗愈」——简单、可信、有共情、可自我监测、能养成习惯。这五条可以直接做成你的产品体验自检清单。</div>
+    </article>
+
+    <article class="card">
+      <div class="top">
+        <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42606992/" target="_blank" rel="noopener">AI 龋齿风险预测模型（学龄前儿童）：随机森林优于逻辑回归</a></h3>
+        <span class="src">PubMed</span>
+      </div>
+      <div class="meta-line">
+        <span>期刊：J Contemp Dent Pract</span>
+        <span class="date">2026-08-17 收录</span>
+        <span>PMID 42606992</span>
+      </div>
+      <p class="abstract">200 名学龄前儿童，用临床 + 行为变量预测 12 个月新发龋。随机森林准确率 0.847 显著优于逻辑回归 0.783；变异链球菌、糖摄入频率、既往龋、基线 dmft 是 Top 预测因子。</p>
+      <div class="relate"><b>为什么与你有关：</b>儿科风险预测的「小而美」范式——用少量临床 + 行为变量即可产出可解释的个体化风险分层，正是你量表平台想复制的「轻量评估 → 家长端干预建议」路径，可作为方法学模板。</div>
+    </article>
+  </section>
+
+  <section class="block">
+    <div class="block-title">行业与监管动态 <span class="count">1 条</span></div>
+
+    <article class="card">
+      <div class="top">
+        <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42606593/" target="_blank" rel="noopener">LLM 用于前列腺 MRI 报告：AI / 数据 / 网络安全监管下的安全部署压力测试</a></h3>
+        <span class="src">PubMed</span>
+      </div>
+      <div class="meta-line">
+        <span>期刊：Abdominal Radiology (NY)</span>
+        <span class="date">2026-08-17</span>
+        <span>PMID 42606593</span>
+      </div>
+      <p class="abstract">把 LLM 用于前列腺 MRI 报告作为「严格压力测试床」，系统考察在 AI 法案、健康数据与网络安全监管演进下如何安全部署，强调可追溯性、合规与护栏机制。</p>
+      <div class="relate"><b>为什么与你有关：</b>你做医疗 AI 迟早要过合规关。这篇影像报告场景的监管框架可直接迁移到你的量表评估与陪伴工具——尤其小雪宝 / 星桥计划涉及未成年人数据，数据合规与可追溯是你必须提前铺好的底线。</div>
+    </article>
+  </section>
+
+  <section class="block actions">
+    <div class="block-title">今日行动建议</div>
+    <div class="advice">
+      <div class="item">
+        <div class="num">1</div>
+        <p>把 SciDC 的「规则约束」思路落进小雪宝本地对话模块：先梳理白血患儿陪伴里绝不能说的红线清单（不妄下诊断、不提供用药剂量、情绪危机立即转家长 / 人工），用硬约束压到本地模型上，哪怕先做 20 条。</p>
+      </div>
+      <div class="item">
+        <div class="num">2</div>
+        <p>参照 JMIR 语音 - 抑郁研究，给星桥计划 / 量表平台加一个「自由语言 → 结构化情绪信号」原型：让孩子 / 家长录 1 分钟语音，用 LLM 做主题聚类并映射到现有量表维度，先做 10 个样本内部验证。</p>
+      </div>
+      <div class="item">
+        <div class="num">3</div>
+        <p>用 medRxiv「边缘青少年数字心理工具」的五条可接受性主题（可信度、易用、情绪调节内容、个性化、习惯养成），给星桥计划做一次体验自检打分，定位最短的那块板。</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    数据来源：AI HOT（aihot.virxact.com）· PubMed（NCBI E-utilities）· medRxiv（Cold Spring Harbor Laboratory）<br>
+    预印本内容未经同行评审，仅供学术交流，不代表临床结论。<br>
+    本简报由「AI新青年」自动生成，仅供个人学习参考，不构成医疗建议。
+  </footer>
+
+</div>
+</body>
+</html>

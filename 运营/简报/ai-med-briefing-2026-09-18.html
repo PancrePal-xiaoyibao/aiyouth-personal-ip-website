@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI新青年 · 医疗 AI 聚焦简报 2026-09-18</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.75;
+    background: #f4f7f7;
+    color: #1a2b2b;
+    padding: 24px 16px;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #0e1a1a; color: #d7e5e3; }
+    .card { background: #16262a !important; border-color: #24403f !important; }
+    .meta, .why-label, .muted { color: #8fb0ac !important; }
+    .why-box { background: #122225 !important; border-left-color: #0d9488 !important; }
+    a { color: #4fd1c5 !important; }
+    .chip { background: #123733 !important; color: #7de8d8 !important; }
+    .section-title { color: #7de8d8 !important; }
+    .footer { color: #6f918d !important; }
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  header.hero {
+    background: linear-gradient(135deg, #0d9488 0%, #0f766e 60%, #115e59 100%);
+    color: #ffffff; border-radius: 12px; padding: 32px 28px; margin-bottom: 20px;
+  }
+  header.hero h1 { font-size: 26px; letter-spacing: 0.5px; margin-bottom: 10px; }
+  header.hero .sub { font-size: 14px; opacity: 0.92; }
+  .profile {
+    margin-top: 14px; font-size: 13.5px; background: rgba(255,255,255,0.13);
+    border-radius: 8px; padding: 10px 14px; display: inline-block;
+  }
+  .chiprow { margin-top: 14px; }
+  .chip {
+    display: inline-block; background: #ecfdf8; color: #0f766e; font-size: 12.5px;
+    border-radius: 999px; padding: 3px 12px; margin: 3px 6px 3px 0; font-weight: 600;
+  }
+  .section-title {
+    font-size: 19px; font-weight: 700; color: #0f766e; margin: 30px 4px 12px;
+    padding-left: 10px; border-left: 4px solid #0d9488;
+  }
+  .card {
+    background: #ffffff; border: 1px solid #dfe9e8; border-radius: 12px;
+    padding: 20px 22px; margin-bottom: 14px;
+  }
+  .card h3 { font-size: 16.5px; margin-bottom: 6px; }
+  .card h3 a { color: #0f766e; text-decoration: none; }
+  .card h3 a:hover { text-decoration: underline; }
+  .meta { font-size: 12.5px; color: #5c7875; margin-bottom: 10px; }
+  .meta .src { font-weight: 600; }
+  .summary { font-size: 14.5px; margin-bottom: 12px; }
+  .why-box {
+    background: #f0faf8; border-left: 3px solid #0d9488; border-radius: 0 8px 8px 0;
+    padding: 10px 14px; font-size: 13.5px; color: #2b4a47;
+  }
+  .why-label { font-weight: 700; color: #0d9488; margin-right: 6px; }
+  .muted { color: #5c7875; font-size: 13px; }
+  .note {
+    background: #fffbeb; border: 1px solid #fde68a; border-radius: 12px;
+    padding: 14px 18px; font-size: 13.5px; color: #7a5b12; margin: 18px 0;
+  }
+  @media (prefers-color-scheme: dark) {
+    .note { background: #2a2313; border-color: #6b5a1e; color: #e3c76a; }
+  }
+  .action-card {
+    background: linear-gradient(135deg, #134e4a 0%, #0f766e 100%);
+    color: #eafffb; border-radius: 12px; padding: 22px 24px; margin-top: 20px;
+  }
+  .action-card h2 { font-size: 18px; margin-bottom: 12px; color: #ffffff; }
+  .action-card ol { padding-left: 20px; }
+  .action-card li { margin-bottom: 10px; font-size: 14px; }
+  .footer {
+    text-align: center; font-size: 12.5px; color: #6f8a87; margin-top: 28px;
+    padding-top: 16px; border-top: 1px solid #d8e4e3;
+  }
+  .glance li { margin-bottom: 8px; font-size: 14px; }
+  .glance { padding-left: 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>AI新青年 · 医疗 AI 聚焦简报</h1>
+  <div class="sub">2026-09-18（星期五）· 第 26 期 · 数据窗口 2026-09-11 → 2026-09-18</div>
+  <div class="profile">主理人 Alan 画像：三甲医院儿科医师 × AI Builder · 受众为青少年与家长 · 在手项目：小雪宝 LeukemiaPal（白血患儿陪伴助手）/ 星桥计划（孤独症数字疗愈）/ 孤独症量表 AI 平台 / 本地 AI 内容团队 / 一人公司</div>
+  <div class="chiprow">
+    <span class="chip">数据源：AI HOT · PubMed · medRxiv</span>
+    <span class="chip">本期精选 6 条主卡</span>
+    <span class="chip">去重：已比对最近 4 期</span>
+  </div>
+</header>
+
+<div class="note"><b>今日信号说明：</b>medRxiv 官方数据源本期恢复正常（330 条去重，上期曾故障改走备用源）。儿童白血病专属方向（ALL/AML 新模型）连续第二周无新强命中——白血病定向检索 10 条命中里多为成人/移植/综述类；血液肿瘤叙事带由 UCSF 儿童癌症 + 造血干细胞移植幸存者研究补位（其人群覆盖白血病幸存者，见第 1 条）。已用条目（如 09-17 的语音自杀意念检测）本期全部剔除，未硬凑。</div>
+
+<div class="section-title">医疗模型与临床落地</div>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42752525/">AI 辅助生成儿童癌症与造血干细胞移植幸存者的长期随访建议（UCSF）</a></h3>
+  <div class="meta"><span class="src">J Pediatr Hematol Oncol</span> · 2026-09-17 · PMID 42752525 · 加州大学旧金山分校 Benioff 儿童医院</div>
+  <div class="summary">GPT-4o 基于去标识化治疗摘要 + COG 长期随访指南 v5 生成幸存者照护计划草稿：40 例验证队列中，AI 产出 467 条建议 vs 临床 446 条——临床建议的 86.3% 被 AI 覆盖，AI 建议的 82.4% 与临床一致；分歧集中在放疗相关暴露与需细致临床判断的场景。</div>
+  <div class="why-box"><span class="why-label">为什么与你有关</span>这是「血液肿瘤 × 幸存者长期随访 × LLM」最贴近小雪宝场景的研究：它给出了可抄的验收指标——「双向一致率」（86.3% / 82.4%）而不是笼统准确率。小雪宝的随访提醒、复查清单、家长宣教草稿功能，完全可以按「AI 出草稿 + 医生定稿」的分工上线，并把分歧高发区（放疗暴露类）预设为必须人工复核的红线。</div>
+</div>
+
+<div class="section-title">前沿研究 · 论文</div>
+
+<div class="card">
+  <h3><a href="https://doi.org/10.64898/2026.09.10.26362703">家长与医护对儿童青少年常规诊疗中应用 AI 的接受度（德国，双队列调查）</a></h3>
+  <div class="meta"><span class="src">medRxiv 预印本 · medical ethics</span> · 2026-09-14 · DOI 10.64898/2026.09.10.26362703 · 未<a href="https://doi.org/10.64898/2026.09.10.26362703">经同行评审</a> · 尤利希研究中心等</div>
+  <div class="summary">家长两批（n=198、79）+ 儿科医护（n=33）跨疾病场景调查：数据隐私管控越严格，使用意愿反而越低（p&lt;.001）；感知病情越重越愿意用 AI；当 AI 建议与医生冲突时，家长在<b>治疗</b>场景比<b>诊断</b>场景更倾向倒向 AI，医护同型且额外加权病情严重度。</div>
+  <div class="why-box"><span class="why-label">为什么与你有关</span>三个反直觉结论直接命中星桥计划与量表平台的家长侧设计：①「隐私越严越不信任」提示你的隐私声明别只堆合规话术，要解释「数据怎么帮到孩子」；②重症/高需求家庭对 AI 接受度更高——小雪宝的目标人群天然更开放；③「治疗场景家长更信 AI」是把双刃剑，陪伴助手涉及干预建议时必须显式呈现「AI 建议 ≠ 医嘱」的冲突提示。</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://doi.org/10.64898/2026.09.14.26363047">NUMBERS 基准：语言模型能复述临床证据，却无法把它适配到具体患者</a></h3>
+  <div class="meta"><span class="src">medRxiv 预印本 · health informatics</span> · 2026-09-15 · DOI 10.64898/2026.09.14.26363047 · 未<a href="https://doi.org/10.64898/2026.09.14.26363047">经同行评审</a> · 美国国家科学院资助</div>
+  <div class="summary">16 个模型配置 × 1300 道证据关联题：患病率类数值用「临床措辞」提问时仅 33.7% 更新正确，改为显式输入 + 要求计算则升至 78.5%；模型 stated cutoff 正确却选错动作的比例达 11.0%；直接提供完整规则可将动作准确率从 85.6% 拉到 99.4%。</div>
+  <div class="why-box"><span class="why-label">为什么与你有关</span>这是量表平台所有「LLM 自动判分 / 自动分诊」链路的工程铁律：别指望模型「理解」评分规则——把原始分作为显式输入传入、明确要求执行计算、给出完整判定规则（而不是让它回忆），能把错误压掉一个数量级。那 11% 的「说对标准做错事」错误，在儿童孤独症筛查场景里就是漏诊，值得写进你的回归测试集。</div>
+</div>
+
+<div class="section-title">行业与监管动态</div>
+
+<div class="card">
+  <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42752602/">波士顿儿童医院合规 LLM 聊天助手 InternalGPT 的 14 个月真实使用报告</a></h3>
+  <div class="meta"><span class="src">PLOS Digital Healthcare</span> · 2026-09-17 · PMID 42752602 · 波士顿儿童医院创新与数字健康加速器</div>
+  <div class="summary">约 15,800 名员工中 13.6% 申请开通、52.8% 至少用过一次、使用量前 20% 的用户消耗 69.4% 的 tokens；持续使用者自报生产力提升约 30%。非用户的首要障碍是「没时间探索」（51.4%）与「难以上手/集成」（合计约 37%），而非 AI 性能问题。</div>
+  <div class="why-box"><span class="why-label">为什么与你有关</span>顶级儿科医院的落地数据给你两个校准：其一，医院内部 AI 工具的真实活跃度就是这么低——你在医院推广小雪宝/量表工具时，预期管理按「两成重度用户贡献七成使用」来设计运营；其二，瓶颈是培训与集成而不是模型——这正是一人公司「实施服务」的收费依据，也解释了为什么你的资料包要带落地陪跑而非只卖工具。</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://blogs.nvidia.com/blog/childrens-hospital-open-source-ai-cardiac-care/">CHOP 基于 NVIDIA MONAI 构建开源儿童心脏建模平台：3D 心脏模型从 4 小时缩至秒级</a></h3>
+  <div class="meta"><span class="src">NVIDIA Blog / 美国费城儿童医院（CHOP）</span> · 2026-09-17（北京时间，原始发布 09-16 UTC）</div>
+  <div class="summary">美国顶级儿童医院用开源 MONAI 生态把儿童先天性心脏病的个性化 3D 心脏建模从 4 小时压缩到秒级，且整套平台开源——儿科影像 AI 的「降配不降性能 + 开放工具链」路线又添一例。</div>
+  <div class="why-box"><span class="why-label">为什么与你有关</span>这是「顶级儿童医院 × 全开源栈」的标杆案例：儿科专用模型不必从零造，开源生态 + 场景化微调是可行路径。对一人公司而言，CHOP 的平台思路（把专家流程固化成开源工具链）正是你给科室做知识库/量表平台时可讲的对标故事。</div>
+</div>
+
+<div class="section-title">工具与开源</div>
+
+<div class="card">
+  <h3><a href="https://x.com/OpenBMB/status/2100585575959154853">MiniCPM5-2B 联手 OpenMed 落地本地临床 AI：小体量开源模型进临床文本场景</a></h3>
+  <div class="meta"><span class="src">OpenBMB / OpenMed</span> · 2026-09-17（北京时间，原始发布 09-17 UTC）</div>
+  <div class="summary">2B 级开源模型与医疗开源社区 OpenMed 合作，主打「本地部署 + 临床文本任务」的低门槛组合——延续近几周「开放权重小模型在临床垂直任务上性价比反超」的趋势（对照上期血液学基准：开放权重模型代际提升最大）。</div>
+  <div class="why-box"><span class="why-label">为什么与你有关</span>你的量表平台和小雪宝都有「数据不出院/不出本机」的硬需求，2B 级模型在单卡（甚至 CPU）上跑临床文本任务，是把「本地化部署方案」做成一人公司标准交付物的直接候选件——值得拉一个评测清单试一轮中文儿保文本。</div>
+</div>
+
+<div class="section-title">速览 · 一句话值得看</div>
+<div class="card">
+  <ul class="glance">
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42753254/">微调 vs RAG vs 混合适配系统综述</a>（Mayo Clinic，J Med Internet Res，2026-09-17）：35 研究分型结论——窄分类用微调、指南推理用 RAG、复杂多模态用混合；但 25/35 项研究高偏倚风险。你接医院项目选技术路线时的引文。</li>
+    <li><a href="https://www.langchain.com/blog/how-included-health-built-federated-agents-for-healthcare/">Included Health 用 LangGraph 构建联邦式医疗智能体</a>（LangChain 官方博客，2026-09-18 北京时间）：多专科子智能体 + 联邦编排的工程实录，适合参考其多智能体分工边界设计。</li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42743601/">AI 聊天机器人对心理健康影响的三级 meta 分析</a>（Psychiatry Res，2026-09-12）：总体效应与异质性来源一次看清——星桥写证据页时的背景板素材。</li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/42752617/">医学 grounded 的 LLM agent 从病历中检测患者安全事件</a>（PLOS Digit Health，2026-09-17）：不良事件主动监测的 agent 化方案，小雪宝随访场景可借鉴其事件定义与抽验流程。</li>
+  </ul>
+</div>
+
+<div class="action-card">
+  <h2>今日行动建议</h2>
+  <ol>
+    <li><b>小雪宝 · 抄 UCSF 的验收设计：</b>把「双向一致率」写进随访/宣教草稿功能的验收指标（AI 覆盖临床建议的比例 + AI 建议获临床确认的比例），并按其发现把「放疗暴露类」预设为强制人工复核分支——本周可先做 10 例回顾性对照打分。</li>
+    <li><b>量表平台 · 按 NUMBERS 改造 LLM 判分链路：</b>凡是让模型「读规则打分」的地方，改成「显式传分数输入 + 要求执行计算 + 提供完整判定规则」三件套；加一组「cutoff-动作一致性」回归测试（那 11% 的自相矛盾错误必须为 0）。</li>
+    <li><b>星桥 · 把家长侧沟通页按证据重写：</b>①隐私章节改为「解释数据如何帮到孩子」而非堆合规条款（隐私管控越严意愿越低是本期调查的硬发现）；②把「AI 建议与医生建议冲突时的呈现方式」写进产品规格——家长在干预场景更容易倒向 AI，这既是信任红利也是责任风险。</li>
+  </ol>
+</div>
+
+<div class="footer">
+  数据来源：AI HOT（行业资讯）· PubMed / NCBI E-utilities（同行评审论文）· medRxiv（预印本）。<br>
+  预印本内容<b>未经同行评审</b>，结论以正式发表为准。摘要为中文节译，数据以原文为准。<br>
+  仅供个人研究参考，不构成医疗建议 · AI新青年 © 2026 · Generated by Alan's AI 内容团队
+</div>
+
+</div>
+</body>
+</html>
