@@ -1,0 +1,21 @@
+# Local-only secrets and deployment files
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Build and editor output
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+.backup-*/
+*.log
+
+# Internal planning notes
+首页信息架构与文案骨架-v1.md
+网站诊断-*.md

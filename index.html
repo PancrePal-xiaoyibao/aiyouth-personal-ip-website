@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="wYhkEUJVkpoWWGsBjWQGH7">
+<head data-page-node-id="SCiA96WpJRumNiKWYcn2ZC">
+<meta charset="utf-8" data-page-node-id="Jng4cwYDrb6xGQDMz0yNZ8">
+<meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="D8a31EVWzYhTtc0TKehNg2">
+<title>李帅帅 · 儿科医生 × AI Builder｜从真实病例出发，做一个陪医生一起成长的临床 AI</title>
+<meta name="description" content="我是一名儿科住院医师，也在把病例、循证证据、上级医生经验和个人知识沉淀连接起来，让每一次临床工作都成为下一次的能力。" data-page-node-id="L2HzS2c5CF73KJez60kuY5">
+<link rel="canonical" href="https://xiaozhiserver.cloud/" data-page-node-id="XgXR4uMAVrvPxcUvAZSrQV">
+<style>
+:root{
+  --bg:#FAFAF7;
+  --ink:#17202A;
+  --muted:#5A6B72;
+  --primary:#176B87;
+  --accent:#B45309;
+  --soft:#E8F2F5;
+  --warm:#F4E7D3;
+  --line:#E3E0D8;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",sans-serif;
+  font-size:17px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.wrap{max-width:1140px;margin:0 auto;padding:0 32px}
+section{padding:112px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.eyebrow{
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.14em;
+  color:var(--muted);
+  margin:0 0 20px;
+  text-transform:uppercase;
+}
+h1{font-size:52px;line-height:1.18;letter-spacing:-.02em;font-weight:700;margin:0 0 24px}
+h2{font-size:34px;line-height:1.28;letter-spacing:-.01em;font-weight:700;margin:0 0 20px}
+h3{font-size:19px;font-weight:700;margin:0 0 8px}
+p{margin:0 0 18px;max-width:720px}
+.lead{font-size:19px;color:var(--muted);max-width:660px}
+.mono{font-family:var(--mono);font-size:13px;color:var(--muted)}
+
+/* ---------- buttons ---------- */
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{
+  display:inline-block;padding:13px 26px;font-size:15px;font-weight:600;
+  border-radius:4px;border:1px solid var(--primary);transition:background .15s,color .15s;
+}
+.btn-solid{background:var(--primary);color:#fff}
+.btn-solid:hover{background:#0F5266;text-decoration:none}
+.btn-ghost{color:var(--primary);background:transparent}
+.btn-ghost:hover{background:var(--soft);text-decoration:none}
+
+/* ---------- hero ---------- */
+.hero{padding-top:88px;padding-bottom:96px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+.identity{
+  font-family:var(--mono);font-size:13px;letter-spacing:.1em;color:var(--muted);
+  margin:0 0 22px;padding-bottom:22px;border-bottom:1px solid var(--line);
+}
+.hero-shot{
+  border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;
+}
+.hero-shot img{width:100%;height:520px;object-fit:cover;object-position:center}
+.hero-cap{
+  font-family:var(--mono);font-size:11.5px;color:var(--muted);
+  padding:10px 12px;border-top:1px solid var(--line);background:#fff;
+}
+
+/* ---------- statement ---------- */
+.statement{background:var(--warm);border-top:0}
+.statement h2{font-size:40px;max-width:820px;line-height:1.3}
+.story{max-width:700px;margin-top:40px}
+.story p{margin-bottom:20px}
+.pull{
+  font-size:21px;font-weight:600;line-height:1.55;margin:36px 0 0;
+  padding-left:20px;border-left:3px solid var(--accent);color:var(--ink);
+}
+
+/* ---------- problem ---------- */
+.principle{
+  font-size:28px;font-weight:700;line-height:1.45;margin:36px 0 28px;
+  padding:26px 30px;background:var(--soft);border-radius:6px;max-width:760px;
+}
+.flow{
+  font-family:var(--mono);font-size:13px;line-height:2.05;color:var(--ink);
+  background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px 26px;
+  margin:0 0 16px;max-width:640px;white-space:pre;
+}
+.note{font-size:13.5px;color:var(--muted);max-width:720px;line-height:1.7}
+
+/* ---------- growth loop ---------- */
+.loop-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.loop-fig{margin:0}
+.loop-fig svg{width:100%;height:auto;display:block}
+.loop-nodes{list-style:none;margin:0;padding:0;font-size:15px}
+.loop-nodes li{padding:11px 0;border-top:1px solid var(--line)}
+.loop-nodes li:first-child{border-top:0}
+.loop-nodes b{display:inline-block;min-width:96px;color:var(--primary)}
+.qa{display:flex;gap:28px;flex-wrap:wrap;margin:36px 0 0;font-size:15px;color:var(--muted)}
+.qa span s{text-decoration:none;opacity:.55}
+
+/* ---------- layers ---------- */
+.layers{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:40px}
+.layer{background:var(--bg);padding:26px 24px}
+.layer .mono{display:block;margin-bottom:10px}
+.layer p{font-size:14.5px;color:var(--muted);margin:0}
+
+/* ---------- project ---------- */
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:44px}
+.shot{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.shot img{width:100%;display:block}
+.shot figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding:10px 12px;border-top:1px solid var(--line)}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.notconcept{
+  margin-top:26px;padding:20px 24px;background:#fff;border:1px solid var(--line);
+  border-left:3px solid var(--accent);border-radius:4px;font-size:16px;line-height:1.7;
+}
+.notconcept strong{display:block;margin-bottom:6px;font-size:15px}
+.status{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:40px}
+.status h4{margin:0 0 14px;font-size:14px;font-family:var(--mono);letter-spacing:.08em;color:var(--muted);font-weight:600}
+.status ul{list-style:none;margin:0;padding:0}
+.status li{padding:9px 0 9px 22px;border-top:1px solid var(--line);font-size:15px;position:relative}
+.status li:first-child{border-top:0}
+.done li::before{content:"";position:absolute;left:0;top:16px;width:9px;height:9px;border-radius:50%;background:var(--primary)}
+.wip li::before{content:"";position:absolute;left:0;top:16px;width:9px;height:9px;border-radius:50%;border:2px solid var(--muted);background:transparent}
+.wip li{color:var(--muted)}
+
+/* ---------- other projects ---------- */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:44px}
+.card{border:1px solid var(--line);border-radius:6px;padding:30px 28px;background:#fff}
+.card .mono{display:block;margin-bottom:14px}
+.card p{font-size:15px;color:var(--muted);margin:0 0 18px}
+
+/* ---------- boundaries ---------- */
+.bound{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:36px}
+.bound div{background:var(--bg);padding:26px 26px}
+.bound h4{margin:0 0 8px;font-size:16px}
+.bound p{font-size:14.5px;color:var(--muted);margin:0}
+
+/* ---------- cta ---------- */
+.cta{background:var(--ink);color:#fff;border-top:0}
+.cta h2{color:#fff;max-width:740px}
+.cta p{color:rgba(255,255,255,.72)}
+.cta .btn-solid{background:#fff;color:var(--ink);border-color:#fff}
+.cta .btn-solid:hover{background:var(--warm)}
+.cta .btn-ghost{color:#fff;border-color:rgba(255,255,255,.45)}
+.cta .btn-ghost:hover{background:rgba(255,255,255,.1)}
+.who{list-style:none;margin:34px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:14.5px;color:rgba(255,255,255,.72)}
+.who li::before{content:"· ";color:var(--warm)}
+
+footer{padding:56px 0;font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
+footer a{color:var(--muted)}
+.foot-links{display:flex;flex-wrap:wrap;gap:24px;margin-bottom:14px}
+
+@media (max-width:900px){
+  .hero-grid,.loop-grid,.proj-grid,.cards,.status,.bound,.layers{grid-template-columns:1fr}
+  h1{font-size:36px}.statement h2{font-size:30px}h2{font-size:26px}
+  .principle{font-size:22px;padding:20px}
+  .hero-shot img{height:380px}
+  section{padding:72px 0}
+  .wrap{padding:0 20px}
+  .loop-fig{display:none}
+  .flow{white-space:pre-wrap;font-size:12px}
+}
+</style>
+</head>
+<body data-page-node-id="5sDyXD4wTaXdHnJxXBiFXd">
+
+<!-- ================= HERO ================= -->
+<section class="hero" data-page-node-id="cZ9W1XE8EuglD07rwAunQD">
+  <div class="wrap hero-grid" data-page-node-id="DQb2JifH0R8fSmEC3BOOpf">
+    <div data-page-node-id="AteCqYGSC0GMJiLaBIV1RN">
+      <p class="identity" data-page-node-id="1df6i97MokZSmhNhLARAIh">李帅帅 · 儿科医生 × AI Builder</p>
+      <h1 data-page-node-id="8HCUhsA3Tx6Dp1DTltKN8a">从真实病例出发，做一个陪医生一起成长的临床 AI。</h1>
+      <p class="lead" data-page-node-id="Gtak1kEeO9oODMfBloPTLg">把病例、循证证据、上级医生经验和个人知识沉淀连接起来，让每一次临床工作，都成为下一次能力。</p>
+      <div class="actions" data-page-node-id="wHK28Zdp2UWVYY0nKHEobh">
+        <a class="btn btn-solid" href="#projects" data-page-node-id="1n020erVcx31Kr46dWI7RR">看我正在做什么</a>
+        <a class="btn btn-ghost" href="#contact" data-page-node-id="qvta0BuFr0bynBYFRPIwd8">一起做一个临床 PoC</a>
+      </div>
+    </div>
+    <figure class="hero-shot" data-page-node-id="Qo8KNKGo6ywnff3C4SlCD7">
+      <img src="assets/jacket-home.jpg" alt="住院医师智能胸卡 v1 原型，墨水屏主界面显示时间与每日清单等功能入口" data-page-node-id="2pJDl5WmVodwRDb45AaZXB">
+      <figcaption data-page-node-id="ueAxL9e4tC5YsBUvmZV5Ns">原型实拍 · Metalio E-INK 4 · 2026-09-10</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= STATEMENT ================= -->
+<section class="statement" id="why" data-page-node-id="xoTO5QKfku2yznobmuvQJH">
+  <div class="wrap" data-page-node-id="Kqivghi09yBfUJYVJ6KzlZ">
+    <p class="eyebrow" data-page-node-id="QpF9TdEsNHrViOdLLiQML3">为什么是我</p>
+    <h2 data-page-node-id="ejW5yDSD6RfTEBsBc268Nd">我不是离开临床去做 AI，而是把 AI 做进临床。</h2>
+    <div class="story" data-page-node-id="K2fpvVsOOeauYSscFpBPbW">
+      <p data-page-node-id="ctmSF6hR52jNBbhCAjwd88">我不熟悉儿童神经。以前遇到复杂的神经病例，主任讲疾病、脑电、基因、鉴别诊断，我大部分时间只能听。</p>
+      <p data-page-node-id="pADd3DMAFAr7jrAtMtF4a7">现在不一样了。我可以先用指南和循证工具补齐背景，形成自己的判断和问题，再去找主任讨论。</p>
+      <p data-page-node-id="A2AKSfnCE4DJ00VVXpfwsK">AI 没有替我成为主任。但它让我第一次有能力，带着自己的思考参与讨论。</p>
+      <p class="pull" data-page-node-id="qJnoMWxlwwa04LKEqAQNh2">于是我开始想：如果这种能力不是一次性的，而是能随着每一个病例留下来，会发生什么？</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section id="boundary" data-page-node-id="EamyUDHPv0yqQLCiP99yfm">
+  <div class="wrap" data-page-node-id="3E8GilMons36t6xO88rH4K">
+    <p class="eyebrow" data-page-node-id="JX3gHLrrvdNL1CLiMOfLPZ">一个结构性问题</p>
+    <h2 data-page-node-id="h9uHBds8KD9fbs8JX6HufP">AI 已经进入临床，但它还没有真正属于每一个中国医生。</h2>
+    <p class="lead" data-page-node-id="NyPq5JclFF3SlqBT4uKCWf">在美国，顶尖临床 AI 已经开始进入医生工作场景，结合患者完整的病历资料辅助医生工作。但在中国，真实病历和患者隐私有严格的数据边界——我的场景大量涉及儿科，未成年人、基因、影像、检查结果，这些不是删掉姓名和住院号就结束的问题。</p>
+    <p data-page-node-id="zWcGycFCnQDcEy1fGdhqMd">所以真正的问题不是「医生要不要用 AI」，而是：<strong data-page-node-id="IkdJcrUmv3cLXSc6tVH7u3">怎样让 AI 在不把真实病历交出去的前提下，真正理解医生每天面对的患者。</strong></p>
+
+    <p class="principle" data-page-node-id="tWeduLjSQy3nU2gMiSIVF9">病历留在本地，问题去寻找世界。</p>
+
+    <div class="flow" data-page-node-id="wdUofLbKBBrRaa21x3RcOX">真实患者病历（本地）
+   ↓ 本地 AI 理解完整上下文
+   ↓ 提取真正需要解决的医学问题
+   ↓ 去身份化 · 最小必要化
+   ↓ 调用外部循证 / 文献能力
+   ↓ 证据返回本地
+   ↓ 与完整患者上下文结合
+   ↓ 医生最终判断</div>
+    <p class="note" data-page-node-id="21r0agxp3G2kYy7XoKqPvo">去身份化不等于绝对安全：年龄、罕见病、基因、日期等组合信息仍可能重新识别个体。因此外部调用遵循最小必要原则，且本方案不构成任何安全承诺。</p>
+  </div>
+</section>
+
+<!-- ================= GROWTH LOOP ================= -->
+<section id="loop" data-page-node-id="ECWtcSLjA0uosYUamPBA7a">
+  <div class="wrap" data-page-node-id="I7wctCjIfs4Zz9lQAQqKrd">
+    <p class="eyebrow" data-page-node-id="prX1RqL3CK9qTP4vXrk788">产品内核</p>
+    <h2 data-page-node-id="3izRjx2RCLghgKLeBqQGtJ">一个陪医生成长的 Personal Clinical Copilot</h2>
+    <p class="lead" data-page-node-id="Vt8kyzn0uGsQfFn2DtGSHz">不是替医生思考，而是帮助医生形成越来越好的思考。</p>
+
+    <div class="loop-grid" data-page-node-id="sDcqWYjwkg7rKtfrPCghjm">
+      <figure class="loop-fig" data-page-node-id="5dzcPsVRhTh63WaDdmDcfN">
+        <svg viewBox="-30 -30 660 660" role="img" aria-label="临床成长闭环：病例、理解、证据、讨论、反馈、沉淀、成长" data-page-node-id="tRBbapWXJ7n6Y8QX9kRCL1">
+          <title>临床成长闭环</title>
+          <circle cx="300" cy="300" r="200" fill="none" stroke="#E3E0D8" stroke-width="1" data-page-node-id="KGL47a6SCWvHKPY4WiE1Zl"/>
+          <g fill="#176B87" data-page-node-id="nMyYuxSIptCNwQVq2ANC1e">
+            <circle cx="300" cy="100" r="6" data-page-node-id="zeA4EFcbkXZckTMIcpo2QH"/>
+            <circle cx="456" cy="175" r="6" data-page-node-id="jFCTvCMX29AkO5zVW7BZy8"/>
+            <circle cx="495" cy="345" r="6" data-page-node-id="6mAEz9oiAmzCYXnPVWzJ36"/>
+            <circle cx="387" cy="480" r="6" data-page-node-id="167Kji7G2bTclntRAcanMq"/>
+            <circle cx="213" cy="480" r="6" data-page-node-id="I7XUl6OQxPufIRqbLdxdgC"/>
+            <circle cx="105" cy="345" r="6" data-page-node-id="IZvp1Oom8KzsCWp2XPC7hv"/>
+            <circle cx="144" cy="175" r="6" data-page-node-id="Bl7YRVN6HDCldSnRLtvrh3"/>
+          </g>
+          <g fill="#17202A" font-size="19" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,PingFang SC,Microsoft YaHei,sans-serif" data-page-node-id="2jJ0hoVHATm2u3OjlWhNr1">
+            <text x="300" y="78" text-anchor="middle" data-page-node-id="sfS7F1o546M9E8KsGcUuIP">病例</text>
+            <text x="474" y="181" text-anchor="start" data-page-node-id="rV5GlOJTSpCKUjNP9U49X8">理解</text>
+            <text x="513" y="350" text-anchor="start" data-page-node-id="IxZpyJrfjs9AHgIaWJffAk">证据</text>
+            <text x="405" y="486" text-anchor="start" data-page-node-id="KfeAWMfXJs2O77BEzHXmZw">讨论</text>
+            <text x="195" y="486" text-anchor="end" data-page-node-id="Tf5mE9tbOx4vUowCdfKjjP">反馈</text>
+            <text x="87" y="350" text-anchor="end" data-page-node-id="oWFpqqEULCYYneZ4DvJPZB">沉淀</text>
+            <text x="126" y="181" text-anchor="end" data-page-node-id="nSvw9Jn9xFywyWtqMPvOOU">成长</text>
+          </g>
+          <text x="300" y="286" text-anchor="middle" fill="#17202A" font-size="25" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,PingFang SC,Microsoft YaHei,sans-serif" data-page-node-id="w3WhyQFCQvxEflJ3uZ5skr">让每一次临床思考</text>
+          <text x="300" y="322" text-anchor="middle" fill="#17202A" font-size="25" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,PingFang SC,Microsoft YaHei,sans-serif" data-page-node-id="9HUGAtIAiaTH0TFpJlFZCE">都成为下一次的能力</text>
+        </svg>
+      </figure>
+
+      <div data-page-node-id="sydfGs2H9sw5lowoyJR6Zs">
+        <ol class="loop-nodes" data-page-node-id="VMSxppfBimyg8MhTIrVacR">
+          <li data-page-node-id="ZouqiNBGnJ8yVj3teyiPHT"><b data-page-node-id="wUy4L3c0lbXozGUDebPGXp">病例</b>一个真实患儿，一次真实查房</li>
+          <li data-page-node-id="dDAjeIj88w2mDH9S56BLuS"><b data-page-node-id="bLQRibqFKoadFFCgM7LV4s">理解</b>AI 帮我看清：我知道什么、不知道什么</li>
+          <li data-page-node-id="xfMsUy1HcbcNYfNzAGTBRw"><b data-page-node-id="B86l6BC89ov4clE0Idg7Ff">证据</b>指南、文献、循证工具</li>
+          <li data-page-node-id="uRdSCACzWBjzFwjZVQhlQE"><b data-page-node-id="mDDY0c4ho3sLmKoqexiYhr">讨论</b>带着自己的判断去找主任</li>
+          <li data-page-node-id="M4f0xBxDIKP07PcUC3i9zC"><b data-page-node-id="OjeII8qyJ4L3LbKegh1YTN">反馈</b>记录主任纠正了什么</li>
+          <li data-page-node-id="EbbwFc6XCDFnwQgIuEEPiV"><b data-page-node-id="q0e55ajDSTKBuBwcacT1ly">沉淀</b>留下知识，不留患者隐私</li>
+          <li data-page-node-id="mWk0Z0pjJyyN3MYSiNEPt9"><b data-page-node-id="QTpB3rcbcNZrBWQ3yfwgkr">成长</b>下一次，我能判断得更好</li>
+        </ol>
+        <p class="qa" data-page-node-id="BzIIJHpLgTJpppsUaZ1FoW">
+          <span data-page-node-id="8a0ZF93rSKTmB1VbzCyE45"><s data-page-node-id="dWyjsfLRBBjzaXvSyUQ6Sw">普通医学 AI：</s>提问 → 答案</span>
+          <span data-page-node-id="BzEDtCAWIHs2XP4Iir2Lrh"><s data-page-node-id="OV75WtTNoauRTwFNwEcQhR">我在做的：</s>病例 → 成长</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LAYERS ================= -->
+<section data-page-node-id="AshQR88wgRCFUEOgGDabj7">
+  <div class="wrap" data-page-node-id="HUvm5rO67zgtPVAvdh6ivL">
+    <p class="eyebrow" data-page-node-id="acBFCzZwEHetiMB0GLFMtR">它怎么工作</p>
+    <h2 data-page-node-id="1cgEJ6toSCwZfBQENyryHo">它不是一个功能，是一套每天在跑的闭环</h2>
+    <div class="layers" data-page-node-id="vEvBp51uh6jCa3mksEqpLn">
+      <div class="layer" data-page-node-id="7PBX0CtSRHc0fyNbPQX3Fk">
+        <span class="mono" data-page-node-id="6dc2ctYJEAYxqED7hD9HxQ">01 / CAPTURE</span>
+        <h3 data-page-node-id="9d1EZTqbD1b9CQZ2obEjqX">采集</h3>
+        <p data-page-node-id="PN0MCIkTLNnbeUAm7K7L98">医患沟通、查房、主任讨论、交班、病历、检查、检验、图片、文献、语音。</p>
+      </div>
+      <div class="layer" data-page-node-id="awzWgWVrcY5EGMF6Nlnz2g">
+        <span class="mono" data-page-node-id="vSHhJ9dFmMARCFJsK3YFFV">02 / UNDERSTANDING</span>
+        <h3 data-page-node-id="TSQXYvGrr8cu06u4JJNdsE">理解</h3>
+        <p data-page-node-id="XhN8zwCTEKufVLTqOJ7Mln">这个病人有什么问题？我现在的判断是什么？我遗漏了什么？我哪里不懂？</p>
+      </div>
+      <div class="layer" data-page-node-id="O0U5gcPIpoSpU7Md3EU6BY">
+        <span class="mono" data-page-node-id="cBFEDKnDGikG2z5EDBsJcH">03 / EVIDENCE</span>
+        <h3 data-page-node-id="jj1HxDfNMeow2vUrET9bD0">证据</h3>
+        <p data-page-node-id="kBXUl294seyEz7522JvnZ2">指南、文献、循证工具、科室知识库、个人知识库。</p>
+      </div>
+      <div class="layer" data-page-node-id="OvXEuoTdsDzkYyAZzT0kAX">
+        <span class="mono" data-page-node-id="JC7N09nGFrmvk3Sk04ylVt">04 / DISCUSSION</span>
+        <h3 data-page-node-id="xWqYNFDb98DQUMWwkZpYXP">讨论</h3>
+        <p data-page-node-id="0x47rkSY2lzqDkvzV4YTUa">在查房、主任请示、MDT、病例讨论之前做好准备。</p>
+      </div>
+      <div class="layer" data-page-node-id="NEH86mgQhhxJH4dsT79YGv">
+        <span class="mono" data-page-node-id="rRoxO3rBiSUHF2ATByqun2">05 / MEMORY</span>
+        <h3 data-page-node-id="1cEQaxHIicGnMR9AZDlPEY">沉淀</h3>
+        <p data-page-node-id="yUPeVYBKUtiwmtkeThBBSK">留下的不是患者隐私，而是医学知识、临床经验、主任反馈、决策逻辑、我犯过的错。</p>
+      </div>
+      <div class="layer" data-page-node-id="H6YW4Esg4NHqzMjFztxJs3">
+        <span class="mono" data-page-node-id="y0wNQx7JAdAetPC3aFWlqu">→ GROWTH</span>
+        <h3 data-page-node-id="dWwmDCULXsBZvkgt97nDq1">成长</h3>
+        <p data-page-node-id="GC0V927FBOEiVC86shY3vk">每一次病例，都成为下一次临床能力的起点。</p>
+      </div>
+    </div>
+    <p class="note" style="margin-top:22px" data-page-node-id="VLPO5r4bHt0JhWc5F7Ol19">病历生成只是采集层的一个入口，不是产品本身。</p>
+  </div>
+</section>
+
+<!-- ================= FLAGSHIP PROJECT ================= -->
+<section id="projects" data-page-node-id="HGo8jNsU7hrupVruWeDePe">
+  <div class="wrap" data-page-node-id="slunRcktenojkTpoOdCL4M">
+    <p class="eyebrow" data-page-node-id="9JGjX1FIHC4gDTDHvieMLI">项目 01 · 旗舰</p>
+    <h2 data-page-node-id="fRN9VwGEDvw3owv6GrsnKJ">住院医师智能胸卡</h2>
+    <p class="lead" data-page-node-id="CblZy4a1v7ACqHzEemvGQX">一个挂在医生身上的临床工作入口：提醒今天该做什么，也让一次查房、一次讨论、一个临床问题能够进入个人 AI 工作流。</p>
+
+    <div class="proj-grid" data-page-node-id="GrYBHLR31CNxNQODOxY3Eq">
+      <div data-page-node-id="kiEvINdR8AeWOvpDPcRQvQ">
+        <figure class="shot" data-page-node-id="93r43b47DG37gO0WA5XV45">
+          <img src="assets/jacket-home.jpg" alt="胸卡原型墨水屏主界面" data-page-node-id="LUDasuB7zk40nM8YKe1Ggr">
+          <figcaption data-page-node-id="dNznXmWMEAa4QWEQtKTzGu">主界面 · 每日清单 / 百问 AI / 阅读</figcaption>
+        </figure>
+        <div class="shots" data-page-node-id="puDQpHG5XhqBu0Q7D5LCfq">
+          <figure class="shot" data-page-node-id="PByRn0N292SyCLHIVNpgIq">
+            <img src="assets/jacket-selftest.jpg" alt="设备自检页，显示音频、加速度计、RTC 等硬件状态" data-page-node-id="20Kcc6PFDZgE3sDD18S5i1">
+            <figcaption data-page-node-id="eTJ92OKR47xJXGcWr2d6L1">硬件自检页</figcaption>
+          </figure>
+          <figure class="shot" data-page-node-id="QdzvG8h471lwsjbprgGR4M">
+            <img src="assets/jacket-specs.jpg" alt="设备关于页，显示型号与芯片信息" data-page-node-id="WRm2DpHUGIySHN0v9W5Rzm">
+            <figcaption data-page-node-id="dDzK4Ob5BXfovCpGpk6E6m">设备信息</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div data-page-node-id="ZPUAwDvrRy0jCDQK81ZXXu">
+        <div class="notconcept" data-page-node-id="X5rL5sBhcijTQcp6fGV26l">
+          <strong data-page-node-id="FCHNd5VQ9iNWwQClyB5oUU">不是概念图。</strong>
+          ESP32-S3、墨水屏、RTC、运动传感器、SD 存储——我正在把一台消费级开源硬件改造成自己的临床终端。
+        </div>
+
+        <div class="status" data-page-node-id="2cZ8bacZn6DH6GyWQvmpLr">
+          <div class="done" data-page-node-id="mYx4O8gkovyfCMyslJ79td">
+            <h4 data-page-node-id="x5QFquQKPJ7CCDqjwKzHww">已实现</h4>
+            <ul data-page-node-id="usIP4wtmiWIb9lJldCK83m">
+              <li data-page-node-id="JomXGJvIXdrz1EdveRgH2Z">墨水屏交互</li>
+              <li data-page-node-id="9kK9WYlAdisiKXDEqLac2n">每日清单</li>
+              <li data-page-node-id="MNTydpUa8qvtEElmUw4IE6">RTC 独立时钟</li>
+              <li data-page-node-id="OIJVF0nvic6kOcFxbcRRzP">本地存储</li>
+              <li data-page-node-id="CCovzSBIRWbvmvRO1DJx2y">语音硬件入口</li>
+              <li data-page-node-id="hcrdOL7XY1a2kQvAKxkkUr">ESP32-S3 可编程硬件</li>
+            </ul>
+          </div>
+          <div class="wip" data-page-node-id="ddd2bafS94zDMnGSF73FNk">
+            <h4 data-page-node-id="yhf3Kuwj8oVydSwtZM9BjC">正在开发 / 验证</h4>
+            <ul data-page-node-id="XVn0b3NnfLKfhra1wShuxA">
+              <li data-page-node-id="76eJSmZExkaFOLJp1AMCev">语音采集</li>
+              <li data-page-node-id="cFZ5FOZ4BoDuvbUfPgCxoE">本地 ASR</li>
+              <li data-page-node-id="whFuVU3gjYuvCrH1S4EpLT">医学术语纠错</li>
+              <li data-page-node-id="6jabmmV49JgEyFuvQDPeaZ">待办提取</li>
+              <li data-page-node-id="SJLW8CdOwXmErX6tCR2kcT">病例理解</li>
+              <li data-page-node-id="iMjlWQ2BpSs49uaYdOrrqw">临床 Copilot</li>
+              <li data-page-node-id="djWvjxEufPHHA1S2TOwS6d">主任反馈沉淀</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="note" style="margin-top:26px" data-page-node-id="WTwIPHIAIe1vbXdVMmLFmB">计划接入本地 AI 工作站进行 ASR、医学纠错和病例理解。整条链路跑通之前，不作为已实现能力对外描述。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OTHER PROJECTS ================= -->
+<section data-page-node-id="hx3zo4AXXSctIuRLlzZzV3">
+  <div class="wrap" data-page-node-id="Z5WDmqEGZADDFc11bu5AJx">
+    <p class="eyebrow" data-page-node-id="h5YXAFoeH95cEIFjMN97YY">项目 02 · 03</p>
+    <h2 data-page-node-id="ptgBVbli72XNIZkv33PqLB">三种 Builder 证据</h2>
+    <div class="cards" data-page-node-id="hpPYiAMcUrvpxh9TlgHrKu">
+      <div class="card" data-page-node-id="c2lNwR32X7ChmPbdaF4cuI">
+        <span class="mono" data-page-node-id="2kAWkGOZtxoRMTyHmQZxM0">项目 02</span>
+        <h3 data-page-node-id="bNCJlRZiDc25hXx4Cqnxi4">智能量表</h3>
+        <p data-page-node-id="1ApQXiZ4vKjzce9WFs6jUf">把医学规则、交互设计、AI 和产品真正结合起来。这不只是 Demo，而是另一种「临床知识产品化」。</p>
+        <p class="mono" style="margin:0" data-page-node-id="zdjU2npp5CHReedLAfHNCJ">医学规则 × AI × 产品交互</p>
+      </div>
+      <div class="card" data-page-node-id="VQNl8y1Fky7MpCc4v4egxe">
+        <span class="mono" data-page-node-id="DyxwLlvmcCIHjrxpAGvGvx">项目 03</span>
+        <h3 data-page-node-id="N1lrh7a32WC16Hv1asrLWd">星桥</h3>
+        <p data-page-node-id="YIzCzYFBcENaPTyDKAI6KE">面向孤独症儿童的数字化疗愈游戏，已有真实家庭内测与奖项验证。它证明我也能从一个儿童医疗真实问题出发，把产品做给真实用户使用。</p>
+        <p class="mono" style="margin:0" data-page-node-id="AeLXoIpt5zOG0kz9EftKwr">儿童医疗问题 × 产品化 × 真实用户验证</p>
+      </div>
+    </div>
+    <p class="note" style="margin-top:26px" data-page-node-id="rXnvPVAj1wdrFrsPc6nYLP">小雪宝、小安 AI 健康助手、AI 新青年 OPC 收录在项目库与 Build in Public，不占首页篇幅。</p>
+  </div>
+</section>
+
+<!-- ================= BOUNDARIES ================= -->
+<section data-page-node-id="5QNkaDh6FrWmIH1SeUe815">
+  <div class="wrap" data-page-node-id="OlnqkoPZSwtAo25jE4MpAo">
+    <p class="eyebrow" data-page-node-id="48KTQfWqFJsTGJTkSLmCxP">数据边界</p>
+    <h2 data-page-node-id="u2O9dfW4zkcj7Oo2yAmpbH">它跑在哪里，以及它不做什么</h2>
+    <div class="bound" data-page-node-id="mjigqJSFMGkGVW3PIbREnp">
+      <div data-page-node-id="Iw53mFJjhD6NsRzKoGBfOC">
+        <h4 data-page-node-id="QKEE2dkPRyvFtMRwYEAKE8">全本地处理</h4>
+        <p data-page-node-id="CM4leF08n9fcHLGiATNUga">语音转写、图像识别、文书生成全部跑在本机工作站，患者资料不出本机。</p>
+      </div>
+      <div data-page-node-id="2cMwvgoEh90yUFzcy1sYfC">
+        <h4 data-page-node-id="gpRzhnOwpjb4z5QGCNJ36Q">外部调用最小必要</h4>
+        <p data-page-node-id="2pR4LpoYB2wgAtFVNlw3Px">仅当需要循证检索时才向外请求，且先做去身份化与最小化处理。</p>
+      </div>
+      <div data-page-node-id="9VRRvfkCYkA0JCm4azKAyF">
+        <h4 data-page-node-id="0GHeuQMtRRUVK15cBledww">文书永远是草稿</h4>
+        <p data-page-node-id="VkE9sIoFdNaIoBLYIZKEr1">所有生成内容需医生本人审核确认后使用，AI 不替代医师判断。</p>
+      </div>
+      <div data-page-node-id="d71VNuqXOS8sUlRpmhvQZT">
+        <h4 data-page-node-id="kwZ2tM3jlHMKbCHEvpkxlN">不提供在线诊疗</h4>
+        <p data-page-node-id="gpfHxfF6kQSlKeNZHxd1aO">本站与本项目不提供任何形式的在线诊疗服务。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROLE ================= -->
+<section data-page-node-id="wuR3yFc5YuMnQYcxNO9flY">
+  <div class="wrap" data-page-node-id="YcBliJRRaF9UFi7spVniPE">
+    <p class="eyebrow" data-page-node-id="qDDKdjGd12GA03Qkf6bvjG">Builder 方法论</p>
+    <h2 data-page-node-id="PvDSFwRudXiYvcLVl2GBcB">先看医生在哪里被浪费，再决定 AI 应该出现在哪里。</h2>
+    <p class="lead" data-page-node-id="QeiEjmzloh3FEj7EzwcmD2">我不是从模型出发寻找医疗场景，而是从每天真正遇到的临床问题，倒着决定哪里该用 AI。</p>
+    <div class="bound" style="margin-top:34px" data-page-node-id="TxU2dsPKXwb8dBzki9gcNc">
+      <div data-page-node-id="xTAdnfSQpPe1TP9c0h7x0z">
+        <h4 data-page-node-id="cwU7ziTl1TxNfM8s2Boxe5">我负责什么</h4>
+        <p data-page-node-id="drJugwbAYKMh0K657PxEL6">临床需求 / 产品设计 / 硬件定义 / 工程实现 / 医学内容审核</p>
+      </div>
+      <div data-page-node-id="Fb1zJPiwn5ucRdfKREgXoe">
+        <h4 data-page-node-id="5xOzsxttchgNdE430VLixS">可验证的身份</h4>
+        <p data-page-node-id="IPWgYyp6uY0TuKwJcjBI2N">三甲医院儿科医师 · 童医魔盒科技服务有限公司 · 黑客松获奖 · 联合共建伙伴：极新（北京思维进步科技有限公司）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="contact" data-page-node-id="lxLZBh7029Z5XJfXCqLiKo">
+  <div class="wrap" data-page-node-id="FH6J9MmUQLcZFxJRS4wBgu">
+    <p class="eyebrow" style="color:rgba(255,255,255,.6)" data-page-node-id="AW8DTvC5zP1kcC8tCyJnAr">合作</p>
+    <h2 data-page-node-id="KzkC1Te0E2dhZp46ngplUV">一起做一个临床 PoC</h2>
+    <p data-page-node-id="Wx5aC5RshOP6lLsIULN7Kq">如果你也在想「AI 到底该怎么进入中国医生的日常工作」，我们可以从一个小而真实的场景开始验证。</p>
+    <div class="actions" data-page-node-id="DWHkjBVSfTYxTWW8U1Fq3H">
+      <a class="btn btn-solid" href="#projects" data-page-node-id="BFoFrOhWfCqCGvsKNxJrQC">看我正在做什么</a>
+      <a class="btn btn-ghost" href="#contact" data-page-node-id="HoJ2rgCm8r2QZ4GQs8CvZD">一起做一个临床 PoC</a>
+    </div>
+    <ul class="who" data-page-node-id="oDRMYDAv4mYDlei9S3Da0u">
+      <li data-page-node-id="qD0Xgs0czFwz0c0r96SaIW">临床医生</li><li data-page-node-id="xbLlWDtb8HHX1B1DicaVKW">科室主任</li><li data-page-node-id="WJcCb3fHOsnQmCeuJWSFqK">医院信息人员</li><li data-page-node-id="KLrcoIocvIAnwRs3oi11Q5">医疗 AI 团队</li><li data-page-node-id="hzbjUWuaZGvceoKO6hGJQ2">AI Builder</li><li data-page-node-id="WoCGvS1G6CyyyjB3MDLgv9">医疗 AI 研究者</li>
+    </ul>
+  </div>
+</section>
+
+<footer data-page-node-id="yE4uRiTpmGYgoLlG3yHEHC">
+  <div class="wrap" data-page-node-id="PvxIj89cIaaDHGBZse5UqC">
+    <div class="foot-links" data-page-node-id="QB5XqNs00zFo8GNlBzxNZB">
+      <a href="#projects" data-page-node-id="dr64rqd47mD2IQ7nmiBrDG">项目</a>
+      <a href="#loop" data-page-node-id="Kx2QCODXIAv9tGNLZqO2vG">产品内核</a>
+      <a href="#boundary" data-page-node-id="R3eEuyFzV0Jnq66agnuDST">数据边界</a>
+      <span data-page-node-id="gp4bdt155k99ZrltxKqKH8">公众号</span>
+      <span data-page-node-id="GHF0dngWk130t1buQR4jQc">GitHub</span>
+      <span data-page-node-id="4e6yDuv98ZUVpExG1IaFAt">Build in Public</span>
+    </div>
+    <p class="mono" style="margin:0" data-page-node-id="pxFyWjvd3vpGZCTvx5E6OZ">李帅帅 · 儿科医生 × AI Builder　|　本站不提供在线诊疗，内容仅供专业交流</p>
+  </div>
+</footer>
+
+</body>
+</html>
